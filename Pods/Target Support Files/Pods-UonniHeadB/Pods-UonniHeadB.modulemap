@@ -1,0 +1,6 @@
+framework module Pods_UonniHeadB {
+  umbrella header "Pods-UonniHeadB-umbrella.h"
+
+  export *
+  module * { export * }
+}
