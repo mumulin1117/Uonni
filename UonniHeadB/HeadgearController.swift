@@ -7,14 +7,17 @@
 
 import UIKit
 //launch
+import IQKeyboardManager
 class HeadgearController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        IQKeyboardManager.shared().isEnabled = true
         if SeasonalLoogController.enthusiasts != nil {
             self.navigationController?.pushViewController(HeadpiecesMainController.init(), animated: false)
             return
         }
+        
         headwearCulture()
     }
 

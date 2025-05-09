@@ -11,4 +11,6 @@ pod 'IQKeyboardManager'
 pod 'SVProgressHUD'
 
 pod 'SwiftyStoreKit'
+
+pod 'SnapKit'
 end

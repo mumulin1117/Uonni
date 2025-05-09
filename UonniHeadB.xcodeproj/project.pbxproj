@@ -74,7 +74,6 @@
 				41427FB2A46BA3FEB12E9C6F /* Pods-UonniHeadB.debug.xcconfig */,
 				B33B7B8C7E073CF353095958 /* Pods-UonniHeadB.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
