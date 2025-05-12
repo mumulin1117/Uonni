@@ -9,7 +9,7 @@ target 'UonniHeadB' do
 pod 'IQKeyboardManager'
 
 pod 'SVProgressHUD'
-
+pod 'Kingfisher'
 pod 'SwiftyStoreKit'
 
 pod 'SnapKit'
