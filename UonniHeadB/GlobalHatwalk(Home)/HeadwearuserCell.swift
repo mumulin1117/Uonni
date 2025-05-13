@@ -6,7 +6,23 @@
 //
 import SnapKit
 import UIKit
-//在线用户
+
+struct HeadwearCommunityMoment {
+    let Headwearavatar: String
+    let Headwearusername: String
+    let HeadwearmediaType: MediaType
+    let Headwearcontent: String
+    let Headwearlikes: Int
+    let Headwearcomments: Int
+    
+    enum MediaType {
+        case photo(String)
+        case video(String)
+    }
+}
+
+
+
 class HeadwearuserCell: UICollectionViewCell {
     
     let artisticHeader = UIImageView()

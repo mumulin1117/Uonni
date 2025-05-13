@@ -6,7 +6,11 @@
 //
 
 import UIKit
-
+struct HeadwearRecommendation {
+    let coverImage: String
+    let styleTags: [String]
+    let matchScore: Double
+}
 class DnnovationVidrCell: UICollectionViewCell {
     
     let artisticHeader = UIImageView()

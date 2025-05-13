@@ -8,6 +8,8 @@
 import UIKit
 
 @main
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //
@@ -30,3 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+enum AuthPhase {
+    case welcome
+    case avatarSelection
+    case securitySetup
+    case completion
+}

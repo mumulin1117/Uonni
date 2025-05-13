@@ -6,8 +6,30 @@
 //
 
 import UIKit
+struct HeadwearDesignElement {
+    let baseModel: String
+    let decorations: [DecorationItem]
+    let colorPalette: [UIColor]
+    let materialType: MaterialType
+    
+    enum MaterialType: String, CaseIterable {
+        case satin = "绸缎光泽"
+        case lace = "蕾丝镂空"
+        case metallic = "金属质感"
+        case straw = "草编纹理"
+    }
+}
 
-class HeadwearPolicyController: UIViewController {
+struct DecorationItem {
+    let modelURL: String
+    let position: SIMD3<Float>
+    let scale: Float
+    let rotation: SIMD3<Float>
+}
+
+class HeadwearPolicyController: UIViewController, UICollectionViewDelegate {
+   
+    
     private let headwearGradientLayer: CAGradientLayer = {
            let layer = CAGradientLayer()
            layer.colors = [
@@ -56,12 +78,17 @@ class HeadwearPolicyController: UIViewController {
        }
        
        var currentPolicy: FashionPolicyType = .styleProtection
-    
+    private let elementLibrary = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     init(currentPolicy: FashionPolicyType) {
         self.currentPolicy = currentPolicy
         super.init(nibName: nil, bundle: nil)
     }
-    
+    private var currentDesign = HeadwearDesignElement(
+            baseModel: "hat_base_01.scn",
+            decorations: [],
+            colorPalette: [.systemPink, .systemIndigo, .systemTeal],
+            materialType: .satin
+        )
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -69,6 +96,11 @@ class HeadwearPolicyController: UIViewController {
         super.viewDidLoad()
         prepareRunwayView()
         arrangeStyleElements()
+        
+               
+        elementLibrary.delegate = self
+        elementLibrary.backgroundColor = .systemGray6
+        view.addSubview(elementLibrary)
         displayCurrentFashionPolicy()
         
     }
@@ -108,7 +140,26 @@ class HeadwearPolicyController: UIViewController {
           
         ])
     }
-    
+    private func createLibraryLayout()  {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.33),
+            heightDimension: .fractionalHeight(1.0)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .estimated(80)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+        
+       
+        
+    }
     // MARK: - Policy Display
     private func displayCurrentFashionPolicy() {
         switch currentPolicy {
@@ -228,12 +279,22 @@ class HeadwearPolicyController: UIViewController {
     
         return content
     }
-        
-        
+    enum DecorationLibrary {
+        static let allItems = [
+            DecorationItem(modelURL: "decoration_pearl.scn", position: .zero, scale: 1, rotation: .zero),
+            DecorationItem(modelURL: "decoration_ribbon.scn", position: .zero, scale: 1, rotation: .zero),
+            DecorationItem(modelURL: "decoration_feather.scn", position: .zero, scale: 1, rotation: .zero)
+        ]
+    }
+    private let materialSwatch = UIView()
         
         // MARK: - Style Actions
         @objc private func returnToStyleHub() {
+            materialSwatch.backgroundColor = UIColor.black
+                   
+            
             navigationController?.popViewController(animated: true)
+            materialSwatch.layer.cornerRadius = 8
         }
 }
 private extension UIColor {

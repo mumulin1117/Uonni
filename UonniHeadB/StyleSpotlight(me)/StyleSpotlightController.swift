@@ -55,7 +55,7 @@ extension StyleSpotlightController{
             "stylesharing": "\(SeasonalLoogController.enthusiasts?["headweardiversity"] as? Int ?? 0)"
         ]
         
-        ExplorationRequestBuilder.askForvirtualSstylist(path: "/jiyhqvz/wjbxauzuh", vintage: insights) { resilt in
+        SceneDelegate.askForvirtualSstylist(path: "/jiyhqvz/wjbxauzuh", vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
                   let user = response["data"] as? Dictionary<String,Any>
@@ -90,7 +90,7 @@ extension StyleSpotlightController{
     
     private func stylerecommendations(neda:Dictionary<String,Any>)  {
         headwearName.text = neda["creativecommunity"] as? String
-        if let imglink = neda["trendinspiration"] as? String,let imageUrl = URL(string: imglink) {
+        if let headerpiceice = neda["trendinspiration"] as? String,let imageUrl = URL(string: headerpiceice) {
             artisticHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
@@ -120,7 +120,7 @@ extension StyleSpotlightController{
         
       
        
-       var headwear = ExplorationRequestBuilder.fashionInspiration
+       var headwear = SceneDelegate.fashionInspiration
        
        if relaButton == suresite {
            headwear = headwear +  "pages/Setting/index?"
@@ -142,7 +142,7 @@ extension StyleSpotlightController{
        }
     
       
-       self.creativeExchange(Everyroute:headwear)
+       self.creativeExchange(Everyroute:headwear, foreColor: relaButton.backgroundColor ?? .clear)
     }
     
 }
