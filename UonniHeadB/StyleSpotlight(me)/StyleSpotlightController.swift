@@ -57,7 +57,7 @@ extension StyleSpotlightController{
         
         ExplorationRequestBuilder.askForvirtualSstylist(path: "/jiyhqvz/wjbxauzuh", vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
-                  let code = response["code"] as? Int,code == 200000,
+                  
                   let user = response["data"] as? Dictionary<String,Any>
                     
             else {

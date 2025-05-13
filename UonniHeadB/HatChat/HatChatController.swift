@@ -69,7 +69,7 @@ extension HatChatController{
         SVProgressHUD.show()
         ExplorationRequestBuilder.askForvirtualSstylist(path: "/ynppespskoqbcejz/ckxrxfhffw", vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
-                  let code = response["code"] as? Int,code == 200000,
+                  
                   let user = response["data"] as? Array<Dictionary<String,Any>>
                     
             else {
@@ -137,9 +137,7 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
            
         }
         uonnicell.tovhatki.tag = indexPath.row
-//        uonnicell.tovhatki.addTarget(self, action: #selector(fashionDiversity(index:)), for: .touchUpInside)
-        
-        
+ 
         uonnicell.headwearName.text = recommendMonment[indexPath.row]["fashionmoments"] as? String
         uonnicell.postConttnwearLbl.text = recommendMonment[indexPath.row]["beautyindetails"] as? String
         return uonnicell
@@ -156,13 +154,5 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
         
     }
     
-    
-//   @objc func fashionDiversity(index:UIButton) {
-//       guard let itemid = recommendMonment[index.tag]["stylesharing"] as? Int else { return  }
-//
-//       let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/privateChat/index?userId="  + "\(itemid)" + "CallVideo=1"
-//       self.creativeExchange(Everyroute:mainRoute)
-//   
-//   }
-    
+
 }

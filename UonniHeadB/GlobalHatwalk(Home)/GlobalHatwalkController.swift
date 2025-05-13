@@ -7,7 +7,7 @@
 import SVProgressHUD
 import UIKit
 import Kingfisher
-//home
+
 class GlobalHatwalkController: ArtistryController {
     var guidance:Int = 1{
         didSet{
@@ -98,7 +98,7 @@ extension GlobalHatwalkController{
       
         ExplorationRequestBuilder.askForvirtualSstylist(path: "/syydhnafgz/gbtyvidltckj", vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
-                  let code = response["code"] as? Int,code == 200000,
+                  
                   let user = response["data"] as? Array<Dictionary<String,Any>>
                     
             else {
@@ -124,16 +124,16 @@ extension GlobalHatwalkController{
        
         let insights: [String:Any] = [
             "casualcaps": "51032696",
-            "elegantheadbands":1,//dynamicType 动态类型1正常2其他等等
-            "vintagehats":10,//size
-            "luxuryheadpieces":guidance, //selectType 查询类型1热门2我的3关注的
-                "bohemianstyles":1//current
+            "elegantheadbands":1,
+            "vintagehats":10,
+            "luxuryheadpieces":guidance,
+                "bohemianstyles":1
             
         ]
         SVProgressHUD.show()
         ExplorationRequestBuilder.askForvirtualSstylist(path: "/ssvjeaitpqgz/kkatdxmagludyrk", vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
-                  let code = response["code"] as? Int,code == 200000,
+                  
                   let user = response["data"] as? Array<Dictionary<String,Any>>
                     
             else {
