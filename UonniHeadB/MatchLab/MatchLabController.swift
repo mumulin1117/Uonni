@@ -2,7 +2,7 @@
 //  MatchLabController.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/9.
+//  Created by UonniHeadB on 2025/5/9.
 //
 
 import UIKit
@@ -42,6 +42,7 @@ class MatchLabController: ArtistryController {
         if sender.tag == 234 {
             let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/releaseVideos/index?"
             self.creativeExchange(Everyroute:mainRoute)
+            return
         }
         let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/Report/index?"
         self.creativeExchange(Everyroute:mainRoute)
@@ -71,7 +72,7 @@ class MatchLabController: ArtistryController {
         recommendationsView.dataSource = self
         recommendationsView.register(DnnovationVidrCell.self, forCellWithReuseIdentifier: "DnnovationVidrCell")
         
-        
+        recommendationsView.isPagingEnabled = true
       
        
     }
@@ -109,7 +110,7 @@ extension MatchLabController{
                
             })
            
-            
+            SVProgressHUD.dismiss()
             self.recommendationsView.reloadData()
             
         } failure: { error in
@@ -155,16 +156,58 @@ extension MatchLabController:UICollectionViewDelegate,UICollectionViewDataSource
             
            
         }
-       
-       
+        uonnicell.postConttnwearLbl.text = recommendMonment[indexPath.row]["creativeexpression"] as? String
+        uonnicell.headwearName.text = recommendMonment[indexPath.row]["trendsettinglooks"] as? String
+        
+        let timecount = recommendMonment[indexPath.row]["exclusivedesigns"] as? Int ?? 0
+        
+        uonnicell.postTimewearLbl.text = formatExclusiveDesignTime( TimeInterval(timecount)) //
         return uonnicell
         
     }
-    
+    /// 专为Uonni应用设计的独家设计时间格式化
+    private func formatExclusiveDesignTime(_ timestamp: TimeInterval) -> String {
+        guard timestamp > 0 else {
+            return "Just released" // 处理0或负时间戳
+        }
+        
+        let date = Date(timeIntervalSince1970: timestamp)
+        let now = Date()
+        let calendar = Calendar.current
+        
+        // 1. 当天显示时分
+        if calendar.isDateInToday(date) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            formatter.timeZone = TimeZone.current
+            return "today \(formatter.string(from: date))"
+        }
+        // 2. 昨天显示昨天+时间
+        else if calendar.isDateInYesterday(date) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            formatter.timeZone = TimeZone.current
+            return "Yesterday \(formatter.string(from: date))"
+        }
+        // 3. 一周内显示星期
+        else if let days = calendar.dateComponents([.day], from: date, to: now).day, days < 7 {
+            let weekdayFormatter = DateFormatter()
+            weekdayFormatter.dateFormat = "EEEE HH:mm"
+            weekdayFormatter.timeZone = TimeZone.current
+            return weekdayFormatter.string(from: date)
+        }
+        // 4. 其他情况显示完整日期
+        else {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+            formatter.timeZone = TimeZone.current
+            return formatter.string(from: date)
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         
-        guard let itemid = recommendMonment[indexPath.row]["chicaccessories"] as? String else { return  }
+        guard let itemid = recommendMonment[indexPath.row]["chicaccessories"] as? Int else { return  }
  
         let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/DynamicDetails/index?dynamicId="  + "\(itemid)"
         self.creativeExchange(Everyroute:mainRoute)

@@ -2,7 +2,7 @@
 //  Headinsights Cell.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/9.
+//  Created by UonniHeadB on 2025/5/9.
 //
 
 import UIKit
@@ -21,6 +21,7 @@ class Headinsights_Cell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         artisticHeader.layer.cornerRadius = 15
+        artisticSporty.layer.masksToBounds = true
         contentView.addSubview(artisticSporty)
         artisticSporty.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -47,6 +48,7 @@ class Headinsights_Cell: UICollectionViewCell {
     }
     
     private func creativeExpression()  {
+        artisticSporty.contentMode = .scaleAspectFill
         artisticSporty.layer.cornerRadius = 12
         artisticSporty.layer.masksToBounds = true
         artisticHeader.layer.masksToBounds = true
@@ -55,11 +57,9 @@ class Headinsights_Cell: UICollectionViewCell {
     
     
     private func  trendsettinglooks()  {
-        headwearName.textColor = .black
-       
-        headwearName.textAlignment = .center
-        
+        headwearName.textColor = .white
         contentView.addSubview(artisticAttitude)
+        headwearName.textAlignment = .left
         contentView.addSubview(artisticComment)
     }
     
@@ -77,7 +77,7 @@ class Headinsights_Cell: UICollectionViewCell {
         headwearName.snp.makeConstraints { make in
             make.trailing.equalTo(artisticHeader.snp.leading).offset(-2)
             make.leading.equalToSuperview().offset(10)
-            make.top.equalToSuperview().offset(4)
+            make.top.equalToSuperview().offset(8)
             
         }
     }
@@ -88,13 +88,13 @@ class Headinsights_Cell: UICollectionViewCell {
         artisticAttitude.snp.makeConstraints { make in
             make.width.height.equalTo(44)
             make.bottom.equalToSuperview().offset(-10)
-            make.centerX.equalToSuperview().offset(-10)
+            make.right.equalTo(self.contentView.snp.centerX).offset(-10)
         }
         
         artisticComment.snp.makeConstraints { make in
             make.width.height.equalTo(44)
             make.bottom.equalToSuperview().offset(-10)
-            make.centerX.equalToSuperview().offset(10)
+            make.left.equalTo(self.contentView.snp.centerX).offset(10)
         }
     }
     

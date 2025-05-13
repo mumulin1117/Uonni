@@ -1,19 +1,19 @@
 workflows:
   ios-native-workflow:
-    name: Hinki
+    name: Uonni
     max_build_duration: 120
     instance_type: mac_mini_m1
     integrations:
-      app_store_connect: Hinki
+      app_store_connect: Uonni
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.trensding.kinki
+        bundle_identifier: com.hairni.uonni
       vars:
-        BUNDLE_ID: "com.trensding.kinki"
-        XCODE_WORKSPACE: DiBngHink.xcworkspace # <-- Put the name of your Xcode workspace here
-        XCODE_SCHEME: "DiBngHink" # <-- Put the name of your Xcode scheme here
-#        APP_STORE_APPLE_ID: 6743076520
+        BUNDLE_ID: "com.hairni.uonni"
+        XCODE_WORKSPACE: UonniHeadB.xcworkspace # <-- Put the name of your Xcode workspace here
+        XCODE_SCHEME: "UonniHeadB" # <-- Put the name of your Xcode scheme here
+#        APP_STORE_APPLE_ID:
       xcode: 16.1
       cocoapods: default
     scripts:

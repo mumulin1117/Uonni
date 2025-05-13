@@ -2,7 +2,7 @@
 //  DnnoCamesagCell.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/12.
+//  Created by UonniHeadB on 2025/5/12.
 //
 
 import UIKit
@@ -18,9 +18,10 @@ class DnnoCamesagCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        tovhatki.isUserInteractionEnabled = false
         self.layer.cornerRadius = 12
         artisticHeader.layer.cornerRadius = 12
-        
+        artisticHeader.contentMode = .scaleAspectFill
         artisticHeader.layer.masksToBounds = true
       
         self.layer.masksToBounds = true

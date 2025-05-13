@@ -2,7 +2,7 @@
 //  HeadwearuserCell.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/9.
+//  Created by UonniHeadB on 2025/5/9.
 //
 import SnapKit
 import UIKit
@@ -40,7 +40,8 @@ class HeadwearuserCell: UICollectionViewCell {
     
     private func  fashionMoments()  {
         headwearName.font = UIFont(name: "Apple SD Gothic Neo SemiBold", size: 16)
-        
+        self.layer.cornerRadius = 12
+        self.layer.masksToBounds = true
         artisticHeader.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(3)
             make.width.height.equalTo(38)

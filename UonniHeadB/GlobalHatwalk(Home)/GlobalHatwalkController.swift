@@ -2,7 +2,7 @@
 //  GlobalHatwalkController.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/9.
+//  Created by UonniHeadB on 2025/5/9.
 //
 import SVProgressHUD
 import UIKit
@@ -69,7 +69,7 @@ class GlobalHatwalkController: ArtistryController {
         recommendationsView.dataSource = self
         recommendationsView.register(HeadwearuserCell.self, forCellWithReuseIdentifier: "HeadwearuserCell")
         
-        
+        artistryView.contentInset = UIEdgeInsets(top: 0, left: 12, bottom: 100, right: 12)
         artistryView.backgroundColor = .clear
         artistryView.delegate = self
         artistryView.dataSource = self
@@ -147,7 +147,7 @@ extension GlobalHatwalkController{
                 return (dic["hatmatching"] as? String)  == nil
                
             })
-           
+            SVProgressHUD.dismiss()
             
             self.artistryView.reloadData()
             
@@ -209,21 +209,21 @@ extension GlobalHatwalkController:UICollectionViewDelegate,UICollectionViewDataS
         }
        
         uonnicell.artisticAttitude.image = UIImage(named: ((recommendMonment[indexPath.row]["headwearart"] as? Int) == 1) ? "notheadertYES" : "notheadert")
-      
+        uonnicell.headwearName.text = recommendMonment[indexPath.row]["trendsettinglooks"] as? String
         return uonnicell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.recommendationsView {
-            guard let userid = recommentuser[indexPath.row]["visualDiary"] as? Int else { return  }
+            guard let userid = recommentuser[indexPath.row]["stylishhats"] as? Int else { return  }
             let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/HomePage/index?userId="  + "\(userid)"
             self.creativeExchange(Everyroute:mainRoute)
             
         }
         
         
-        guard let itemid = recommendMonment[indexPath.row]["chicaccessories"] as? String else { return  }
+        guard let itemid = recommendMonment[indexPath.row]["chicaccessories"] as? Int else { return  }
  
         let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/DynamicDetails/index?dynamicId="  + "\(itemid)"
         self.creativeExchange(Everyroute:mainRoute)

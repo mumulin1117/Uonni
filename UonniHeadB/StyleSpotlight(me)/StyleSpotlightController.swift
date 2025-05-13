@@ -2,7 +2,7 @@
 //  StyleSpotlightController.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/9.
+//  Created by UonniHeadB on 2025/5/9.
 //
 
 import UIKit
@@ -33,10 +33,14 @@ class StyleSpotlightController: ArtistryController {
         addTouchupinside()
         
         creativeExpression()
+        relationFriendUo.layer.cornerRadius = 12
+        relationFriendUo.layer.masksToBounds = true
     }
     
     private func creativeExpression()  {
         artisticHeader.layer.masksToBounds = true
+        relationFolloweUo.layer.cornerRadius = 12
+        relationFolloweUo.layer.masksToBounds = true
         artisticHeader.contentMode = .scaleAspectFill
     }
     
@@ -69,7 +73,13 @@ extension StyleSpotlightController{
         
     }
     
-    private func addTouchupinside()  {
+    private func addTouchupinside()
+    {
+        
+        relationFansUo.layer.cornerRadius = 12
+        relationFansUo.layer.masksToBounds = true
+        
+        
         ecoEdit.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)
         relationFriendUo.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)
         relationFriendUo.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)

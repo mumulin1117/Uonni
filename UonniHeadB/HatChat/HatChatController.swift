@@ -2,7 +2,7 @@
 //  HatChatController.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/9.
+//  Created by UonniHeadB on 2025/5/9.
 //
 
 import UIKit
@@ -49,7 +49,7 @@ class HatChatController: ArtistryController {
         recommendationsView.backgroundColor = .clear
         recommendationsView.delegate = self
         recommendationsView.dataSource = self
-        recommendationsView.register(DnnoCamesagCell.self, forCellWithReuseIdentifier: "DnnoCamesagCell")
+        recommendationsView.register(UINib(nibName: "DnnoCamesagCell", bundle: nil), forCellWithReuseIdentifier: "DnnoCamesagCell")
         
         
       
@@ -137,7 +137,7 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
            
         }
         uonnicell.tovhatki.tag = indexPath.row
-        uonnicell.tovhatki.addTarget(self, action: #selector(fashionDiversity(index:)), for: .touchUpInside)
+//        uonnicell.tovhatki.addTarget(self, action: #selector(fashionDiversity(index:)), for: .touchUpInside)
         
         
         uonnicell.headwearName.text = recommendMonment[indexPath.row]["fashionmoments"] as? String
@@ -149,7 +149,7 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         
-        guard let itemid = recommendMonment[indexPath.row]["stylesharing"] as? String else { return  }
+        guard let itemid = recommendMonment[indexPath.row]["stylesharing"] as? Int else { return  }
  
         let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/privateChat/index?userId="  + "\(itemid)"
         self.creativeExchange(Everyroute:mainRoute)
@@ -157,12 +157,12 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
     }
     
     
-   @objc func fashionDiversity(index:UIButton) {
-       guard let itemid = recommendMonment[index.tag]["stylesharing"] as? String else { return  }
-
-       let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/privateChat/index?userId="  + "\(itemid)" + "?CallVideo=1"
-       self.creativeExchange(Everyroute:mainRoute)
-   
-   }
+//   @objc func fashionDiversity(index:UIButton) {
+//       guard let itemid = recommendMonment[index.tag]["stylesharing"] as? Int else { return  }
+//
+//       let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/privateChat/index?userId="  + "\(itemid)" + "CallVideo=1"
+//       self.creativeExchange(Everyroute:mainRoute)
+//   
+//   }
     
 }

@@ -2,7 +2,7 @@
 //  DnnovationVidrCell.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/12.
+//  Created by UonniHeadB on 2025/5/12.
 //
 
 import UIKit
@@ -87,11 +87,6 @@ class DnnovationVidrCell: UICollectionViewCell {
         postConttnwearLbl.textColor = .white
         postConttnwearLbl.font = UIFont(name: "Helvetica", size: 15)
         
-        
-       
-        
-        
-       
     }
     
     
@@ -111,6 +106,20 @@ class DnnovationVidrCell: UICollectionViewCell {
         interactionUser.snp.makeConstraints { make in
             make.width.height.equalTo(28)
             make.bottom.right.equalTo(artisticHeader)
+        }
+        
+        contentView.addSubview(headwearName)
+        headwearName.snp.makeConstraints { make in
+            make.left.equalTo(artisticHeader.snp.right).offset(9)
+            make.top.equalTo(artisticHeader).offset(3)
+        }
+        
+        let aiuu = UIImageView(image: UIImage.init(named: "cospla"))
+        contentView.addSubview(aiuu)
+        aiuu.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.equalTo(44)
+            make.height.equalTo(61)
         }
     }
     
