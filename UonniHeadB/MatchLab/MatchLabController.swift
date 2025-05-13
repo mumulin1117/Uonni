@@ -15,7 +15,7 @@ class MatchLabController: ArtistryController {
             trendsettingideas()
         }
     }
-    private var recommendMonment:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
+    private var recommendMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
     @IBOutlet weak var recommendationsView: UICollectionView!
     
     @IBOutlet weak var hatsForsession: UIButton!
@@ -104,7 +104,7 @@ extension MatchLabController{
                 return
             }
             
-            self.recommendMonment = user.filter({ dic in
+            self.recommendMonment["GlobalHatwalk"] = user.filter({ dic in
            
                 return (dic["hatmatching"] as? String)  != nil
                
@@ -140,26 +140,26 @@ extension MatchLabController:UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
-        return recommendMonment.count
+        return recommendMonment["GlobalHatwalk"]?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "DnnovationVidrCell", for: indexPath) as! DnnovationVidrCell
-        if let imglink = recommendMonment[indexPath.row]["hatmatching"] as? String,let imageUrl = URL(string: imglink) {
+        if let imglink = recommendMonment["GlobalHatwalk"]?[indexPath.row]["hatmatching"] as? String,let imageUrl = URL(string: imglink) {
             uonnicell.artisticSporty.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
-        if let imglink = recommendMonment[indexPath.row]["hatcollections"] as? String,let imageHeaderUrl = URL(string: imglink) {
+        if let imglink = recommendMonment["GlobalHatwalk"]?[indexPath.row]["hatcollections"] as? String,let imageHeaderUrl = URL(string: imglink) {
             uonnicell.artisticHeader.kf.setImage(with: imageHeaderUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
-        uonnicell.postConttnwearLbl.text = recommendMonment[indexPath.row]["creativeexpression"] as? String
-        uonnicell.headwearName.text = recommendMonment[indexPath.row]["trendsettinglooks"] as? String
+        uonnicell.postConttnwearLbl.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["creativeexpression"] as? String
+        uonnicell.headwearName.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["trendsettinglooks"] as? String
         
-        let timecount = recommendMonment[indexPath.row]["exclusivedesigns"] as? Int ?? 0
+        let timecount = recommendMonment["GlobalHatwalk"]?[indexPath.row]["exclusivedesigns"] as? Int ?? 0
         
         uonnicell.postTimewearLbl.text = formatExclusiveDesignTime( TimeInterval(timecount)) //
         return uonnicell
@@ -207,7 +207,7 @@ extension MatchLabController:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         
-        guard let itemid = recommendMonment[indexPath.row]["chicaccessories"] as? Int else { return  }
+        guard let itemid = recommendMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
  
         let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/DynamicDetails/index?dynamicId="  + "\(itemid)"
         self.creativeExchange(Everyroute:mainRoute)

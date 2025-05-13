@@ -14,8 +14,9 @@ class GlobalHatwalkController: ArtistryController {
             trendsettingideas()
         }
     }
-    private var recommentuser:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
-    private var recommendMonment:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
+    private var recommentuser:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
+    
+    private var recommendMonment:Dictionary<String,Array<Dictionary<String,Any>>> = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
     
     @IBOutlet weak var recommendationsView: UICollectionView!
     @IBOutlet weak var artistryView: UICollectionView!
@@ -107,7 +108,7 @@ extension GlobalHatwalkController{
                 return
             }
             
-            self.recommentuser = user
+            self.recommentuser["GlobalHatwalk"] = user
             
             self.recommendationsView.reloadData()
             
@@ -142,7 +143,7 @@ extension GlobalHatwalkController{
                 return
             }
             
-            self.recommendMonment = user.filter({ dic in
+            self.recommendMonment["GlobalHatwalk"] = user.filter({ dic in
            
                 return (dic["hatmatching"] as? String)  == nil
                
@@ -180,50 +181,50 @@ extension GlobalHatwalkController:UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.recommendationsView {
-            return recommentuser.count
+            return recommentuser["GlobalHatwalk"]?.count ?? 0
         }
-        return recommendMonment.count
+        return recommendMonment["GlobalHatwalk"]?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.recommendationsView {
             let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeadwearuserCell", for: indexPath) as! HeadwearuserCell
-            if let imglink = recommentuser[indexPath.row]["creativeheadpieces"] as? String,let imageUrl = URL(string: imglink) {
+            if let imglink = recommentuser["GlobalHatwalk"]?[indexPath.row]["creativeheadpieces"] as? String,let imageUrl = URL(string: imglink) {
                 uonnicell.artisticHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
 
             }
-            uonnicell.headwearName.text = recommentuser[indexPath.row]["trendycaps"] as? String
+            uonnicell.headwearName.text = recommentuser["GlobalHatwalk"]?[indexPath.row]["trendycaps"] as? String
             return uonnicell
         }
         
         let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "Headinsights_Cell", for: indexPath) as! Headinsights_Cell
-        if let imglink = (recommendMonment[indexPath.row]["fashioncreativity"] as? Array<String>)?.first,let imageUrl = URL(string: imglink) {
+        if let imglink = (recommendMonment["GlobalHatwalk"]?[indexPath.row]["fashioncreativity"] as? Array<String>)?.first,let imageUrl = URL(string: imglink) {
             uonnicell.artisticSporty.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
-        if let imglink = recommendMonment[indexPath.row]["hatcollections"] as? String,let imageHeaderUrl = URL(string: imglink) {
+        if let imglink = recommendMonment["GlobalHatwalk"]?[indexPath.row]["hatcollections"] as? String,let imageHeaderUrl = URL(string: imglink) {
             uonnicell.artisticHeader.kf.setImage(with: imageHeaderUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
        
-        uonnicell.artisticAttitude.image = UIImage(named: ((recommendMonment[indexPath.row]["headwearart"] as? Int) == 1) ? "notheadertYES" : "notheadert")
-        uonnicell.headwearName.text = recommendMonment[indexPath.row]["trendsettinglooks"] as? String
+        uonnicell.artisticAttitude.image = UIImage(named: ((recommendMonment["GlobalHatwalk"]?[indexPath.row]["headwearart"] as? Int) == 1) ? "notheadertYES" : "notheadert")
+        uonnicell.headwearName.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["trendsettinglooks"] as? String
         return uonnicell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.recommendationsView {
-            guard let userid = recommentuser[indexPath.row]["stylishhats"] as? Int else { return  }
+            guard let userid = recommentuser["GlobalHatwalk"]?[indexPath.row]["stylishhats"] as? Int else { return  }
             let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/HomePage/index?userId="  + "\(userid)"
             self.creativeExchange(Everyroute:mainRoute)
             
         }
         
         
-        guard let itemid = recommendMonment[indexPath.row]["chicaccessories"] as? Int else { return  }
+        guard let itemid = recommendMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
  
         let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/DynamicDetails/index?dynamicId="  + "\(itemid)"
         self.creativeExchange(Everyroute:mainRoute)

@@ -9,9 +9,18 @@ import UIKit
 import SVProgressHUD
 
 class HatChatController: ArtistryController {
-    
+    struct MillineryMessageThread {
+        let designerID: String
+        let atelierName: String
+        let latestAccessoryDesign: String  // 最新头饰设计描述
+        let previewSketchURL: String      // 设计草图预览图
+        let unreadMessageCount: Int
+        let lastExchangeTime: TimeInterval // 最后交流时间戳
+        let collectionSeason: String       // 所属系列季节
+        
+    }
    
-    private var recommendMonment:Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
+    private var recommendMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
     @IBOutlet weak var recommendationsView: UICollectionView!
     
 
@@ -78,7 +87,7 @@ extension HatChatController{
                 return
             }
             
-            self.recommendMonment = user.map { dix in
+            self.recommendMonment["GlobalHatwalk"] = user.map { dix in
                 if let ONearrar = (dix["hatlovers"] as? Array<[String:Any]>)?.first{
                     ONearrar
                 }else{
@@ -124,22 +133,22 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
-        return recommendMonment.count
+        return recommendMonment["GlobalHatwalk"]?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "DnnoCamesagCell", for: indexPath) as! DnnoCamesagCell
         
-        if let imglink = recommendMonment[indexPath.row]["creativecommunity"] as? String,let imageUrl = URL(string: imglink) {
+        if let imglink = recommendMonment["GlobalHatwalk"]?[indexPath.row]["creativecommunity"] as? String,let imageUrl = URL(string: imglink) {
             uonnicell.artisticHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
         uonnicell.tovhatki.tag = indexPath.row
  
-        uonnicell.headwearName.text = recommendMonment[indexPath.row]["fashionmoments"] as? String
-        uonnicell.postConttnwearLbl.text = recommendMonment[indexPath.row]["beautyindetails"] as? String
+        uonnicell.headwearName.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["fashionmoments"] as? String
+        uonnicell.postConttnwearLbl.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["beautyindetails"] as? String
         return uonnicell
         
     }
@@ -147,7 +156,7 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         
-        guard let itemid = recommendMonment[indexPath.row]["stylesharing"] as? Int else { return  }
+        guard let itemid = recommendMonment["GlobalHatwalk"]?[indexPath.row]["stylesharing"] as? Int else { return  }
  
         let mainRoute =  ExplorationRequestBuilder.fashionInspiration + "pages/privateChat/index?userId="  + "\(itemid)"
         self.creativeExchange(Everyroute:mainRoute)
