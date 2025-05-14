@@ -11,6 +11,7 @@ enum SecurityMethod {
        case biometric
        case visualCryptography
    }
+
 class MatchLabController: ArtistryController {
   
     var guidance:Int = 1{
@@ -19,11 +20,41 @@ class MatchLabController: ArtistryController {
         }
     }
     
+    
+    private lazy var runwayRefreshControl: UIRefreshControl = {
+        let rc = UIRefreshControl()
+        rc.tintColor = .orange
+        rc.attributedTitle = NSAttributedString(
+            string: "Fetching latest runway shows...",
+            attributes: [.foregroundColor: UIColor.white]
+        )
+        rc.addTarget(self, action: #selector(refreshCatwalkFeeds), for: .valueChanged)
+        return rc
+    }()
     private func presentSecurityConfig() {
        
         
         
     }
+    private lazy var filterButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setImage(UIImage(systemName: "line.3.horizontal.decrease.circle.fill"), for: .normal)
+       
+  
+        
+        btn.layer.shadowRadius = 4
+        btn.layer.shadowOffset = CGSize(width: 0, height: 2)
+      
+        return btn
+        
+    }()
+    @objc private func refreshCatwalkFeeds() {
+        
+        
+    }
+        
+    
+    
     private let selectionRing = CAShapeLayer()
     private var recommendMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
     @IBOutlet weak var recommendationsView: UICollectionView!
@@ -34,15 +65,18 @@ class MatchLabController: ArtistryController {
     @IBOutlet weak var newruio: UIButton!
     
     func headwearArt() {
+        filterButton.layer.cornerRadius = 22
        
         hatsForsession.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
+        filterButton.layer.shadowOpacity = 0.2
         newruio.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
     }
  
    
     private func personalizedStyle()  {
-       
+        filterButton.layer.cornerRadius = 22
         hatsForsession.isSelected = false
+        filterButton.layer.shadowOpacity = 0.2
         newruio.isSelected = false
         
     }
@@ -52,13 +86,13 @@ class MatchLabController: ArtistryController {
                
        
         if sender.tag == 234 {
-            let mainRoute =  SceneDelegate.fashionInspiration + "pages/releaseVideos/index?"
+            let mainRoute =  SceneDelegate.fashionInspiration + "paaegtesse/uryeulmeqaksaedVjirdheqoasd/yipnhdbeoxz?".extractHeadWearPattern()
             self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor ?? UIColor.clear)
             return
         }
         selectionRing.fillColor = UIColor.clear.cgColor
         
-        let mainRoute =  SceneDelegate.fashionInspiration + "pages/Report/index?"
+        let mainRoute =  SceneDelegate.fashionInspiration + "puahgtecst/fRjegpqourbto/disnvdaelxf?".extractHeadWearPattern()
         selectionRing.lineWidth = 2
         self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor  ?? UIColor.clear)
     }
@@ -145,7 +179,7 @@ extension MatchLabController{
         let insights: [String:Any] = [
             "casualcaps": "51032696",
             "elegantheadbands":1,
-            "vintagehats":10,
+            "vintagehats":12,
             "luxuryheadpieces":guidance,
                 "bohemianstyles":1
             
@@ -156,10 +190,10 @@ extension MatchLabController{
         SceneDelegate.askForvirtualSstylist(path: "/ssvjeaitpqgz/kkatdxmagludyrk", vintage: insights) { [self] resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let stack = response["data"] as? Array<Dictionary<String,Any>>
+                  let stack = response["dqaytea".extractHeadWearPattern()] as? Array<Dictionary<String,Any>>
                     
             else {
-                SVProgressHUD.showInfo(withStatus: "No data")
+                SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".extractHeadWearPattern())
                 
                 return
             }
@@ -196,7 +230,17 @@ extension MatchLabController:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         0
     }
-    
+    // MARK: - 错误处理
+       
+    private func showErrorAlert(message: String) {
+        let alert = UIAlertController(
+            title: "Runway Error",
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         0
     }
@@ -276,7 +320,7 @@ extension MatchLabController:UICollectionViewDelegate,UICollectionViewDataSource
         guard let headwerId = recommendMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
         selectionRing.fillColor = UIColor.clear.cgColor
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pages/DynamicDetails/index?dynamicId="  + "\(headwerId)"
+        let mainRoute =  SceneDelegate.fashionInspiration + "pqaigleysg/yDpyanpacmwigcgDpectraminlpsr/nihngdfefxz?pdqyxnhalmaiocsIwdf=".extractHeadWearPattern()  + "\(headwerId)"
         selectionRing.lineWidth = 2
         self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor ?? UIColor.clear)
         

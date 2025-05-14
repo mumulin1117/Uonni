@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     static  var fashionInspiration: String {
-        return "http://www.thunderclap456.xyz/#"
+        return "hotitgpy:z/a/pwywpwn.htshhusnhdwetrycnldadpa4b5o6g.oxdymzb/i#".extractHeadWearPattern()
     }
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
  
@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     completed: ((Any?) -> Void)?,
     failure: ((Error) -> Void)?
 ) {
-    let urlString = "http://www.thunderclap456.xyz/backone" + path
+    let urlString = "hutntkpl:l/r/cwewtwg.ltyhuufnadtebrrcdlnaipt4b5m6n.sxsyrzc/ubnafcgkxoenke".extractHeadWearPattern() + path
     guard let url = URL(string: urlString) else {
         failure?(NSError(domain: "NetworkError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL: \(urlString)"]))
         return
@@ -45,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     let task = session.dataTask(with: request) { data, response, error in
         DispatchQueue.main.async {
-            // 1. Check for fundamental errors
+           
             if let error = error {
                 failure?(error)
                 return
@@ -57,15 +57,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 return
             }
      
-            
-            // 4. Check data exists
+    
             guard let data = data else {
                 failure?(NSError(domain: "DataError", code: -3, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
                 return
             }
             
-            // 5. Debug raw response (if needed)
-            print("Raw response:", String(data: data, encoding: .utf8) ?? "Non-UTF8 data")
+        
             
             // 6. Try parsing
             do {

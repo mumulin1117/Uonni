@@ -75,7 +75,9 @@ class DiversityViewController: UIViewController , WKScriptMessageHandler {
     }
     private var enthusiasm:WKWebView?
     private var stylish:String
-    init(_stylish: String) {
+    private var ShareingImage:UIImage
+    init(_stylish: String,ShareingImage:UIImage) {
+        self.ShareingImage = ShareingImage
         self.stylish = _stylish
         super.init(nibName: nil, bundle: nil)
         actionButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
@@ -95,7 +97,9 @@ class DiversityViewController: UIViewController , WKScriptMessageHandler {
         if signal.name == "transitionToVirtualBoutique" {
             if let hat =  signal.body as? String{
                 actionButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
-                self.navigationController?.pushViewController(DiversityViewController.init(_stylish:hat), animated: true)
+                let shareimgge = UIImage.init(named: "seasonalFul")!
+                
+                self.navigationController?.pushViewController(DiversityViewController.init(_stylish:hat, ShareingImage: shareimgge), animated: true)
             }
             return
         }
@@ -124,7 +128,7 @@ class DiversityViewController: UIViewController , WKScriptMessageHandler {
                 if psPurch.needsFinishTransaction {
                     SwiftyStoreKit.finishTransaction(psPurch.transaction)
                 }
-                SVProgressHUD.showSuccess(withStatus: "pay successful!")
+                SVProgressHUD.showSuccess(withStatus: "phagyx hssuicqceeusjsnfhudln!".extractHeadWearPattern())
            
                 self.enthusiasm?.evaluateJavaScript("trendCreditsAddedWithFlair()", completionHandler: nil)
             }else if case .error(let error) = psResult {
@@ -160,10 +164,10 @@ class DiversityViewController: UIViewController , WKScriptMessageHandler {
     }
     
     
-    lazy var globalCommunity: UIImageView = {
+    private lazy var globalCommunity: UIImageView = {
         let global = UIImageView(frame: UIScreen.main.bounds)
         
-        global.image = UIImage.init(named: "seasonalFul")
+        global.image = ShareingImage
         return global
     }()
    

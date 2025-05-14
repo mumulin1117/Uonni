@@ -48,14 +48,14 @@ class HatChatController: ArtistryController {
         if sender.tag == 23 {
             selectionRing.fillColor = UIColor.clear.cgColor
            
-            let mainRoute =  SceneDelegate.fashionInspiration + "pages/screenplay/index?"
+            let mainRoute =  SceneDelegate.fashionInspiration + "puangeexsp/wsrcxreeaeanxprljahyf/zianydoejxn?".extractHeadWearPattern()
             selectionRing.lineWidth = 2
             self.creativeExchange(Everyroute:mainRoute, foreColor: sender.backgroundColor ?? .clear)
             return
         }
         selectionRing.fillColor = UIColor.clear.cgColor
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pages/CreateRole/index?"
+        let mainRoute =  SceneDelegate.fashionInspiration + "pjaigkeqsv/aCrraegajtveqRnollwek/jilnndjepxi?".extractHeadWearPattern()
         selectionRing.lineWidth = 2
         self.creativeExchange(Everyroute:mainRoute, foreColor: sender.backgroundColor ?? .clear)
        
@@ -193,10 +193,10 @@ extension HatChatController{
             self.configureAtelierGallery()
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let user = response["data"] as? Array<Dictionary<String,Any>>
+                  let user = response["dqaytea".extractHeadWearPattern()] as? Array<Dictionary<String,Any>>
                     
             else {
-                SVProgressHUD.showInfo(withStatus: "No data")
+                SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".extractHeadWearPattern())
                 if self.seasonLabel.isHidden == true {
                     self.view.addSubview(self.seasonLabel)
                 }
@@ -272,7 +272,7 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
     private func loadSampleData() {
         
         SVProgressHUD.dismiss()
-        if self.recommendMonment.count == 0{
+        if self.recommendMonment["GlobalHatwalk"]?.count ?? 0 == 0{
             self.headgear.isHidden = false
             self.fusion.isHidden = false
         }else{
@@ -323,7 +323,7 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
         actionButton.setTitleColor(.white, for: .normal)
         selectionRing.fillColor = UIColor.clear.cgColor
         actionButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
-        let mainRoute =  SceneDelegate.fashionInspiration + "pages/privateChat/index?userId="  + "\(itemid)"
+        let mainRoute =  SceneDelegate.fashionInspiration + "peamgieast/lpnrminvgabtmegCjhcaetk/jiqnudjerxq?supshecreIgdk=".extractHeadWearPattern()  + "\(itemid)"
        
        
         actionButton.layer.cornerRadius = 8

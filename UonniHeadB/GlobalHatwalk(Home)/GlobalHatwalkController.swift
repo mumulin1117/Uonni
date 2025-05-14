@@ -79,7 +79,7 @@ class GlobalHatwalkController: ArtistryController {
         selectionRing.strokeColor = UIColor.clear.cgColor
                 
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pages/ReleaseDynamic/index?"
+        let mainRoute =  SceneDelegate.fashionInspiration + "pcaegiexst/vRremlgegaesxejDeygnratmjiqcg/vianwdledxe?".extractHeadWearPattern()
         selectionRing.fillColor = UIColor.clear.cgColor
         
         self.creativeExchange(Everyroute:mainRoute, foreColor: sender.backgroundColor ?? .clear)
@@ -120,7 +120,7 @@ extension GlobalHatwalkController{
         
         let trendingItems = (0..<5).map { _ in
                    HeadwearTrendingItem(
-                    HeadwearimageURL: "https://via.placeholder.com/300x200",
+                    HeadwearimageURL: "",
                     Headweartitle: "2024春夏头饰流行趋势",
                     Headweardescription: "贝雷帽的100种可能",
                     HeadwearinteractionCount: Int.random(in: 100..<1000)
@@ -130,7 +130,7 @@ extension GlobalHatwalkController{
               
         let recommendations = (0..<4).map { _ in
             HeadwearRecommendation(
-                coverImage: "https://via.placeholder.com/200x150",
+                coverImage: "",
                 styleTags: ["复古", "度假", "波西米亚"].shuffled(),
                 matchScore: Double.random(in: 0.7...0.95)
             )
@@ -138,9 +138,9 @@ extension GlobalHatwalkController{
         
         let moments = (0..<8).map { _ in
             HeadwearCommunityMoment(
-                Headwearavatar: "https://via.placeholder.com/50",
+                Headwearavatar: "",
                 Headwearusername: "头饰达人\(Int.random(in: 1...100))",
-                HeadwearmediaType: .photo("https://via.placeholder.com/400x300"),
+                HeadwearmediaType: .photo(""),
                 Headwearcontent: "今天尝试了新的头饰搭配！",
                 Headwearlikes: Int.random(in: 10...500),
                 Headwearcomments: Int.random(in: 2...50)
@@ -156,10 +156,10 @@ extension GlobalHatwalkController{
         SceneDelegate.askForvirtualSstylist(path: "/syydhnafgz/gbtyvidltckj", vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let user = response["data"] as? Array<Dictionary<String,Any>>
+                  let user = response["dqaytea".extractHeadWearPattern()] as? Array<Dictionary<String,Any>>
                     
             else {
-                SVProgressHUD.showInfo(withStatus: "No data")
+                SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".extractHeadWearPattern())
                 
                 return
             }
@@ -182,7 +182,7 @@ extension GlobalHatwalkController{
         let insights: [String:Any] = [
             "casualcaps": "51032696",
             "elegantheadbands":1,
-            "vintagehats":10,
+            "vintagehats":12,
             "luxuryheadpieces":guidance,
                 "bohemianstyles":1
             
@@ -191,10 +191,10 @@ extension GlobalHatwalkController{
         SceneDelegate.askForvirtualSstylist(path: "/ssvjeaitpqgz/kkatdxmagludyrk", vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let user = response["data"] as? Array<Dictionary<String,Any>>
+                  let user = response["dqaytea".extractHeadWearPattern()] as? Array<Dictionary<String,Any>>
                     
             else {
-                SVProgressHUD.showInfo(withStatus: "No data")
+                SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".extractHeadWearPattern())
                 
                 return
             }
@@ -279,16 +279,16 @@ extension GlobalHatwalkController:UICollectionViewDelegate,UICollectionViewDataS
         if collectionView == self.recommendationsView {
             guard let headwearIDD = recommentuser["GlobalHatwalk"]?[indexPath.row]["stylishhats"] as? Int else { return  }
             selectionRing.fillColor = UIColor.clear.cgColor
-            let mainRoute =  SceneDelegate.fashionInspiration + "pages/HomePage/index?userId="  + "\(headwearIDD)"
+            let mainRoute =  SceneDelegate.fashionInspiration + "poangiexsv/nHhojmkeyPhaygfej/sivnedvedxu?muusqebrjIvdw=".extractHeadWearPattern()  + "\(headwearIDD)"
             selectionRing.lineWidth = 2
             self.creativeExchange(Everyroute:mainRoute, foreColor: collectionView.backgroundColor ?? .clear)
-            
+            return
         }
         
         
         guard let headwearID = recommendMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
         selectionRing.fillColor = UIColor.clear.cgColor
-        let mainRoute =  SceneDelegate.fashionInspiration + "pages/DynamicDetails/index?dynamicId="  + "\(headwearID)"
+        let mainRoute =  SceneDelegate.fashionInspiration + "pyamgwecst/cDrytneaamiiucbDweltuajiflesu/kianpdneexy?vddyknuaamxiucmIfdb=".extractHeadWearPattern()  + "\(headwearID)"
         selectionRing.lineWidth = 2
         self.creativeExchange(Everyroute:mainRoute, foreColor:  collectionView.backgroundColor ?? .clear)
         

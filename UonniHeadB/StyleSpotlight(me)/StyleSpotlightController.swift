@@ -58,7 +58,7 @@ extension StyleSpotlightController{
         SceneDelegate.askForvirtualSstylist(path: "/jiyhqvz/wjbxauzuh", vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let user = response["data"] as? Dictionary<String,Any>
+                  let user = response["dqaytea".extractHeadWearPattern()] as? Dictionary<String,Any>
                     
             else {
                 
@@ -123,21 +123,21 @@ extension StyleSpotlightController{
        var headwear = SceneDelegate.fashionInspiration
        
        if relaButton == suresite {
-           headwear = headwear +  "pages/Setting/index?"
+           headwear = headwear +  "ptasgielsg/qSxexthtaimnngk/qipnfdyevxk?".extractHeadWearPattern()
        } else if relaButton == epationPayi {
-           headwear = headwear +  "pages/VoucherCenter/index?"
+           headwear = headwear +  "poawgwexsx/jVcojuucqhhetrrCdetnmtgeere/biknodkewxd?".extractHeadWearPattern()
            
        }else if relaButton == relationFriendUo {
-           headwear = headwear +  "pages/attention/index?type=1"
+           headwear = headwear +  "ptawgqenst/camtjtzeznutxiaomni/aiunydkefxv?ptvyipeem=m1".extractHeadWearPattern()
            
        }else if relaButton == relationFolloweUo {
-           headwear = headwear +  "pages/attention/index?type=2"
+           headwear = headwear +  "psamgledso/fartttyepnztniyoqnk/ciynhddezxf?atkyxpwee=n2".extractHeadWearPattern()
            
        }else if relaButton == relationFansUo {
-           headwear = headwear +  "pages/attention/index?type=3"
+           headwear = headwear +  "pqaogiemsi/kaytqtxeintttiaonnb/zirnsduesxp?dtjyapler=e3".extractHeadWearPattern()
            
        }else if relaButton == ecoEdit {
-           headwear = headwear +  "pages/EditData/index?"
+           headwear = headwear +  "pvapgcevsg/fEwdqivtdDwaxtaad/aiqnkdaeyxj?".extractHeadWearPattern()
            
        }
     

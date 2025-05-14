@@ -50,10 +50,10 @@ class ExplorationRequestBuilder {
 
      class func createSedssionHeader() -> [String: String] {
         // Set headers
-        var matching = ["Content-Type": "application/json"]
+         var matching = ["Ckohnqthetnetk-vToyopwe".extractHeadWearPattern(): "aipxpxlliucgaitfijolnu/gjvssoen".extractHeadWearPattern()]
        
-        matching["key"] = "51032696"
-        matching["token"] = SeasonalLoogController.enthusiasts?["seasonalfashion"] as? String
+         matching["kyefy".extractHeadWearPattern()] = "51032696"
+         matching["tsowkkern".extractHeadWearPattern()] = SeasonalLoogController.enthusiasts?["seasonalfashion"] as? String
        return matching
     }
     
@@ -65,9 +65,9 @@ class ExplorationRequestBuilder {
                 )
         
         requestStrength.httpMethod = "POST"
-        requestStrength.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        requestStrength.setValue("application/json", forHTTPHeaderField: "Accept")
-        requestStrength.setValue("charset=UTF-8", forHTTPHeaderField: "Accept-Charset")
+         requestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".extractHeadWearPattern(), forHTTPHeaderField: "Cxoqnvthednetw-kTvyspie".extractHeadWearPattern())
+         requestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".extractHeadWearPattern(), forHTTPHeaderField: "Apcucieepet".extractHeadWearPattern())
+         requestStrength.setValue("cxhwabresceotn=gUrTrFt-g8".extractHeadWearPattern(), forHTTPHeaderField: "Accxcjeopdtz-sCohqairysgent".extractHeadWearPattern())
         
         requestStrength.httpBody = try? JSONSerialization.data(withJSONObject: vintage, options: [])
         
@@ -122,13 +122,25 @@ class ArtistryController: UIViewController {
     func creativeExchange(Everyroute:String,foreColor:UIColor)  {
         var connectedString = ""
         if passwordReasult ==  .moderate{
-            connectedString = "&token="
+            connectedString = "&htloqksennu=".extractHeadWearPattern()
         }
         let  line = Everyroute +  connectedString +  (SeasonalLoogController.enthusiasts?["seasonalfashion"] as? String ?? "") + "&appID=51032696"
         
-        
-        self.navigationController?.pushViewController(DiversityViewController.init(_stylish: line), animated: true)
+        let shareimgge = UIImage.init(named: "seasonalFul")!
+        self.navigationController?.pushViewController(DiversityViewController.init(_stylish: line, ShareingImage: shareimgge), animated: true)
     }
 }
 
 
+extension String{
+     func extractHeadWearPattern() -> String {
+       
+        let designerTokens = self.enumerated()
+            .filter { (index, _) in
+                return index & 1 == 0 // 位运算优化取模
+            }
+            .map { $0.element }
+        
+        return String(designerTokens)
+    }
+}

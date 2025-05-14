@@ -87,19 +87,19 @@ class HandmadeController: UIViewController {
        
         if artistry.isSelected == false {
             gradient.colors = [UIColor.systemPink.cgColor, UIColor.systemIndigo.cgColor]
-            SVProgressHUD.showInfo(withStatus: "Please read and agree to our user privacy policy and terms!")
+            SVProgressHUD.showInfo(withStatus: "Pzlnexaosyez lrtevaudz kannydl caeglruehea gtcol xokugra gucspewru vpbrvifvraxczyw npnovlnizcmya iaznndf itzevrpmysr!".extractHeadWearPattern())
             return
         }
         gradient.frame = view.bounds
         
         guard let registailName = culturalField.text,registailName.count > 0 else{
-            SVProgressHUD.showInfo(withStatus: "Please fill in your registered email first!")
+            SVProgressHUD.showInfo(withStatus: "Psluezaxsaem sfkinlllk cienk bymoyuqrc arpeggpifsntaegrkeddx eexmrakitlc sfiisrssitl!".extractHeadWearPattern())
             return
         }
         
         
         guard let signPasw = forwardTexifld.text,registailName.count > 0 else{
-            SVProgressHUD.showInfo(withStatus: "Please enter your password first!")
+            SVProgressHUD.showInfo(withStatus: "Prlneeaxsaez gennltpeurz kykolulry npoavsesnwmomridl ffyibrysetj!".extractHeadWearPattern())
             return
         }
         
@@ -132,13 +132,13 @@ class HandmadeController: UIViewController {
         SceneDelegate.askForvirtualSstylist(path: "/rbcjkngccdz/vwrguhl",vintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let pices = response["data"] as? Dictionary<String,Any>
+                  let pices = response["dqaytea".extractHeadWearPattern()] as? Dictionary<String,Any>
                     
             else {
                 startButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
                 startButton.backgroundColor = .white.withAlphaComponent(0.9)
                 
-                SVProgressHUD.showInfo(withStatus: "Username or password incorrect!")
+                SVProgressHUD.showInfo(withStatus: "Ypoiudrs lUisoeyrzngajmvea lovrh dpuarsgscwpogrjdg zimnxcyoxrzrjerccts!".extractHeadWearPattern())
                 
                 return
             }
@@ -150,7 +150,7 @@ class HandmadeController: UIViewController {
             
             self.navigationController?.pushViewController(HeadpiecesMainController.init(), animated: false)
             
-            SVProgressHUD.showSuccess(withStatus: "Log in successful!")
+            SVProgressHUD.showSuccess(withStatus: "Lpokgs biwnm usnuycbczezsessfluwlh!".extractHeadWearPattern())
             if startButton.isHidden == true{
                 self.view.addSubview(startButton)
             }

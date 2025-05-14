@@ -65,7 +65,7 @@ class HeadwearPolicyController: UIViewController, UICollectionViewDelegate {
     private lazy var fashionBackButton: UIButton = {
            let button = UIButton(type: .system)
            button.setImage(UIImage(systemName: "chevron.left.circle.fill"), for: .normal)
-           button.tintColor = UIColor(hex: "#D8BFD8") // Thistle
+           button.tintColor = UIColor(hexUonniColor: "#D8BFD8") // Thistle
            button.addTarget(self, action: #selector(returnToStyleHub), for: .touchUpInside)
            button.translatesAutoresizingMaskIntoConstraints = false
            return button
@@ -176,13 +176,13 @@ class HeadwearPolicyController: UIViewController, UICollectionViewDelegate {
     private func createStyleProtectionContent(tag:Int) -> NSAttributedString {
         let sectionTitleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 18, weight: .semibold),
-            .foregroundColor: UIColor(hex: "#BA55D3"), // Medium Orchid
+            .foregroundColor: UIColor(hexUonniColor: "#BA55D3"), // Medium Orchid
             .paragraphStyle: NSMutableParagraphStyle()
         ]
         
         let contentAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 15, weight: .regular),
-            .foregroundColor: UIColor(hex: "#E6E6FA"), // Lavender Mist
+            .foregroundColor: UIColor(hexUonniColor: "#E6E6FA"), // Lavender Mist
             .paragraphStyle: NSMutableParagraphStyle()
         ]
         
@@ -298,8 +298,8 @@ class HeadwearPolicyController: UIViewController, UICollectionViewDelegate {
         }
 }
 private extension UIColor {
-    convenience init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+    convenience init(hexUonniColor: String) {
+        let hex = hexUonniColor.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()
         Scanner(string: hex).scanHexInt64(&int)
         let a, r, g, b: UInt64
