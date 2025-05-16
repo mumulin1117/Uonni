@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftyStoreKit
 @main
 
 
@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+           
+        }
         return true
     }
 
