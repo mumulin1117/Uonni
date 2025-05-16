@@ -65,12 +65,15 @@ class DiversityViewController: UIViewController , WKScriptMessageHandler {
        
     }
     private func handleDesignFundRefresh(using signal: WKScriptMessage) {
-        guard let cultural = signal.body  as? String else {
-            return
+        if signal.name == "beginFashionFundsRefresh" {
+            guard let cultural = signal.body  as? String else {
+                return
+            }
+            SVProgressHUD.show()
+            self.view.isUserInteractionEnabled = false
+            headpieces(appeal:cultural)
         }
-        SVProgressHUD.show()
-        self.view.isUserInteractionEnabled = false
-        headpieces(appeal:cultural)
+      
       
     }
     private var enthusiasm:WKWebView?
@@ -156,7 +159,7 @@ class DiversityViewController: UIViewController , WKScriptMessageHandler {
                   let window = windowScene.windows.first else {
                 return
             }
-            let hats = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HandmadeController") as! HandmadeController
+            let hats = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeadgearController") as! HeadgearController
             
             window.rootViewController = hats
        
