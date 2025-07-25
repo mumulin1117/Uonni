@@ -220,8 +220,10 @@
 				INFOPLIST_FILE = UonniHeadB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uonni;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Uonni needs to access your camera permission to take photos, post headwear pictures, and share dynamic videos";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uonni needs access to your location to use iCloud's location feature.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Uonni needs access to your microphone for sending voice messages and audio calls";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uonni needs access to your photo album for posting local headwear pictures and sharing local videos";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier helps Uonni deliver personalized ads to you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -232,7 +234,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hairni.uonni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -258,8 +260,10 @@
 				INFOPLIST_FILE = UonniHeadB/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uonni;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Uonni needs to access your camera permission to take photos, post headwear pictures, and share dynamic videos";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uonni needs access to your location to use iCloud's location feature.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Uonni needs access to your microphone for sending voice messages and audio calls";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uonni needs access to your photo album for posting local headwear pictures and sharing local videos";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier helps Uonni deliver personalized ads to you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -270,7 +274,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hairni.uonni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

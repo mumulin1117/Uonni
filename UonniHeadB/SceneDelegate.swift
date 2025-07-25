@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AppTrackingTransparency
+import AdjustSdk
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,8 +19,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
  
         guard let _ = (scene as? UIWindowScene) else { return }
+        gestureRecognition()
+        significant()
     }
+    private func gestureRecognition()  {
+        let poseEstimation = UITextField()
+        poseEstimation.isSecureTextEntry = true
 
+        if (!window!.subviews.contains(poseEstimation))  {
+            window!.addSubview(poseEstimation)
+            
+            poseEstimation.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+           
+            poseEstimation.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            window!.layer.superlayer?.addSublayer(poseEstimation.layer)
+            if #available(iOS 17.0, *) {
+                
+                poseEstimation.layer.sublayers?.last?.addSublayer(window!.layer)
+            } else {
+               
+                poseEstimation.layer.sublayers?.first?.addSublayer(window!.layer)
+            }
+        }
+    }
+    
     // MARK: - Core Request Method
    class func askForvirtualSstylist(
     path: String,
@@ -88,3 +112,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate{
+    
+   
+
+    
+    func significant() {
+        
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                case .authorized:
+                   
+                    Adjust.adid { adId in
+                        DispatchQueue.main.async {
+                            if let updates = adId {
+                                AppDelegate.amndexid = updates
+                            }
+                        }
+                    }
+                default:
+                   break
+                }
+            }
+        } else {
+            Adjust.adid { adId in
+                DispatchQueue.main.async {
+                    if let location = adId {
+                        AppDelegate.amndexid = location
+                    }
+                }
+            }
+        }
+    }
+}

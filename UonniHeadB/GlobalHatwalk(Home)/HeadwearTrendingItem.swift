@@ -2,7 +2,7 @@
 //  struct HeadwearTrendingItem {     let imageURL: String     let title: String     let description: String     let interactionCount: Int HeadwearTrendingItem.swift
 //  UonniHeadB
 //
-//  Created by mumu on 2025/5/13.
+//  Created by  on 2025/5/13.
 //
 
 import UIKit
