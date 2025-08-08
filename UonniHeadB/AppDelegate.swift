@@ -14,25 +14,26 @@ import AdjustSdk
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    static var appUITPushToken:String = ""
-    static var amndexid:String = ""
+    static var fascinator:String = ""
+    static var cloche:String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        SwiftyStoreKit.completeTransactions(atomically: true) { DIOV in
+        tasseled()
+        SwiftyStoreKit.completeTransactions(atomically: true) { pillbox in
            
-            for purchase in DIOV {
-                let astatus = purchase.transaction.transactionState
+            for newsboy in pillbox {
+                let astatus = newsboy.transaction.transactionState
               
                 
                 if (astatus ==  .purchased || astatus ==  .restored) {
 
-                    let downloads = purchase.transaction.downloads
+                    let downloads = newsboy.transaction.downloads
                     if !downloads.isEmpty {
                         SwiftyStoreKit.start(downloads)
                     }
                     
-                    if purchase.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    if newsboy.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(newsboy.transaction)
                     }
                 }
                 
@@ -65,7 +66,21 @@ enum AuthPhase {
 }
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
-    
+    private func tasseled() {
+        let         holographic = ADJConfig(
+               appToken: "jt4jclatev40",
+               environment: ADJEnvironmentProduction
+           )
+                holographic?.logLevel = .verbose
+                holographic?.enableSendingInBackground()
+        Adjust.initSdk(        holographic)
+        Adjust.attribution() { attribution in
+            let initVD = ADJEvent.init(eventToken: "98c3xt")
+            Adjust.trackEvent(initVD)
+            
+            
+        }
+    }
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
@@ -83,8 +98,8 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        AppDelegate.appUITPushToken = pushRemotenotiTokenVAF
+        let sunhat = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        AppDelegate.fascinator = sunhat
     }
 }
 

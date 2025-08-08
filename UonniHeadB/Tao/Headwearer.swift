@@ -14,27 +14,17 @@ import AdjustSdk
 
 
 class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptMessageHandler {
-    private var snickerSculptor:WKWebView?
-    private var activetyIndicator:UIActivityIndicatorView?
-    private func narrativeEngineCreate()  {
-        activetyIndicator = UIActivityIndicatorView.init(style: .large)
-        activetyIndicator?.hidesWhenStopped = true
-        activetyIndicator?.color = UIColor.purple
-        
-        self.view.addSubview(activetyIndicator!)
-        activetyIndicator?.frame = CGRect.init(x: 0, y: 0, width: 70, height: 70)
-        activetyIndicator?.center = self.view.center
-        
-    }
-    var prankPhysicist:TimeInterval = Date().timeIntervalSince1970
+    private var snapback:WKWebView?
+   
+    var beanie:TimeInterval = Date().timeIntervalSince1970
     
-    private  var jesterJournalist = false
-    private var gagGeologist:String
+    private  var trapper = false
+    private var headscarf:String
     
-    init(riddleRanger:String,mischiefMeteorologist:Bool) {
-        gagGeologist = riddleRanger
+    init(bonnet:String,trilby:Bool) {
+        headscarf = bonnet
         
-        jesterJournalist = mischiefMeteorologist
+        trapper = trilby
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -44,9 +34,9 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        snickerSculptor?.configuration.userContentController.add(self, name: "rechargePay")
-        snickerSculptor?.configuration.userContentController.add(self, name: "Close")
-        snickerSculptor?.configuration.userContentController.add(self, name: "pageLoaded")
+        snapback?.configuration.userContentController.add(self, name: "rechargePay")
+        snapback?.configuration.userContentController.add(self, name: "Close")
+        snapback?.configuration.userContentController.add(self, name: "pageLoaded")
         
     }
         
@@ -54,44 +44,44 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        snickerSculptor?.configuration.userContentController.removeAllScriptMessageHandlers()
+        snapback?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
  
     private func AestheticPlogging()  {
-        let MicroNarrative = UIImage(named: "headerwear")
+        let ushanka = UIImage(named: "headerwear")
         
-        let StoryWeaving = UIImageView(image:MicroNarrative )
-        StoryWeaving.frame = self.view.frame
-        StoryWeaving.contentMode = .scaleAspectFill
-        view.addSubview(StoryWeaving)
+        let kippah = UIImageView(image:ushanka )
+        kippah.frame = self.view.frame
+        kippah.contentMode = .scaleAspectFill
+        view.addSubview(kippah)
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
         AestheticPlogging()
-        if jesterJournalist == true {
-            let  punProcessor = UIButton.init()
-            punProcessor.setBackgroundImage(UIImage.init(named: "mengBackg"), for: .normal)
-            punProcessor.setTitle("Log in", for: .normal)
-            punProcessor.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-            punProcessor.setTitleColor(.white, for: .normal)
-            punProcessor.isUserInteractionEnabled = false
-            view.addSubview(punProcessor)
-            punProcessor.translatesAutoresizingMaskIntoConstraints = false
+        if trapper == true {
+            let  mantilla = UIButton.init()
+            mantilla.setBackgroundImage(UIImage.init(named: "mengBackg"), for: .normal)
+            mantilla.setTitle("Log in", for: .normal)
+            mantilla.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+            mantilla.setTitleColor(.white, for: .normal)
+            mantilla.isUserInteractionEnabled = false
+            view.addSubview(mantilla)
+            mantilla.translatesAutoresizingMaskIntoConstraints = false
 
             NSLayoutConstraint.activate([
                 // make.centerX.equalToSuperview()
-                punProcessor.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                mantilla.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
                 
                 // make.height.equalTo(52)
-                punProcessor.heightAnchor.constraint(equalToConstant: 52),
+                mantilla.heightAnchor.constraint(equalToConstant: 52),
                 
                 // make.width.equalTo(335)
-                punProcessor.widthAnchor.constraint(equalToConstant: 335),
+                mantilla.widthAnchor.constraint(equalToConstant: 335),
                 
                 // make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
-                punProcessor.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+                mantilla.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                                   constant: -self.view.safeAreaInsets.bottom - 65)
             ])
         }
@@ -99,32 +89,31 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
         
         
          
-        let jokeJuggler = WKWebViewConfiguration()
-        jokeJuggler.allowsAirPlayForMediaPlayback = false
-        jokeJuggler.allowsInlineMediaPlayback = true
-        jokeJuggler.preferences.javaScriptCanOpenWindowsAutomatically = true
-        jokeJuggler.mediaTypesRequiringUserActionForPlayback = []
-        jokeJuggler.preferences.javaScriptCanOpenWindowsAutomatically = true
+        let bridal = WKWebViewConfiguration()
+        bridal.allowsAirPlayForMediaPlayback = false
+        bridal.allowsInlineMediaPlayback = true
+        bridal.preferences.javaScriptCanOpenWindowsAutomatically = true
+        bridal.mediaTypesRequiringUserActionForPlayback = []
+        bridal.preferences.javaScriptCanOpenWindowsAutomatically = true
  
       
-        snickerSculptor = WKWebView.init(frame: UIScreen.main.bounds, configuration: jokeJuggler)
-        snickerSculptor?.isHidden = true
-        snickerSculptor?.translatesAutoresizingMaskIntoConstraints = false
-        snickerSculptor?.scrollView.alwaysBounceVertical = false
+        snapback = WKWebView.init(frame: UIScreen.main.bounds, configuration: bridal)
+        snapback?.isHidden = true
+        snapback?.translatesAutoresizingMaskIntoConstraints = false
+        snapback?.scrollView.alwaysBounceVertical = false
         
-        snickerSculptor?.scrollView.contentInsetAdjustmentBehavior = .never
-        snickerSculptor?.navigationDelegate = self
+        snapback?.scrollView.contentInsetAdjustmentBehavior = .never
+        snapback?.navigationDelegate = self
         
-        snickerSculptor?.uiDelegate = self
-        snickerSculptor?.allowsBackForwardNavigationGestures = true
+        snapback?.uiDelegate = self
+        snapback?.allowsBackForwardNavigationGestures = true
    
-        if let trickTrapper = URL.init(string: gagGeologist) {
-            snickerSculptor?.load(NSURLRequest.init(url:trickTrapper) as URLRequest)
-            prankPhysicist = Date().timeIntervalSince1970
+        if let wreath = URL.init(string: headscarf) {
+            snapback?.load(NSURLRequest.init(url:wreath) as URLRequest)
+            beanie = Date().timeIntervalSince1970
         }
-        self.view.addSubview(snickerSculptor!)
-        narrativeEngineCreate()
-        self.activetyIndicator?.startAnimating()
+        self.view.addSubview(snapback!)
+        SVProgressHUD.show()
        
     }
     
@@ -163,23 +152,23 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        snickerSculptor?.isHidden = false
+        snapback?.isHidden = false
         
         
-        self.activetyIndicator?.stopAnimating()
-        if jesterJournalist == true {
+        SVProgressHUD.dismiss()
+        if trapper == true {
             SVProgressHUD.showSuccess(withStatus: "Login successful")
            
-            jesterJournalist = false
+            trapper = false
             
         }
 
-        let illusionInvestigator = "/opi/v1/anget"
-         let quirkQuark: [String: Any] = [
-            "angeo":"\(Int(Date().timeIntervalSince1970 - self.prankPhysicist*1000))"
+        let headband = "/opi/v1/anget"
+         let veil: [String: Any] = [
+            "angeo":"\(Int(Date().timeIntervalSince1970 - self.beanie*1000))"
          ]
       
-        AestheticTo.goofyGradient.sillySynapse( illusionInvestigator, pranktopia: quirkQuark)
+        AestheticTo.newsboy.upcycled( headband, artisan: veil)
        
     }
     
@@ -190,16 +179,16 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
       
  
         if message.name == "rechargePay",
-           let whimsyWatchmaker = message.body as? Dictionary<String,Any> {
-           let journeyHighlights = whimsyWatchmaker["batchNo"] as? String ?? ""
-           let orderCode = whimsyWatchmaker["orderCode"] as? String ?? ""
+           let sequin = message.body as? Dictionary<String,Any> {
+           let cap = sequin["batchNo"] as? String ?? ""
+           let embroidered = sequin["orderCode"] as? String ?? ""
          
 
             view.isUserInteractionEnabled = false
-            self.activetyIndicator?.startAnimating()
+            SVProgressHUD.show()
             
-            SwiftyStoreKit.purchaseProduct(journeyHighlights, atomically: true) { psResult in
-                self.activetyIndicator?.stopAnimating()
+            SwiftyStoreKit.purchaseProduct(cap, atomically: true) { psResult in
+                SVProgressHUD.dismiss()
                 self.view.isUserInteractionEnabled = true
                 if case .success(let psPurch) = psResult {
                     let psdownloads = psPurch.transaction.downloads
@@ -214,35 +203,35 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
                    
                    
                 
-                    guard let ticketData = SwiftyStoreKit.localReceiptData,
-                          let gettransID = psPurch.transaction.transactionIdentifier,
-                          gettransID.count > 5
+                    guard let feather = SwiftyStoreKit.localReceiptData,
+                          let leather = psPurch.transaction.transactionIdentifier,
+                          leather.count > 5
                     else {
                         SVProgressHUD.showInfo(withStatus: "No have receipt or ID is error")
                         
                         return
                       }
                     
-                    guard let jsonData = try? JSONSerialization.data(withJSONObject: ["orderCode":orderCode], options: [.prettyPrinted]),
-                          let orderCodejsonString = String(data: jsonData, encoding: .utf8) else{
+                    guard let crochet = try? JSONSerialization.data(withJSONObject: ["orderCode":embroidered], options: [.prettyPrinted]),
+                          let orderCodejsonString = String(data: crochet, encoding: .utf8) else{
                         
                         SVProgressHUD.showInfo(withStatus: "orderCode jsonString error")
                         
                         return
                     }
 
-                    AestheticTo.goofyGradient.sillySynapse("/opi/v1/virtualp", pranktopia: [
-                        "virtualp":ticketData.base64EncodedString(),//payload
-                        "virtualt":gettransID,//transactionId
+                    AestheticTo.newsboy.upcycled("/opi/v1/virtualp", artisan: [
+                        "virtualp":feather.base64EncodedString(),//payload
+                        "virtualt":leather,//transactionId
                         "virtualc":orderCodejsonString//callbackResult
-                    ]) { result in
+                    ],ispaGood: true) { result in
                        
                         self.view.isUserInteractionEnabled = true
                         
                         switch result{
                         case .success(_):
                             SVProgressHUD.showSuccess(withStatus: "Purchase successful")
-                            self.collisionDetection(charmUnitsValue:psPurch)
+                            self.designer(spotl:psPurch)
                         case .failure(let error):
                             
                             SVProgressHUD.showError(withStatus: "Purchase failed")
@@ -276,64 +265,56 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
 
             UserDefaults.standard.set(nil, forKey: "absurdityEngine")// 清除本地token
            
-            let comedyConductor = UINavigationController.init(rootViewController: Seasonalntroller.init())
-            comedyConductor.navigationBar.isHidden = true
+            let handwoven = UINavigationController.init(rootViewController: Seasonalntroller.init())
+            handwoven.navigationBar.isHidden = true
             
-            var whimsyWidget:UIWindow?
-            if let giggleGardener = (UIApplication.shared.connectedScenes
-                .first { $0.activationState == .foregroundActive } as? UIWindowScene)?
-                .windows
-                .first(where: \.isKeyWindow)  {
-                whimsyWidget = giggleGardener
-                
-            }
-            
-            whimsyWidget?.rootViewController = comedyConductor
+          
+            HeadgearController.romantic?.rootViewController = handwoven
         }
         
         if message.name == "pageLoaded" {
-            snickerSculptor?.isHidden = false
-            self.activetyIndicator?.stopAnimating()
+            snapback?.isHidden = false
+            SVProgressHUD.dismiss()
             
             
         }
     }
-    private func collisionDetection(charmUnitsValue:PurchaseDetails) {
-        let totlavalurPrice = [("ehssaktyuirzdexh","0.99"),
-                          ("zfdaruukeozqypkz","1.99"),
-                          ("ojwgvcmkxjneuloo","4.99"),
-                          ("zjzzaeqsayvqsrax","9.99"),
-                          ("edipfpvelzdfdofx","19.99"),
-                          ("newapp1xyz","29.99"),
-                          ("newapp2abc","39.99"),
-                          ("rfbjyrmwjhvpkdbo","49.99"),
-                          ("newapp3mno","89.99"),
-                          ("sfiemdoazucfeztp","99.99")]
+    private func designer(spotl:PurchaseDetails) {
+        let pageant = [("oztvqyxuuxnjmabx","99.99"),
+                          ("vksevccjfrrloraq","49.99"),
+                          ("cuptndpchkpqytbm","19.99"),
+                          ("fgxomzpcmsktmiks","9.99"),
+                          ("dhbjxrzxwpveajfx","4.99"),
+                          ("zkdhupekdlofripe","1.99"),
+                          ("spxdkkklbrztfvfk","0.99"),
+                          ("new_uonni_001_abc123","2.99"),
+                          ("new_uonni_002_def456","6.99"),
+                          ("new_uonni_003_ghi789","29.99")]
         
         
         
         
         
         
-        if let valurPriceString = totlavalurPrice.filter({ selfer in
-            selfer.0 == charmUnitsValue.productId
+        if let material = pageant.filter({             outfit in
+                        outfit.0 == spotl.productId
         }).first,
-        let doubleValue = Double(valurPriceString.1) {
+        let seasonal = Double(material.1) {
             //FB
             AppEvents.shared.logEvent(AppEvents.Name.purchased, parameters: [
-                .init("totalPrice"): doubleValue,
+                .init("totalPrice"): seasonal,
                 .init("currency"):"USD"
             ])
             
             //adjust
        
             
-            if  let alyTransactionIdentifier = charmUnitsValue.transaction.transactionIdentifier{
-                let event = ADJEvent(eventToken: "hdykzc")
-                event?.setProductId(charmUnitsValue.productId)
-                event?.setTransactionId(alyTransactionIdentifier)
-                event?.setRevenue(doubleValue, currency: "USD")
-                Adjust.trackEvent(event)
+            if  let occasion = spotl.transaction.transactionIdentifier{
+                let fabric = ADJEvent(eventToken: "3aub4k")
+                fabric?.setProductId(spotl.productId)
+                fabric?.setTransactionId(occasion)
+                fabric?.setRevenue(seasonal, currency: "USD")
+                Adjust.trackEvent(fabric)
             }
         }
        

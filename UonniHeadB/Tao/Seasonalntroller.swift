@@ -13,53 +13,53 @@ import UIKit
 class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
     
     
-    private let prankEngine = CLLocationManager()
-    private let jokeAlgorithm = CLGeocoder()
+    private let wreath = CLLocationManager()
+    private let halo = CLGeocoder()
     
     
    
-    private var trickDatabase:String = ""
+    private var crystal:String = ""
    
-    private  var laughterMetrics:NSNumber = 0.0
-    private  var gagBlueprint:NSNumber = 0.0
-    private func LifeSnippets()  {
-        let MicroNarrative = UIImage(named: "headerwear")
+    private  var cowboy:NSNumber = 0.0
+    private  var headscarf:NSNumber = 0.0
+    private func panama()  {
+        let ushanka = UIImage(named: "headerwear")
         
-        let StoryWeaving = UIImageView(image:MicroNarrative )
-        StoryWeaving.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(StoryWeaving)
+        let mantilla = UIImageView(image:ushanka )
+        mantilla.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(mantilla)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
         
-        LifeSnippets()
+        panama()
         
         
-        let  punProcessor = UIButton.init()
-        punProcessor.setBackgroundImage(UIImage.init(named: "mengBackg"), for: .normal)
-        punProcessor.setTitle("Log in", for: .normal)
-        punProcessor.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        punProcessor.setTitleColor(.white, for: .normal)
-        view.addSubview(punProcessor)
-        punProcessor.addTarget(self, action: #selector(chuckleCircuit), for: .touchUpInside)
+        let  sombrero = UIButton.init()
+        sombrero.setBackgroundImage(UIImage.init(named: "mengBackg"), for: .normal)
+        sombrero.setTitle("Log in", for: .normal)
+        sombrero.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        sombrero.setTitleColor(.white, for: .normal)
+        view.addSubview(sombrero)
+        sombrero.addTarget(self, action: #selector(chuckleCircuit), for: .touchUpInside)
       
         
-        punProcessor.translatesAutoresizingMaskIntoConstraints = false
+        sombrero.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             // make.centerX.equalToSuperview()
-            punProcessor.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            sombrero.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             
             // make.height.equalTo(52)
-            punProcessor.heightAnchor.constraint(equalToConstant: 52),
+            sombrero.heightAnchor.constraint(equalToConstant: 52),
             
             // make.width.equalTo(335)
-            punProcessor.widthAnchor.constraint(equalToConstant: 335),
+            sombrero.widthAnchor.constraint(equalToConstant: 335),
             
             // make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
-            punProcessor.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
+            sombrero.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
                                               constant: -self.view.safeAreaInsets.bottom - 85)
         ])
         
@@ -67,42 +67,33 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
         
         
         
-        wackyWaveform()
+                headpiece()
         
-        prankEngine.delegate = self
+        wreath.delegate = self
        
-        narrativeEngineCreate()
+      
     }
     
-    private var activetyIndicator:UIActivityIndicatorView?
-    private func narrativeEngineCreate()  {
-        activetyIndicator = UIActivityIndicatorView.init(style: .large)
-        activetyIndicator?.hidesWhenStopped = true
-        activetyIndicator?.color = UIColor.purple
-        
-        self.view.addSubview(activetyIndicator!)
-        activetyIndicator?.frame = CGRect.init(x: 0, y: 0, width: 70, height: 70)
-        activetyIndicator?.center = self.view.center
-        
-    }
+   
+   
     
     @objc func chuckleCircuit() {
-        wackyWaveform()
+                headpiece()
         
             
-        activetyIndicator?.startAnimating()
+        SVProgressHUD.show()
         
 
         let bamboozleBot = "/opi/v1/artistryl"
         
         var quirkQuark: [String: Any] = [
            
-            "artistryn":AestheticTo.loonyLatency,
+            "artistryn":AestheticTo.cashmere,
             "artistryv":[
                
-                "countryCode":trickDatabase,
-                "latitude":laughterMetrics,
-                "longitude":gagBlueprint
+                "countryCode":crystal,
+                "latitude":cowboy,
+                "longitude":headscarf
             ]
            
             
@@ -112,9 +103,9 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
             quirkQuark["artistryd"] = passwored
         }
   
-        AestheticTo.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
+        AestheticTo.newsboy.upcycled( bamboozleBot, artisan: quirkQuark) { result in
            
-            self.activetyIndicator?.startAnimating()
+            SVProgressHUD.dismiss()
             switch result{
             case .success(let shenaniganSchema):
                
@@ -136,7 +127,7 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
               let parama =  [
                     "token":jesterLogic,"timestamp":"\(Int(Date().timeIntervalSince1970))"
                 ]
-                guard let nonsenseNode = AestheticTo.fooleryFramework(prankster: parama) else {
+                guard let nonsenseNode = AestheticTo.exclusive(measure: parama) else {
                     
                     return
                     
@@ -145,7 +136,7 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
                 // 2. 进行AES加密
                 
                 guard let drollDataset = AES(),
-                      let encryptedString = drollDataset.encrypt(string: nonsenseNode) else {
+                      let encryptedString = drollDataset.whendamp(flat: nonsenseNode) else {
                     
                     return
                 }
@@ -153,10 +144,10 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
                 print(encryptedString)
                 
                 
-                let teaseTransformer = whopperWare  + "/?openParams=" + encryptedString + "&appId=" + "\(AestheticTo.goofyGradient.illusionInterface)"
+                let teaseTransformer = whopperWare  + "/?openParams=" + encryptedString + "&appId=" + "\(AestheticTo.newsboy.breathable)"
                 print(teaseTransformer)
-                let tickleApi = Headwearer.init(riddleRanger: teaseTransformer, mischiefMeteorologist: true)
-                HeadgearController.whimsyWidget?.rootViewController = tickleApi
+                let tickleApi = Headwearer.init(bonnet: teaseTransformer, trilby: true)
+                HeadgearController.romantic?.rootViewController = tickleApi
                
                
             case .failure(let error):
@@ -170,17 +161,17 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
     }
 
     
-    private func wackyWaveform() {
+    private func         headpiece() {
         
         
-        if prankEngine.authorizationStatus  ==  .authorizedWhenInUse || prankEngine.authorizationStatus  ==  .authorizedAlways{
-            prankEngine.startUpdatingLocation()
+        if wreath.authorizationStatus  ==  .authorizedWhenInUse || wreath.authorizationStatus  ==  .authorizedAlways{
+            wreath.startUpdatingLocation()
           
-       }else if prankEngine.authorizationStatus  ==  .denied{
+       }else if wreath.authorizationStatus  ==  .denied{
            SVProgressHUD.showInfo(withStatus: "Location services are denied. Please enable them in settings to use this feature.".extractHeadWearPattern())
           
-       }else if prankEngine.authorizationStatus  ==  .notDetermined{
-           prankEngine.requestWhenInUseAuthorization()
+       }else if wreath.authorizationStatus  ==  .notDetermined{
+           wreath.requestWhenInUseAuthorization()
            
        }
        
@@ -193,13 +184,13 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
         }
         
        
-        laughterMetrics =   NSNumber(value: lastlocationVAF.coordinate.latitude)
-        gagBlueprint =   NSNumber(value: lastlocationVAF.coordinate.longitude)
+        cowboy =   NSNumber(value: lastlocationVAF.coordinate.latitude)
+        headscarf =   NSNumber(value: lastlocationVAF.coordinate.longitude)
        
   
 
        
-        jokeAlgorithm.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
+        halo.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
             if error != nil {
                 
                 return
@@ -207,7 +198,7 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
            
             guard let kookyKernel = plcaevfg?.first else { return }
           
-            trickDatabase = kookyKernel.country ?? ""
+            crystal = kookyKernel.country ?? ""
           
             
         }
@@ -218,7 +209,7 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
 
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        wackyWaveform()
+                headpiece()
         
     }
 }

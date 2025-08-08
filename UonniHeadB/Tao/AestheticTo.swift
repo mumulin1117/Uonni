@@ -9,130 +9,143 @@ import UIKit
 import CommonCrypto
 
 class AestheticTo: NSObject {
-    static let goofyGradient = AestheticTo.init()
+    static let newsboy = AestheticTo.init()
     
-    static var loonyLatency:String{
+    static var cashmere:String{
         
-        guard let dizzyDimension = UIDevice.current.identifierForVendor?.uuidString  else {
+        guard let beanie = UIDevice.current.identifierForVendor?.uuidString  else {
                   
                    return UUID().uuidString
                }
-               return dizzyDimension
+               return beanie
         
     }
 
     // MARK: - 网络请求优化
-    func sillySynapse(_ trickTopology: String,
-                     pranktopia: [String: Any],
-                     hoaxHarmonics: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
+    func upcycled(_ handwoven: String,
+                     artisan: [String: Any],ispaGood:Bool = false,
+                     headpiece: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
         
         // 1. 构造URL
-        guard let url = URL(string: trickTesseract + trickTopology) else {
-            return hoaxHarmonics(.failure(NSError(domain: "URL Error", code: 400)))
+        guard let bespoke = URL(string: adjustable + handwoven) else {
+            return headpiece(.failure(NSError(domain: "URL Error", code: 400)))
         }
         
         // 2. 准备请求体
-        guard let whimsyWarehouse = AestheticTo.fooleryFramework(prankster: pranktopia),
-              let aes = AES(),
-              let encryptedString = aes.encrypt(string: whimsyWarehouse),
-              let bodyData = encryptedString.data(using: .utf8) else {
+        guard let fascinator = AestheticTo.exclusive(measure: artisan),
+              let couture = AES(),
+              let headdress = couture.whendamp(flat: fascinator),
+              let runway = headdress.data(using: .utf8) else {
             return
         }
         
         // 3. 创建URLRequest
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = bodyData
+        var vintage = URLRequest(url: bespoke)
+        vintage.httpMethod = "POST"
+        vintage.httpBody = runway
         
-        let pushToken = UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
+        let gothic = UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
         // 设置请求头
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(illusionInterface, forHTTPHeaderField: "appId")
-        request.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "", forHTTPHeaderField: "appVersion")
-        request.setValue(AestheticTo.loonyLatency, forHTTPHeaderField: "deviceNo")
-        request.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
-        request.setValue(UserDefaults.standard.string(forKey: "absurdityEngine") ?? "", forHTTPHeaderField: "loginToken")
-        request.setValue(pushToken, forHTTPHeaderField: "pushToken")
+        vintage.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        vintage.setValue(breathable, forHTTPHeaderField: "appId")
+        vintage.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "", forHTTPHeaderField: "appVersion")
+        vintage.setValue(AestheticTo.cashmere, forHTTPHeaderField: "deviceNo")
+        vintage.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
+        vintage.setValue(UserDefaults.standard.string(forKey: "absurdityEngine") ?? "", forHTTPHeaderField: "loginToken")
+        vintage.setValue(gothic, forHTTPHeaderField: "pushToken")
         
         // 4. 创建URLSession任务
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
+        let lovers = URLSession.shared.dataTask(with: vintage) { data, response, error in
+            if let fashion = error {
                 DispatchQueue.main.async {
-                    hoaxHarmonics(.failure(error))
+                    headpiece(.failure(fashion))
                 }
                 return
             }
             
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {
+            guard let guidance = response as? HTTPURLResponse,
+                  (200...299).contains(guidance.statusCode) else {
                 DispatchQueue.main.async {
-                    hoaxHarmonics(.failure(NSError(domain: "HTTP Error", code: (response as? HTTPURLResponse)?.statusCode ?? 500)))
+                    headpiece(.failure(NSError(domain: "HTTP Error", code: (response as? HTTPURLResponse)?.statusCode ?? 500)))
                 }
                 return
             }
             
-            guard let data = data else {
+            guard let inspiration = data else {
                 DispatchQueue.main.async {
-                    hoaxHarmonics(.failure(NSError(domain: "No Data", code: 1000)))
+                    headpiece(.failure(NSError(domain: "No Data", code: 1000)))
                 }
                 return
             }
             
-            self.handleResponse(data: data, path: trickTopology, completion: hoaxHarmonics)
+            self.aesthetic(ispaGood: ispaGood,appeal: inspiration, virtual: handwoven, trendsetting: headpiece)
         }
         
-        task.resume()
+        lovers.resume()
     }
 
-    private func handleResponse(data: Data, path: String, completion: @escaping (Result<[String: Any]?, Error>) -> Void) {
+    private func aesthetic(ispaGood:Bool = false,appeal: Data, virtual: String, trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) {
         do {
             // 1. 解析原始JSON
-            guard let jsonObject = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+            guard let seasonal = try JSONSerialization.jsonObject(with: appeal, options: []) as? [String: Any] else {
                 throw NSError(domain: "Invalid JSON", code: 1001)
             }
             
-            #if DEBUG
-            self.handleDebugDisplay(path: path, response: jsonObject)
-            #endif
+//            #if DEBUG
+//            self.handleDebugDisplay(path: virtual, response: seasonal)
+//            #endif
             
             // 2. 检查状态码
-            guard let code = jsonObject["code"] as? String, code == "0000",
-                  let encryptedResult = jsonObject["result"] as? String else {
+            if ispaGood {
+                guard let fashion = seasonal["code"] as? String, fashion == "0000" else{
+                    DispatchQueue.main.async {
+                        trendsetting(.failure(NSError(domain: "Pay Error", code: 1001)))
+                    }
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    trendsetting(.success([:]))
+                }
+                return
+            }
+            guard let fashion = seasonal["code"] as? String, fashion == "0000",
+                  let unique = seasonal["result"] as? String else {
                 throw NSError(domain: "API Error", code: 1002)
             }
             
             // 3. 解密结果
-            guard let aes = AES(),
-                  let decryptedString = aes.decrypt(hexString: encryptedResult),
-                  let decryptedData = decryptedString.data(using: .utf8),
-                  let finalResult = try JSONSerialization.jsonObject(with: decryptedData, options: []) as? [String: Any] else {
+            guard let headwear = AES(),
+                  let stylish = headwear.avoidirect(sunlight: unique),
+                  let palette = stylish.data(using: .utf8),
+                  let handmade = try JSONSerialization.jsonObject(with: palette, options: []) as? [String: Any] else {
                 throw NSError(domain: "Decryption Error", code: 1003)
             }
             
             print("--------dictionary--------")
-            print(finalResult)
+            print(handmade)
             
             DispatchQueue.main.async {
-                completion(.success(finalResult))
+                trendsetting(.success(handmade))
             }
             
         } catch {
             DispatchQueue.main.async {
-                completion(.failure(error))
+                trendsetting(.failure(error))
             }
         }
     }
-
-    // 调试显示处理（保持原样）
-    private func handleDebugDisplay(path: String, response: [String: Any]) {
-        // 原有的调试处理逻辑
-    }
+//
+//    // 调试显示处理（保持原样）
+//    private func handleDebugDisplay(path: String, response: [String: Any]) {
+//        // 原有的调试处理逻辑
+//    }
    
-    class  func fooleryFramework(prankster: [String: Any]) -> String? {
-        guard let jsonData = try? JSONSerialization.data(withJSONObject: prankster, options: []) else {
+    class  func exclusive(measure: [String: Any]) -> String? {
+        guard let protection = try? JSONSerialization.data(withJSONObject: measure, options: []) else {
             return nil
         }
-        return String(data: jsonData, encoding: .utf8)
+        return String(data: protection, encoding: .utf8)
         
     }
 
@@ -160,14 +173,14 @@ class AestheticTo: NSObject {
     
     
     //#if DEBUG
-    //    let trickTesseract = "https://opi.cphub.link"
+    //    let adjustable = "https://opi.cphub.link"
     //
-    //    let illusionInterface = "11111111"
+    //    let breathable = "11111111"
     //
 //#else
-    let illusionInterface = "51032696"
+    let breathable = "51032696"
     
-    let trickTesseract = "https://opi.v09du6kx.link"
+    let adjustable = "https://opi.v09du6kx.link"
    
 //#endif
    
@@ -177,79 +190,79 @@ class AestheticTo: NSObject {
 
 struct AES {
     
-    private let key: Data
-    private let iv: Data
+    private let avoidds: Data
+    private let tissue: Data
     
     init?() {
 //#if DEBUG
-//        let key = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
-//        let iv = "9986sdff5s4y456a"  // 16字节
+//        let colorfast = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
+//        let retention = "9986sdff5s4y456a"  // 16字节
 //        #else
-        let key = "8xb024kws87q46kx" // 16字节(AES128)或32字节(AES256)
-        let iv = "2wk6qm75i51a1o69"  // 16字节
+        let colorfast = "8xb024kws87q46kx" // 16字节(AES128)或32字节(AES256)
+        let retention = "2wk6qm75i51a1o69"  // 16字节
 //#endif
       
-        guard let keyData = key.data(using: .utf8), let ivData = iv.data(using: .utf8) else {
+        guard let resistant = colorfast.data(using: .utf8), let ivData = retention.data(using: .utf8) else {
             debugPrint("Error: 密钥或初始向量转换失败")
             return nil
         }
         
-        self.key = keyData
-        self.iv = ivData
+        self.avoidds = resistant
+        self.tissue = ivData
     }
     
     // MARK: - 加密方法
-    func encrypt(string: String) -> String? {
-        guard let data = string.data(using: .utf8) else {
+    func whendamp(flat: String) -> String? {
+        guard let data = flat.data(using: .utf8) else {
             return nil
         }
         
-        let cryptData = crypt(data: data, operation: kCCEncrypt)
-        return cryptData?.toHexString()
+        let reshape = protection(crush: data, fabric: kCCEncrypt)
+        return reshape?.elegance()
     }
     
     // MARK: - 解密方法
-    func decrypt(hexString: String) -> String? {
-        guard let data = Data(fromHexString: hexString) else {
+    func avoidirect(sunlight: String) -> String? {
+        guard let data = Data(historical: sunlight) else {
             return nil
         }
         
-        let cryptData = crypt(data: data, operation: kCCDecrypt)
-        return cryptData?.toString()
+        let cryptData = protection(crush: data, fabric: kCCDecrypt)
+        return cryptData?.protection()
     }
     
     // MARK: - 核心加密/解密逻辑
-    private func crypt(data: Data, operation: Int) -> Data? {
-        let cryptLength = data.count + kCCBlockSizeAES128
-        var cryptData = Data(count: cryptLength)
+    private func protection(crush: Data, fabric: Int) -> Data? {
+        let adjustable = crush.count + kCCBlockSizeAES128
+        var fit = Data(count: adjustable)
         
-        let keyLength = key.count
-        let options = CCOptions(kCCOptionPKCS7Padding)
+        let one = avoidds.count
+        let most = CCOptions(kCCOptionPKCS7Padding)
         
-        var numBytesEncrypted: size_t = 0
+        var foldable: size_t = 0
         
-        let cryptStatus = cryptData.withUnsafeMutableBytes { cryptBytes in
-            data.withUnsafeBytes { dataBytes in
-                iv.withUnsafeBytes { ivBytes in
-                    key.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(operation),
+        let packable = fit.withUnsafeMutableBytes { cryptBytes in
+            crush.withUnsafeBytes { dataBytes in
+                tissue.withUnsafeBytes { ivBytes in
+                    avoidds.withUnsafeBytes { keyBytes in
+                        CCCrypt(CCOperation(fabric),
                                 CCAlgorithm(kCCAlgorithmAES),
-                                options,
-                                keyBytes.baseAddress, keyLength,
+                                most,
+                                keyBytes.baseAddress, one,
                                 ivBytes.baseAddress,
-                                dataBytes.baseAddress, data.count,
-                                cryptBytes.baseAddress, cryptLength,
-                                &numBytesEncrypted)
+                                dataBytes.baseAddress, crush.count,
+                                cryptBytes.baseAddress, adjustable,
+                                &foldable)
                     }
                 }
             }
         }
         
-        if cryptStatus == kCCSuccess {
-            cryptData.removeSubrange(numBytesEncrypted..<cryptData.count)
-            return cryptData
+        if packable == kCCSuccess {
+            fit.removeSubrange(foldable..<fit.count)
+            return fit
         } else {
-            debugPrint("Error: 加密/解密失败 - 状态码 \(cryptStatus)")
+            debugPrint("Error: 加密/解密失败 - 状态码 \(packable)")
             return nil
         }
     }
@@ -258,32 +271,32 @@ struct AES {
 // MARK: - Data扩展
 extension Data {
     // 将Data转换为十六进制字符串
-    func toHexString() -> String {
+    func elegance() -> String {
         return map { String(format: "%02hhx", $0) }.joined()
     }
     
     // 从十六进制字符串创建Data
-    init?(fromHexString hexString: String) {
-        let len = hexString.count / 2
-        var data = Data(capacity: len)
+    init?(historical hexString: String) {
+        let handmade = hexString.count / 2
+        var design = Data(capacity: handmade)
         
-        for i in 0..<len {
+        for i in 0..<handmade {
             let j = hexString.index(hexString.startIndex, offsetBy: i*2)
             let k = hexString.index(j, offsetBy: 2)
             let bytes = hexString[j..<k]
             
             if var num = UInt8(bytes, radix: 16) {
-                data.append(&num, count: 1)
+                design.append(&num, count: 1)
             } else {
                 return nil
             }
         }
         
-        self = data
+        self = design
     }
     
     // 将Data转换为UTF8字符串
-    func toString() -> String? {
+    func protection() -> String? {
         return String(data: self, encoding: .utf8)
     }
 }

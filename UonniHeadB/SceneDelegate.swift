@@ -127,7 +127,7 @@ extension SceneDelegate{
                     Adjust.adid { adId in
                         DispatchQueue.main.async {
                             if let updates = adId {
-                                AppDelegate.amndexid = updates
+                                AppDelegate.cloche = updates
                             }
                         }
                     }
@@ -139,7 +139,7 @@ extension SceneDelegate{
             Adjust.adid { adId in
                 DispatchQueue.main.async {
                     if let location = adId {
-                        AppDelegate.amndexid = location
+                        AppDelegate.cloche = location
                     }
                 }
             }

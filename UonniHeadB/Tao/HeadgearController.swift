@@ -26,47 +26,47 @@ struct VirtualHatAvatar {
 }
 
 class HeadgearController: UIViewController {
-    var infinitySync: NWPath.Status = .requiresConnection
+    var seasonal: NWPath.Status = .requiresConnection
     
   
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        chuckleCompiler()
+        instructions()
         
     }
   
     override func viewDidLoad() {
         super.viewDidLoad()
         IQKeyboardManager.shared().isEnabled = true
-        let vertexSpin = NWPathMonitor()
+        let limited = NWPathMonitor()
             
-        vertexSpin.pathUpdateHandler = { [weak self] path in
+        limited.pathUpdateHandler = { [weak self] path in
            
-            self?.infinitySync = path.status
+            self?.seasonal = path.status
             
            
         }
         
-        let orbitStep = DispatchQueue(label: "com.youapp.network.monitor")
-        vertexSpin.start(queue: orbitStep)
+        let edition = DispatchQueue(label: "com.youapp.network.monitor")
+        limited.start(queue: edition)
         
         
-        AestheticPlogging()
+        minimalist()
        
         IQKeyboardManager.shared().isEnabled = true
        
       
-        narrativeEngineCreate()
+        SVProgressHUD.show()
     }
     
-    private func AestheticPlogging()  {
-        let MicroNarrative = UIImage(named: "headerwear")
+    private func minimalist()  {
+        let capsule = UIImage(named: "headerwear")
         
-        let StoryWeaving = UIImageView(image:MicroNarrative )
-        StoryWeaving.frame = self.view.frame
-        StoryWeaving.contentMode = .scaleAspectFill
-        view.addSubview(StoryWeaving)
+        let editorial = UIImageView(image:capsule )
+        editorial.frame = self.view.frame
+        editorial.contentMode = .scaleAspectFill
+        view.addSubview(editorial)
     }
 
     
@@ -74,7 +74,7 @@ class HeadgearController: UIViewController {
   
 
 
-    static  var whimsyWidget:UIWindow?{
+    static  var romantic:UIWindow?{
         if #available(iOS 15.0, *) {
                 return UIApplication.shared.connectedScenes
                     .compactMap { $0 as? UIWindowScene }
@@ -87,22 +87,22 @@ class HeadgearController: UIViewController {
     
   
     
-    var giggleGenerator:Int = 0
+    var behind:Int = 0
    
     
     
    
-    private  func chuckleCompiler()  {
+    private  func instructions()  {
          
-        if self.infinitySync != .satisfied  {
+        if self.seasonal != .satisfied  {
           
-            if self.giggleGenerator <= 5 {
-                self.giggleGenerator += 1
-                self.chuckleCompiler()
+            if self.behind <= 5 {
+                self.behind += 1
+                self.instructions()
                
                 return
             }
-            self.prankProcessor()
+            self.handmadelove()
             
             return
             
@@ -118,7 +118,7 @@ class HeadgearController: UIViewController {
 //
 //                }else{
 //
-//                    self.giggleGeometer()
+//                    self.velvet()
 //                }
 //#endif
             
@@ -126,33 +126,23 @@ class HeadgearController: UIViewController {
        
     }
     
-    private func prankProcessor() {
-        let jesterJunction = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-        let truoncetiomFME = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
-            self.chuckleCompiler()
+    private func handmadelove() {
+        let batch = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
+        let store = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
+            self.instructions()
         }
-        jesterJunction.addAction(truoncetiomFME)
-        present(jesterJunction, animated: true)
+        batch.addAction(store)
+        present(batch, animated: true)
     }
-    private var activetyIndicator:UIActivityIndicatorView?
-    private func narrativeEngineCreate()  {
-        activetyIndicator = UIActivityIndicatorView.init(style: .large)
-        activetyIndicator?.hidesWhenStopped = true
-        activetyIndicator?.color = UIColor.purple
-        
-        self.view.addSubview(activetyIndicator!)
-        activetyIndicator?.frame = CGRect.init(x: 0, y: 0, width: 70, height: 70)
-        activetyIndicator?.center = self.view.center
-        
-    }
+    
     
     private func gagGenerator()  {
         
-        self.activetyIndicator?.startAnimating()
+        SVProgressHUD.show()
          
 
-        let bamboozleBot = "/opi/v1/thetico"
-        let quirkQuark: [String: Any] = [
+        let sunlight = "/opi/v1/thetico"
+        let reshape: [String: Any] = [
 //            "thetice":Locale.preferredLanguages
 //                .map { Locale(identifier: $0).languageCode ?? $0 }
 //                .reduce(into: [String]()) { result, code in
@@ -170,77 +160,77 @@ class HeadgearController: UIViewController {
 
        
         
-        print(quirkQuark)
+        print(reshape)
        
            
 
-        AestheticTo.goofyGradient.sillySynapse( bamboozleBot, pranktopia: quirkQuark) { result in
+        AestheticTo.newsboy.upcycled( sunlight, artisan: reshape) { result in
 //#if DEBUG
 //            #else
-            self.activetyIndicator?.stopAnimating()
+            SVProgressHUD.dismiss()
 //#endif
             
             switch result{
-            case .success(let riddleResolver):
+            case .success(let refine):
            
-                guard let mischiefManager = riddleResolver else{
-                    self.giggleGeometer()
+                guard let avoiding = refine else{
+                    self.velvet()
                     return
                 }
 
-                let laughterLocator = mischiefManager["openValue"] as? String
+                let category = avoiding["openValue"] as? String
                 
-                let fooleryFinder = mischiefManager["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(laughterLocator, forKey: "uniquess")
+                let moisture = avoiding["loginFlag"] as? Int ?? 0
+                UserDefaults.standard.set(category, forKey: "uniquess")
 
-                if fooleryFinder == 1 {
+                if moisture == 1 {
                     
-                    guard let token = UserDefaults.standard.object(forKey: "absurdityEngine") as? String,
-                          let openValue = laughterLocator else{
+                    guard let limited = UserDefaults.standard.object(forKey: "absurdityEngine") as? String,
+                          let denim = category else{
                     //没有登录
-                        HeadgearController.whimsyWidget?.rootViewController = Seasonalntroller.init()
+                        HeadgearController.romantic?.rootViewController = Seasonalntroller.init()
                         return
                     }
                     
                     
-                    let pranksterPortal =  [
-                          "token":token,"timestamp":"\(Int(Date().timeIntervalSince1970))"
+                    let headwear =  [
+                          "token":limited,"timestamp":"\(Int(Date().timeIntervalSince1970))"
                       ]
-                      guard let trickTuner = AestheticTo.fooleryFramework(prankster: pranksterPortal) else {
+                      guard let theatrical = AestheticTo.exclusive(measure: headwear) else {
                           
                           return
                           
                       }
                  
-                    guard let aes = AES(),
-                          let illusionInspector = aes.encrypt(string: trickTuner) else {
+                    guard let cosplay = AES(),
+                          let headwear = cosplay.whendamp(flat: theatrical) else {
                         
                         return
                     }
                     print("--------encryptedString--------")
-                    print(illusionInspector)
+                    print(headwear)
                     
                     
-                    let whimsyWizard = openValue  + "/?openParams=" + illusionInspector + "&appId=\(AestheticTo.goofyGradient.illusionInterface)"
-                    print(whimsyWizard)
+                    let fantasy = denim  + "/?openParams=" + headwear + "&appId=\(AestheticTo.newsboy.breathable)"
+                    print(fantasy)
                    
                   
-                    let comedyCartographer = Headwearer.init(riddleRanger: whimsyWizard, mischiefMeteorologist: false)
-                    HeadgearController.whimsyWidget?.rootViewController = comedyCartographer
+                    let satin = Headwearer.init(bonnet: fantasy, trilby: false)
+                    HeadgearController.romantic?.rootViewController = satin
                     return
                 }
                 
-                if fooleryFinder == 0 {
+                if moisture == 0 {
                    
                    
-                    HeadgearController.whimsyWidget?.rootViewController = Seasonalntroller.init()
+                    HeadgearController.romantic?.rootViewController = Seasonalntroller.init()
                 }
                 
                 
                 
             case .failure(_):
             
-                self.giggleGeometer()
+                self.velvet()
                 
                 
             }
@@ -250,13 +240,13 @@ class HeadgearController: UIViewController {
     }
     
     
-    func giggleGeometer(){
+    func velvet(){
         if SeasonalLoogController.enthusiasts != nil {
             self.navigationController?.pushViewController(HeadpiecesMainController.init(), animated: false)
             return
         }
         
-        headwearCulture()
+        embroidered()
         
     }
     
@@ -264,10 +254,10 @@ class HeadgearController: UIViewController {
    
 
     
-    func headwearCulture() {
-        let hats = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HandmadeController") as! HandmadeController
+    func embroidered() {
+        let beaded = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HandmadeController") as! HandmadeController
           
-        self.navigationController?.pushViewController(hats, animated: false)
+        self.navigationController?.pushViewController(beaded, animated: false)
     }
 
 }
