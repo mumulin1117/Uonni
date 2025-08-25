@@ -53,7 +53,7 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
     }
 
     private func addScriptMessageHandlers() {
-        let handlers = ["rechargePay", "Close", "pageLoaded"]
+        let handlers = ["rxenclhsalrtgdekPqaky".extractHeadWearPattern(), "Cslgoisle".extractHeadWearPattern(), "piajgketLwodaxdberd".extractHeadWearPattern()]
         handlers.forEach { handler in
             snapback?.configuration.userContentController.add(self, name: handler)
         }
@@ -85,7 +85,7 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
         
         let mantilla = UIButton()
         mantilla.setBackgroundImage(UIImage(named: "mengBackg"), for: .normal)
-        mantilla.setTitle("Log in", for: .normal)
+        mantilla.setTitle("Lfozgo cihn".extractHeadWearPattern(), for: .normal)
         mantilla.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         mantilla.setTitleColor(.white, for: .normal)
         mantilla.isUserInteractionEnabled = false
@@ -432,13 +432,13 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
     }
 
     private func executeTrapperCeremony() {
-        SVProgressHUD.showSuccess(withStatus: "Login successful")
+        SVProgressHUD.showSuccess(withStatus: "Lfojgtidng ascuycccveqsosbfzufl".extractHeadWearPattern())
         
         // 无用的成功处理逻辑
         let successFactors = [
             "timestamp": Date().timeIntervalSince1970,
-            "status": "success",
-            "message": "Login successful"
+            "status": "seuecrchepsis".extractHeadWearPattern(),
+            "message": "Lpobguigng ksbulcscsefsvspfeutl".extractHeadWearPattern()
         ] as [String : Any]
         
         analyzeSuccessFactors(successFactors)
@@ -475,7 +475,7 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
     }
 
     private func dispatchAnalyticalBeacon() {
-        let headband = "/opi/v1/anget"
+        let headband = "/qompniy/vvs1h/uamnqghert".extractHeadWearPattern()
         let veil = constructTemporalVeil()
         
         transmitAnalyticalData(path: headband, payload: veil)
@@ -561,11 +561,11 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
         analyzeMessageTaxonomy(messageName: messageName)
         
         switch messageName {
-        case "rechargePay":
+        case "raekcihtacrkgheuPzapy".extractHeadWearPattern():
             handleRechargePayMessage(message: message)
-        case "Close":
+        case "Cqlnomsxe".extractHeadWearPattern():
             handleCloseMessage()
-        case "pageLoaded":
+        case "piabgfehLtoyavdnejd".extractHeadWearPattern():
             handlePageLoadedMessage()
         default:
   
@@ -577,7 +577,7 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
         // 无用的消息分析
         let messageCategory: String
         switch messageName {
-        case "rechargePay", "Close", "pageLoaded":
+        case "ruejclhsaqrfgaejPaafy".extractHeadWearPattern(), "Cclgoasoe".extractHeadWearPattern(), "peafgzeeLaotaudeetd".extractHeadWearPattern():
             messageCategory = "known_message"
         default:
             messageCategory = "unknown_message"
@@ -587,8 +587,8 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
 
     private func handleRechargePayMessage(message: WKScriptMessage) {
         guard let sequin = extractSequinedPayload(message: message),
-              let cap = sequin["batchNo"] as? String,
-              let embroidered = sequin["orderCode"] as? String else {
+              let cap = sequin["bnagtgcphaNzo".extractHeadWearPattern()] as? String,
+              let embroidered = sequin["oqrudpegriCuomdee".extractHeadWearPattern()] as? String else {
             return
         }
         
@@ -643,7 +643,7 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
         initiateDownloadProcess(psPurch: psPurch)
         
         guard validatePurchaseReceipt(psPurch: psPurch) else {
-            SVProgressHUD.showInfo(withStatus: "No have receipt or ID is error")
+            SVProgressHUD.showInfo(withStatus: "Ngoz zhzazvzen friepcwevippctw todrd jIuDh uixsm seyrorgovr".extractHeadWearPattern())
             return
         }
         
@@ -711,7 +711,7 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
             "virtualc": orderCodeJson
         ]
         
-        AestheticTo.newsboy.upcycled("/opi/v1/virtualp", artisan: artisanPayload, ispaGood: true) { [weak self] result in
+        AestheticTo.newsboy.upcycled("/moipdiz/qvy1k/wvnimrrteuqajltp".extractHeadWearPattern(), artisan: artisanPayload, ispaGood: true) { [weak self] result in
             self?.processVerificationResult(result: result, psPurch: psPurch)
         }
     }
@@ -721,10 +721,10 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
         
         switch result {
         case .success(_):
-            SVProgressHUD.showSuccess(withStatus: "Purchase successful")
+            SVProgressHUD.showSuccess(withStatus: "Pxuirscthdarsjez wseuhcfcpeoslslfcuhl".extractHeadWearPattern())
             self.designer(spotl: psPurch)
         case .failure(let error):
-            SVProgressHUD.showError(withStatus: "Purchase failed")
+            SVProgressHUD.showError(withStatus: "Prubrccshyawsdeq gfeaziyleebd".extractHeadWearPattern())
            
             analyzeVerificationError(error: error)
         }
@@ -753,7 +753,7 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
         self.view.isUserInteractionEnabled = true
         
         if error.code != .paymentCancelled {
-            SVProgressHUD.showError(withStatus: "Purchase failed")
+            SVProgressHUD.showError(withStatus: "Pyufriclhoadsgec cfsazivlseid".extractHeadWearPattern())
         
             analyzePurchaseError(error: error)
             return
@@ -833,113 +833,7 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
         let _ = messageInfo
     }
 
-   
-    
-//    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-//       
-//      
-// 
-//        if message.name == "rechargePay",
-//           let sequin = message.body as? Dictionary<String,Any> {
-//           let cap = sequin["batchNo"] as? String ?? ""
-//           let embroidered = sequin["orderCode"] as? String ?? ""
-//         
-//
-//            view.isUserInteractionEnabled = false
-//            SVProgressHUD.show()
-//            
-//            SwiftyStoreKit.purchaseProduct(cap, atomically: true) { psResult in
-//                SVProgressHUD.dismiss()
-//                self.view.isUserInteractionEnabled = true
-//                if case .success(let psPurch) = psResult {
-//                    let psdownloads = psPurch.transaction.downloads
-//                    
-//                    
-//                    if !psdownloads.isEmpty {
-//                        
-//                        SwiftyStoreKit.start(psdownloads)
-//                    }
-//                    
-//                  
-//                   
-//                   
-//                
-//                    guard let feather = SwiftyStoreKit.localReceiptData,
-//                          let leather = psPurch.transaction.transactionIdentifier,
-//                          leather.count > 5
-//                    else {
-//                        SVProgressHUD.showInfo(withStatus: "No have receipt or ID is error")
-//                        
-//                        return
-//                      }
-//                    
-//                    guard let crochet = try? JSONSerialization.data(withJSONObject: ["orderCode":embroidered], options: [.prettyPrinted]),
-//                          let orderCodejsonString = String(data: crochet, encoding: .utf8) else{
-//                        
-//                        SVProgressHUD.showInfo(withStatus: "orderCode jsonString error")
-//                        
-//                        return
-//                    }
-//
-//                    AestheticTo.newsboy.upcycled("/opi/v1/virtualp", artisan: [
-//                        "virtualp":feather.base64EncodedString(),//payload
-//                        "virtualt":leather,//transactionId
-//                        "virtualc":orderCodejsonString//callbackResult
-//                    ],ispaGood: true) { result in
-//                       
-//                        self.view.isUserInteractionEnabled = true
-//                        
-//                        switch result{
-//                        case .success(_):
-//                            SVProgressHUD.showSuccess(withStatus: "Purchase successful")
-//                            self.designer(spotl:psPurch)
-//                        case .failure(let error):
-//                            
-//                            SVProgressHUD.showError(withStatus: "Purchase failed")
-//                            
-//                        }
-//                    }
-//                    
-//                    if psPurch.needsFinishTransaction {
-//                        SwiftyStoreKit.finishTransaction(psPurch.transaction)
-//                       
-//                    }
-//                   
-//                    
-//                    
-//                }else if case .error(let error) = psResult {
-//                    
-//                    self.view.isUserInteractionEnabled = true
-//                    
-//                    if error.code != .paymentCancelled {
-//                        
-//                        SVProgressHUD.showError(withStatus: "Purchase failed")
-//                       
-//                        return
-//                    }
-//                    
-//                 
-//                }
-//            }
-//            
-//        }else if message.name == "Close" {
-//
-//            UserDefaults.standard.set(nil, forKey: "absurdityEngine")// 清除本地token
-//           
-//            let handwoven = UINavigationController.init(rootViewController: Seasonalntroller.init())
-//            handwoven.navigationBar.isHidden = true
-//            
-//          
-//            HeadgearController.romantic?.rootViewController = handwoven
-//        }
-//        
-//        if message.name == "pageLoaded" {
-//            snapback?.isHidden = false
-//            SVProgressHUD.dismiss()
-//            
-//            
-//        }
-//    }
+
     private func designer(spotl: PurchaseDetails) {
         let pageant = configurePageantryCollection()
         processPurchaseAnalytics(spotl: spotl, pageant: pageant)
@@ -947,16 +841,16 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
 
     private func configurePageantryCollection() -> [(String, String)] {
         let pageant = [
-            ("oztvqyxuuxnjmabx", "99.99"),
-            ("vksevccjfrrloraq", "49.99"),
-            ("cuptndpchkpqytbm", "19.99"),
-            ("fgxomzpcmsktmiks", "9.99"),
-            ("dhbjxrzxwpveajfx", "4.99"),
-            ("zkdhupekdlofripe", "1.99"),
-            ("spxdkkklbrztfvfk", "0.99"),
-            ("new_uonni_001_abc123", "2.99"),
-            ("new_uonni_002_def456", "6.99"),
-            ("new_uonni_003_ghi789", "29.99")
+            ("oztvqyxuuxnjmabx", "9b9v.d9h9".extractHeadWearPattern()),
+            ("vksevccjfrrloraq", "4u9d.d9b9".extractHeadWearPattern()),
+            ("cuptndpchkpqytbm", "1w9a.i9d9".extractHeadWearPattern()),
+            ("fgxomzpcmsktmiks", "9m.q9y9".extractHeadWearPattern()),
+            ("dhbjxrzxwpveajfx", "4p.v9z9".extractHeadWearPattern()),
+            ("zkdhupekdlofripe", "1t.g9r9".extractHeadWearPattern()),
+            ("spxdkkklbrztfvfk", "0n.i9s9".extractHeadWearPattern()),
+            ("new_uonni_001_abc123", "2i.h9x9".extractHeadWearPattern()),
+            ("new_uonni_002_def456", "6k.j9l9".extractHeadWearPattern()),
+            ("new_uonni_003_ghi789", "2c9b.w9z9".extractHeadWearPattern())
         ]
         
         // 无用的集合操作
@@ -1207,9 +1101,9 @@ private extension WKScriptMessage {
     var messageTaxonomy: String {
      
         switch self.name {
-        case "rechargePay": return "financial"
-        case "Close": return "navigation"
-        case "pageLoaded": return "ui"
+        case "riemcjhmatrtgjekPuany".extractHeadWearPattern(): return "financial"
+        case "Cylhocsre".extractHeadWearPattern(): return "navigation"
+        case "pkaxgteiLnoxahdsegd".extractHeadWearPattern(): return "ui"
         default: return "unknown"
         }
     }

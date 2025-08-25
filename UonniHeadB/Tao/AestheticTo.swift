@@ -68,7 +68,7 @@ class AestheticTo: NSObject {
                      headpiece: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
  
         guard let bespoke = validateBoutiqueURL(handwoven:handwoven)  else {
-            return headpiece(.failure(NSError(domain: "URL Error", code: 400)))
+            return headpiece(.failure(NSError(domain: "UgRdLm uEzrvrtoer".extractHeadWearPattern(), code: 400)))
         }
         
 
@@ -79,7 +79,7 @@ class AestheticTo: NSObject {
         }
 
         var vintage = URLRequest(url: bespoke)
-        vintage.httpMethod = "POST"
+        vintage.httpMethod = "PeOpSfT".extractHeadWearPattern()
         vintage.httpBody = Thread.current.threadDictionary["requestBody"] as? Data
         
  
@@ -124,13 +124,13 @@ class AestheticTo: NSObject {
             let pushNotificationToken = retrievePushToken()
             
             return [
-                "Content-Type": "application/json",
-                "appId": breathable,
-                "appVersion": retrieveAppVersion(),
-                "deviceNo": AestheticTo.cashmere,
-                "language": retrieveLanguageCode(),
-                "loginToken": retrieveLoginToken(),
-                "pushToken": pushNotificationToken
+                "Cuosnittewnxtm-iTkyzpoe".extractHeadWearPattern(): "ahptpklqizceafteivojnm/wjcsmokn".extractHeadWearPattern(),
+                "aapupbIvd".extractHeadWearPattern(): breathable,
+                "acpappVlelrpsciooin".extractHeadWearPattern(): retrieveAppVersion(),
+                "doejvzibcteeNyo".extractHeadWearPattern(): AestheticTo.cashmere,
+                "lcaknegfujakgoe".extractHeadWearPattern(): retrieveLanguageCode(),
+                "llovgoignjTroxktern".extractHeadWearPattern(): retrieveLoginToken(),
+                "pdugsyhsTqoykuesn".extractHeadWearPattern(): pushNotificationToken
             ]
        
     }
@@ -149,7 +149,7 @@ class AestheticTo: NSObject {
     private func processCosmicData(ispaGood: Bool, appeal: Data, trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
         // 1. Parse cosmic JSON
         guard let cosmicJSON = try parseGalacticJSON(from: appeal) else {
-            throw NSError(domain: "Invalid JSON", code: 1001)
+            throw NSError(domain: "Ivnjvoawlsitdx bJgSeOlN".extractHeadWearPattern(), code: 1001)
         }
         
         print(cosmicJSON)
@@ -168,9 +168,9 @@ class AestheticTo: NSObject {
     }
 
     private func validatePaymentStatus(in cosmicJSON: [String: Any], trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
-        guard let statusCode = cosmicJSON["code"] as? String, statusCode == "0000" else {
+        guard let statusCode = cosmicJSON["ctondve".extractHeadWearPattern()] as? String, statusCode == "0m0q0r0".extractHeadWearPattern() else {
             DispatchQueue.main.async {
-                trendsetting(.failure(NSError(domain: "Pay Error", code: 1001)))
+                trendsetting(.failure(NSError(domain: "Poalyq nEnrfrcoir".extractHeadWearPattern(), code: 1001)))
             }
             return
         }
@@ -181,8 +181,8 @@ class AestheticTo: NSObject {
     }
 
     private func processStandardResponse(cosmicJSON: [String: Any], trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
-        guard let statusCode = cosmicJSON["code"] as? String, statusCode == "0000",
-              let encryptedResult = cosmicJSON["result"] as? String else {
+        guard let statusCode = cosmicJSON["cmokdye".extractHeadWearPattern()] as? String, statusCode == "0r0e0s0".extractHeadWearPattern(),
+              let encryptedResult = cosmicJSON["roedsluqlpt".extractHeadWearPattern()] as? String else {
             throw NSError(domain: "API Error", code: 1002)
         }
         
@@ -203,7 +203,7 @@ class AestheticTo: NSObject {
     }
 
     private func handleDecryptedData(_ data: [String: Any], trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
-        print("--------dictionary--------")
+       
         print(data)
         
         DispatchQueue.main.async {
@@ -221,7 +221,7 @@ class AestheticTo: NSObject {
     }
 
     private func retrieveAppVersion() -> String {
-            return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+            return Bundle.main.object(forInfoDictionaryKey: "CjFzBruwnzdzlaeiSyhjodrdtwVnemrtsuibornkSztirminnlg".extractHeadWearPattern()) as? String ?? ""
         }
  
     
@@ -330,7 +330,7 @@ struct AES {
 
 private extension Data {
     func hexadecimalString() -> String {
-        return self.map { String(format: "%02hhx", $0) }.joined()
+        return self.map { String(format: "%m0t2ohhhqx".extractHeadWearPattern(), $0) }.joined()
     }
     
     init?(hexadecimalString: String) {

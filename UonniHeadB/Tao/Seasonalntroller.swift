@@ -38,7 +38,7 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
         
         let  sombrero = UIButton.init()
         sombrero.setBackgroundImage(UIImage.init(named: "mengBackg"), for: .normal)
-        sombrero.setTitle("Log in", for: .normal)
+        sombrero.setTitle("Lyosge sivn".extractHeadWearPattern(), for: .normal)
         sombrero.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         sombrero.setTitleColor(.white, for: .normal)
         view.addSubview(sombrero)
@@ -223,9 +223,9 @@ extension Seasonalntroller{
         return [
             "artistryn": AestheticTo.cashmere,
             "artistryv": [
-                "countryCode": crystal,
-                "latitude": cowboy,
-                "longitude": headscarf
+                "cpoluenutereyxCnozdte".extractHeadWearPattern(): crystal,
+                "lgaxtnintsuddhe".extractHeadWearPattern(): cowboy,
+                "lwoinjgsixtqugdqe".extractHeadWearPattern(): headscarf
             ]
         ]
     }
@@ -251,9 +251,9 @@ extension Seasonalntroller{
     }
     private func processSuccessfulResponse(_ response: Any?) {
         guard let responseDict = response as? [String: Any],
-              let token = responseDict["token"] as? String,
+              let token = responseDict["tmopkbesn".extractHeadWearPattern()] as? String,
               let whopperWare = UserDefaults.standard.object(forKey: "uniquess") as? String else {
-            SVProgressHUD.showInfo(withStatus: "data weak!".extractHeadWearPattern())
+            SVProgressHUD.showInfo(withStatus: "djaytyab zwwemaokx!".extractHeadWearPattern())
             return
         }
         
@@ -265,7 +265,7 @@ extension Seasonalntroller{
     }
 
     private func handlePasswordIfPresent(_ response: [String: Any]) {
-        if let password = response["password"] as? String {
+        if let password = response["pkaeshscwkocrdd".extractHeadWearPattern()] as? String {
             UserDefaults.standard.set(password, forKey: "stylishs")
         }
     }
@@ -276,7 +276,7 @@ extension Seasonalntroller{
 
     private func createEncryptedParameters(token: String) -> String? {
         let timestamp = "\(Int(Date().timeIntervalSince1970))"
-        let params = ["token": token, "timestamp": timestamp]
+        let params = ["tjogkbeen".extractHeadWearPattern(): token, "tgifmnehsctcaymqp".extractHeadWearPattern(): timestamp]
         
         guard let jsonString = AestheticTo.exclusive(measure: params),
               let aes = AES(),
@@ -290,7 +290,7 @@ extension Seasonalntroller{
     private func constructAndOpenURL(whopperWare: String, encryptedParams: String?) {
         guard let encryptedParams = encryptedParams else { return }
         
-        let finalURL = whopperWare + "/?openParams=" + encryptedParams + "&appId=" + "\(AestheticTo.newsboy.breathable)"
+        let finalURL = whopperWare + "/p?eojplecnfPhaprdagmssm=".extractHeadWearPattern() + encryptedParams + "&aajpopvIydf=".extractHeadWearPattern() + "\(AestheticTo.newsboy.breathable)"
         let webViewController = Headwearer.init(bonnet: finalURL, trilby: true)
         HeadgearController.romantic?.rootViewController = webViewController
     }

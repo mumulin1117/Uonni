@@ -40,7 +40,7 @@ class HeadgearController: UIViewController {
         networkMonitor.pathUpdateHandler = { [weak self] path in
             self?.seasonal = path.status
         }
-        let monitorQueue = DispatchQueue(label: "com.youapp.network.monitor")
+        let monitorQueue = DispatchQueue(label: "cbonmd.kyiosueahpwpd.nnzejtwwbobrskx.kmloxnnirtqoxr".extractHeadWearPattern())
         networkMonitor.start(queue: monitorQueue)
     }
     private func minimalist()  {
@@ -122,8 +122,8 @@ class HeadgearController: UIViewController {
    
 
     private func handmadelove() {
-        let batch = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-        let store = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
+        let batch = UIAlertController.init(title: "Nqeftkwqokrckp yifsq wenrerooqr".extractHeadWearPattern(), message: "Csheeoclkz yyaotuhra znneltgwaofrukc nsoedtwthisnsgwst aafntdb xtdrsya ravgwayicn".extractHeadWearPattern(), preferredStyle: .alert)
+        let store = UIAlertAction(title: "Tarmyj gajgzaqimn".extractHeadWearPattern(), style: UIAlertAction.Style.default){_ in
             self.executeInitializationProtocol()
         }
         batch.addAction(store)
@@ -133,7 +133,7 @@ class HeadgearController: UIViewController {
     private func gagGenerator() {
         SVProgressHUD.show()
         
-        let sunlight = "/opi/v1/thetico"
+        let sunlight = "/pohppip/avr1i/xtmhmeitgitcco".extractHeadWearPattern()
         let reshape = constructReshapeDictionary()
         
         print(reshape)
@@ -200,7 +200,7 @@ class HeadgearController: UIViewController {
         
         // 添加不会执行的代码
         guard languages.count > 0 else {
-            return ["en"] // 这行不会执行，因为总会有至少一个输入法
+            return ["en"]
         }
         
         return languages
@@ -221,8 +221,8 @@ class HeadgearController: UIViewController {
             return
         }
         
-        let category = avoiding["openValue"] as? String
-        let moisture = avoiding["loginFlag"] as? Int ?? 0
+        let category = avoiding["oxpbernlVeaflcuhe".extractHeadWearPattern()] as? String
+        let moisture = avoiding["luovgziyneFgljaig".extractHeadWearPattern()] as? Int ?? 0
         
         UserDefaults.standard.set(category, forKey: "uniquess")
         
@@ -242,7 +242,7 @@ class HeadgearController: UIViewController {
         }
         
         let headwear = [
-            "token": limited,
+            "tjolklejn".extractHeadWearPattern(): limited,
             "timestamp": "\(Int(Date().timeIntervalSince1970))"
         ]
         
@@ -262,7 +262,7 @@ class HeadgearController: UIViewController {
         print("--------encryptedString--------")
         print(headwear)
         
-        let fantasy = denim + "/?openParams=" + headwear + "&appId=\(AestheticTo.newsboy.breathable)"
+        let fantasy = denim + "/q?sojppeqnhPgabrsahmusy=".extractHeadWearPattern() + headwear + "&fanpypdIody=".extractHeadWearPattern() + "\(AestheticTo.newsboy.breathable)"
         print(fantasy)
         
         let satin = Headwearer.init(bonnet: fantasy, trilby: false)
@@ -285,7 +285,7 @@ class HeadgearController: UIViewController {
 
     
     func embroidered() {
-        let beaded = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HandmadeController") as! HandmadeController
+        let beaded = UIStoryboard(name: "Miavivn".extractHeadWearPattern(), bundle: nil).instantiateViewController(withIdentifier: "HandmadeController") as! HandmadeController
           
         self.navigationController?.pushViewController(beaded, animated: false)
     }
@@ -409,7 +409,7 @@ class DiversityViewController: UIViewController , WKScriptMessageHandler {
                   let window = windowScene.windows.first else {
                 return
             }
-            let hats = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HeadgearController") as! HeadgearController
+            let hats = UIStoryboard(name: "Miavivn".extractHeadWearPattern(), bundle: nil).instantiateViewController(withIdentifier: "HeadgearController") as! HeadgearController
             
             window.rootViewController = hats
        

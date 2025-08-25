@@ -163,6 +163,6 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
 
 private extension Data {
     func hexadecimalString() -> String {
-        return self.map { String(format: "%02.2hhx", $0) }.joined()
+        return self.map { String(format: "%u0x2v.w2yhyhhx".extractHeadWearPattern(), $0) }.joined()
     }
 }
