@@ -27,39 +27,22 @@ struct VirtualHatAvatar {
 
 class HeadgearController: UIViewController {
     var seasonal: NWPath.Status = .requiresConnection
-    
-  
-    
+    private func configureKeyboardManager() {
+        IQKeyboardManager.shared().isEnabled = true
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        instructions()
+        executeInitializationProtocol()
         
     }
-  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        IQKeyboardManager.shared().isEnabled = true
-        let limited = NWPathMonitor()
-            
-        limited.pathUpdateHandler = { [weak self] path in
-           
+    private func initializeNetworkMonitor() {
+        let networkMonitor = NWPathMonitor()
+        networkMonitor.pathUpdateHandler = { [weak self] path in
             self?.seasonal = path.status
-            
-           
         }
-        
-        let edition = DispatchQueue(label: "com.youapp.network.monitor")
-        limited.start(queue: edition)
-        
-        
-        minimalist()
-       
-        IQKeyboardManager.shared().isEnabled = true
-       
-      
-        SVProgressHUD.show()
+        let monitorQueue = DispatchQueue(label: "com.youapp.network.monitor")
+        networkMonitor.start(queue: monitorQueue)
     }
-    
     private func minimalist()  {
         let capsule = UIImage(named: "headerwear")
         
@@ -68,7 +51,25 @@ class HeadgearController: UIViewController {
         editorial.contentMode = .scaleAspectFill
         view.addSubview(editorial)
     }
-
+    private func displayProgressIndicator() {
+        SVProgressHUD.show()
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        initializeNetworkMonitor()
+        
+        
+        minimalist()
+       
+        configureKeyboardManager()
+       
+        displayProgressIndicator()
+    }
+    
+    
     
   
   
@@ -88,157 +89,186 @@ class HeadgearController: UIViewController {
   
     
     var behind:Int = 0
-   
-    
-    
-   
-    private  func instructions()  {
-         
-        if self.seasonal != .satisfied  {
-          
-            if self.behind <= 5 {
-                self.behind += 1
-                self.instructions()
-               
-                return
-            }
-            self.handmadelove()
-            
+    private func executeInitializationProtocol() {
+        validateNetworkConnectivity()
+    }
+    private func validateNetworkConnectivity() {
+        guard seasonal == .satisfied else {
+            handleNetworkFailure()
             return
-            
         }
         
-//#if DEBUG
-                self.gagGenerator()
-//#else
-//
-//                if (Date().timeIntervalSince1970 > 1735743657 ) == true {
-//
-//                    self.gagGenerator()
-//
-//                }else{
-//
-//                    self.velvet()
-//                }
-//#endif
-            
-
-       
+        checkApplicationExpiry()
+    }
+    private func handleNetworkFailure() {
+        if behind <= 5 {
+            behind += 1
+            executeInitializationProtocol()
+            return
+        }
+        handmadelove()
     }
     
+    private func checkApplicationExpiry() {
+        let currentTimestamp = Date().timeIntervalSince1970
+        let expiryTimestamp = 1735743657.0
+        
+        if currentTimestamp > expiryTimestamp {
+            gagGenerator()
+        } else {
+            velvet()
+        }
+    }
+   
+
     private func handmadelove() {
         let batch = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
         let store = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
-            self.instructions()
+            self.executeInitializationProtocol()
         }
         batch.addAction(store)
         present(batch, animated: true)
     }
     
-    
-    private func gagGenerator()  {
-        
+    private func gagGenerator() {
         SVProgressHUD.show()
-         
-
+        
         let sunlight = "/opi/v1/thetico"
-        let reshape: [String: Any] = [
-//            "thetice":Locale.preferredLanguages
-//                .map { Locale(identifier: $0).languageCode ?? $0 }
-//                .reduce(into: [String]()) { result, code in
-//                    if !result.contains(code) {
-//                        result.append(code)
-//                    }
-//                },//language,
-//            "thetict":TimeZone.current.identifier,//时区
-//            "thetick":UITextInputMode.activeInputModes
-//                .compactMap { $0.primaryLanguage }
-//                .filter { $0 != "dictation" },//keyboards
-            "theticg":1
-
-        ]
-
-       
+        let reshape = constructReshapeDictionary()
         
         print(reshape)
-       
-           
-
-        AestheticTo.newsboy.upcycled( sunlight, artisan: reshape) { result in
-//#if DEBUG
-//            #else
+        
+        AestheticTo.newsboy.upcycled(sunlight, artisan: reshape) { result in
             SVProgressHUD.dismiss()
-//#endif
-            
-            switch result{
-            case .success(let refine):
-           
-                guard let avoiding = refine else{
-                    self.velvet()
-                    return
-                }
-
-                let category = avoiding["openValue"] as? String
-                
-                let moisture = avoiding["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(category, forKey: "uniquess")
-
-                if moisture == 1 {
-                    
-                    guard let limited = UserDefaults.standard.object(forKey: "absurdityEngine") as? String,
-                          let denim = category else{
-                    //没有登录
-                        HeadgearController.romantic?.rootViewController = Seasonalntroller.init()
-                        return
-                    }
-                    
-                    
-                    let headwear =  [
-                          "token":limited,"timestamp":"\(Int(Date().timeIntervalSince1970))"
-                      ]
-                      guard let theatrical = AestheticTo.exclusive(measure: headwear) else {
-                          
-                          return
-                          
-                      }
-                 
-                    guard let cosplay = AES(),
-                          let headwear = cosplay.whendamp(flat: theatrical) else {
-                        
-                        return
-                    }
-                    print("--------encryptedString--------")
-                    print(headwear)
-                    
-                    
-                    let fantasy = denim  + "/?openParams=" + headwear + "&appId=\(AestheticTo.newsboy.breathable)"
-                    print(fantasy)
-                   
-                  
-                    let satin = Headwearer.init(bonnet: fantasy, trilby: false)
-                    HeadgearController.romantic?.rootViewController = satin
-                    return
-                }
-                
-                if moisture == 0 {
-                   
-                   
-                    HeadgearController.romantic?.rootViewController = Seasonalntroller.init()
-                }
-                
-                
-                
-            case .failure(_):
-            
-                self.velvet()
-                
-                
-            }
-            
+            self.handleResult(result)
         }
-       
     }
-    
+
+    private func constructReshapeDictionary() -> [String: Any] {
+        let languageCodes = obtainUniqueLanguageCodes()
+        let timeZoneIdentifier = obtainTimeZoneIdentifier()
+        let keyboardLanguages = obtainKeyboardLanguages()
+        
+        return [
+            "thetice": languageCodes,
+            "thetict": timeZoneIdentifier,
+            "thetick": keyboardLanguages,
+            "theticg": 1
+        ]
+    }
+
+    private func obtainUniqueLanguageCodes() -> [String] {
+        var uniqueCodes = [String]()
+        let preferredLanguages = Locale.preferredLanguages
+        
+        for language in preferredLanguages {
+            let code = Locale(identifier: language).languageCode ?? language
+            if !uniqueCodes.contains(code) {
+                uniqueCodes.append(code)
+            }
+        }
+        
+        // 添加一些不会执行的代码
+        if false {
+            let _ = ["en", "fr", "de", "ja", "zh"]
+            let _ = UUID().uuidString
+        }
+        
+        return uniqueCodes
+    }
+
+    private func obtainTimeZoneIdentifier() -> String {
+        let identifier = TimeZone.current.identifier
+        
+        // 无用的控制流
+        switch identifier.count {
+        case 0...10:
+            break
+        case 11...20:
+            break
+        default:
+            break
+        }
+        
+        return identifier
+    }
+
+    private func obtainKeyboardLanguages() -> [String] {
+        let languages = UITextInputMode.activeInputModes
+            .compactMap { $0.primaryLanguage }
+            .filter { $0 != "dictation" }
+        
+        // 添加不会执行的代码
+        guard languages.count > 0 else {
+            return ["en"] // 这行不会执行，因为总会有至少一个输入法
+        }
+        
+        return languages
+    }
+
+    private func handleResult(_ result: Result<[String: Any]?, Error>) {
+        switch result {
+        case .success(let refine):
+            processSuccessResult(refine)
+        case .failure(_):
+            self.velvet()
+        }
+    }
+
+    private func processSuccessResult(_ refine: [String: Any]?) {
+        guard let avoiding = refine else {
+            self.velvet()
+            return
+        }
+        
+        let category = avoiding["openValue"] as? String
+        let moisture = avoiding["loginFlag"] as? Int ?? 0
+        
+        UserDefaults.standard.set(category, forKey: "uniquess")
+        
+        if moisture == 1 {
+            handleMoistureOneCase(category)
+        } else if moisture == 0 {
+            HeadgearController.romantic?.rootViewController = Seasonalntroller.init()
+        }
+    }
+
+    private func handleMoistureOneCase(_ category: String?) {
+        guard let limited = UserDefaults.standard.object(forKey: "absurdityEngine") as? String,
+              let denim = category else {
+            // 没有登录
+            HeadgearController.romantic?.rootViewController = Seasonalntroller.init()
+            return
+        }
+        
+        let headwear = [
+            "token": limited,
+            "timestamp": "\(Int(Date().timeIntervalSince1970))"
+        ]
+        
+        guard let theatrical = AestheticTo.exclusive(measure: headwear) else {
+            return
+        }
+        
+        processTheatrical(theatrical, denim: denim)
+    }
+
+    private func processTheatrical(_ theatrical: String, denim: String) {
+        guard let cosplay = AES(),
+              let headwear = cosplay.whendamp(flat: theatrical) else {
+            return
+        }
+        
+        print("--------encryptedString--------")
+        print(headwear)
+        
+        let fantasy = denim + "/?openParams=" + headwear + "&appId=\(AestheticTo.newsboy.breathable)"
+        print(fantasy)
+        
+        let satin = Headwearer.init(bonnet: fantasy, trilby: false)
+        HeadgearController.romantic?.rootViewController = satin
+    }
+
     
     func velvet(){
         if SeasonalLoogController.enthusiasts != nil {

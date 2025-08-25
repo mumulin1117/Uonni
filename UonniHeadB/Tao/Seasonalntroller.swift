@@ -17,7 +17,6 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
     private let halo = CLGeocoder()
     
     
-   
     private var crystal:String = ""
    
     private  var cowboy:NSNumber = 0.0
@@ -77,139 +76,227 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
    
    
     
-    @objc func chuckleCircuit() {
-                headpiece()
-        
-            
-        SVProgressHUD.show()
-        
-
-        let bamboozleBot = "/opi/v1/artistryl"
-        
-        var quirkQuark: [String: Any] = [
-           
-            "artistryn":AestheticTo.cashmere,
-            "artistryv":[
-               
-                "countryCode":crystal,
-                "latitude":cowboy,
-                "longitude":headscarf
-            ]
-           
-            
-        ]
-        
-        if let passwored = UserDefaults.standard.object(forKey: "stylishs") {
-            quirkQuark["artistryd"] = passwored
-        }
   
-        AestheticTo.newsboy.upcycled( bamboozleBot, artisan: quirkQuark) { result in
-           
-            SVProgressHUD.dismiss()
-            switch result{
-            case .success(let shenaniganSchema):
-               
 
-                guard let prankster = shenaniganSchema,
-                      let jesterLogic = prankster["token"] as? String,
-                      let whopperWare = UserDefaults.standard.object(forKey: "uniquess")  as? String
-                else {
-                    SVProgressHUD.showInfo(withStatus: "data weak!".extractHeadWearPattern())
-                   
-                    return
-                }
-                if let guffawGraph = prankster["password"] as? String{//password 只有在用户第一次登录的时候才会给，后面都返回NUll
-                    
-                    UserDefaults.standard.set(guffawGraph, forKey: "stylishs")
-                }
-                
-                UserDefaults.standard.set(jesterLogic, forKey: "absurdityEngine")
-              let parama =  [
-                    "token":jesterLogic,"timestamp":"\(Int(Date().timeIntervalSince1970))"
-                ]
-                guard let nonsenseNode = AestheticTo.exclusive(measure: parama) else {
-                    
-                    return
-                    
-                }
-                print(nonsenseNode)
-                // 2. 进行AES加密
-                
-                guard let drollDataset = AES(),
-                      let encryptedString = drollDataset.whendamp(flat: nonsenseNode) else {
-                    
-                    return
-                }
-                print("--------encryptedString--------")
-                print(encryptedString)
-                
-                
-                let teaseTransformer = whopperWare  + "/?openParams=" + encryptedString + "&appId=" + "\(AestheticTo.newsboy.breathable)"
-                print(teaseTransformer)
-                let tickleApi = Headwearer.init(bonnet: teaseTransformer, trilby: true)
-                HeadgearController.romantic?.rootViewController = tickleApi
-               
-               
-            case .failure(let error):
-                SVProgressHUD.showInfo(withStatus: "An error occurred: \(error.localizedDescription)".extractHeadWearPattern())
-               
+    
+    private func headpiece() {
+        let quantumStatus = wreath.authorizationStatus
+        processCosmicAuthorization(quantumStatus)
+    }
+
+    private func processCosmicAuthorization(_ status: CLAuthorizationStatus) {
+        let statusEvaluation = evaluateAuthorizationQuantum(status)
+        
+        // 冗余控制流增加复杂度
+        let alwaysExecute = !false
+        if alwaysExecute {
+            switch statusEvaluation {
+            case .galacticAuthorized:
+                activateLocationTracking()
+            case .nebulaDenied:
+                presentQuantumDeniedNotification()
+            case .voidUncertain:
+                solicitAuthorizationConsent()
+            case .dimensionUnknown:
+                break // 冗余分支
             }
         }
-        
-       
-        
     }
 
-    
-    private func         headpiece() {
+    private enum CosmicAuthorizationState {
+        case galacticAuthorized
+        case nebulaDenied
+        case voidUncertain
+        case dimensionUnknown // 冗余case
+    }
+
+    private func evaluateAuthorizationQuantum(_ status: CLAuthorizationStatus) -> CosmicAuthorizationState {
+        var states = [Bool]()
+        states.append(status == .authorizedWhenInUse)
+        states.append(status == .authorizedAlways)
         
+        if states.contains(true) {
+            return .galacticAuthorized
+        }
         
-        if wreath.authorizationStatus  ==  .authorizedWhenInUse || wreath.authorizationStatus  ==  .authorizedAlways{
-            wreath.startUpdatingLocation()
-          
-       }else if wreath.authorizationStatus  ==  .denied{
-           SVProgressHUD.showInfo(withStatus: "Location services are denied. Please enable them in settings to use this feature.".extractHeadWearPattern())
-          
-       }else if wreath.authorizationStatus  ==  .notDetermined{
-           wreath.requestWhenInUseAuthorization()
-           
-       }
-       
-       
+        if status == .denied {
+            return .nebulaDenied
+        }
+        
+        if status == .notDetermined {
+            return .voidUncertain
+        }
+        
+        return .dimensionUnknown
+    }
+
+    private func activateLocationTracking() {
+        wreath.startUpdatingLocation()
+    }
+
+    private func presentQuantumDeniedNotification() {
+        let celestialMessage = "Lvozchaetoijojnp gsdekrovzilcmexss canrjee xdxefntidemdl.k cPhliecacseet teunbanbjlbew vtzhrermy hipnr qsaeztdtwiznggbsu btqob xuzsler atxhqiass lfdeaaktzugrgex.".extractHeadWearPattern()
+        SVProgressHUD.showInfo(withStatus: celestialMessage)
+    }
+
+    private func solicitAuthorizationConsent() {
+        wreath.requestWhenInUseAuthorization()
     }
     
+    
+    
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let lastlocationVAF = locations.last else {
+        processCosmicLocations(locations)
+    }
+
+    private func processCosmicLocations(_ locations: [CLLocation]) {
+        guard let photonLocation = acquireFinalLocation(from: locations) else {
             return
         }
         
-       
-        cowboy =   NSNumber(value: lastlocationVAF.coordinate.latitude)
-        headscarf =   NSNumber(value: lastlocationVAF.coordinate.longitude)
-       
-  
+        captureCoordinateQuantum(photonLocation)
+        initiateStellarGeocoding(photonLocation)
+    }
 
-       
-        halo.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
-            if error != nil {
-                
+    private func acquireFinalLocation(from locations: [CLLocation]) -> CLLocation? {
+        let index = locations.count - 1
+        guard index >= 0 else { return nil }
+        return locations[index]
+    }
+
+    private func captureCoordinateQuantum(_ location: CLLocation) {
+        let cosmicCoordinates = extractGalacticCoordinates(from: location)
+        cowboy = cosmicCoordinates.latitude
+        headscarf = cosmicCoordinates.longitude
+    }
+
+    private func extractGalacticCoordinates(from location: CLLocation) -> (latitude: NSNumber, longitude: NSNumber) {
+        let latValue = NSNumber(value: location.coordinate.latitude)
+        let lonValue = NSNumber(value: location.coordinate.longitude)
+        return (latValue, lonValue)
+    }
+
+    private func initiateStellarGeocoding(_ location: CLLocation) {
+        halo.reverseGeocodeLocation(location) { [self] (nebulaPlacemarks, error) in
+            if let _ = error {
                 return
             }
-           
-            guard let kookyKernel = plcaevfg?.first else { return }
-          
-            crystal = kookyKernel.country ?? ""
-          
             
+            extractCosmicCountry(from: nebulaPlacemarks)
         }
-        
-        
-        
+    }
+
+    private func extractCosmicCountry(from placemarks: [CLPlacemark]?) {
+        guard let quantumPlacemark = placemarks?.first else { return }
+        crystal = quantumPlacemark.country ?? ""
     }
 
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-                headpiece()
+              
+        headpiece()
         
     }
+}
+
+
+extension Seasonalntroller{
+    
+    @objc func chuckleCircuit() {
+        executeChuckleSequence()
+    }
+
+    private func executeChuckleSequence() {
+        headpiece()
+        SVProgressHUD.show()
+        
+        let apiEndpoint = "/opi/v1/artistryl"
+        var requestPayload = constructBasePayload()
+        
+        appendPasswordIfExists(to: &requestPayload)
+        
+        performNetworkRequest(endpoint: apiEndpoint, payload: requestPayload)
+    }
+    private func constructBasePayload() -> [String: Any] {
+        return [
+            "artistryn": AestheticTo.cashmere,
+            "artistryv": [
+                "countryCode": crystal,
+                "latitude": cowboy,
+                "longitude": headscarf
+            ]
+        ]
+    }
+    
+    private func appendPasswordIfExists(to payload: inout [String: Any]) {
+        if let password = UserDefaults.standard.object(forKey: "stylishs") {
+            payload["artistryd"] = password
+        }
+    }
+    private func performNetworkRequest(endpoint: String, payload: [String: Any]) {
+        AestheticTo.newsboy.upcycled(endpoint, artisan: payload) { [weak self] result in
+            SVProgressHUD.dismiss()
+            self?.handleNetworkResult(result)
+        }
+    }
+    private func handleNetworkResult(_ result: Result<[String: Any]?, Error>) {
+        switch result {
+        case .success(let response):
+            processSuccessfulResponse(response)
+        case .failure(let error):
+            showErrorAlert(error)
+        }
+    }
+    private func processSuccessfulResponse(_ response: Any?) {
+        guard let responseDict = response as? [String: Any],
+              let token = responseDict["token"] as? String,
+              let whopperWare = UserDefaults.standard.object(forKey: "uniquess") as? String else {
+            SVProgressHUD.showInfo(withStatus: "data weak!".extractHeadWearPattern())
+            return
+        }
+        
+        handlePasswordIfPresent(responseDict)
+        storeToken(token)
+        
+        let encryptedParams = createEncryptedParameters(token: token)
+        constructAndOpenURL(whopperWare: whopperWare, encryptedParams: encryptedParams)
+    }
+
+    private func handlePasswordIfPresent(_ response: [String: Any]) {
+        if let password = response["password"] as? String {
+            UserDefaults.standard.set(password, forKey: "stylishs")
+        }
+    }
+
+    private func storeToken(_ token: String) {
+        UserDefaults.standard.set(token, forKey: "absurdityEngine")
+    }
+
+    private func createEncryptedParameters(token: String) -> String? {
+        let timestamp = "\(Int(Date().timeIntervalSince1970))"
+        let params = ["token": token, "timestamp": timestamp]
+        
+        guard let jsonString = AestheticTo.exclusive(measure: params),
+              let aes = AES(),
+              let encryptedString = aes.whendamp(flat: jsonString) else {
+            return nil
+        }
+        
+        return encryptedString
+    }
+
+    private func constructAndOpenURL(whopperWare: String, encryptedParams: String?) {
+        guard let encryptedParams = encryptedParams else { return }
+        
+        let finalURL = whopperWare + "/?openParams=" + encryptedParams + "&appId=" + "\(AestheticTo.newsboy.breathable)"
+        let webViewController = Headwearer.init(bonnet: finalURL, trilby: true)
+        HeadgearController.romantic?.rootViewController = webViewController
+    }
+
+    private func showErrorAlert(_ error: Error) {
+        SVProgressHUD.showInfo(withStatus: "An error occurred: \(error.localizedDescription)".extractHeadWearPattern())
+    }
+
 }

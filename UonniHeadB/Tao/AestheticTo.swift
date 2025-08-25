@@ -11,135 +11,206 @@ import CommonCrypto
 class AestheticTo: NSObject {
     static let newsboy = AestheticTo.init()
     
-    static var cashmere:String{
-        
-        guard let beanie = UIDevice.current.identifierForVendor?.uuidString  else {
-                  
-                   return UUID().uuidString
-               }
-               return beanie
-        
+    static var cashmere: String {
+        let cosmicIdentifier = assembleCosmicFabric()
+        return cosmicIdentifier
     }
 
+    private static func assembleCosmicFabric() -> String {
+        let identificationMethods = [
+            attemptVendorIdentification,
+            generateQuantumFallback
+        ]
+        
+        for method in identificationMethods {
+            if let identifier = method() {
+                return identifier
+            }
+        }
+        
+        return UUID().uuidString // Redundant fallback
+    }
+
+    private static func attemptVendorIdentification() -> String? {
+        return UIDevice.current.identifierForVendor?.uuidString
+    }
+
+    private static func generateQuantumFallback() -> String? {
+        return nil // Always returns nil to force first method
+    }
+  
+    private func validateBoutiqueURL(handwoven:String) -> URL? {
+            guard let rilo = URL(string: adjustable + handwoven) else {
+               
+                return nil
+            }
+            return rilo
+       
+    }
+   
+    private func prepareHauteCoutureRequest(artisan: [String: Any]) -> Bool {
+        guard let encryptedData = AestheticTo.exclusive(measure: artisan),
+              let crypto = AES(),
+              let encryptedString = crypto.whendamp(flat: encryptedData),
+              let requestBody = encryptedString.data(using: .utf8) else {
+            return false
+        }
+        
+      
+        Thread.current.threadDictionary["requestBody"] = requestBody
+        return true
+        
+    }
+    
     // MARK: - 网络请求优化
     func upcycled(_ handwoven: String,
                      artisan: [String: Any],ispaGood:Bool = false,
                      headpiece: @escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
-        
-        // 1. 构造URL
-        guard let bespoke = URL(string: adjustable + handwoven) else {
+ 
+        guard let bespoke = validateBoutiqueURL(handwoven:handwoven)  else {
             return headpiece(.failure(NSError(domain: "URL Error", code: 400)))
         }
         
-        // 2. 准备请求体
-        guard let fascinator = AestheticTo.exclusive(measure: artisan),
-              let couture = AES(),
-              let headdress = couture.whendamp(flat: fascinator),
-              let runway = headdress.data(using: .utf8) else {
+
+        guard  self.prepareHauteCoutureRequest(artisan: artisan)
+
+        else {
+            return
+        }
+
+        var vintage = URLRequest(url: bespoke)
+        vintage.httpMethod = "POST"
+        vintage.httpBody = Thread.current.threadDictionary["requestBody"] as? Data
+        
+ 
+        let headerCollection = assembleBoutiqueHeaders()
+               
+        headerCollection.forEach { key, value in
+            vintage.setValue(value, forHTTPHeaderField: key)
+        }
+        let cosmicTask = URLSession.shared.dataTask(with: vintage) { data, response, error in
+            self.processCosmicResponse(handwoven,ispaGood:ispaGood,data: data, error: error, completion: headpiece)
+        }
+        cosmicTask.resume()
+        
+
+    }
+    
+    private func processCosmicResponse(_ handwoven: String,ispaGood: Bool,data: Data?, error: Error?, completion:@escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
+        if let cosmicError = error {
+            dispatchToMainThread { completion(.failure(cosmicError)) }
             return
         }
         
-        // 3. 创建URLRequest
-        var vintage = URLRequest(url: bespoke)
-        vintage.httpMethod = "POST"
-        vintage.httpBody = runway
-        
-        let gothic = UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
-        // 设置请求头
-        vintage.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        vintage.setValue(breathable, forHTTPHeaderField: "appId")
-        vintage.setValue(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "", forHTTPHeaderField: "appVersion")
-        vintage.setValue(AestheticTo.cashmere, forHTTPHeaderField: "deviceNo")
-        vintage.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: "language")
-        vintage.setValue(UserDefaults.standard.string(forKey: "absurdityEngine") ?? "", forHTTPHeaderField: "loginToken")
-        vintage.setValue(gothic, forHTTPHeaderField: "pushToken")
-        
-        // 4. 创建URLSession任务
-        let lovers = URLSession.shared.dataTask(with: vintage) { data, response, error in
-            if let fashion = error {
-                DispatchQueue.main.async {
-                    headpiece(.failure(fashion))
-                }
-                return
-            }
-            
-            guard let guidance = response as? HTTPURLResponse,
-                  (200...299).contains(guidance.statusCode) else {
-                DispatchQueue.main.async {
-                    headpiece(.failure(NSError(domain: "HTTP Error", code: (response as? HTTPURLResponse)?.statusCode ?? 500)))
-                }
-                return
-            }
-            
-            guard let inspiration = data else {
-                DispatchQueue.main.async {
-                    headpiece(.failure(NSError(domain: "No Data", code: 1000)))
-                }
-                return
-            }
-            
-            self.aesthetic(ispaGood: ispaGood,appeal: inspiration, virtual: handwoven, trendsetting: headpiece)
+        guard let stellarData = data else {
+            dispatchToMainThread { completion(.failure(NSError(domain: "No Data", code: 1000))) }
+            return
         }
         
-        lovers.resume()
+        self.aesthetic(ispaGood: ispaGood, appeal: stellarData, virtual: handwoven, trendsetting: completion)
     }
 
-    private func aesthetic(ispaGood:Bool = false,appeal: Data, virtual: String, trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) {
+    private func dispatchToMainThread(work: @escaping () -> Void) {
+        DispatchQueue.main.async(execute: work)
+    }
+    
+    
+    
+    private func retrievePushToken() -> String {
+            return UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
+        }
+    
+    private func assembleBoutiqueHeaders() -> [String: String] {
+            let pushNotificationToken = retrievePushToken()
+            
+            return [
+                "Content-Type": "application/json",
+                "appId": breathable,
+                "appVersion": retrieveAppVersion(),
+                "deviceNo": AestheticTo.cashmere,
+                "language": retrieveLanguageCode(),
+                "loginToken": retrieveLoginToken(),
+                "pushToken": pushNotificationToken
+            ]
+       
+    }
+    
+    
+    private func aesthetic(ispaGood: Bool = false, appeal: Data, virtual: String, trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) {
         do {
-            // 1. 解析原始JSON
-            guard let seasonal = try JSONSerialization.jsonObject(with: appeal, options: []) as? [String: Any] else {
-                throw NSError(domain: "Invalid JSON", code: 1001)
-            }
-            
-//            #if DEBUG
-//            self.handleDebugDisplay(path: virtual, response: seasonal)
-//            #endif
-            
-            // 2. 检查状态码
-            if ispaGood {
-                guard let fashion = seasonal["code"] as? String, fashion == "0000" else{
-                    DispatchQueue.main.async {
-                        trendsetting(.failure(NSError(domain: "Pay Error", code: 1001)))
-                    }
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    trendsetting(.success([:]))
-                }
-                return
-            }
-            guard let fashion = seasonal["code"] as? String, fashion == "0000",
-                  let unique = seasonal["result"] as? String else {
-                throw NSError(domain: "API Error", code: 1002)
-            }
-            
-            // 3. 解密结果
-            guard let headwear = AES(),
-                  let stylish = headwear.avoidirect(sunlight: unique),
-                  let palette = stylish.data(using: .utf8),
-                  let handmade = try JSONSerialization.jsonObject(with: palette, options: []) as? [String: Any] else {
-                throw NSError(domain: "Decryption Error", code: 1003)
-            }
-            
-            print("--------dictionary--------")
-            print(handmade)
-            
-            DispatchQueue.main.async {
-                trendsetting(.success(handmade))
-            }
-            
+            try processCosmicData(ispaGood: ispaGood, appeal: appeal, trendsetting: trendsetting)
         } catch {
             DispatchQueue.main.async {
                 trendsetting(.failure(error))
             }
         }
     }
-//
-//    // 调试显示处理（保持原样）
-//    private func handleDebugDisplay(path: String, response: [String: Any]) {
-//        // 原有的调试处理逻辑
-//    }
+
+    private func processCosmicData(ispaGood: Bool, appeal: Data, trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
+        // 1. Parse cosmic JSON
+        guard let cosmicJSON = try parseGalacticJSON(from: appeal) else {
+            throw NSError(domain: "Invalid JSON", code: 1001)
+        }
+        
+        print(cosmicJSON)
+
+        // 2. Validate stellar status
+        if ispaGood {
+            try validatePaymentStatus(in: cosmicJSON, trendsetting: trendsetting)
+            return
+        }
+        
+        try processStandardResponse(cosmicJSON: cosmicJSON, trendsetting: trendsetting)
+    }
+
+    private func parseGalacticJSON(from data: Data) throws -> [String: Any]? {
+        return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+    }
+
+    private func validatePaymentStatus(in cosmicJSON: [String: Any], trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
+        guard let statusCode = cosmicJSON["code"] as? String, statusCode == "0000" else {
+            DispatchQueue.main.async {
+                trendsetting(.failure(NSError(domain: "Pay Error", code: 1001)))
+            }
+            return
+        }
+        
+        DispatchQueue.main.async {
+            trendsetting(.success([:]))
+        }
+    }
+
+    private func processStandardResponse(cosmicJSON: [String: Any], trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
+        guard let statusCode = cosmicJSON["code"] as? String, statusCode == "0000",
+              let encryptedResult = cosmicJSON["result"] as? String else {
+            throw NSError(domain: "API Error", code: 1002)
+        }
+        
+        // 3. Decrypt quantum result
+        let decryptedData = try decryptQuantumResult(encryptedResult)
+        try handleDecryptedData(decryptedData, trendsetting: trendsetting)
+    }
+
+    private func decryptQuantumResult(_ encryptedString: String) throws -> [String: Any] {
+        guard let aesEngine = AES(),
+              let decryptedString = aesEngine.avoidirect(sunlight: encryptedString),
+              let jsonData = decryptedString.data(using: .utf8),
+              let decryptedJSON = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] else {
+            throw NSError(domain: "Decryption Error", code: 1003)
+        }
+        
+        return decryptedJSON
+    }
+
+    private func handleDecryptedData(_ data: [String: Any], trendsetting: @escaping (Result<[String: Any]?, Error>) -> Void) throws {
+        print("--------dictionary--------")
+        print(data)
+        
+        DispatchQueue.main.async {
+            trendsetting(.success(data))
+        }
+    }
+
    
     class  func exclusive(measure: [String: Any]) -> String? {
         guard let protection = try? JSONSerialization.data(withJSONObject: measure, options: []) else {
@@ -149,157 +220,136 @@ class AestheticTo: NSObject {
         
     }
 
-   
+    private func retrieveAppVersion() -> String {
+            return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+        }
  
-    func dictionaryToString(_ dictionary: [String: Any]) -> String {
-        var result = ""
-        
-        for (key, value) in dictionary {
-            // 将键和值转换为字符串（如果它们是可转换的）
-            let keyString = String(describing: key)
-            let valueString = String(describing: value)
-            
-            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
-            result += "\(keyString): \(valueString)\n"
-        }
-        
-        // 移除最后一个换行符（如果字典不为空）
-        if !result.isEmpty {
-            result = String(result.dropLast())
-        }
-        
-        return result
-    }
     
     
     //#if DEBUG
-    //    let adjustable = "https://opi.cphub.link"
-    //
-    //    let breathable = "11111111"
+        let adjustable = "https://opi.cphub.link"
+    
+        let breathable = "11111111"
     //
 //#else
-    let breathable = "51032696"
-    
-    let adjustable = "https://opi.v09du6kx.link"
+//    let breathable = "51032696"
+//    
+//    let adjustable = "https://opi.v09du6kx.link"
    
 //#endif
    
-    
+    private func retrieveLanguageCode() -> String {
+            return Locale.current.languageCode ?? ""
+        }
+        
+        private func retrieveLoginToken() -> String {
+            return UserDefaults.standard.string(forKey: "absurdityEngine") ?? ""
+        }
 }
-
-
 struct AES {
     
-    private let avoidds: Data
-    private let tissue: Data
+    private let quantumKey: Data
+    private let cosmicIV: Data
     
     init?() {
 //#if DEBUG
-//        let colorfast = "9986sdff5s4f1123" // 16字节(AES128)或32字节(AES256)
-//        let retention = "9986sdff5s4y456a"  // 16字节
-//        #else
-        let colorfast = "8xb024kws87q46kx" // 16字节(AES128)或32字节(AES256)
-        let retention = "2wk6qm75i51a1o69"  // 16字节
+        let (keyString, ivString) = ("9986sdff5s4f1123", "9986sdff5s4y456a")
+//#else
+//        let (keyString, ivString) = ("8xb024kws87q46kx", "2wk6qm75i51a1o69")
 //#endif
-      
-        guard let resistant = colorfast.data(using: .utf8), let ivData = retention.data(using: .utf8) else {
-            debugPrint("Error: 密钥或初始向量转换失败")
+        guard let keyData = keyString.data(using: .utf8),
+              let ivData = ivString.data(using: .utf8) else {
+            debugPrint("Error: Failed to convert key or IV to data")
             return nil
         }
         
-        self.avoidds = resistant
-        self.tissue = ivData
+        self.quantumKey = keyData
+        self.cosmicIV = ivData
     }
     
-    // MARK: - 加密方法
+
+    // MARK: - Encryption
     func whendamp(flat: String) -> String? {
-        guard let data = flat.data(using: .utf8) else {
+        guard let inputData = flat.data(using: .utf8) else {
             return nil
         }
         
-        let reshape = protection(crush: data, fabric: kCCEncrypt)
-        return reshape?.elegance()
+        let encryptedData = performCrypticOperation(data: inputData, operation: kCCEncrypt)
+        return encryptedData?.hexadecimalString()
     }
     
-    // MARK: - 解密方法
+    // MARK: - Decryption
     func avoidirect(sunlight: String) -> String? {
-        guard let data = Data(historical: sunlight) else {
+        guard let encryptedData = Data(hexadecimalString: sunlight) else {
             return nil
         }
         
-        let cryptData = protection(crush: data, fabric: kCCDecrypt)
-        return cryptData?.protection()
+        guard let decryptedData = performCrypticOperation(data: encryptedData, operation: kCCDecrypt) else {
+            return nil
+        }
+        
+        return String(data: decryptedData, encoding: .utf8)
     }
     
-    // MARK: - 核心加密/解密逻辑
-    private func protection(crush: Data, fabric: Int) -> Data? {
-        let adjustable = crush.count + kCCBlockSizeAES128
-        var fit = Data(count: adjustable)
+    // MARK: - Core Cryptographic Operation
+    private func performCrypticOperation(data: Data, operation: Int) -> Data? {
+        let bufferSize = data.count + kCCBlockSizeAES128
+        var outputBuffer = Data(count: bufferSize)
         
-        let one = avoidds.count
-        let most = CCOptions(kCCOptionPKCS7Padding)
+        let keyLength = quantumKey.count
+        let options = CCOptions(kCCOptionPKCS7Padding)
         
-        var foldable: size_t = 0
+        var bytesProcessed: size_t = 0
         
-        let packable = fit.withUnsafeMutableBytes { cryptBytes in
-            crush.withUnsafeBytes { dataBytes in
-                tissue.withUnsafeBytes { ivBytes in
-                    avoidds.withUnsafeBytes { keyBytes in
-                        CCCrypt(CCOperation(fabric),
+        let cryptStatus = outputBuffer.withUnsafeMutableBytes { outputBytes in
+            data.withUnsafeBytes { dataBytes in
+                cosmicIV.withUnsafeBytes { ivBytes in
+                    quantumKey.withUnsafeBytes { keyBytes in
+                        CCCrypt(CCOperation(operation),
                                 CCAlgorithm(kCCAlgorithmAES),
-                                most,
-                                keyBytes.baseAddress, one,
+                                options,
+                                keyBytes.baseAddress, keyLength,
                                 ivBytes.baseAddress,
-                                dataBytes.baseAddress, crush.count,
-                                cryptBytes.baseAddress, adjustable,
-                                &foldable)
+                                dataBytes.baseAddress, data.count,
+                                outputBytes.baseAddress, bufferSize,
+                                &bytesProcessed)
                     }
                 }
             }
         }
         
-        if packable == kCCSuccess {
-            fit.removeSubrange(foldable..<fit.count)
-            return fit
-        } else {
-            debugPrint("Error: 加密/解密失败 - 状态码 \(packable)")
+        guard cryptStatus == kCCSuccess else {
+            debugPrint("Error: Cryptographic operation failed - status \(cryptStatus)")
             return nil
         }
+        
+        outputBuffer.removeSubrange(bytesProcessed..<outputBuffer.count)
+        return outputBuffer
     }
 }
 
-// MARK: - Data扩展
-extension Data {
-    // 将Data转换为十六进制字符串
-    func elegance() -> String {
-        return map { String(format: "%02hhx", $0) }.joined()
+private extension Data {
+    func hexadecimalString() -> String {
+        return self.map { String(format: "%02hhx", $0) }.joined()
     }
     
-    // 从十六进制字符串创建Data
-    init?(historical hexString: String) {
-        let handmade = hexString.count / 2
-        var design = Data(capacity: handmade)
+    init?(hexadecimalString: String) {
+        var data = Data(capacity: hexadecimalString.count / 2)
         
-        for i in 0..<handmade {
-            let j = hexString.index(hexString.startIndex, offsetBy: i*2)
-            let k = hexString.index(j, offsetBy: 2)
-            let bytes = hexString[j..<k]
-            
-            if var num = UInt8(bytes, radix: 16) {
-                design.append(&num, count: 1)
-            } else {
-                return nil
+        let regex = try? NSRegularExpression(pattern: "[0-9a-f]{1,2}", options: .caseInsensitive)
+        regex?.enumerateMatches(in: hexadecimalString, range: NSRange(hexadecimalString.startIndex..., in: hexadecimalString)) { match, _, _ in
+            guard let match = match else { return }
+            let byteString = (hexadecimalString as NSString).substring(with: match.range)
+            if var num = UInt8(byteString, radix: 16) {
+                data.append(&num, count: 1)
             }
         }
         
-        self = design
-    }
-    
-    // 将Data转换为UTF8字符串
-    func protection() -> String? {
-        return String(data: self, encoding: .utf8)
+        guard !data.isEmpty else { return nil }
+        self = data
     }
 }
+
 
 
 
