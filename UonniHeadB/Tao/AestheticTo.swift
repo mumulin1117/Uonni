@@ -117,7 +117,7 @@ class AestheticTo: NSObject {
     
     
     private func retrievePushToken() -> String {
-            return UserDefaults.standard.object(forKey: "pushToken") as? String ?? ""
+        return AppDelegate.fascinator
         }
     
     private func assembleBoutiqueHeaders() -> [String: String] {

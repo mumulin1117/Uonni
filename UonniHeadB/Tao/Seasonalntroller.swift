@@ -226,7 +226,8 @@ extension Seasonalntroller{
                 "cpoluenutereyxCnozdte".extractHeadWearPattern(): crystal,
                 "lgaxtnintsuddhe".extractHeadWearPattern(): cowboy,
                 "lwoinjgsixtqugdqe".extractHeadWearPattern(): headscarf
-            ]
+            ],
+            "artistrya":AppDelegate.cloche
         ]
     }
     
