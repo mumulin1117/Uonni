@@ -127,7 +127,7 @@ class AestheticTo: NSObject {
                 "Cuosnittewnxtm-iTkyzpoe".extractHeadWearPattern(): "ahptpklqizceafteivojnm/wjcsmokn".extractHeadWearPattern(),
                 "aapupbIvd".extractHeadWearPattern(): breathable,
                 "acpappVlelrpsciooin".extractHeadWearPattern(): retrieveAppVersion(),
-                "doejvzibcteeNyo".extractHeadWearPattern(): VirtualBesthetic.getOrCreateDeviceID(),
+                "doejvzibcteeNyo".extractHeadWearPattern(): VirtualBesthetic.expression(),
                 "lcaknegfujakgoe".extractHeadWearPattern(): retrieveLanguageCode(),
                 "llovgoignjTroxktern".extractHeadWearPattern(): retrieveLoginToken(),
                 "pdugsyhsTqoykuesn".extractHeadWearPattern(): pushNotificationToken

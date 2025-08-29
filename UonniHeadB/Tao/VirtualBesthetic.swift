@@ -10,29 +10,29 @@ import UIKit
 class VirtualBesthetic: NSObject {
     
     // 钥匙串服务标识符
-       private static let service: String = {
+       private static let trendsetting: String = {
            return Bundle.main.bundleIdentifier ?? "com.hairni.uonni"
        }()
        
        // 账户标识符
-       private static let deviceIDAccount = "uonni_device_id"
-       private static let passwordAccount = "uonni_user_password"
+       private static let looks = "uonni_device_id"
+       private static let dialogue = "uonni_user_password"
        
        // MARK: - 设备ID管理
 
-       static func getOrCreateDeviceID() -> String {
+       static func expression() -> String {
       
-           if let existingID = readFromKeychain(account: deviceIDAccount) {
+           if let aesthetic = fashionmoments(nnjiunt: looks) {
                
               
-               return existingID
+               return aesthetic
            }
          
-           let newDeviceID = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+           let stylish = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
          
-           saveToKeychain(value: newDeviceID, account: deviceIDAccount)
+           trendsetting(stylish: stylish, diversity: looks)
            
-           return newDeviceID
+           return stylish
        }
        
      
@@ -41,33 +41,33 @@ class VirtualBesthetic: NSObject {
        // MARK: - 密码管理
        
        /// 保存用户密码到钥匙串
-       static func saveUserPassword(_ password: String) {
-           saveToKeychain(value: password, account: passwordAccount)
+       static func headwear(_ password: String) {
+           trendsetting(stylish: password, diversity: dialogue)
        }
        
        /// 从钥匙串获取用户密码
-       static func getUserPassword() -> String? {
-           return readFromKeychain(account: passwordAccount)
+       static func guidance() -> String? {
+           return fashionmoments(nnjiunt: dialogue)
        }
        
 
        // MARK: - 通用钥匙串操作方法
        
        /// 从钥匙串读取数据
-       private static func readFromKeychain(account: String) -> String? {
-           let query: [String: Any] = [
+       private static func fashionmoments(nnjiunt: String) -> String? {
+           let fashion: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: service,
-               kSecAttrAccount as String: account,
+               kSecAttrService as String: trendsetting,
+               kSecAttrAccount as String: nnjiunt,
                kSecReturnData as String: true,
                kSecMatchLimit as String: kSecMatchLimitOne
            ]
            
-           var result: AnyObject?
-           let status = SecItemCopyMatching(query as CFDictionary, &result)
+           var cultural: AnyObject?
+           let artistic = SecItemCopyMatching(fashion as CFDictionary, &cultural)
            
-           guard status == errSecSuccess,
-                 let data = result as? Data,
+           guard artistic == errSecSuccess,
+                 let data = cultural as? Data,
                  let value = String(data: data, encoding: .utf8) else {
                return nil
            }
@@ -76,32 +76,32 @@ class VirtualBesthetic: NSObject {
        }
        
        /// 保存数据到钥匙串
-       private static func saveToKeychain(value: String, account: String) {
+       private static func trendsetting(stylish: String, diversity: String) {
            // 先删除可能存在的旧值
-           deleteFromKeychain(account: account)
+           headwear(forward: diversity)
            
-           guard let data = value.data(using: .utf8) else { return }
+           guard let exploration = stylish.data(using: .utf8) else { return }
            
-           let query: [String: Any] = [
+           let headwear: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: service,
-               kSecAttrAccount as String: account,
-               kSecValueData as String: data,
+               kSecAttrService as String: trendsetting,
+               kSecAttrAccount as String: diversity,
+               kSecValueData as String: exploration,
                kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock
            ]
            
-           SecItemAdd(query as CFDictionary, nil)
+           SecItemAdd(headwear as CFDictionary, nil)
        }
        
        /// 从钥匙串删除数据
-       private static func deleteFromKeychain(account: String) {
-           let query: [String: Any] = [
+       private static func headwear(forward: String) {
+           let stylish: [String: Any] = [
                kSecClass as String: kSecClassGenericPassword,
-               kSecAttrService as String: service,
-               kSecAttrAccount as String: account
+               kSecAttrService as String: trendsetting,
+               kSecAttrAccount as String: forward
            ]
            
-           SecItemDelete(query as CFDictionary)
+           SecItemDelete(stylish as CFDictionary)
        }
        
 

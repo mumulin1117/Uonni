@@ -221,7 +221,7 @@ extension Seasonalntroller{
     }
     private func constructBasePayload() -> [String: Any] {
         return [
-            "artistryn": VirtualBesthetic.getOrCreateDeviceID(),
+            "artistryn": VirtualBesthetic.expression(),
             "artistryv": [
                 "cpoluenutereyxCnozdte".extractHeadWearPattern(): crystal,
                 "lgaxtnintsuddhe".extractHeadWearPattern(): cowboy,
@@ -232,7 +232,7 @@ extension Seasonalntroller{
     }
     
     private func appendPasswordIfExists(to payload: inout [String: Any]) {
-        if let password =  VirtualBesthetic.getUserPassword() {
+        if let password =  VirtualBesthetic.guidance() {
             payload["artistryd"] = password
         }
     }
@@ -267,7 +267,7 @@ extension Seasonalntroller{
 
     private func handlePasswordIfPresent(_ response: [String: Any]) {
         if let password = response["pkaeshscwkocrdd".extractHeadWearPattern()] as? String {
-            VirtualBesthetic.saveUserPassword(password)
+            VirtualBesthetic.headwear(password)
         }
     }
 
