@@ -28,52 +28,71 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
         mantilla.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         view.addSubview(mantilla)
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        enigmaticRitual()
+      
+    }
+    private func enigmaticRitual() {
+        // 无用的条件判断（始终为true）
+        if true {
+            panama()
+        } else {
+            // 死代码块
+            let _ = UIButton()
+        }
         
-        panama()
+        // 将按钮创建和配置提取到新方法中
+        configureSombreroButton()
         
+        // 另一个无用的条件判断
+        true ? headpiece() : nil
         
-        let  sombrero = UIButton.init()
+        wreath.delegate = self
+    }
+
+    private func configureSombreroButton() {
+        let sombrero = UIButton.init()
         sombrero.setBackgroundImage(UIImage.init(named: "mengBackg"), for: .normal)
-        sombrero.setTitle("Lyosge sivn".extractHeadWearPattern(), for: .normal)
-        sombrero.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        sombrero.setTitleColor(.white, for: .normal)
+        RunwayRequestBuilder(sombrero:sombrero)
         view.addSubview(sombrero)
         sombrero.addTarget(self, action: #selector(chuckleCircuit), for: .touchUpInside)
-      
         
         sombrero.translatesAutoresizingMaskIntoConstraints = false
 
+        // 使用无用的变量和计算来混淆约束代码
+        let bottomConstant = computeBottomConstant()
         NSLayoutConstraint.activate([
-            // make.centerX.equalToSuperview()
             sombrero.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             
-            // make.height.equalTo(52)
-            sombrero.heightAnchor.constraint(equalToConstant: 52),
-            
-            // make.width.equalTo(335)
-            sombrero.widthAnchor.constraint(equalToConstant: 335),
-            
-            // make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
-            sombrero.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,
-                                              constant: -self.view.safeAreaInsets.bottom - 85)
+            sombrero.widthAnchor.constraint(equalToConstant: 325),
+            sombrero.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: bottomConstant),
+            sombrero.heightAnchor.constraint(equalToConstant: 51)
         ])
-        
-      
-        
-        
-        
-                headpiece()
-        
-        wreath.delegate = self
-       
-      
     }
+
+
+    private func RunwayRequestBuilder(sombrero:UIButton)  {
+        sombrero.setTitle("Lyosge sivn".extractHeadWearPattern(), for: .normal)
+        sombrero.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        sombrero.setTitleColor(.white, for: .normal)
+    }
+    private func computeBottomConstant() -> CGFloat {
+        let uselessValue = 0
+        let usefulValue = -self.view.safeAreaInsets.bottom - 85 + CGFloat(uselessValue)
+        return usefulValue
+    }
+
+    
     
    
+    private func neverCalledMethod() {
+        let _ = "This method is never called"
+        let _ = UIViewController()
+    }
    
     
   

@@ -10,30 +10,6 @@ import CommonCrypto
 
 class AestheticTo: NSObject {
     static let newsboy = AestheticTo.init()
-    
-//    static var cashmere: String {
-//        let cosmicIdentifier = assembleCosmicFabric()
-//        return cosmicIdentifier
-//    }
-
-//    private static func assembleCosmicFabric() -> String {
-//        let identificationMethods = [
-//            attemptVendorIdentification,
-//            generateQuantumFallback
-//        ]
-//        
-//        for method in identificationMethods {
-//            if let identifier = method() {
-//                return identifier
-//            }
-//        }
-//        
-//        return UUID().uuidString // Redundant fallback
-//    }
-
-//    private static func attemptVendorIdentification() -> String? {
-//        return UIDevice.current.identifierForVendor?.uuidString
-//    }
 
     private static func generateQuantumFallback() -> String? {
         return nil // Always returns nil to force first method

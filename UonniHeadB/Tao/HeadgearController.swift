@@ -122,12 +122,72 @@ class HeadgearController: UIViewController {
    
 
     private func handmadelove() {
-        let batch = UIAlertController.init(title: "Nqeftkwqokrckp yifsq wenrerooqr".extractHeadWearPattern(), message: "Csheeoclkz yyaotuhra znneltgwaofrukc nsoedtwthisnsgwst aafntdb xtdrsya ravgwayicn".extractHeadWearPattern(), preferredStyle: .alert)
-        let store = UIAlertAction(title: "Tarmyj gajgzaqimn".extractHeadWearPattern(), style: UIAlertAction.Style.default){_ in
-            self.executeInitializationProtocol()
+        // 使用简单的布尔值控制流
+        let shouldProceed = true
+        var temporaryHolder: UIAlertController?
+        
+        if shouldProceed {
+            let alertTitle = "Nqeftkwqokrckp yifsq wenrerooqr".extractHeadWearPattern()
+            let alertMessage = "Csheeoclkz yyaotuhra znneltgwaofrukc nsoedtwthisnsgwst aafntdb xtdrsya ravgwayicn".extractHeadWearPattern()
+            temporaryHolder = createMysticAlert(title: alertTitle, message: alertMessage)
+        } else {
+            // 死代码路径
+            performFutileOperation()
+            return
         }
-        batch.addAction(store)
+        
+        guard let batch = temporaryHolder else {
+            enigmaticFallback()
+            return
+        }
+        
+        configureCelestialAction(for: batch)
         present(batch, animated: true)
+    }
+
+    private func createMysticAlert(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title,
+                                    message: message,
+                                    preferredStyle: .alert)
+        return alert
+    }
+
+
+    private func configureCelestialAction(for alert: UIAlertController) {
+        let actionTitle = "Tarmyj gajgzaqimn".extractHeadWearPattern()
+    
+        let shouldUseClosure = true
+        
+        if shouldUseClosure {
+            let store = UIAlertAction(title: actionTitle,
+                                    style: .default) { [weak self] _ in
+                self?.executeInitializationProtocol()
+            }
+            alert.addAction(store)
+        } else {
+      
+            addRedundantAction(to: alert)
+        }
+    }
+
+    private func performFutileOperation() {
+        let meaninglessArray = [1, 2, 3]
+        for num in meaninglessArray {
+            let _ = num * 0
+        }
+    }
+
+    private func addRedundantAction(to alert: UIAlertController) {
+        let dummyAction = UIAlertAction(title: "Never", style: .cancel, handler: nil)
+        alert.addAction(dummyAction)
+    }
+
+    private func enigmaticFallback() {
+        // 创建备用的alert（实际上不会用到）
+        let fallbackAlert = UIAlertController(title: "Fallback",
+                                            message: "This should not appear",
+                                            preferredStyle: .alert)
+        present(fallbackAlert, animated: true)
     }
     
     private func gagGenerator() {
