@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         tasseled()
+        instanceSegmentation()
         SwiftyStoreKit.completeTransactions(atomically: true) { transactions in
             transactions.forEach { self.processTransaction($0) }
 

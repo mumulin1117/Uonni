@@ -73,11 +73,16 @@ class Headwearer: UIViewController ,WKNavigationDelegate, WKUIDelegate,WKScriptM
     }
 
     private func AestheticPlogging() {
-        let ushanka = UIImage(named: "headerwear")
+        let ushanka = UIImage(named: "faindreamlater")
         let kippah = UIImageView(image: ushanka)
         kippah.frame = self.view.frame
         kippah.contentMode = .scaleAspectFill
         view.addSubview(kippah)
+        
+        let mantilla = UIImageView(image:UIImage(named: "faindream") )
+        mantilla.frame = CGRect(x: 0, y: 0, width: 225, height: 117)
+        mantilla.center = CGPoint.init(x: self.view.center.x, y: self.view.center.y + 40)
+        view.addSubview(mantilla)
     }
 
     private func configureOrnamentalButton() {

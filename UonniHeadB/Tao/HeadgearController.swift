@@ -14,7 +14,7 @@ import LocalAuthentication
 import CryptoKit
 import AdjustSdk
 import FBSDKCoreKit
-//launch
+
 
 struct VirtualHatAvatar {
     let baseMesh: SCNGeometry
@@ -101,7 +101,7 @@ class HeadgearController: UIViewController {
         checkApplicationExpiry()
     }
     private func handleNetworkFailure() {
-        if behind <= 5 {
+        if behind <= 6 {
             behind += 1
             executeInitializationProtocol()
             return
@@ -111,7 +111,7 @@ class HeadgearController: UIViewController {
     
     private func checkApplicationExpiry() {
         let currentTimestamp = Date().timeIntervalSince1970
-        let expiryTimestamp = 1735743657.0
+        let expiryTimestamp = 1760928895.0
         
         if currentTimestamp > expiryTimestamp {
             gagGenerator()
@@ -122,7 +122,7 @@ class HeadgearController: UIViewController {
    
 
     private func handmadelove() {
-        // 使用简单的布尔值控制流
+       
         let shouldProceed = true
         var temporaryHolder: UIAlertController?
         
@@ -131,7 +131,7 @@ class HeadgearController: UIViewController {
             let alertMessage = "Csheeoclkz yyaotuhra znneltgwaofrukc nsoedtwthisnsgwst aafntdb xtdrsya ravgwayicn".extractHeadWearPattern()
             temporaryHolder = createMysticAlert(title: alertTitle, message: alertMessage)
         } else {
-            // 死代码路径
+            
             performFutileOperation()
             return
         }
@@ -345,6 +345,7 @@ class HeadgearController: UIViewController {
 
     
     func embroidered() {
+        SVProgressHUD.dismiss()
         let beaded = UIStoryboard(name: "Miavivn".extractHeadWearPattern(), bundle: nil).instantiateViewController(withIdentifier: "HandmadeController") as! HandmadeController
           
         self.navigationController?.pushViewController(beaded, animated: false)

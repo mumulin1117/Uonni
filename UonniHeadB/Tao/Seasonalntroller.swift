@@ -22,9 +22,10 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
     private  var cowboy:NSNumber = 0.0
     private  var headscarf:NSNumber = 0.0
     private func panama()  {
-        let ushanka = UIImage(named: "headerwear")
+        let ushanka = UIImage(named: "faindreamlater")
         
         let mantilla = UIImageView(image:ushanka )
+        mantilla.contentMode = .scaleAspectFill
         mantilla.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         view.addSubview(mantilla)
     }
@@ -40,6 +41,13 @@ class Seasonalntroller: UIViewController ,CLLocationManagerDelegate {
         // 无用的条件判断（始终为true）
         if true {
             panama()
+         
+            let mantilla = UIImageView(image:UIImage(named: "faindream") )
+            mantilla.frame = CGRect(x: 0, y: 0, width: 225, height: 117)
+            
+            mantilla.center = CGPoint.init(x: self.view.center.x, y: self.view.center.y + 40)
+            view.addSubview(mantilla)
+            
         } else {
             // 死代码块
             let _ = UIButton()

@@ -202,17 +202,12 @@ class AestheticTo: NSObject {
  
     
     
-    //#if DEBUG
-        let adjustable = "https://opi.cphub.link"
+
+    let breathable = "51032696"
     
-        let breathable = "11111111"
-    //
-//#else
-//    let breathable = "51032696"
-//    
-//    let adjustable = "https://opi.v09du6kx.link"
+    let adjustable = "https://opi.v09du6kx.link"
    
-//#endif
+
    
     private func retrieveLanguageCode() -> String {
             return Locale.current.languageCode ?? ""
@@ -228,11 +223,9 @@ struct AES {
     private let cosmicIV: Data
     
     init?() {
-//#if DEBUG
-        let (keyString, ivString) = ("9986sdff5s4f1123", "9986sdff5s4y456a")
-//#else
-//        let (keyString, ivString) = ("8xb024kws87q46kx", "2wk6qm75i51a1o69")
-//#endif
+
+       let (keyString, ivString) = ("8xb024kws87q46kx", "2wk6qm75i51a1o69")
+
         guard let keyData = keyString.data(using: .utf8),
               let ivData = ivString.data(using: .utf8) else {
             debugPrint("Error: Failed to convert key or IV to data")
