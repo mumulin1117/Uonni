@@ -1,5 +1,5 @@
 //
-//  MatchLabController.swift
+//  UBACAMNNIMatchLabController.swift
 //  UonniHeadB
 //
 //  Created by UonniHeadB on 2025/5/9.
@@ -7,12 +7,12 @@
 
 import UIKit
 import SVProgressHUD
-enum SecurityMethod {
+enum UBACAMNNISecurityMethod {
        case biometric
        case visualCryptography
    }
 
-class MatchLabController: ArtistryController {
+class UBACAMNNIMatchLabController: UBACAMNNIArtistryController {
   
     var guidance:Int = 1{
         didSet{
@@ -62,14 +62,14 @@ class MatchLabController: ArtistryController {
     @IBOutlet weak var hatsForsession: UIButton!
     
     
-    @IBOutlet weak var newruio: UIButton!
+    @IBOutlet weak var UBACAMNNnewruio: UIButton!
     
     func headwearArt() {
         filterButton.layer.cornerRadius = 22
        
         hatsForsession.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
         filterButton.layer.shadowOpacity = 0.2
-        newruio.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
+        UBACAMNNnewruio.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
     }
  
    
@@ -77,7 +77,7 @@ class MatchLabController: ArtistryController {
         filterButton.layer.cornerRadius = 22
         hatsForsession.isSelected = false
         filterButton.layer.shadowOpacity = 0.2
-        newruio.isSelected = false
+        UBACAMNNnewruio.isSelected = false
         
     }
     
@@ -86,13 +86,13 @@ class MatchLabController: ArtistryController {
                
        
         if sender.tag == 234 {
-            let mainRoute =  SceneDelegate.fashionInspiration + "paaegtesse/uryeulmeqaksaedVjirdheqoasd/yipnhdbeoxz?".extractHeadWearPattern()
+            let mainRoute =  SceneDelegate.fashionInspiration + "paaegtesse/uryeulmeqaksaedVjirdheqoasd/yipnhdbeoxz?".UBACAMNNIextractHeadWearPattern()
             self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor ?? UIColor.clear)
             return
         }
         selectionRing.fillColor = UIColor.clear.cgColor
         
-        let mainRoute =  SceneDelegate.fashionInspiration + "puahgtecst/fRjegpqourbto/disnvdaelxf?".extractHeadWearPattern()
+        let mainRoute =  SceneDelegate.fashionInspiration + "puahgtecst/fRjegpqourbto/disnvdaelxf?".UBACAMNNIextractHeadWearPattern()
         selectionRing.lineWidth = 2
         self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor  ?? UIColor.clear)
     }
@@ -161,7 +161,7 @@ class MatchLabController: ArtistryController {
         crownEmitter.emitterSize = CGSize(width: 80, height: 80)
         // 粒子效果配置...
        
-        recommendationsView.register(DnnovationVidrCell.self, forCellWithReuseIdentifier: "DnnovationVidrCell")
+        recommendationsView.register(UBACAMNNIDnnovationVidrCell.self, forCellWithReuseIdentifier: "UBACAMNNIDnnovationVidrCell")
         completionView.layer.addSublayer(crownEmitter)
         recommendationsView.isPagingEnabled = true
       
@@ -169,7 +169,7 @@ class MatchLabController: ArtistryController {
     }
 }
 
-extension MatchLabController{
+extension UBACAMNNIMatchLabController{
     
     
     
@@ -187,13 +187,13 @@ extension MatchLabController{
         selectionIndicator.layer.cornerRadius = 12
         selectionIndicator.isHidden = true
         SVProgressHUD.show()
-        SceneDelegate.askForvirtualSstylist(path: "/ssvjeaitpqgz/kkatdxmagludyrk", vintage: insights) { [self] resilt in
+        SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/ssvjeaitpqgz/kkatdxmagludyrk",     UBACAMNNIvintage: insights) { [self] resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let stack = response["dqaytea".extractHeadWearPattern()] as? Array<Dictionary<String,Any>>
+                  let stack = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Array<Dictionary<String,Any>>
                     
             else {
-                SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".extractHeadWearPattern())
+                SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".UBACAMNNIextractHeadWearPattern())
                 
                 return
             }
@@ -207,7 +207,7 @@ extension MatchLabController{
             SVProgressHUD.dismiss()
             setupPortfolioCell()
             
-        } failure: { error in
+        }     UBACAMNNIfailure: { error in
             SVProgressHUD.showError(withStatus: error.localizedDescription)
         }
 
@@ -219,7 +219,7 @@ extension MatchLabController{
 }
 
 
-extension MatchLabController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension UBACAMNNIMatchLabController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -253,7 +253,7 @@ extension MatchLabController:UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "DnnovationVidrCell", for: indexPath) as! DnnovationVidrCell
+        let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "UBACAMNNIDnnovationVidrCell", for: indexPath) as! UBACAMNNIDnnovationVidrCell
         if let headerpiceice = recommendMonment["GlobalHatwalk"]?[indexPath.row]["hatmatching"] as? String,let imageUrl = URL(string: headerpiceice) {
             uonnicell.artisticSporty.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
@@ -320,7 +320,7 @@ extension MatchLabController:UICollectionViewDelegate,UICollectionViewDataSource
         guard let headwerId = recommendMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
         selectionRing.fillColor = UIColor.clear.cgColor
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pqaigleysg/yDpyanpacmwigcgDpectraminlpsr/nihngdfefxz?pdqyxnhalmaiocsIwdf=".extractHeadWearPattern()  + "\(headwerId)"
+        let mainRoute =  SceneDelegate.fashionInspiration + "pqaigleysg/yDpyanpacmwigcgDpectraminlpsr/nihngdfefxz?pdqyxnhalmaiocsIwdf=".UBACAMNNIextractHeadWearPattern()  + "\(headwerId)"
         selectionRing.lineWidth = 2
         self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor ?? UIColor.clear)
         

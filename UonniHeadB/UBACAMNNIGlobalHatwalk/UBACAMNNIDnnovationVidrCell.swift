@@ -1,17 +1,17 @@
 //
-//  DnnovationVidrCell.swift
+//  UBACAMNNIDnnovationVidrCell.swift
 //  UonniHeadB
 //
 //  Created by UonniHeadB on 2025/5/12.
 //
 
 import UIKit
-struct HeadwearRecommendation {
+struct UBACAMNNIHeadwearRecommendation {
     let coverImage: String
     let styleTags: [String]
     let matchScore: Double
 }
-class DnnovationVidrCell: UICollectionViewCell {
+class UBACAMNNIDnnovationVidrCell: UICollectionViewCell {
     
     let artisticHeader = UIImageView()
     
@@ -70,7 +70,7 @@ class DnnovationVidrCell: UICollectionViewCell {
         contentView.addSubview(postConttnwearLbl)
         contentView.addSubview(artisticHeader)
         contentView.addSubview(postTimewearLbl)
-        interactionUser.setImage(UIImage.init(named: "diversityIN"), for: .normal)
+        interactionUser.setImage(UIImage.init(named: "UBACAMNNIdiversityIN"), for: .normal)
         contentView.addSubview(headwearName)
         contentView.addSubview(interactionUser)
         postConttnwearLbl.snp.makeConstraints { make in
@@ -118,7 +118,7 @@ class DnnovationVidrCell: UICollectionViewCell {
             make.top.equalTo(artisticHeader).offset(3)
         }
         
-        let aiuu = UIImageView(image: UIImage.init(named: "cospla"))
+        let aiuu = UIImageView(image: UIImage.init(named: "UBACAMNNIcospla"))
         contentView.addSubview(aiuu)
         aiuu.snp.makeConstraints { make in
             make.center.equalToSuperview()

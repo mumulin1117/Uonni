@@ -1,5 +1,5 @@
 //
-//  MaterialShaderEngine.swift
+//  UBACAMNNIMaterialShaderEngine.swift
 //  UonniHeadB
 //
 //  Created by  on 2025/5/13.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MaterialShaderEngine: NSObject {
+class UBACAMNNIMaterialShaderEngine: NSObject {
     private let materialPresets: [String: SCNMaterial] = {
             var presets = [String: SCNMaterial]()
             

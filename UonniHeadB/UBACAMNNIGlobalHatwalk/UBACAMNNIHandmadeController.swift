@@ -8,7 +8,7 @@ import SVProgressHUD
 import UIKit
 //log
 
-class HandmadeController: UIViewController {
+class UBACAMNNIHandmadeController: UIViewController {
 
     @IBOutlet weak var trendsLabel: UIImageView!
     
@@ -72,11 +72,11 @@ class HandmadeController: UIViewController {
     
     @objc func dividerView() {
         //pri
-        self.navigationController?.pushViewController(HeadwearPolicyController(currentPolicy: .styleProtection), animated: true)
+        self.navigationController?.pushViewController(UBACAMNNIHeadwearPolicyController(currentPolicy: .styleProtection), animated: true)
     }
     
     @objc func dividerViewterm() {
-        self.navigationController?.pushViewController(HeadwearPolicyController(currentPolicy: .communityTerms), animated: true)
+        self.navigationController?.pushViewController(UBACAMNNIHeadwearPolicyController(currentPolicy: .communityTerms), animated: true)
         
     }
   
@@ -87,19 +87,19 @@ class HandmadeController: UIViewController {
        
         if artistry.isSelected == false {
             gradient.colors = [UIColor.systemPink.cgColor, UIColor.systemIndigo.cgColor]
-            SVProgressHUD.showInfo(withStatus: "Pzlnexaosyez lrtevaudz kannydl caeglruehea gtcol xokugra gucspewru vpbrvifvraxczyw npnovlnizcmya iaznndf itzevrpmysr!".extractHeadWearPattern())
+            SVProgressHUD.showInfo(withStatus: "Pzlnexaosyez lrtevaudz kannydl caeglruehea gtcol xokugra gucspewru vpbrvifvraxczyw npnovlnizcmya iaznndf itzevrpmysr!".UBACAMNNIextractHeadWearPattern())
             return
         }
         gradient.frame = view.bounds
         
         guard let registailName = culturalField.text,registailName.count > 0 else{
-            SVProgressHUD.showInfo(withStatus: "Psluezaxsaem sfkinlllk cienk bymoyuqrc arpeggpifsntaegrkeddx eexmrakitlc sfiisrssitl!".extractHeadWearPattern())
+            SVProgressHUD.showInfo(withStatus: "Psluezaxsaem sfkinlllk cienk bymoyuqrc arpeggpifsntaegrkeddx eexmrakitlc sfiisrssitl!".UBACAMNNIextractHeadWearPattern())
             return
         }
         
         
         guard let signPasw = forwardTexifld.text,registailName.count > 0 else{
-            SVProgressHUD.showInfo(withStatus: "Prlneeaxsaez gennltpeurz kykolulry npoavsesnwmomridl ffyibrysetj!".extractHeadWearPattern())
+            SVProgressHUD.showInfo(withStatus: "Prlneeaxsaez gennltpeurz kykolulry npoavsesnwmomridl ffyibrysetj!".UBACAMNNIextractHeadWearPattern())
             return
         }
         
@@ -129,16 +129,16 @@ class HandmadeController: UIViewController {
         startButton.setTitle("Start config", for: .normal)
         
                
-        SceneDelegate.askForvirtualSstylist(path: "/rbcjkngccdz/vwrguhl",vintage: insights) { resilt in
+        SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/rbcjkngccdz/vwrguhl",    UBACAMNNIvintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let pices = response["dqaytea".extractHeadWearPattern()] as? Dictionary<String,Any>
+                  let pices = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Dictionary<String,Any>
                     
             else {
                 startButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
                 startButton.backgroundColor = .white.withAlphaComponent(0.9)
                 
-                SVProgressHUD.showInfo(withStatus: "Ypoiudrs lUisoeyrzngajmvea lovrh dpuarsgscwpogrjdg zimnxcyoxrzrjerccts!".extractHeadWearPattern())
+                SVProgressHUD.showInfo(withStatus: "Ypoiudrs lUisoeyrzngajmvea lovrh dpuarsgscwpogrjdg zimnxcyoxrzrjerccts!".UBACAMNNIextractHeadWearPattern())
                 
                 return
             }
@@ -148,14 +148,14 @@ class HandmadeController: UIViewController {
             startButton.transform = CGAffineTransform(translationX: 0, y: 40)
             self.presentWelcomeScreen(headwearuser:pices)
             
-            self.navigationController?.pushViewController(HeadpiecesMainController.init(), animated: false)
+            self.navigationController?.pushViewController(UBACAMNNIHeadpiecesMainController.init(), animated: false)
             
-            SVProgressHUD.showSuccess(withStatus: "Lpokgs biwnm usnuycbczezsessfluwlh!".extractHeadWearPattern())
+            SVProgressHUD.showSuccess(withStatus: "Lpokgs biwnm usnuycbczezsessfluwlh!".UBACAMNNIextractHeadWearPattern())
             if startButton.isHidden == true{
                 self.view.addSubview(startButton)
             }
             
-        } failure: { error in
+        }     UBACAMNNIfailure: { error in
             startButton.layer.cornerRadius = 24
             
             startButton.transform = CGAffineTransform(translationX: 0, y: 40)

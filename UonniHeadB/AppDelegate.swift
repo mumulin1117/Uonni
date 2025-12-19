@@ -14,8 +14,8 @@ import AdjustSdk
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    static var fascinator:String = ""
-    static var cloche:String = ""
+//    static var fascinator:String = ""
+//    static var cloche:String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         tasseled()
@@ -156,14 +156,14 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
 
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        UserDefaults.standard.set(deviceToken.hexadecimalString(), forKey: "fascinator")
        
-        AppDelegate.fascinator = deviceToken.hexadecimalString()
     }
 }
 
 
 private extension Data {
     func hexadecimalString() -> String {
-        return self.map { String(format: "%u0x2v.w2yhyhhx".extractHeadWearPattern(), $0) }.joined()
+        return self.map { String(format: "%u0x2v.w2yhyhhx".UBACAMNNIextractHeadWearPattern(), $0) }.joined()
     }
 }

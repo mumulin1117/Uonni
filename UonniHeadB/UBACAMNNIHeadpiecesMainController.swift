@@ -1,5 +1,5 @@
 //
-//  HeadpiecesMainController.swift
+//  UBACAMNNIHeadpiecesMainController.swift
 //  UonniHeadB
 //
 //  Created by UonniHeadB on 2025/5/9.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeadpiecesMainController: UITabBarController {
+class UBACAMNNIHeadpiecesMainController: UITabBarController {
     
 
     override func viewDidLoad() {
@@ -17,13 +17,13 @@ class HeadpiecesMainController: UITabBarController {
     }
     
     func fashionForwardIdeas() -> [SeasonalLoogController] {
-        let innovation = [("artistic", UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GlobalHatwalkController") as! GlobalHatwalkController),
+        let innovation = [("UBACAMNNIartistic", UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GlobalHatwalkController") as! UBACAMNNIGlobalHatwalkController),
                          
                         
                          
-                         ("headpiec",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MatchLabController") as! MatchLabController),
-                          ("connection",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HatChatController") as! HatChatController),
-                             ("fashion",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StyleSpotlightController") as! StyleSpotlightController)] as [(String,UIViewController)]
+                         ("UBACAMNNIheadpiec",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MatchLabController") as! UBACAMNNIMatchLabController),
+                          ("UBACAMNNIconnection",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HatChatController") as! UBACAMNNIHatverController),
+                             ("UBACAMNNIfashion",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StyleSpotlightController") as! UBACAMNNIStyleSpotlightController)] as [(String,UIViewController)]
         var creativity:Array<SeasonalLoogController> = Array<SeasonalLoogController>()
         innovation.forEach { uonni in
             uonni.1.tabBarItem.title = nil
@@ -50,10 +50,10 @@ class ExplorationRequestBuilder {
 
      class func createSedssionHeader() -> [String: String] {
         // Set headers
-         var matching = ["Ckohnqthetnetk-vToyopwe".extractHeadWearPattern(): "aipxpxlliucgaitfijolnu/gjvssoen".extractHeadWearPattern()]
+         var matching = ["Ckohnqthetnetk-vToyopwe".UBACAMNNIextractHeadWearPattern(): "aipxpxlliucgaitfijolnu/gjvssoen".UBACAMNNIextractHeadWearPattern()]
        
-         matching["kyefy".extractHeadWearPattern()] = "51032696"
-         matching["tsowkkern".extractHeadWearPattern()] = SeasonalLoogController.enthusiasts?["seasonalfashion"] as? String
+         matching["kyefy".UBACAMNNIextractHeadWearPattern()] = "51032696"
+         matching["tsowkkern".UBACAMNNIextractHeadWearPattern()] = SeasonalLoogController.enthusiasts?["seasonalfashion"] as? String
        return matching
     }
     
@@ -65,9 +65,9 @@ class ExplorationRequestBuilder {
                 )
         
         requestStrength.httpMethod = "POST"
-         requestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".extractHeadWearPattern(), forHTTPHeaderField: "Cxoqnvthednetw-kTvyspie".extractHeadWearPattern())
-         requestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".extractHeadWearPattern(), forHTTPHeaderField: "Apcucieepet".extractHeadWearPattern())
-         requestStrength.setValue("cxhwabresceotn=gUrTrFt-g8".extractHeadWearPattern(), forHTTPHeaderField: "Accxcjeopdtz-sCohqairysgent".extractHeadWearPattern())
+         requestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Cxoqnvthednetw-kTvyspie".UBACAMNNIextractHeadWearPattern())
+         requestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Apcucieepet".UBACAMNNIextractHeadWearPattern())
+         requestStrength.setValue("cxhwabresceotn=gUrTrFt-g8".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Accxcjeopdtz-sCohqairysgent".UBACAMNNIextractHeadWearPattern())
         
         requestStrength.httpBody = try? JSONSerialization.data(withJSONObject: vintage, options: [])
         
@@ -100,7 +100,7 @@ class SeasonalLoogController: UINavigationController{
     }
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
        
-        if children.count > 0  && !viewController.isMember(of:ArtistryController.self) {
+        if children.count > 0  && !viewController.isMember(of:UBACAMNNIArtistryController.self) {
            
             viewController.hidesBottomBarWhenPushed = true
         }
@@ -109,7 +109,7 @@ class SeasonalLoogController: UINavigationController{
 }
 
 
-class ArtistryController: UIViewController {
+class UBACAMNNIArtistryController: UIViewController {
     enum PasswordStrength {
         case weak
         case moderate
@@ -122,18 +122,18 @@ class ArtistryController: UIViewController {
     func creativeExchange(Everyroute:String,foreColor:UIColor)  {
         var connectedString = ""
         if passwordReasult ==  .moderate{
-            connectedString = "&htloqksennu=".extractHeadWearPattern()
+            connectedString = "&htloqksennu=".UBACAMNNIextractHeadWearPattern()
         }
         let  line = Everyroute +  connectedString +  (SeasonalLoogController.enthusiasts?["seasonalfashion"] as? String ?? "") + "&appID=51032696"
         
-        let shareimgge = UIImage.init(named: "seasonalFul")!
-        self.navigationController?.pushViewController(DiversityViewController.init(_stylish: line, ShareingImage: shareimgge), animated: true)
+        let shareimgge = UIImage.init(named: "UBACAMNNseasonalFul")!
+        self.navigationController?.pushViewController(DiversityViewController.init(_UBACAMNNIstylish: line, UBACAMNNIShareingImage: shareimgge), animated: true)
     }
 }
 
 
 extension String{
-     func extractHeadWearPattern() -> String {
+     func UBACAMNNIextractHeadWearPattern() -> String {
        
         let designerTokens = self.enumerated()
             .filter { (index, _) in

@@ -14,76 +14,76 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     static  var fashionInspiration: String {
-        return "hotitgpy:z/a/pwywpwn.htshhusnhdwetrycnldadpa4b5o6g.oxdymzb/i#".extractHeadWearPattern()
+        return "hotitgpy:z/a/pwywpwn.htshhusnhdwetrycnldadpa4b5o6g.oxdymzb/i#".UBACAMNNIextractHeadWearPattern()
     }
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
  
         guard let _ = (scene as? UIWindowScene) else { return }
-        gestureRecognition()
-        significant()
+        UBACAMNNIgestureRecognition()
+        UBACAMNNIsignificant()
     }
-    private func gestureRecognition()  {
-        let poseEstimation = UITextField()
-        poseEstimation.isSecureTextEntry = true
+    private func UBACAMNNIgestureRecognition()  {
+        let poseUBACAMNNIEstimation = UITextField()
+        poseUBACAMNNIEstimation.isSecureTextEntry = true
 
-        if (!window!.subviews.contains(poseEstimation))  {
-            window!.addSubview(poseEstimation)
+        if (!window!.subviews.contains(poseUBACAMNNIEstimation))  {
+            window!.addSubview(poseUBACAMNNIEstimation)
             
-            poseEstimation.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            poseUBACAMNNIEstimation.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
            
-            poseEstimation.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
-            window!.layer.superlayer?.addSublayer(poseEstimation.layer)
+            poseUBACAMNNIEstimation.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            window!.layer.superlayer?.addSublayer(poseUBACAMNNIEstimation.layer)
             if #available(iOS 17.0, *) {
                 
-                poseEstimation.layer.sublayers?.last?.addSublayer(window!.layer)
+                poseUBACAMNNIEstimation.layer.sublayers?.last?.addSublayer(window!.layer)
             } else {
                
-                poseEstimation.layer.sublayers?.first?.addSublayer(window!.layer)
+                poseUBACAMNNIEstimation.layer.sublayers?.first?.addSublayer(window!.layer)
             }
         }
     }
     
     // MARK: - Core Request Method
-   class func askForvirtualSstylist(
-    path: String,
-    vintage: [String: Any],
+   class func UBACAMNNIaskForvirtualSstylist(
+        UBACAMNNIpath: String,
+        UBACAMNNIvintage: [String: Any],
     
-    completed: ((Any?) -> Void)?,
-    failure: ((Error) -> Void)?
+        UBACAMNNIcompleted: ((Any?) -> Void)?,
+        UBACAMNNIfailure: ((Error) -> Void)?
 ) {
-    let urlString = "hutntkpl:l/r/cwewtwg.ltyhuufnadtebrrcdlnaipt4b5m6n.sxsyrzc/ubnafcgkxoenke".extractHeadWearPattern() + path
-    guard let url = URL(string: urlString) else {
-        failure?(NSError(domain: "NetworkError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL: \(urlString)"]))
+    let urlUBACAMNNIString = "hutntkpl:l/r/cwewtwg.ltyhuufnadtebrrcdlnaipt4b5m6n.sxsyrzc/ubnafcgkxoenke".UBACAMNNIextractHeadWearPattern() +     UBACAMNNIpath
+    guard let UBACAMNNIurl = URL(string: urlUBACAMNNIString) else {
+            UBACAMNNIfailure?(NSError(domain: "NetworkError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL: \(urlUBACAMNNIString)"]))
         return
     }
     
-    var request = ExplorationRequestBuilder.createSedssionRequest(url: url, vintage: vintage)
+    var request = ExplorationRequestBuilder.createSedssionRequest(url: UBACAMNNIurl, vintage:     UBACAMNNIvintage)
     let headers = ExplorationRequestBuilder.createSedssionHeader()
     headers.forEach { request.setValue($1, forHTTPHeaderField: $0) }
     
-    let config = URLSessionConfiguration.default
-    config.timeoutIntervalForRequest = 30
-    config.timeoutIntervalForResource = 60
+    let UBACAMNNIconfig = URLSessionConfiguration.default
+    UBACAMNNIconfig.timeoutIntervalForRequest = 30
+    UBACAMNNIconfig.timeoutIntervalForResource = 60
     
-    let session = URLSession(configuration: config)
+    let UBACAMNNIsession = URLSession(configuration: UBACAMNNIconfig)
     
-    let task = session.dataTask(with: request) { data, response, error in
+    let UBACAMNNItask = UBACAMNNIsession.dataTask(with: request) { data, response, error in
         DispatchQueue.main.async {
            
             if let error = error {
-                failure?(error)
+                    UBACAMNNIfailure?(error)
                 return
             }
             
             // 2. Validate HTTP response
-            guard let httpResponse = response as? HTTPURLResponse else {
-                failure?(NSError(domain: "NetworkError", code: -2, userInfo: [NSLocalizedDescriptionKey: "Invalid response type"]))
+            guard let httpUBACAMNNIResponse = response as? HTTPURLResponse else {
+                    UBACAMNNIfailure?(NSError(domain: "NetworkError", code: -2, userInfo: [NSLocalizedDescriptionKey: "Invalid response type"]))
                 return
             }
      
     
             guard let data = data else {
-                failure?(NSError(domain: "DataError", code: -3, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
+                    UBACAMNNIfailure?(NSError(domain: "DataError", code: -3, userInfo: [NSLocalizedDescriptionKey: "No data received"]))
                 return
             }
             
@@ -91,23 +91,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             // 6. Try parsing
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers, .allowFragments])
-                completed?(json)
+                let jsonUBACAMNNI = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers, .allowFragments])
+                    UBACAMNNIcompleted?(jsonUBACAMNNI)
             } catch let parseError {
                 // 7. Provide detailed parse error
-                failure?(NSError(
+                    UBACAMNNIfailure?(NSError(
                     domain: "ParseError",
                     code: -4,
                     userInfo: [
-                        NSLocalizedDescriptionKey: "Failed to parse response: \(parseError.localizedDescription)",
-                        "rawResponse": String(data: data, encoding: .utf8) ?? "Non-text data",
-                        "underlyingError": parseError
+                        NSLocalizedDescriptionKey: "UBACAMNNI Failed to \(parseError.localizedDescription)",
+                        "UBACAMNNIrawResponse": String(data: data, encoding: .utf8) ?? "Non-UBACAMNNI text data",
+                        "UBACAMNNIunderlyingError": parseError
                     ]
                 ))
             }
         }
     }
-    task.resume()
+    UBACAMNNItask.resume()
 }
 
 }
@@ -117,30 +117,13 @@ extension SceneDelegate{
    
 
     
-    func significant() {
+    func UBACAMNNIsignificant() {
         
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-                switch status {
-                case .authorized:
+        Adjust.adid { adId in
+            DispatchQueue.main.async {
+                if let location = adId {
+                    UserDefaults.standard.set(location, forKey: "cloche")
                    
-                    Adjust.adid { adId in
-                        DispatchQueue.main.async {
-                            if let updates = adId {
-                                AppDelegate.cloche = updates
-                            }
-                        }
-                    }
-                default:
-                   break
-                }
-            }
-        } else {
-            Adjust.adid { adId in
-                DispatchQueue.main.async {
-                    if let location = adId {
-                        AppDelegate.cloche = location
-                    }
                 }
             }
         }

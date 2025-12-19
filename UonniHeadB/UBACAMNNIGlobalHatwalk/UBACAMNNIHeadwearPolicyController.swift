@@ -1,5 +1,5 @@
 //
-//  HeadwearPolicyController.swift
+//  UBACAMNNIHeadwearPolicyController.swift
 //  UonniHeadB
 //
 //  Created by UonniHeadB on 2025/5/9.
@@ -27,7 +27,7 @@ struct DecorationItem {
     let rotation: SIMD3<Float>
 }
 
-class HeadwearPolicyController: UIViewController, UICollectionViewDelegate {
+class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDelegate {
    
     
     private let headwearGradientLayer: CAGradientLayer = {
@@ -63,12 +63,12 @@ class HeadwearPolicyController: UIViewController, UICollectionViewDelegate {
         }()
     
     private lazy var fashionBackButton: UIButton = {
-           let button = UIButton(type: .system)
-           button.setImage(UIImage(systemName: "chevron.left.circle.fill"), for: .normal)
-           button.tintColor = UIColor(hexUonniColor: "#D8BFD8") // Thistle
-           button.addTarget(self, action: #selector(returnToStyleHub), for: .touchUpInside)
-           button.translatesAutoresizingMaskIntoConstraints = false
-           return button
+           let UBACAMNNIbutton = UIButton(type: .system)
+           UBACAMNNIbutton.setImage(UIImage(systemName: "chevron.left.circle.fill"), for: .normal)
+           UBACAMNNIbutton.tintColor = UIColor(hexUonniColor: "#D8BFD8") // Thistle
+           UBACAMNNIbutton.addTarget(self, action: #selector(returnToStyleHub), for: .touchUpInside)
+           UBACAMNNIbutton.translatesAutoresizingMaskIntoConstraints = false
+           return UBACAMNNIbutton
        }()
        
        // MARK: - Style Policy Types

@@ -1,5 +1,5 @@
 //
-//  StyleSpotlightController.swift
+//  UBACAMNNIStyleSpotlightController.swift
 //  UonniHeadB
 //
 //  Created by UonniHeadB on 2025/5/9.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StyleSpotlightController: ArtistryController {
+class UBACAMNNIStyleSpotlightController: UBACAMNNIArtistryController {
 
     @IBOutlet weak var relationFriendUo: UIButton!
     @IBOutlet weak var relationFolloweUo: UIButton!
@@ -49,16 +49,16 @@ class StyleSpotlightController: ArtistryController {
     
 
 }
-extension StyleSpotlightController{
+extension UBACAMNNIStyleSpotlightController{
     func fashionGuidance()  {
         let insights: [String: Any] = [
             "stylesharing": "\(SeasonalLoogController.enthusiasts?["headweardiversity"] as? Int ?? 0)"
         ]
         
-        SceneDelegate.askForvirtualSstylist(path: "/jiyhqvz/wjbxauzuh", vintage: insights) { resilt in
+        SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/jiyhqvz/wjbxauzuh",     UBACAMNNIvintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let user = response["dqaytea".extractHeadWearPattern()] as? Dictionary<String,Any>
+                  let user = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Dictionary<String,Any>
                     
             else {
                 
@@ -67,7 +67,7 @@ extension StyleSpotlightController{
             
             self.stylerecommendations(neda:user)
             
-        } failure: { error in
+        }     UBACAMNNIfailure: { error in
             
         }
         
@@ -123,21 +123,21 @@ extension StyleSpotlightController{
        var headwear = SceneDelegate.fashionInspiration
        
        if relaButton == suresite {
-           headwear = headwear +  "ptasgielsg/qSxexthtaimnngk/qipnfdyevxk?".extractHeadWearPattern()
+           headwear = headwear +  "ptasgielsg/qSxexthtaimnngk/qipnfdyevxk?".UBACAMNNIextractHeadWearPattern()
        } else if relaButton == epationPayi {
-           headwear = headwear +  "poawgwexsx/jVcojuucqhhetrrCdetnmtgeere/biknodkewxd?".extractHeadWearPattern()
+           headwear = headwear +  "poawgwexsx/jVcojuucqhhetrrCdetnmtgeere/biknodkewxd?".UBACAMNNIextractHeadWearPattern()
            
        }else if relaButton == relationFriendUo {
-           headwear = headwear +  "ptawgqenst/camtjtzeznutxiaomni/aiunydkefxv?ptvyipeem=m1".extractHeadWearPattern()
+           headwear = headwear +  "ptawgqenst/camtjtzeznutxiaomni/aiunydkefxv?ptvyipeem=m1".UBACAMNNIextractHeadWearPattern()
            
        }else if relaButton == relationFolloweUo {
-           headwear = headwear +  "psamgledso/fartttyepnztniyoqnk/ciynhddezxf?atkyxpwee=n2".extractHeadWearPattern()
+           headwear = headwear +  "psamgledso/fartttyepnztniyoqnk/ciynhddezxf?atkyxpwee=n2".UBACAMNNIextractHeadWearPattern()
            
        }else if relaButton == relationFansUo {
-           headwear = headwear +  "pqaogiemsi/kaytqtxeintttiaonnb/zirnsduesxp?dtjyapler=e3".extractHeadWearPattern()
+           headwear = headwear +  "pqaogiemsi/kaytqtxeintttiaonnb/zirnsduesxp?dtjyapler=e3".UBACAMNNIextractHeadWearPattern()
            
        }else if relaButton == ecoEdit {
-           headwear = headwear +  "pvapgcevsg/fEwdqivtdDwaxtaad/aiqnkdaeyxj?".extractHeadWearPattern()
+           headwear = headwear +  "pvapgcevsg/fEwdqivtdDwaxtaad/aiqnkdaeyxj?".UBACAMNNIextractHeadWearPattern()
            
        }
     

@@ -1,5 +1,5 @@
 //
-//  HatChatController.swift
+//  UBACAMNNIHatverController.swift
 //  UonniHeadB
 //
 //  Created by UonniHeadB on 2025/5/9.
@@ -8,7 +8,7 @@
 import UIKit
 import SVProgressHUD
 
-class HatChatController: ArtistryController {
+class UBACAMNNIHatverController: UBACAMNNIArtistryController {
     private  let actionButton = UIButton(type: .system)
     
     
@@ -24,14 +24,14 @@ class HatChatController: ArtistryController {
     }
     private var recommendMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
     
-    private var messages = [HeadwearMessage]()
+    private var messages = [UBACAMNNIHeadwearMessage]()
     @IBOutlet weak var recommendationsView: UICollectionView!
     
     private let seasonLabel: UILabel = {
-           let label = UILabel()
-        label.font = .systemFont(ofSize: 11, weight: .semibold)
-        label.textAlignment = .center
-           return label
+           let UBACAMNNIlabel = UILabel()
+        UBACAMNNIlabel.font = .systemFont(ofSize: 11, weight: .semibold)
+        UBACAMNNIlabel.textAlignment = .center
+           return UBACAMNNIlabel
        }()
     
     @IBOutlet weak var headgear: UIImageView!
@@ -48,14 +48,14 @@ class HatChatController: ArtistryController {
         if sender.tag == 23 {
             selectionRing.fillColor = UIColor.clear.cgColor
            
-            let mainRoute =  SceneDelegate.fashionInspiration + "puangeexsp/wsrcxreeaeanxprljahyf/zianydoejxn?".extractHeadWearPattern()
+            let mainRoute =  SceneDelegate.fashionInspiration + "puangeexsp/wsrcxreeaeanxprljahyf/zianydoejxn?".UBACAMNNIextractHeadWearPattern()
             selectionRing.lineWidth = 2
             self.creativeExchange(Everyroute:mainRoute, foreColor: sender.backgroundColor ?? .clear)
             return
         }
         selectionRing.fillColor = UIColor.clear.cgColor
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pjaigkeqsv/aCrraegajtveqRnollwek/jilnndjepxi?".extractHeadWearPattern()
+        let mainRoute =  SceneDelegate.fashionInspiration + "pjaigkeqsv/aCrraegajtveqRnollwek/jilnndjepxi?".UBACAMNNIextractHeadWearPattern()
         selectionRing.lineWidth = 2
         self.creativeExchange(Everyroute:mainRoute, foreColor: sender.backgroundColor ?? .clear)
        
@@ -134,7 +134,7 @@ class HatChatController: ArtistryController {
        
         recommendationsView.dataSource = self
         seasonLabel.translatesAutoresizingMaskIntoConstraints = false
-        recommendationsView.register(UINib(nibName: "DnnoCamesagCell", bundle: nil), forCellWithReuseIdentifier: "DnnoCamesagCell")
+        recommendationsView.register(UINib(nibName: "UBACAMNNIDnnoCamesagCell", bundle: nil), forCellWithReuseIdentifier: "UBACAMNNIDnnoCamesagCell")
         
         
       
@@ -167,19 +167,19 @@ class HatChatController: ArtistryController {
     
 }
 
-extension HatChatController{
+extension UBACAMNNIHatverController{
     
    
     
     func trendsettingideas()  {
         messages = [
-            HeadwearMessage(senderAvatar: "avatar_luna", senderName: "Luna的帽饰研究所",
+            UBACAMNNIHeadwearMessage(senderAvatar: "avatar_luna", senderName: "Luna的帽饰研究所",
                            messageContent: "刚发了新的贝雷帽混搭视频，求搭配建议！",
                            messageType: .videoShare, timestamp: Date().addingTimeInterval(-3600)),
-            HeadwearMessage(senderAvatar: "avatar_ai_stylist", senderName: "AI搭配助手",
+            UBACAMNNIHeadwearMessage(senderAvatar: "avatar_ai_stylist", senderName: "AI搭配助手",
                            messageContent: "根据您的草帽收藏，推荐尝试波西米亚风长裙搭配方案",
                            messageType: .aiRecommendation, timestamp: Date().addingTimeInterval(-7200)),
-            HeadwearMessage(senderAvatar: "avatar_hat_lover", senderName: "头饰收藏家小鹿",
+            UBACAMNNIHeadwearMessage(senderAvatar: "avatar_hat_lover", senderName: "头饰收藏家小鹿",
                            messageContent: "姐妹！求你上次视频里的珍珠发箍链接！",
                            messageType: .text, timestamp: Date().addingTimeInterval(-18000))
         ]
@@ -187,16 +187,16 @@ extension HatChatController{
             "fashionconnection": "51032696"
         ]
         SVProgressHUD.show()
-        SceneDelegate.askForvirtualSstylist(path: "/ynppespskoqbcejz/ckxrxfhffw", vintage: insights) { resilt in
+        SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/ynppespskoqbcejz/ckxrxfhffw",     UBACAMNNIvintage: insights) { resilt in
             self.seasonLabel.layer.borderWidth = 1
             self.seasonLabel.clipsToBounds = true
             self.configureAtelierGallery()
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let user = response["dqaytea".extractHeadWearPattern()] as? Array<Dictionary<String,Any>>
+                  let user = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Array<Dictionary<String,Any>>
                     
             else {
-                SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".extractHeadWearPattern())
+                SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".UBACAMNNIextractHeadWearPattern())
                 if self.seasonLabel.isHidden == true {
                     self.view.addSubview(self.seasonLabel)
                 }
@@ -223,7 +223,7 @@ extension HatChatController{
           
             self.loadSampleData()
             
-        } failure: { error in
+        }     UBACAMNNIfailure: { error in
             if self.seasonLabel.isHidden == true {
                 self.view.addSubview(self.seasonLabel)
             }
@@ -239,7 +239,7 @@ extension HatChatController{
 }
 
 
-extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension UBACAMNNIHatverController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     
     func designerProfiles() -> CGSize {
@@ -284,7 +284,7 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "DnnoCamesagCell", for: indexPath) as! DnnoCamesagCell
+        let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "UBACAMNNIDnnoCamesagCell", for: indexPath) as! UBACAMNNIDnnoCamesagCell
         
         if let headerpiceice = recommendMonment["GlobalHatwalk"]?[indexPath.row]["creativecommunity"] as? String,let imageUrl = URL(string: headerpiceice) {
             uonnicell.artisticHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
@@ -323,7 +323,7 @@ extension HatChatController:UICollectionViewDelegate,UICollectionViewDataSource,
         actionButton.setTitleColor(.white, for: .normal)
         selectionRing.fillColor = UIColor.clear.cgColor
         actionButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
-        let mainRoute =  SceneDelegate.fashionInspiration + "peamgieast/lpnrminvgabtmegCjhcaetk/jiqnudjerxq?supshecreIgdk=".extractHeadWearPattern()  + "\(itemid)"
+        let mainRoute =  SceneDelegate.fashionInspiration + "peamgieast/lpnrminvgabtmegCjhcaetk/jiqnudjerxq?supshecreIgdk=".UBACAMNNIextractHeadWearPattern()  + "\(itemid)"
        
        
         actionButton.layer.cornerRadius = 8

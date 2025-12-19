@@ -12,12 +12,12 @@
         <!--Headgear Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HeadgearController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HeadgearController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HeadgearController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="UBACAMNNIHeadgearController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerwear" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-QI-DIt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNIheaderwear" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-QI-DIt">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                         </subviews>
@@ -55,12 +55,12 @@
         <!--Handmade Controller-->
         <scene sceneID="7B1-DA-DSi">
             <objects>
-                <viewController restorationIdentifier="HandmadeController" storyboardIdentifier="HandmadeController" id="LRl-dd-fUz" customClass="HandmadeController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="HandmadeController" storyboardIdentifier="HandmadeController" id="LRl-dd-fUz" customClass="UBACAMNNIHandmadeController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohQ-NW-Fwq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seasonalFul" translatesAutoresizingMaskIntoConstraints="NO" id="Dq5-k1-EPv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNseasonalFul" translatesAutoresizingMaskIntoConstraints="NO" id="Dq5-k1-EPv">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Terms of Use&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-Tf-ah4">
@@ -69,14 +69,14 @@
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password_unino" translatesAutoresizingMaskIntoConstraints="NO" id="LGQ-6P-KjU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNPassword_unino" translatesAutoresizingMaskIntoConstraints="NO" id="LGQ-6P-KjU">
                                 <rect key="frame" x="64" y="407" width="102" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="102" id="f4U-TM-uJe"/>
                                     <constraint firstAttribute="height" constant="24" id="vcL-Tj-Vmo"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PasswordJIOino" translatesAutoresizingMaskIntoConstraints="NO" id="hws-W7-7DH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNPasswordJIOino" translatesAutoresizingMaskIntoConstraints="NO" id="hws-W7-7DH">
                                 <rect key="frame" x="20" y="402" width="34" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="rkZ-lc-ZL2"/>
@@ -93,21 +93,21 @@
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email_uonnoi" translatesAutoresizingMaskIntoConstraints="NO" id="ZEe-93-1d2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNIEmail_uonnoi" translatesAutoresizingMaskIntoConstraints="NO" id="ZEe-93-1d2">
                                 <rect key="frame" x="64" y="281" width="59" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="YMK-cl-dPz"/>
                                     <constraint firstAttribute="height" constant="24" id="poX-M3-kGr"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wmX-Lm-cj4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNpassionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wmX-Lm-cj4">
                                 <rect key="frame" x="156.66666666666666" y="109" width="80" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="0hi-T7-H6J"/>
                                     <constraint firstAttribute="width" constant="80" id="iVg-2f-Rx6"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emaildJIOino" translatesAutoresizingMaskIntoConstraints="NO" id="iFi-0N-n17">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNIemaildJIOino" translatesAutoresizingMaskIntoConstraints="NO" id="iFi-0N-n17">
                                 <rect key="frame" x="20" y="276" width="34" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Hvd-md-giO"/>
@@ -128,7 +128,7 @@
                                 <rect key="frame" x="24" y="656.66666666666663" width="345" height="52"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Login" backgroundImage="mengBackg"/>
+                                <state key="normal" title="Login" backgroundImage="UBACAMNNmengBackg"/>
                                 <connections>
                                     <action selector="handleStylishContinue:" destination="LRl-dd-fUz" eventType="touchUpInside" id="8Wv-2y-649"/>
                                 </connections>
@@ -140,8 +140,8 @@
                                     <constraint firstAttribute="height" constant="22" id="oDz-Fi-mqJ"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="personalized"/>
-                                <state key="selected" image="personalizedsel"/>
+                                <state key="normal" image="UBACAMNNpersonalized"/>
+                                <state key="selected" image="UBACAMNNpersonalizedsel"/>
                                 <connections>
                                     <action selector="HeadwearHaven:" destination="LRl-dd-fUz" eventType="touchUpInside" id="YPQ-mu-jOC"/>
                                 </connections>
@@ -222,12 +222,12 @@
         <!--Match Lab Controller-->
         <scene sceneID="lvD-oi-YAL">
             <objects>
-                <viewController storyboardIdentifier="MatchLabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R81-7p-4bo" customClass="MatchLabController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatchLabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R81-7p-4bo" customClass="UBACAMNNIMatchLabController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XUt-7B-YOf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seasonalFul" translatesAutoresizingMaskIntoConstraints="NO" id="6Ke-fn-auH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNseasonalFul" translatesAutoresizingMaskIntoConstraints="NO" id="6Ke-fn-auH">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jcQ-6w-Dpr">
@@ -248,7 +248,7 @@
                                     <constraint firstAttribute="width" constant="78" id="rAs-vx-vf7"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="maintains"/>
+                                <state key="normal" image="UBACAMNNImaintains"/>
                                 <connections>
                                     <action selector="beautySharing:" destination="R81-7p-4bo" eventType="touchUpInside" id="jUC-x1-euE"/>
                                 </connections>
@@ -260,8 +260,8 @@
                                     <constraint firstAttribute="height" constant="39" id="hFL-BL-fPB"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="huiforyou"/>
-                                <state key="selected" backgroundImage="foryouselo"/>
+                                <state key="normal" backgroundImage="UBACAMNNIhuiforyou"/>
+                                <state key="selected" backgroundImage="UBACAMNNIforyouselo"/>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jm7-D2-jp5">
                                 <rect key="frame" x="122" y="59" width="72" height="39"/>
@@ -270,16 +270,16 @@
                                     <constraint firstAttribute="width" constant="72" id="zce-5N-2f3"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="huinew"/>
-                                <state key="selected" image="newruioHU"/>
+                                <state key="normal" image="UBACAMNNIhuinew"/>
+                                <state key="selected" image="UBACAMNNnewruioHU"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M8-xG-B19">
-                                <rect key="frame" x="341" y="59" width="36" height="36"/>
+                                <rect key="frame" x="249" y="59" width="128" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="x1f-SM-30C"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="segmore"/>
+                                <state key="normal" image="UBACAMNNsegmore"/>
                                 <connections>
                                     <action selector="beautySharing:" destination="R81-7p-4bo" eventType="touchUpInside" id="cb9-CW-5Aa"/>
                                 </connections>
@@ -291,8 +291,8 @@
                                     <constraint firstAttribute="width" constant="54" id="eHS-QE-rYa"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="notheadert"/>
-                                <state key="selected" image="notheadertYES"/>
+                                <state key="normal" image="UBACAMNNnotheadert"/>
+                                <state key="selected" image="UBACAMNNnotheadertYES"/>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPp-8z-LCs">
                                 <rect key="frame" x="325" y="558" width="54" height="54"/>
@@ -301,7 +301,7 @@
                                     <constraint firstAttribute="height" constant="54" id="VRc-XC-SJu"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="commentadertYES"/>
+                                <state key="normal" image="UBACAMNNIcommentadertYES"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cgt-iF-EYf"/>
@@ -330,8 +330,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="UBACAMNNnewruio" destination="jm7-D2-jp5" id="Ykx-AB-5p7"/>
                         <outlet property="hatsForsession" destination="Ix0-3n-7te" id="Bbk-8J-Vek"/>
-                        <outlet property="newruio" destination="jm7-D2-jp5" id="Ykx-AB-5p7"/>
                         <outlet property="recommendationsView" destination="jcQ-6w-Dpr" id="FLe-uF-eDX"/>
                     </connections>
                 </viewController>
@@ -339,18 +339,18 @@
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="1634.5070422535211"/>
         </scene>
-        <!--Hat Chat Controller-->
+        <!--Hatver Controller-->
         <scene sceneID="xic-VU-dX4">
             <objects>
-                <viewController storyboardIdentifier="HatChatController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qFn-yc-Ns8" customClass="HatChatController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HatChatController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qFn-yc-Ns8" customClass="UBACAMNNIHatverController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KfA-iD-RgE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seasonalFul" translatesAutoresizingMaskIntoConstraints="NO" id="Ngt-7P-w2J">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNseasonalFul" translatesAutoresizingMaskIntoConstraints="NO" id="Ngt-7P-w2J">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChatBar" translatesAutoresizingMaskIntoConstraints="NO" id="CSt-85-GTG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNIChatBar" translatesAutoresizingMaskIntoConstraints="NO" id="CSt-85-GTG">
                                 <rect key="frame" x="16" y="59" width="82" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="97E-8x-8FQ"/>
@@ -363,7 +363,7 @@
                                     <constraint firstAttribute="height" constant="70" id="Jgf-UD-pXP"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="headwerrecoAi"/>
+                                <state key="normal" image="UBACAMNNIheadwerrecoAi"/>
                                 <connections>
                                     <action selector="beautySharing:" destination="qFn-yc-Ns8" eventType="touchUpInside" id="xWM-lP-8mI"/>
                                 </connections>
@@ -379,7 +379,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nillholder" translatesAutoresizingMaskIntoConstraints="NO" id="2yp-ek-0j2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNnillholder" translatesAutoresizingMaskIntoConstraints="NO" id="2yp-ek-0j2">
                                 <rect key="frame" x="75" y="345" width="243" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="8Dg-eJ-O66"/>
@@ -400,7 +400,7 @@
                                     <constraint firstAttribute="height" constant="70" id="mVU-Yc-hZT"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="talkingme"/>
+                                <state key="normal" image="UBACAMNNtalkingme"/>
                                 <connections>
                                     <action selector="beautySharing:" destination="qFn-yc-Ns8" eventType="touchUpInside" id="FF7-6K-Apk"/>
                                 </connections>
@@ -443,12 +443,12 @@
         <!--Style Spotlight Controller-->
         <scene sceneID="mc2-Wx-dFe">
             <objects>
-                <viewController storyboardIdentifier="StyleSpotlightController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8u6-m1-FIH" customClass="StyleSpotlightController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StyleSpotlightController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8u6-m1-FIH" customClass="UBACAMNNIStyleSpotlightController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9QH-hd-VbF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qugugfriend" translatesAutoresizingMaskIntoConstraints="NO" id="zhM-N0-Psr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNqugugfriend" translatesAutoresizingMaskIntoConstraints="NO" id="zhM-N0-Psr">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="l9l-qD-k8q"/>
@@ -461,7 +461,7 @@
                                     <constraint firstAttribute="width" constant="60" id="KUX-85-Qse"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="claycleSite"/>
+                                <state key="normal" image="UBACAMNNIclaycleSite"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aln-UJ-IPQ">
                                 <rect key="frame" x="136.66666666666666" y="70" width="119.99999999999997" height="120"/>
@@ -478,7 +478,7 @@
                                     <constraint firstAttribute="height" constant="60" id="s9i-o9-VpI"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="clayclepay"/>
+                                <state key="normal" image="UBACAMNNIclayclepay"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvk-1e-m5x">
                                 <rect key="frame" x="176.66666666666666" y="192" width="0.0" height="0.0"/>
@@ -492,7 +492,7 @@
                                     <constraint firstAttribute="height" constant="22" id="joc-CO-lOb"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="claycleEdit"/>
+                                <state key="normal" image="UBACAMNNIclaycleEdit"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MWO-ZH-KwB">
                                 <rect key="frame" x="12" y="223" width="369" height="80"/>
@@ -528,7 +528,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nillholder" translatesAutoresizingMaskIntoConstraints="NO" id="CKV-oQ-jt0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNnillholder" translatesAutoresizingMaskIntoConstraints="NO" id="CKV-oQ-jt0">
                                 <rect key="frame" x="75" y="370" width="243" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="6Bu-KT-cYC"/>
@@ -588,7 +588,7 @@
         <!--Global Hatwalk Controller-->
         <scene sceneID="7bD-5E-seg">
             <objects>
-                <viewController storyboardIdentifier="GlobalHatwalkController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nog-Z2-jUl" customClass="GlobalHatwalkController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GlobalHatwalkController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nog-Z2-jUl" customClass="UBACAMNNIGlobalHatwalkController" customModule="UonniHeadB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSx-cD-svj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -635,7 +635,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uonnieConer" translatesAutoresizingMaskIntoConstraints="NO" id="4AI-Dj-qQ7">
                                 <rect key="frame" x="0.0" y="188" width="393" height="664"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purperIcdon" translatesAutoresizingMaskIntoConstraints="NO" id="md2-VJ-lz5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNpurperIcdon" translatesAutoresizingMaskIntoConstraints="NO" id="md2-VJ-lz5">
                                 <rect key="frame" x="0.0" y="196" width="393" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="cZ6-xb-A1u"/>
@@ -648,8 +648,8 @@
                                     <constraint firstAttribute="height" constant="39" id="BET-AY-iN6"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="foryouse"/>
-                                <state key="selected" backgroundImage="foryouselo"/>
+                                <state key="normal" backgroundImage="UBACAMNNIforyouse"/>
+                                <state key="selected" backgroundImage="UBACAMNNIforyouselo"/>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQW-3W-ybB">
                                 <rect key="frame" x="12" y="216" width="96" height="39"/>
@@ -658,8 +658,8 @@
                                     <constraint firstAttribute="height" constant="39" id="yH2-lv-jR0"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="trendIngtu"/>
-                                <state key="selected" backgroundImage="trendIngtu_yello"/>
+                                <state key="normal" backgroundImage="UBACAMNNtrendIngtu"/>
+                                <state key="selected" backgroundImage="UBACAMNNtrendIngtu_yello"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eiE-Nv-Tzn">
                                 <rect key="frame" x="0.0" y="285" width="393" height="567"/>
@@ -679,8 +679,8 @@
                                     <constraint firstAttribute="height" constant="39" id="dhb-fX-CNp"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="newruio"/>
-                                <state key="selected" image="newruioHU"/>
+                                <state key="normal" image="UBACAMNNnewruio"/>
+                                <state key="selected" image="UBACAMNNnewruioHU"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K1D-FU-m4r"/>
@@ -716,10 +716,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="UBACAMNNnewruio" destination="5ap-qt-FhC" id="72U-Va-NMA"/>
                         <outlet property="artistryView" destination="eiE-Nv-Tzn" id="noc-Wj-cmS"/>
                         <outlet property="hatsForsession" destination="xA3-ym-z6X" id="opq-bt-WY9"/>
                         <outlet property="hatsTrending" destination="TQW-3W-ybB" id="r8a-np-izz"/>
-                        <outlet property="newruio" destination="5ap-qt-FhC" id="72U-Va-NMA"/>
                         <outlet property="recommendationsView" destination="yhq-dW-Fdl" id="RBd-Pi-hqe"/>
                     </connections>
                 </viewController>
@@ -729,39 +729,39 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ChatBar" width="79.666664123535156" height="24"/>
-        <image name="Email_uonnoi" width="58.333332061767578" height="17.333333969116211"/>
-        <image name="PasswordJIOino" width="34" height="34"/>
-        <image name="Password_unino" width="100.33333587646484" height="16.666666030883789"/>
+        <image name="UBACAMNNIChatBar" width="79.666664123535156" height="24"/>
+        <image name="UBACAMNNIEmail_uonnoi" width="58.333332061767578" height="17.333333969116211"/>
+        <image name="UBACAMNNIclaycleEdit" width="22" height="20"/>
+        <image name="UBACAMNNIclaycleSite" width="60" height="60"/>
+        <image name="UBACAMNNIclayclepay" width="60" height="60"/>
+        <image name="UBACAMNNIcommentadertYES" width="44" height="44"/>
+        <image name="UBACAMNNIemaildJIOino" width="34" height="34"/>
+        <image name="UBACAMNNIforyouse" width="96" height="39"/>
+        <image name="UBACAMNNIforyouselo" width="96" height="39"/>
+        <image name="UBACAMNNIheaderwear" width="375" height="812"/>
+        <image name="UBACAMNNIheadwerrecoAi" width="275" height="70"/>
+        <image name="UBACAMNNIhuiforyou" width="96" height="39"/>
+        <image name="UBACAMNNIhuinew" width="96" height="39"/>
+        <image name="UBACAMNNImaintains" width="78" height="78"/>
+        <image name="UBACAMNNPasswordJIOino" width="34" height="34"/>
+        <image name="UBACAMNNPassword_unino" width="100.33333587646484" height="16.666666030883789"/>
+        <image name="UBACAMNNmengBackg" width="335" height="52"/>
+        <image name="UBACAMNNnewruio" width="72" height="39"/>
+        <image name="UBACAMNNnewruioHU" width="72" height="39"/>
+        <image name="UBACAMNNnillholder" width="201" height="131"/>
+        <image name="UBACAMNNnotheadert" width="44" height="44"/>
+        <image name="UBACAMNNnotheadertYES" width="44" height="44"/>
+        <image name="UBACAMNNpassionIcon" width="80" height="107"/>
+        <image name="UBACAMNNpersonalized" width="22" height="22"/>
+        <image name="UBACAMNNpersonalizedsel" width="128" height="128"/>
+        <image name="UBACAMNNpurperIcdon" width="128" height="128"/>
+        <image name="UBACAMNNqugugfriend" width="128" height="128"/>
+        <image name="UBACAMNNseasonalFul" width="128" height="128"/>
+        <image name="UBACAMNNsegmore" width="128" height="128"/>
+        <image name="UBACAMNNtalkingme" width="128" height="128"/>
+        <image name="UBACAMNNtrendIngtu" width="128" height="128"/>
+        <image name="UBACAMNNtrendIngtu_yello" width="128" height="128"/>
         <image name="Uonni" width="97.333335876464844" height="23.666666030883789"/>
-        <image name="claycleEdit" width="22" height="20"/>
-        <image name="claycleSite" width="60" height="60"/>
-        <image name="clayclepay" width="60" height="60"/>
-        <image name="commentadertYES" width="44" height="44"/>
-        <image name="emaildJIOino" width="34" height="34"/>
-        <image name="foryouse" width="96" height="39"/>
-        <image name="foryouselo" width="96" height="39"/>
-        <image name="headerwear" width="375" height="812"/>
-        <image name="headwerrecoAi" width="275" height="70"/>
-        <image name="huiforyou" width="96" height="39"/>
-        <image name="huinew" width="96" height="39"/>
-        <image name="maintains" width="78" height="78"/>
-        <image name="mengBackg" width="335" height="52"/>
-        <image name="newruio" width="72" height="39"/>
-        <image name="newruioHU" width="72" height="39"/>
-        <image name="nillholder" width="201" height="131"/>
-        <image name="notheadert" width="44" height="44"/>
-        <image name="notheadertYES" width="44" height="44"/>
-        <image name="passionIcon" width="80" height="107"/>
-        <image name="personalized" width="22" height="22"/>
-        <image name="personalizedsel" width="22" height="22"/>
-        <image name="purperIcdon" width="375" height="79"/>
-        <image name="qugugfriend" width="375" height="110"/>
-        <image name="seasonalFul" width="375" height="809"/>
-        <image name="segmore" width="36" height="36"/>
-        <image name="talkingme" width="70" height="70"/>
-        <image name="trendIngtu" width="96" height="39"/>
-        <image name="trendIngtu_yello" width="96" height="39"/>
         <image name="uonnieConer" width="375" height="633"/>
         <image name="uotake" width="40" height="40"/>
         <image name="walkBage" width="375" height="262"/>
@@ -769,7 +769,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

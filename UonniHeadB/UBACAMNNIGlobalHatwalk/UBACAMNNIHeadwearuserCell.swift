@@ -1,5 +1,5 @@
 //
-//  HeadwearuserCell.swift
+//  UBACAMNNIHeadwearuserCell.swift
 //  UonniHeadB
 //
 //  Created by UonniHeadB on 2025/5/9.
@@ -7,7 +7,7 @@
 import SnapKit
 import UIKit
 
-struct HeadwearCommunityMoment {
+struct UBACAMNNIHeadwearCommunityMoment {
     let Headwearavatar: String
     let Headwearusername: String
     let HeadwearmediaType: MediaType
@@ -23,17 +23,17 @@ struct HeadwearCommunityMoment {
 
 
 
-class HeadwearuserCell: UICollectionViewCell {
+class UBACAMNNIHeadwearuserCell: UICollectionViewCell {
     
-    let artisticHeader = UIImageView()
+    let UBACAMNNIartisticHeader = UIImageView()
     let headwearName = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        artisticHeader.layer.cornerRadius = 19
+        UBACAMNNIartisticHeader.layer.cornerRadius = 19
         
         self.backgroundColor = UIColor(red: 0.41, green: 0.97, blue: 0.83, alpha: 1)
-        contentView.addSubview(artisticHeader)
+        contentView.addSubview(UBACAMNNIartisticHeader)
         creativeExpression()
         contentView.addSubview(headwearName)
         
@@ -42,8 +42,8 @@ class HeadwearuserCell: UICollectionViewCell {
     }
     
     private func creativeExpression()  {
-        artisticHeader.layer.masksToBounds = true
-        artisticHeader.contentMode = .scaleAspectFill
+        UBACAMNNIartisticHeader.layer.masksToBounds = true
+        UBACAMNNIartisticHeader.contentMode = .scaleAspectFill
     }
     
     
@@ -58,7 +58,7 @@ class HeadwearuserCell: UICollectionViewCell {
         headwearName.font = UIFont(name: "Apple SD Gothic Neo SemiBold", size: 16)
         self.layer.cornerRadius = 12
         self.layer.masksToBounds = true
-        artisticHeader.snp.makeConstraints { make in
+        UBACAMNNIartisticHeader.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(3)
             make.width.height.equalTo(38)
             make.centerY.equalToSuperview()
@@ -66,7 +66,7 @@ class HeadwearuserCell: UICollectionViewCell {
         
         
         headwearName.snp.makeConstraints { make in
-            make.leading.equalTo(artisticHeader.snp.trailing).offset(4)
+            make.leading.equalTo(UBACAMNNIartisticHeader.snp.trailing).offset(4)
             make.trailing.equalToSuperview().offset(-5)
             make.centerY.equalToSuperview()
         }

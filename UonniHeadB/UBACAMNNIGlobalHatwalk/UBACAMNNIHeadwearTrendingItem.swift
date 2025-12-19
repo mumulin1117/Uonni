@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct HeadwearTrendingItem {
+struct UBACAMNNIHeadwearTrendingItem {
     let HeadwearimageURL: String
     let Headweartitle: String
     let Headweardescription: String

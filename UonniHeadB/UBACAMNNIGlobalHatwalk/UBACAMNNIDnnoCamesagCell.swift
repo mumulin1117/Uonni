@@ -1,12 +1,12 @@
 //
-//  DnnoCamesagCell.swift
+//  UBACAMNNIDnnoCamesagCell.swift
 //  UonniHeadB
 //
 //  Created by UonniHeadB on 2025/5/12.
 //
 
 import UIKit
-struct HeadwearMessage {
+struct UBACAMNNIHeadwearMessage {
     let senderAvatar: String
     let senderName: String
     let messageContent: String
@@ -19,7 +19,7 @@ struct HeadwearMessage {
         case aiRecommendation
     }
 }
-class DnnoCamesagCell: UICollectionViewCell {
+class UBACAMNNIDnnoCamesagCell: UICollectionViewCell {
  
     @IBOutlet weak var artisticHeader: UIImageView!
     
