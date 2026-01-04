@@ -9,131 +9,131 @@ import UIKit
 import SVProgressHUD
 
 class UBACAMNNIHatverController: UBACAMNNIArtistryController {
-    private  let actionButton = UIButton(type: .system)
+    private  let UBACAMNNactionButton = UIButton(type: .system)
     
     
-    struct MillineryMessageThread {
-        let designerID: String
-        let atelierName: String
-        let latestAccessoryDesign: String  // 最新头饰设计描述
-        let previewSketchURL: String      // 设计草图预览图
-        let unreadMessageCount: Int
-        let lastExchangeTime: TimeInterval // 最后交流时间戳
-        let collectionSeason: String       // 所属系列季节
+    struct UBACAMNNMillineryMessageThread {
+        let UBACAMNNdesignerID: String
+        let UBACAMNNatelierName: String
+        let UBACAMNNlatestAccessoryDesign: String  // 最新头饰设计描述
+        let UBACAMNNpreviewSketchURL: String      // 设计草图预览图
+        let UBACAMNNunreadMessageCount: Int
+        let UBACAMNNlastExchangeTime: TimeInterval // 最后交流时间戳
+        let UBACAMNNcollectionSeason: String       // 所属系列季节
         
     }
-    private var recommendMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
+    private var UBACAMNNrecommendMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
     
-    private var messages = [UBACAMNNIHeadwearMessage]()
+    private var UBACAMNNmessages = [UBACAMNNIHeadwearMessage]()
     @IBOutlet weak var recommendationsView: UICollectionView!
     
-    private let seasonLabel: UILabel = {
+    private let UBACAMNNseasonLabel: UILabel = {
            let UBACAMNNIlabel = UILabel()
         UBACAMNNIlabel.font = .systemFont(ofSize: 11, weight: .semibold)
         UBACAMNNIlabel.textAlignment = .center
            return UBACAMNNIlabel
        }()
     
-    @IBOutlet weak var headgear: UIImageView!
+    @IBOutlet weak var UBACAMNNheadgear: UIImageView!
     
-    @IBOutlet weak var fusion: UILabel!
+    @IBOutlet weak var UBACAMNNfusion: UILabel!
     
   
     
-    @IBAction func beautySharing(_ sender: UIButton) {
-        selectionRing.strokeColor = UIColor.clear.cgColor
+    @IBAction func UBACAMNNbeautySharing(_ sender: UIButton) {
+        UBACAMNNselectionRing.strokeColor = UIColor.clear.cgColor
                 
         
-        selectionRing.lineWidth = 2
+        UBACAMNNselectionRing.lineWidth = 2
         if sender.tag == 23 {
-            selectionRing.fillColor = UIColor.clear.cgColor
+            UBACAMNNselectionRing.fillColor = UIColor.clear.cgColor
            
             let mainRoute =  SceneDelegate.fashionInspiration + "puangeexsp/wsrcxreeaeanxprljahyf/zianydoejxn?".UBACAMNNIextractHeadWearPattern()
-            selectionRing.lineWidth = 2
-            self.creativeExchange(Everyroute:mainRoute, foreColor: sender.backgroundColor ?? .clear)
+            UBACAMNNselectionRing.lineWidth = 2
+            self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: sender.backgroundColor ?? .clear)
             return
         }
-        selectionRing.fillColor = UIColor.clear.cgColor
+        UBACAMNNselectionRing.fillColor = UIColor.clear.cgColor
        
         let mainRoute =  SceneDelegate.fashionInspiration + "pjaigkeqsv/aCrraegajtveqRnollwek/jilnndjepxi?".UBACAMNNIextractHeadWearPattern()
-        selectionRing.lineWidth = 2
-        self.creativeExchange(Everyroute:mainRoute, foreColor: sender.backgroundColor ?? .clear)
+        UBACAMNNselectionRing.lineWidth = 2
+        self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: sender.backgroundColor ?? .clear)
        
     }
     // MARK: - UI组件
        
-    private lazy var runwayTableView: UITableView = {
-        let TableVi = UITableView(frame: .zero, style: .grouped)
+    private lazy var UBACAMNNrunwayTableView: UITableView = {
+        let UBACAMNNTableVi = UITableView(frame: .zero, style: .grouped)
         
-        TableVi.separatorStyle = .none
+        UBACAMNNTableVi.separatorStyle = .none
        
-        TableVi.rowHeight = 96
-        TableVi.sectionHeaderHeight = 4
-        TableVi.sectionFooterHeight = 4
+        UBACAMNNTableVi.rowHeight = 96
+        UBACAMNNTableVi.sectionHeaderHeight = 4
+        UBACAMNNTableVi.sectionFooterHeight = 4
        
-        return TableVi
+        return UBACAMNNTableVi
     }()
     
-    private let specialtyLabel: UILabel = UILabel()
-    private func configureCatwalkView() {
+    private let UBACAMNNspecialtyLabel: UILabel = UILabel()
+    private func UBACAMNNconfigureCatwalkView() {
        
-        view.addSubview(runwayTableView)
+        view.addSubview(UBACAMNNrunwayTableView)
        
         
-        runwayTableView.translatesAutoresizingMaskIntoConstraints = false
+        UBACAMNNrunwayTableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            runwayTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            runwayTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            runwayTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            runwayTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            UBACAMNNrunwayTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            UBACAMNNrunwayTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            UBACAMNNrunwayTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            UBACAMNNrunwayTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
        
         
     }
-    private func setupMillineryBadge() {
-        seasonLabel.layer.cornerRadius = 9
-        seasonLabel.layer.borderWidth = 1
-        seasonLabel.clipsToBounds = true
-        if seasonLabel.isHidden == true {
-            view.addSubview(seasonLabel)
+    private func UBACAMNNsetupMillineryBadge() {
+        UBACAMNNseasonLabel.layer.cornerRadius = 9
+        UBACAMNNseasonLabel.layer.borderWidth = 1
+        UBACAMNNseasonLabel.clipsToBounds = true
+        if UBACAMNNseasonLabel.isHidden == true {
+            view.addSubview(UBACAMNNseasonLabel)
         }
         
-        seasonLabel.translatesAutoresizingMaskIntoConstraints = false
+        UBACAMNNseasonLabel.translatesAutoresizingMaskIntoConstraints = false
       
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        seasonLabel.layer.borderWidth = 1
+        UBACAMNNseasonLabel.layer.borderWidth = 1
         
-        trendsettingideas()
-        seasonLabel.clipsToBounds = true
-        if seasonLabel.isHidden == true {
-            view.addSubview(seasonLabel)
+        UBACAMNNtrendsettingideas()
+        UBACAMNNseasonLabel.clipsToBounds = true
+        if UBACAMNNseasonLabel.isHidden == true {
+            view.addSubview(UBACAMNNseasonLabel)
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleRecommendations()
-        seasonLabel.font = .systemFont(ofSize: 11, weight: .semibold)
-        seasonLabel.textAlignment = .center
+        UBACAMNNstyleRecommendations()
+        UBACAMNNseasonLabel.font = .systemFont(ofSize: 11, weight: .semibold)
+        UBACAMNNseasonLabel.textAlignment = .center
     }
-    private let selectionRing = CAShapeLayer()
-    private func styleRecommendations() {
+    private let UBACAMNNselectionRing = CAShapeLayer()
+    private func UBACAMNNstyleRecommendations() {
         recommendationsView.backgroundColor = .clear
-        updateEmptyWorkbench()
-        seasonLabel.font = .systemFont(ofSize: 11, weight: .semibold)
-        seasonLabel.textAlignment = .center
+        UBACAMNNupdateEmptyWorkbench()
+        UBACAMNNseasonLabel.font = .systemFont(ofSize: 11, weight: .semibold)
+        UBACAMNNseasonLabel.textAlignment = .center
         recommendationsView.delegate = self
-        seasonLabel.clipsToBounds = true
-        if seasonLabel.isHidden == true {
-            view.addSubview(seasonLabel)
+        UBACAMNNseasonLabel.clipsToBounds = true
+        if UBACAMNNseasonLabel.isHidden == true {
+            view.addSubview(UBACAMNNseasonLabel)
         }
         
        
         recommendationsView.dataSource = self
-        seasonLabel.translatesAutoresizingMaskIntoConstraints = false
+        UBACAMNNseasonLabel.translatesAutoresizingMaskIntoConstraints = false
         recommendationsView.register(UINib(nibName: "UBACAMNNIDnnoCamesagCell", bundle: nil), forCellWithReuseIdentifier: "UBACAMNNIDnnoCamesagCell")
         
         
@@ -141,26 +141,26 @@ class UBACAMNNIHatverController: UBACAMNNIArtistryController {
        
     }
     
-    private func updateEmptyWorkbench() {
+    private func UBACAMNNupdateEmptyWorkbench() {
         let designerLabel = UILabel()
         designerLabel.font = UIFont.systemFont(ofSize: 15)
         designerLabel.textColor = .orange
     }
     
     
-    private func formatLastExchangeTime(_ timestamp: TimeInterval) -> String  {
-        let formatter = DateFormatter()
+    private func UBACAMNNformatLastExchangeTime(_ timestamp: TimeInterval) -> String  {
+        let UBACAMNNformatter = DateFormatter()
                 
-        formatter.doesRelativeDateFormatting = true
+        UBACAMNNformatter.doesRelativeDateFormatting = true
         
         if Calendar.current.isDateInToday(Date(timeIntervalSince1970: timestamp)) {
-            formatter.timeStyle = .short
-            formatter.dateStyle = .none
+            UBACAMNNformatter.timeStyle = .short
+            UBACAMNNformatter.dateStyle = .none
         } else {
-            formatter.dateFormat = "MM/dd"
+            UBACAMNNformatter.dateFormat = "MM/dd"
         }
         
-        return formatter.string(from: Date(timeIntervalSince1970: timestamp))
+        return UBACAMNNformatter.string(from: Date(timeIntervalSince1970: timestamp))
     }
     
     
@@ -171,64 +171,64 @@ extension UBACAMNNIHatverController{
     
    
     
-    func trendsettingideas()  {
-        messages = [
-            UBACAMNNIHeadwearMessage(senderAvatar: "avatar_luna", senderName: "Luna的帽饰研究所",
-                           messageContent: "刚发了新的贝雷帽混搭视频，求搭配建议！",
-                           messageType: .videoShare, timestamp: Date().addingTimeInterval(-3600)),
-            UBACAMNNIHeadwearMessage(senderAvatar: "avatar_ai_stylist", senderName: "AI搭配助手",
-                           messageContent: "根据您的草帽收藏，推荐尝试波西米亚风长裙搭配方案",
-                           messageType: .aiRecommendation, timestamp: Date().addingTimeInterval(-7200)),
-            UBACAMNNIHeadwearMessage(senderAvatar: "avatar_hat_lover", senderName: "头饰收藏家小鹿",
-                           messageContent: "姐妹！求你上次视频里的珍珠发箍链接！",
-                           messageType: .text, timestamp: Date().addingTimeInterval(-18000))
+    func UBACAMNNtrendsettingideas()  {
+        UBACAMNNmessages = [
+            UBACAMNNIHeadwearMessage(UBACAMNNsenderAvatar: "avatar_luna", UBACAMNNsenderName: "Luna的帽饰研究所",
+                           UBACAMNNmessageContent: "刚发了新的贝雷帽混搭视频，求搭配建议！",
+                           UBACAMNNmessageType: .UBACAMNNvideoShare, UBACAMNNtimestamp: Date().addingTimeInterval(-3600)),
+            UBACAMNNIHeadwearMessage(UBACAMNNsenderAvatar: "avatar_ai_stylist", UBACAMNNsenderName: "AI搭配助手",
+                           UBACAMNNmessageContent: "根据您的草帽收藏，推荐尝试波西米亚风长裙搭配方案",
+                           UBACAMNNmessageType: .UBACAMNNaiRecommendation, UBACAMNNtimestamp: Date().addingTimeInterval(-7200)),
+            UBACAMNNIHeadwearMessage(UBACAMNNsenderAvatar: "avatar_hat_lover", UBACAMNNsenderName: "头饰收藏家小鹿",
+                           UBACAMNNmessageContent: "姐妹！求你上次视频里的珍珠发箍链接！",
+                           UBACAMNNmessageType: .UBACAMNNtext, UBACAMNNtimestamp: Date().addingTimeInterval(-18000))
         ]
         let insights: [String:Any] = [
             "fashionconnection": "51032696"
         ]
         SVProgressHUD.show()
         SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/ynppespskoqbcejz/ckxrxfhffw",     UBACAMNNIvintage: insights) { resilt in
-            self.seasonLabel.layer.borderWidth = 1
-            self.seasonLabel.clipsToBounds = true
-            self.configureAtelierGallery()
+            self.UBACAMNNseasonLabel.layer.borderWidth = 1
+            self.UBACAMNNseasonLabel.clipsToBounds = true
+            self.UBACAMNNconfigureAtelierGallery()
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let user = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Array<Dictionary<String,Any>>
+                  let userUBACAMNN = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Array<Dictionary<String,Any>>
                     
             else {
                 SVProgressHUD.showInfo(withStatus: "Naoz idvaytxa".UBACAMNNIextractHeadWearPattern())
-                if self.seasonLabel.isHidden == true {
-                    self.view.addSubview(self.seasonLabel)
+                if self.UBACAMNNseasonLabel.isHidden == true {
+                    self.view.addSubview(self.UBACAMNNseasonLabel)
                 }
                 
-                self.seasonLabel.translatesAutoresizingMaskIntoConstraints = false
+                self.UBACAMNNseasonLabel.translatesAutoresizingMaskIntoConstraints = false
               
                 return
             }
             
-            self.recommendMonment["GlobalHatwalk"] = user.map { dix in
-                if let ONearrar = (dix["hatlovers"] as? Array<[String:Any]>)?.first{
-                    ONearrar
+            self.UBACAMNNrecommendMonment["GlobalHatwalk"] = userUBACAMNN.map { dix in
+                if let ONearrarUBACAMNN = (dix["hatlovers"] as? Array<[String:Any]>)?.first{
+                    ONearrarUBACAMNN
                 }else{
                     [:]
                     
                 }
                 
             }
-            if self.seasonLabel.isHidden == true {
-                self.view.addSubview(self.seasonLabel)
+            if self.UBACAMNNseasonLabel.isHidden == true {
+                self.view.addSubview(self.UBACAMNNseasonLabel)
             }
             
-            self.seasonLabel.translatesAutoresizingMaskIntoConstraints = false
+            self.UBACAMNNseasonLabel.translatesAutoresizingMaskIntoConstraints = false
           
-            self.loadSampleData()
+            self.UBACAMNNloadSampleData()
             
         }     UBACAMNNIfailure: { error in
-            if self.seasonLabel.isHidden == true {
-                self.view.addSubview(self.seasonLabel)
+            if self.UBACAMNNseasonLabel.isHidden == true {
+                self.view.addSubview(self.UBACAMNNseasonLabel)
             }
             
-            self.seasonLabel.translatesAutoresizingMaskIntoConstraints = false
+            self.UBACAMNNseasonLabel.translatesAutoresizingMaskIntoConstraints = false
           
             SVProgressHUD.showError(withStatus: error.localizedDescription)
         }
@@ -242,7 +242,7 @@ extension UBACAMNNIHatverController{
 extension UBACAMNNIHatverController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     
-    func designerProfiles() -> CGSize {
+    func UBACAMNNdesignerProfiles() -> CGSize {
         CGSize(width: UIScreen.main.bounds.size.width - 24, height: 108)
     }
     
@@ -250,7 +250,7 @@ extension UBACAMNNIHatverController:UICollectionViewDelegate,UICollectionViewDat
    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return designerProfiles()
+        return UBACAMNNdesignerProfiles()
     }
     
     
@@ -267,17 +267,17 @@ extension UBACAMNNIHatverController:UICollectionViewDelegate,UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
-        return recommendMonment["GlobalHatwalk"]?.count ?? 0
+        return UBACAMNNrecommendMonment["GlobalHatwalk"]?.count ?? 0
     }
-    private func loadSampleData() {
+    private func UBACAMNNloadSampleData() {
         
         SVProgressHUD.dismiss()
-        if self.recommendMonment["GlobalHatwalk"]?.count ?? 0 == 0{
-            self.headgear.isHidden = false
-            self.fusion.isHidden = false
+        if self.UBACAMNNrecommendMonment["GlobalHatwalk"]?.count ?? 0 == 0{
+            self.UBACAMNNheadgear.isHidden = false
+            self.UBACAMNNfusion.isHidden = false
         }else{
-            self.headgear.isHidden = true
-            self.fusion.isHidden = true
+            self.UBACAMNNheadgear.isHidden = true
+            self.UBACAMNNfusion.isHidden = true
         }
         
         self.recommendationsView.reloadData()
@@ -286,49 +286,49 @@ extension UBACAMNNIHatverController:UICollectionViewDelegate,UICollectionViewDat
         
         let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "UBACAMNNIDnnoCamesagCell", for: indexPath) as! UBACAMNNIDnnoCamesagCell
         
-        if let headerpiceice = recommendMonment["GlobalHatwalk"]?[indexPath.row]["creativecommunity"] as? String,let imageUrl = URL(string: headerpiceice) {
-            uonnicell.artisticHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
+        if let UBACAMNNheaderpiceice = UBACAMNNrecommendMonment["GlobalHatwalk"]?[indexPath.row]["creativecommunity"] as? String,let imageUrl = URL(string: UBACAMNNheaderpiceice) {
+            uonnicell.UBACAMNNartisticHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
-        uonnicell.tovhatki.tag = indexPath.row
+        uonnicell.UBACAMNNtovhatki.tag = indexPath.row
  
-        uonnicell.headwearName.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["fashionmoments"] as? String
-        uonnicell.postConttnwearLbl.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["beautyindetails"] as? String
+        uonnicell.UBACAMNNheadwearName.text = UBACAMNNrecommendMonment["GlobalHatwalk"]?[indexPath.row]["fashionmoments"] as? String
+        uonnicell.UBACAMNNpostConttnwearLbl.text = UBACAMNNrecommendMonment["GlobalHatwalk"]?[indexPath.row]["beautyindetails"] as? String
         return uonnicell
         
     }
-    private func configureAtelierGallery() {
+    private func UBACAMNNconfigureAtelierGallery() {
         
         
-        actionButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        actionButton.setTitleColor(.white, for: .normal)
+        UBACAMNNactionButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        UBACAMNNactionButton.setTitleColor(.white, for: .normal)
                
-        actionButton.layer.borderColor = UIColor.black.cgColor
-        actionButton.layer.borderWidth = 1
-        actionButton.layer.cornerRadius = 8
-        actionButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
+        UBACAMNNactionButton.layer.borderColor = UIColor.black.cgColor
+        UBACAMNNactionButton.layer.borderWidth = 1
+        UBACAMNNactionButton.layer.cornerRadius = 8
+        UBACAMNNactionButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
         
-        self.view.insertSubview(actionButton, at: 0)
+        self.view.insertSubview(UBACAMNNactionButton, at: 0)
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
-        actionButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        UBACAMNNactionButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         
                 
         
-        selectionRing.lineWidth = 2
-        guard let itemid = recommendMonment["GlobalHatwalk"]?[indexPath.row]["stylesharing"] as? Int else { return  }
-        actionButton.setTitleColor(.white, for: .normal)
-        selectionRing.fillColor = UIColor.clear.cgColor
-        actionButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
+        UBACAMNNselectionRing.lineWidth = 2
+        guard let itemid = UBACAMNNrecommendMonment["GlobalHatwalk"]?[indexPath.row]["stylesharing"] as? Int else { return  }
+        UBACAMNNactionButton.setTitleColor(.white, for: .normal)
+        UBACAMNNselectionRing.fillColor = UIColor.clear.cgColor
+        UBACAMNNactionButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
         let mainRoute =  SceneDelegate.fashionInspiration + "peamgieast/lpnrminvgabtmegCjhcaetk/jiqnudjerxq?supshecreIgdk=".UBACAMNNIextractHeadWearPattern()  + "\(itemid)"
        
        
-        actionButton.layer.cornerRadius = 8
-        self.creativeExchange(Everyroute:mainRoute, foreColor: collectionView.backgroundColor ?? .clear)
-        actionButton.layer.borderWidth = 1
+        UBACAMNNactionButton.layer.cornerRadius = 8
+        self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: collectionView.backgroundColor ?? .clear)
+        UBACAMNNactionButton.layer.borderWidth = 1
     }
     
 

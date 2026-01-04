@@ -130,7 +130,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Login" backgroundImage="UBACAMNNmengBackg"/>
                                 <connections>
-                                    <action selector="handleStylishContinue:" destination="LRl-dd-fUz" eventType="touchUpInside" id="8Wv-2y-649"/>
+                                    <action selector="UBACAMNNhandleStylishContinue:" destination="LRl-dd-fUz" eventType="touchUpInside" id="8Wv-2y-649"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL2-H5-JT0">
@@ -207,12 +207,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="artistry" destination="LL2-H5-JT0" id="Nr0-Ae-SE2"/>
-                        <outlet property="artistrylbl" destination="ngV-Tf-ah4" id="MHY-yC-y2f"/>
-                        <outlet property="culturalField" destination="iwV-rW-4my" id="2FD-o9-wFF"/>
-                        <outlet property="forwardTexifld" destination="fcu-zY-z5D" id="fwD-yW-yOc"/>
-                        <outlet property="trendsLabel" destination="ZEe-93-1d2" id="uV9-jK-i0c"/>
-                        <outlet property="uniquelbl" destination="lIH-2t-22q" id="EcH-r7-9F6"/>
+                        <outlet property="UBACAMNNartistry" destination="LL2-H5-JT0" id="Nr0-Ae-SE2"/>
+                        <outlet property="UBACAMNNartistrylbl" destination="ngV-Tf-ah4" id="MHY-yC-y2f"/>
+                        <outlet property="UBACAMNNculturalField" destination="iwV-rW-4my" id="2FD-o9-wFF"/>
+                        <outlet property="UBACAMNNforwardTexifld" destination="fcu-zY-z5D" id="fwD-yW-yOc"/>
+                        <outlet property="UBACAMNNtrendsLabel" destination="ZEe-93-1d2" id="uV9-jK-i0c"/>
+                        <outlet property="UBACAMNNuniquelbl" destination="lIH-2t-22q" id="EcH-r7-9F6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pei-ww-bVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -274,7 +274,7 @@
                                 <state key="selected" image="UBACAMNNnewruioHU"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M8-xG-B19">
-                                <rect key="frame" x="249" y="59" width="128" height="36"/>
+                                <rect key="frame" x="341" y="59" width="36" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="x1f-SM-30C"/>
                                 </constraints>
@@ -330,9 +330,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="UBACAMNNhatsForsession" destination="Ix0-3n-7te" id="Bbk-8J-Vek"/>
                         <outlet property="UBACAMNNnewruio" destination="jm7-D2-jp5" id="Ykx-AB-5p7"/>
-                        <outlet property="hatsForsession" destination="Ix0-3n-7te" id="Bbk-8J-Vek"/>
-                        <outlet property="recommendationsView" destination="jcQ-6w-Dpr" id="FLe-uF-eDX"/>
+                        <outlet property="UBACAMNNrecommendationsView" destination="jcQ-6w-Dpr" id="FLe-uF-eDX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPH-EJ-owb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -365,7 +365,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="UBACAMNNIheadwerrecoAi"/>
                                 <connections>
-                                    <action selector="beautySharing:" destination="qFn-yc-Ns8" eventType="touchUpInside" id="xWM-lP-8mI"/>
+                                    <action selector="UBACAMNNbeautySharing:" destination="qFn-yc-Ns8" eventType="touchUpInside" id="xWM-lP-8mI"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WPe-uY-xEH">
@@ -402,7 +402,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="UBACAMNNtalkingme"/>
                                 <connections>
-                                    <action selector="beautySharing:" destination="qFn-yc-Ns8" eventType="touchUpInside" id="FF7-6K-Apk"/>
+                                    <action selector="UBACAMNNbeautySharing:" destination="qFn-yc-Ns8" eventType="touchUpInside" id="FF7-6K-Apk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -431,8 +431,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fusion" destination="CEo-T1-faY" id="tHt-Sa-xj3"/>
-                        <outlet property="headgear" destination="2yp-ek-0j2" id="nan-Q4-ISY"/>
+                        <outlet property="UBACAMNNfusion" destination="CEo-T1-faY" id="tHt-Sa-xj3"/>
+                        <outlet property="UBACAMNNheadgear" destination="2yp-ek-0j2" id="nan-Q4-ISY"/>
                         <outlet property="recommendationsView" destination="WPe-uY-xEH" id="OeW-zo-iDE"/>
                     </connections>
                 </viewController>
@@ -571,14 +571,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="artisticHeader" destination="aln-UJ-IPQ" id="hbO-3C-SdY"/>
-                        <outlet property="ecoEdit" destination="klK-E9-pNR" id="bvk-9A-eTW"/>
-                        <outlet property="epationPayi" destination="GLi-v3-1UE" id="sSd-Ph-A5d"/>
-                        <outlet property="headwearName" destination="hvk-1e-m5x" id="xiv-u0-uFx"/>
-                        <outlet property="relationFansUo" destination="1Mx-hn-FXs" id="wXO-5n-Glf"/>
-                        <outlet property="relationFolloweUo" destination="Jya-Tc-9Nx" id="X6r-6G-5mr"/>
-                        <outlet property="relationFriendUo" destination="RKt-pn-xd1" id="YWs-99-h8V"/>
-                        <outlet property="suresite" destination="H1d-Rd-hs8" id="0Hg-EO-7mx"/>
+                        <outlet property="UBACAMNNecoEdit" destination="klK-E9-pNR" id="bvk-9A-eTW"/>
+                        <outlet property="UBACAMNNepationPayi" destination="GLi-v3-1UE" id="sSd-Ph-A5d"/>
+                        <outlet property="UBACAMNNrelationFansUo" destination="1Mx-hn-FXs" id="wXO-5n-Glf"/>
+                        <outlet property="UBACAMNNrelationFolloweUo" destination="Jya-Tc-9Nx" id="X6r-6G-5mr"/>
+                        <outlet property="UBACAMNNrelationFriendUo" destination="RKt-pn-xd1" id="YWs-99-h8V"/>
+                        <outlet property="UBACAMNNsuresite" destination="H1d-Rd-hs8" id="0Hg-EO-7mx"/>
+                        <outlet property="artisticUBACAMNNHeader" destination="aln-UJ-IPQ" id="hbO-3C-SdY"/>
+                        <outlet property="headUBACAMNNwearName" destination="hvk-1e-m5x" id="xiv-u0-uFx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gv6-gB-Hsi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -593,7 +593,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walkBage" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-bl-vZV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNwalkBage" translatesAutoresizingMaskIntoConstraints="NO" id="yJQ-bl-vZV">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="262"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="262" id="Ed9-WL-Zcf"/>
@@ -613,9 +613,9 @@
                                     <constraint firstAttribute="width" constant="40" id="xfJ-y6-KVh"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="uotake"/>
+                                <state key="normal" backgroundImage="UBACAMNNuotake"/>
                                 <connections>
-                                    <action selector="beautySharing:" destination="nog-Z2-jUl" eventType="touchUpInside" id="MNo-xm-ieB"/>
+                                    <action selector="UBACAMNNbeautySharing:" destination="nog-Z2-jUl" eventType="touchUpInside" id="MNo-xm-ieB"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yhq-dW-Fdl">
@@ -632,7 +632,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uonnieConer" translatesAutoresizingMaskIntoConstraints="NO" id="4AI-Dj-qQ7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNuonnieConer" translatesAutoresizingMaskIntoConstraints="NO" id="4AI-Dj-qQ7">
                                 <rect key="frame" x="0.0" y="188" width="393" height="664"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNpurperIcdon" translatesAutoresizingMaskIntoConstraints="NO" id="md2-VJ-lz5">
@@ -716,11 +716,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="UBACAMNNartistryView" destination="eiE-Nv-Tzn" id="noc-Wj-cmS"/>
+                        <outlet property="UBACAMNNhatsForsession" destination="xA3-ym-z6X" id="opq-bt-WY9"/>
+                        <outlet property="UBACAMNNhatsTrending" destination="TQW-3W-ybB" id="r8a-np-izz"/>
                         <outlet property="UBACAMNNnewruio" destination="5ap-qt-FhC" id="72U-Va-NMA"/>
-                        <outlet property="artistryView" destination="eiE-Nv-Tzn" id="noc-Wj-cmS"/>
-                        <outlet property="hatsForsession" destination="xA3-ym-z6X" id="opq-bt-WY9"/>
-                        <outlet property="hatsTrending" destination="TQW-3W-ybB" id="r8a-np-izz"/>
-                        <outlet property="recommendationsView" destination="yhq-dW-Fdl" id="RBd-Pi-hqe"/>
+                        <outlet property="UBACAMNNrecommendationsView" destination="yhq-dW-Fdl" id="RBd-Pi-hqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niR-bn-VR4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -753,23 +753,23 @@
         <image name="UBACAMNNnotheadertYES" width="44" height="44"/>
         <image name="UBACAMNNpassionIcon" width="80" height="107"/>
         <image name="UBACAMNNpersonalized" width="22" height="22"/>
-        <image name="UBACAMNNpersonalizedsel" width="128" height="128"/>
-        <image name="UBACAMNNpurperIcdon" width="128" height="128"/>
-        <image name="UBACAMNNqugugfriend" width="128" height="128"/>
-        <image name="UBACAMNNseasonalFul" width="128" height="128"/>
-        <image name="UBACAMNNsegmore" width="128" height="128"/>
-        <image name="UBACAMNNtalkingme" width="128" height="128"/>
-        <image name="UBACAMNNtrendIngtu" width="128" height="128"/>
-        <image name="UBACAMNNtrendIngtu_yello" width="128" height="128"/>
+        <image name="UBACAMNNpersonalizedsel" width="22" height="22"/>
+        <image name="UBACAMNNpurperIcdon" width="375" height="79"/>
+        <image name="UBACAMNNqugugfriend" width="375" height="110"/>
+        <image name="UBACAMNNseasonalFul" width="375" height="809"/>
+        <image name="UBACAMNNsegmore" width="36" height="36"/>
+        <image name="UBACAMNNtalkingme" width="70" height="70"/>
+        <image name="UBACAMNNtrendIngtu" width="96" height="39"/>
+        <image name="UBACAMNNtrendIngtu_yello" width="96" height="39"/>
+        <image name="UBACAMNNuonnieConer" width="128" height="128"/>
+        <image name="UBACAMNNuotake" width="128" height="128"/>
+        <image name="UBACAMNNwalkBage" width="128" height="128"/>
         <image name="Uonni" width="97.333335876464844" height="23.666666030883789"/>
-        <image name="uonnieConer" width="375" height="633"/>
-        <image name="uotake" width="40" height="40"/>
-        <image name="walkBage" width="375" height="262"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

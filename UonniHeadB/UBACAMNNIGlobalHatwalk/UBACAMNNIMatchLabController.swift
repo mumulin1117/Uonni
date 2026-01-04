@@ -14,29 +14,29 @@ enum UBACAMNNISecurityMethod {
 
 class UBACAMNNIMatchLabController: UBACAMNNIArtistryController {
   
-    var guidance:Int = 1{
+    var UBACAMNNguidance:Int = 1{
         didSet{
-            trendsettingideas()
+            UBACAMNNtrendsettingideas()
         }
     }
     
     
-    private lazy var runwayRefreshControl: UIRefreshControl = {
+    private lazy var UBACAMNNrunwayRefreshControl: UIRefreshControl = {
         let rc = UIRefreshControl()
         rc.tintColor = .orange
         rc.attributedTitle = NSAttributedString(
             string: "Fetching latest runway shows...",
             attributes: [.foregroundColor: UIColor.white]
         )
-        rc.addTarget(self, action: #selector(refreshCatwalkFeeds), for: .valueChanged)
+        rc.addTarget(self, action: #selector(UBACAMNNrefreshCatwalkFeeds), for: .valueChanged)
         return rc
     }()
-    private func presentSecurityConfig() {
+    private func UBACAMNNpresentSecurityConfig() {
        
         
         
     }
-    private lazy var filterButton: UIButton = {
+    private lazy var UBACAMNNfilterButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setImage(UIImage(systemName: "line.3.horizontal.decrease.circle.fill"), for: .normal)
        
@@ -48,79 +48,79 @@ class UBACAMNNIMatchLabController: UBACAMNNIArtistryController {
         return btn
         
     }()
-    @objc private func refreshCatwalkFeeds() {
+    @objc private func UBACAMNNrefreshCatwalkFeeds() {
         
         
     }
         
     
     
-    private let selectionRing = CAShapeLayer()
-    private var recommendMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
-    @IBOutlet weak var recommendationsView: UICollectionView!
+    private let selectionUBACAMNNRing = CAShapeLayer()
+    private var recommendUBACAMNNMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
+    @IBOutlet weak var UBACAMNNrecommendationsView: UICollectionView!
     
-    @IBOutlet weak var hatsForsession: UIButton!
+    @IBOutlet weak var UBACAMNNhatsForsession: UIButton!
     
     
     @IBOutlet weak var UBACAMNNnewruio: UIButton!
     
-    func headwearArt() {
-        filterButton.layer.cornerRadius = 22
+    func UBACAMNNheadwearArt() {
+        UBACAMNNfilterButton.layer.cornerRadius = 22
        
-        hatsForsession.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
-        filterButton.layer.shadowOpacity = 0.2
-        UBACAMNNnewruio.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
+        UBACAMNNhatsForsession.addTarget(self, action: #selector(bohemianUBACAMNNStyles(UBACAMNNacitonButon:)), for: .touchUpInside)
+        UBACAMNNfilterButton.layer.shadowOpacity = 0.2
+        UBACAMNNnewruio.addTarget(self, action: #selector(bohemianUBACAMNNStyles(UBACAMNNacitonButon:)), for: .touchUpInside)
     }
  
    
-    private func personalizedStyle()  {
-        filterButton.layer.cornerRadius = 22
-        hatsForsession.isSelected = false
-        filterButton.layer.shadowOpacity = 0.2
+    private func personalizedUBACAMNNStyle()  {
+        UBACAMNNfilterButton.layer.cornerRadius = 22
+        UBACAMNNhatsForsession.isSelected = false
+        UBACAMNNfilterButton.layer.shadowOpacity = 0.2
         UBACAMNNnewruio.isSelected = false
         
     }
     
-    @IBAction func beautySharing(_ sender: UIButton) {
-        selectionRing.strokeColor = UIColor.clear.cgColor
+    @IBAction func beautyUBACAMNNSharing(_ sender: UIButton) {
+        selectionUBACAMNNRing.strokeColor = UIColor.clear.cgColor
                
        
         if sender.tag == 234 {
             let mainRoute =  SceneDelegate.fashionInspiration + "paaegtesse/uryeulmeqaksaedVjirdheqoasd/yipnhdbeoxz?".UBACAMNNIextractHeadWearPattern()
-            self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor ?? UIColor.clear)
+            self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: self.view.backgroundColor ?? UIColor.clear)
             return
         }
-        selectionRing.fillColor = UIColor.clear.cgColor
+        selectionUBACAMNNRing.fillColor = UIColor.clear.cgColor
         
-        let mainRoute =  SceneDelegate.fashionInspiration + "puahgtecst/fRjegpqourbto/disnvdaelxf?".UBACAMNNIextractHeadWearPattern()
-        selectionRing.lineWidth = 2
-        self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor  ?? UIColor.clear)
+        let mainUBACAMNNRoute =  SceneDelegate.fashionInspiration + "puahgtecst/fRjegpqourbto/disnvdaelxf?".UBACAMNNIextractHeadWearPattern()
+        selectionUBACAMNNRing.lineWidth = 2
+        self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainUBACAMNNRoute, UBACAMNNforeColor: self.view.backgroundColor  ?? UIColor.clear)
     }
     
     
-    @objc func bohemianStyles(acitonButon:UIButton)  {
-        personalizedStyle()
+    @objc func bohemianUBACAMNNStyles(UBACAMNNacitonButon:UIButton)  {
+        personalizedUBACAMNNStyle()
         
-        acitonButon.isSelected = true
+        UBACAMNNacitonButon.isSelected = true
         
-        guidance = acitonButon.tag
+        UBACAMNNguidance = UBACAMNNacitonButon.tag
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        trendsettingideas()
+        UBACAMNNtrendsettingideas()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleRecommendations()
+        styleUBACAMNNRecommendations()
         
-        headwearArt()
+        UBACAMNNheadwearArt()
     }
     
-    private let completionView = UIView()
+    private let completionUBACAMNNView = UIView()
         
     
     
-    private func completeHeaderwearAuthentication() {
+    private func UBACAMNNcompleteHeaderwearAuthentication() {
        
             
        
@@ -142,28 +142,28 @@ class UBACAMNNIMatchLabController: UBACAMNNIArtistryController {
           
         
         // 布局设置...
-        view.addSubview(completionView)
+        view.addSubview(completionUBACAMNNView)
     }
-    private let specialtyLabel: UILabel = UILabel.init()
+    private let specialUBACAMNNtyLabel: UILabel = UILabel.init()
         
        
-    private let selectionIndicator: UIView = UIView.init()
+    private let selectionUBACAMNNIndicator: UIView = UIView.init()
     
-    private func styleRecommendations() {
-        recommendationsView.backgroundColor = .clear
-        recommendationsView.delegate = self
-        completionView.backgroundColor = .clear
+    private func styleUBACAMNNRecommendations() {
+        UBACAMNNrecommendationsView.backgroundColor = .clear
+        UBACAMNNrecommendationsView.delegate = self
+        completionUBACAMNNView.backgroundColor = .clear
         let crownEmitter = CAEmitterLayer()
         crownEmitter.emitterShape = .circle
        
         
-        recommendationsView.dataSource = self
+        UBACAMNNrecommendationsView.dataSource = self
         crownEmitter.emitterSize = CGSize(width: 80, height: 80)
         // 粒子效果配置...
        
-        recommendationsView.register(UBACAMNNIDnnovationVidrCell.self, forCellWithReuseIdentifier: "UBACAMNNIDnnovationVidrCell")
-        completionView.layer.addSublayer(crownEmitter)
-        recommendationsView.isPagingEnabled = true
+        UBACAMNNrecommendationsView.register(UBACAMNNIDnnovationVidrCell.self, forCellWithReuseIdentifier: "UBACAMNNIDnnovationVidrCell")
+        completionUBACAMNNView.layer.addSublayer(crownEmitter)
+        UBACAMNNrecommendationsView.isPagingEnabled = true
       
        
     }
@@ -173,19 +173,19 @@ extension UBACAMNNIMatchLabController{
     
     
     
-    func trendsettingideas()  {
-        selectionIndicator.backgroundColor = .clear
+    func UBACAMNNtrendsettingideas()  {
+        selectionUBACAMNNIndicator.backgroundColor = .clear
         
         let insights: [String:Any] = [
             "casualcaps": "51032696",
             "elegantheadbands":1,
             "vintagehats":12,
-            "luxuryheadpieces":guidance,
+            "luxuryheadpieces":UBACAMNNguidance,
                 "bohemianstyles":1
             
         ]
-        selectionIndicator.layer.cornerRadius = 12
-        selectionIndicator.isHidden = true
+        selectionUBACAMNNIndicator.layer.cornerRadius = 12
+        selectionUBACAMNNIndicator.isHidden = true
         SVProgressHUD.show()
         SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/ssvjeaitpqgz/kkatdxmagludyrk",     UBACAMNNIvintage: insights) { [self] resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
@@ -198,14 +198,14 @@ extension UBACAMNNIMatchLabController{
                 return
             }
             
-            self.recommendMonment["GlobalHatwalk"] = stack.filter({ dic in
+            self.recommendUBACAMNNMonment["GlobalHatwalk"] = stack.filter({ dic in
            
                 return (dic["hatmatching"] as? String)  != nil
                
             })
            
             SVProgressHUD.dismiss()
-            setupPortfolioCell()
+            UBACAMNNsetupPortfolioCell()
             
         }     UBACAMNNIfailure: { error in
             SVProgressHUD.showError(withStatus: error.localizedDescription)
@@ -213,8 +213,8 @@ extension UBACAMNNIMatchLabController{
 
     }
     
-    func setupPortfolioCell()  {
-        self.recommendationsView.reloadData()
+    func UBACAMNNsetupPortfolioCell()  {
+        self.UBACAMNNrecommendationsView.reloadData()
     }
 }
 
@@ -232,10 +232,10 @@ extension UBACAMNNIMatchLabController:UICollectionViewDelegate,UICollectionViewD
     }
     // MARK: - 错误处理
        
-    private func showErrorAlert(message: String) {
+    private func UBACAMNNshowErrorAlert(UBACAMNNmessage: String) {
         let alert = UIAlertController(
             title: "Runway Error",
-            message: message,
+            message: UBACAMNNmessage,
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -248,33 +248,33 @@ extension UBACAMNNIMatchLabController:UICollectionViewDelegate,UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
-        return recommendMonment["GlobalHatwalk"]?.count ?? 0
+        return recommendUBACAMNNMonment["GlobalHatwalk"]?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "UBACAMNNIDnnovationVidrCell", for: indexPath) as! UBACAMNNIDnnovationVidrCell
-        if let headerpiceice = recommendMonment["GlobalHatwalk"]?[indexPath.row]["hatmatching"] as? String,let imageUrl = URL(string: headerpiceice) {
-            uonnicell.artisticSporty.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
+        let UBACAMNNuonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "UBACAMNNIDnnovationVidrCell", for: indexPath) as! UBACAMNNIDnnovationVidrCell
+        if let headerpiceice = recommendUBACAMNNMonment["GlobalHatwalk"]?[indexPath.row]["hatmatching"] as? String,let imageUrl = URL(string: headerpiceice) {
+            UBACAMNNuonnicell.UBACAMNNartisticSporty.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
-        if let headerpiceice = recommendMonment["GlobalHatwalk"]?[indexPath.row]["hatcollections"] as? String,let imageHeaderUrl = URL(string: headerpiceice) {
-            uonnicell.artisticHeader.kf.setImage(with: imageHeaderUrl, options: [.memoryCacheExpiration(.seconds(60))])
+        if let headerpiceice = recommendUBACAMNNMonment["GlobalHatwalk"]?[indexPath.row]["hatcollections"] as? String,let imageHeaderUrl = URL(string: headerpiceice) {
+            UBACAMNNuonnicell.UBACAMNNartisticHeader.kf.setImage(with: imageHeaderUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
-        uonnicell.postConttnwearLbl.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["creativeexpression"] as? String
-        uonnicell.headwearName.text = recommendMonment["GlobalHatwalk"]?[indexPath.row]["trendsettinglooks"] as? String
+        UBACAMNNuonnicell.UBACAMNNtConttnwearLbl.text = recommendUBACAMNNMonment["GlobalHatwalk"]?[indexPath.row]["creativeexpression"] as? String
+        UBACAMNNuonnicell.UBACAMNNheadwearName.text = recommendUBACAMNNMonment["GlobalHatwalk"]?[indexPath.row]["trendsettinglooks"] as? String
         
-        let timecount = recommendMonment["GlobalHatwalk"]?[indexPath.row]["exclusivedesigns"] as? Int ?? 0
+        let timecount = recommendUBACAMNNMonment["GlobalHatwalk"]?[indexPath.row]["exclusivedesigns"] as? Int ?? 0
         
-        uonnicell.postTimewearLbl.text = formatHeadwearDesignTime( TimeInterval(timecount)) //
-        return uonnicell
+        UBACAMNNuonnicell.UBACAMNNtTimewearLbl.text = formatHeadUBACAMNNwearDesignTime( TimeInterval(timecount)) //
+        return UBACAMNNuonnicell
         
     }
     /// 专为Uonni应用设计的独家设计时间格式化
-    private func formatHeadwearDesignTime(_ timestamp: TimeInterval) -> String {
+    private func formatHeadUBACAMNNwearDesignTime(_ timestamp: TimeInterval) -> String {
         guard timestamp > 0 else {
             return "Just released" // 处理0或负时间戳
         }
@@ -313,16 +313,16 @@ extension UBACAMNNIMatchLabController:UICollectionViewDelegate,UICollectionViewD
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectionRing.strokeColor = UIColor.clear.cgColor
+        selectionUBACAMNNRing.strokeColor = UIColor.clear.cgColor
                 
         
         
-        guard let headwerId = recommendMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
-        selectionRing.fillColor = UIColor.clear.cgColor
+        guard let UBACAMNNheadwerId = recommendUBACAMNNMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
+        selectionUBACAMNNRing.fillColor = UIColor.clear.cgColor
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pqaigleysg/yDpyanpacmwigcgDpectraminlpsr/nihngdfefxz?pdqyxnhalmaiocsIwdf=".UBACAMNNIextractHeadWearPattern()  + "\(headwerId)"
-        selectionRing.lineWidth = 2
-        self.creativeExchange(Everyroute:mainRoute, foreColor: self.view.backgroundColor ?? UIColor.clear)
+        let mainRoute =  SceneDelegate.fashionInspiration + "pqaigleysg/yDpyanpacmwigcgDpectraminlpsr/nihngdfefxz?pdqyxnhalmaiocsIwdf=".UBACAMNNIextractHeadWearPattern()  + "\(UBACAMNNheadwerId)"
+        selectionUBACAMNNRing.lineWidth = 2
+        self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: self.view.backgroundColor ?? UIColor.clear)
         
     }
     

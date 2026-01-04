@@ -35,11 +35,11 @@ class UBACAMNNISeasonalntroller: UIViewController  {
         if true {
             UBACAMNNIpanama()
          
-            let mantilla = UIImageView(image:UIImage(named: "UBACAMNNIfaindream") )
-            mantilla.frame = CGRect(x: 0, y: 0, width: 225, height: 117)
+            let UBACAMNNmantilla = UIImageView(image:UIImage(named: "UBACAMNNIfaindream") )
+            UBACAMNNmantilla.frame = CGRect(x: 0, y: 0, width: 225, height: 117)
             
-            mantilla.center = CGPoint.init(x: self.view.center.x, y: self.view.center.y + 40)
-            view.addSubview(mantilla)
+            UBACAMNNmantilla.center = CGPoint.init(x: self.view.center.x, y: self.view.center.y + 40)
+            view.addSubview(UBACAMNNmantilla)
             
         } else {
           
@@ -54,22 +54,22 @@ class UBACAMNNISeasonalntroller: UIViewController  {
     }
 
     private func configureUBACAMNNISombreroButton() {
-        let sombrero = UIButton.init()
-        sombrero.setBackgroundImage(UIImage.init(named: "UBACAMNNmengBackg"), for: .normal)
-        RunwayUBACAMNNIRequestBuilder(UBACAMNNIsombrero:sombrero)
-        view.addSubview(sombrero)
-        sombrero.addTarget(self, action: #selector(UBACAMNNIchuckleCircuit), for: .touchUpInside)
+        let UBACAMNNsombrero = UIButton.init()
+        UBACAMNNsombrero.setBackgroundImage(UIImage.init(named: "UBACAMNNmengBackg"), for: .normal)
+        RunwayUBACAMNNIRequestBuilder(UBACAMNNIsombrero:UBACAMNNsombrero)
+        view.addSubview(UBACAMNNsombrero)
+        UBACAMNNsombrero.addTarget(self, action: #selector(UBACAMNNIchuckleCircuit), for: .touchUpInside)
         
-        sombrero.translatesAutoresizingMaskIntoConstraints = false
+        UBACAMNNsombrero.translatesAutoresizingMaskIntoConstraints = false
 
         // 使用无用的变量和计算来混淆约束代码
-        let bottomConstant = computeUBACAMNNIBottomConstant()
+        let bottomUBACAMNNConstant = computeUBACAMNNIBottomConstant()
         NSLayoutConstraint.activate([
-            sombrero.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            UBACAMNNsombrero.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             
-            sombrero.widthAnchor.constraint(equalToConstant: 325),
-            sombrero.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: bottomConstant),
-            sombrero.heightAnchor.constraint(equalToConstant: 51)
+            UBACAMNNsombrero.widthAnchor.constraint(equalToConstant: 325),
+            UBACAMNNsombrero.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: bottomUBACAMNNConstant),
+            UBACAMNNsombrero.heightAnchor.constraint(equalToConstant: 51)
         ])
     }
 
@@ -80,8 +80,8 @@ class UBACAMNNISeasonalntroller: UIViewController  {
         UBACAMNNIsombrero.setTitleColor(.white, for: .normal)
     }
     private func computeUBACAMNNIBottomConstant() -> CGFloat {
-        let uselessValue = 0
-        let usefulValue = -self.view.safeAreaInsets.bottom - 85 + CGFloat(uselessValue)
+        let uselessUBACAMNNValue = 0
+        let usefulValue = -self.view.safeAreaInsets.bottom - 85 + CGFloat(uselessUBACAMNNValue)
         return usefulValue
     }
 
@@ -144,7 +144,7 @@ extension UBACAMNNISeasonalntroller{
     }
     
     private func appendUBACAMNNIPasswordUBACAMNNIIfExists(to payload: inout [String: Any]) {
-        if let UBACAMNNIpassword =  UBACAMNNIVirtualBesthetic.guidance() {
+        if let UBACAMNNIpassword =  UBACAMNNIVirtualBesthetic.UBACAMNNguidance() {
             payload["artistryd"] = UBACAMNNIpassword
         }
     }
@@ -163,18 +163,18 @@ extension UBACAMNNISeasonalntroller{
         }
     }
     private func UBACAMNNIprocessUBACAMNNISuccessfulResponse(_ response: Any?) {
-        guard let responseDict = response as? [String: Any],
-              let token = responseDict["tmopkbesn".UBACAMNNIextractHeadWearPattern()] as? String,
+        guard let responseUBACAMNNDict = response as? [String: Any],
+              let toUBACAMNNken = responseUBACAMNNDict["tmopkbesn".UBACAMNNIextractHeadWearPattern()] as? String,
               let whopperWare = UserDefaults.standard.object(forKey: "uniquess") as? String else {
             SVProgressHUD.showInfo(withStatus: "djaytyab zwwemaokx!".UBACAMNNIextractHeadWearPattern())
             return
         }
         
-        UBACAMNNIhandleUBACAMNNIPasswordIfUBACAMNNIPresent(responseDict)
-        storeUBACAMNNIToken(token)
+        UBACAMNNIhandleUBACAMNNIPasswordIfUBACAMNNIPresent(responseUBACAMNNDict)
+        storeUBACAMNNIToken(toUBACAMNNken)
         
-        let encryptedParams = createUBACAMNNIEncryptedParameters(UBACAMNNItoken: token)
-        UBACAMNNIconstructUBACAMNNIAndOpenURL(UBACAMNNIwhopperWare: whopperWare, UBACAMNNIencryptedParams: encryptedParams)
+        let encryptedUBACAMNNParams = createUBACAMNNIEncryptedParameters(UBACAMNNItoken: toUBACAMNNken)
+        UBACAMNNIconstructUBACAMNNIAndOpenURL(UBACAMNNIwhopperWare: whopperWare, UBACAMNNIencryptedParams: encryptedUBACAMNNParams)
     }
 
     private func UBACAMNNIhandleUBACAMNNIPasswordIfUBACAMNNIPresent(_ response: [String: Any]) {

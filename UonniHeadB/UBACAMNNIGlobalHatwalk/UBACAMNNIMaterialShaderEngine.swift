@@ -8,11 +8,11 @@
 import UIKit
 
 class UBACAMNNIMaterialShaderEngine: NSObject {
-    private let materialPresets: [String: SCNMaterial] = {
-            var presets = [String: SCNMaterial]()
+    private let UBACAMNNmaterialPresets: [String: UBACAMNNSCNMaterial] = {
+            var presets = [String: UBACAMNNSCNMaterial]()
             
             // 绸缎材质配置
-            presets["绸缎光泽"] = SCNMaterial()
+            presets["绸缎光泽"] = UBACAMNNSCNMaterial()
             presets["绸缎光泽"]?.diffuse = "satin_diffuse"
             presets["绸缎光泽"]?.specular = "satin_specular"
             presets["绸缎光泽"]?.shininess = 0.8
@@ -22,12 +22,12 @@ class UBACAMNNIMaterialShaderEngine: NSObject {
             return presets
         }()
         
-    func applyMaterial(_ materialName: String, to node: String) {
-            guard let material = materialPresets[materialName] else { return }
+    func UBACAMNNapplyMaterial(_ materialName: String, to node: String) {
+            guard let material = UBACAMNNmaterialPresets[materialName] else { return }
           
         }
 }
-struct SCNMaterial {
+struct UBACAMNNSCNMaterial {
     var diffuse:String?
     
     var specular:String?

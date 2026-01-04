@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,15 +62,15 @@
             </constraints>
             <size key="customSize" width="425" height="114"/>
             <connections>
-                <outlet property="artisticHeader" destination="4Mf-fl-ZnJ" id="Geo-F4-X22"/>
-                <outlet property="headwearName" destination="6Uf-he-5EQ" id="sCf-fZ-Asj"/>
-                <outlet property="postConttnwearLbl" destination="KZm-2W-HBc" id="bp9-7v-gpM"/>
-                <outlet property="tovhatki" destination="5Z5-vi-NC3" id="2Kb-VE-oKt"/>
+                <outlet property="UBACAMNNartisticHeader" destination="4Mf-fl-ZnJ" id="Geo-F4-X22"/>
+                <outlet property="UBACAMNNheadwearName" destination="6Uf-he-5EQ" id="sCf-fZ-Asj"/>
+                <outlet property="UBACAMNNpostConttnwearLbl" destination="KZm-2W-HBc" id="bp9-7v-gpM"/>
+                <outlet property="UBACAMNNtovhatki" destination="5Z5-vi-NC3" id="2Kb-VE-oKt"/>
             </connections>
             <point key="canvasLocation" x="425.19083969465646" y="42.95774647887324"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="UBACAMNNIcallfile" width="128" height="128"/>
+        <image name="UBACAMNNIcallfile" width="46" height="45"/>
     </resources>
 </document>

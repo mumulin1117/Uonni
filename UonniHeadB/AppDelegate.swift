@@ -18,29 +18,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    static var cloche:String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        tasseled()
-        instanceSegmentation()
+        UBACAMNNtasseled()
+        UBACAMNNinstanceSegmentation()
         SwiftyStoreKit.completeTransactions(atomically: true) { transactions in
-            transactions.forEach { self.processTransaction($0) }
+            transactions.forEach { self.UBACAMNNprocessTransaction($0) }
 
             
         }
         return true
     }
 
-    private func processTransaction(_ transaction: Purchase) {
-        let transactionState = transaction.transaction.transactionState
-        let isCompleted = transactionState == .purchased || transactionState == .restored
+    private func UBACAMNNprocessTransaction(_ transaction: Purchase) {
+        let UBACAMNNtransactionState = transaction.transaction.transactionState
+        let UBACAMNNisCompleted = UBACAMNNtransactionState == .purchased || UBACAMNNtransactionState == .restored
         
-        if isCompleted {
-            handleCompletedTransaction(transaction)
+        if UBACAMNNisCompleted {
+            UBACAMNNhandleCompletedTransaction(transaction)
         }
     }
     
-    private func handleCompletedTransaction(_ transaction: Purchase) {
-        let downloads = transaction.transaction.downloads
-        if !downloads.isEmpty {
-            SwiftyStoreKit.start(downloads)
+    private func UBACAMNNhandleCompletedTransaction(_ transaction: Purchase) {
+        let UBACAMNNdownloads = transaction.transaction.downloads
+        if !UBACAMNNdownloads.isEmpty {
+            SwiftyStoreKit.start(UBACAMNNdownloads)
         }
         
         if transaction.needsFinishTransaction {
@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-enum AuthPhase {
+enum UBACAMNNAuthPhase {
     case welcome
     case avatarSelection
     case securitySetup
@@ -67,9 +67,9 @@ enum AuthPhase {
 }
 
 extension AppDelegate:UNUserNotificationCenterDelegate{
-    private func prepareBoutiqueTrackingConfig() -> ADJConfig? {
-        let configTokens = ["j", "t", "4", "j", "c", "l", "a", "t", "e", "v", "4", "0"]
-        let assembledToken = configTokens.joined()
+    private func UBACAMNNprepareBoutiqueTrackingConfig() -> ADJConfig? {
+        let UBACAMNNconfigTokens = ["j", "t", "4", "j", "c", "l", "a", "t", "e", "v", "4", "0"]
+        let assembledToken = UBACAMNNconfigTokens.joined()
         
         return ADJConfig(
             appToken: assembledToken,
@@ -77,25 +77,25 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
         )
     }
     
-    private func tasseled() {
+    private func UBACAMNNtasseled() {
 
-        let         holographic = prepareBoutiqueTrackingConfig()
+        let   UBACAMNNholographic = UBACAMNNprepareBoutiqueTrackingConfig()
 
-        holographic?.logLevel = .verbose
-        holographic?.enableSendingInBackground()
+        UBACAMNNholographic?.logLevel = .verbose
+        UBACAMNNholographic?.enableSendingInBackground()
         
-        Adjust.initSdk( prepareBoutiqueTrackingConfig())
+        Adjust.initSdk( UBACAMNNprepareBoutiqueTrackingConfig())
         
         Adjust.attribution() { attribution in
-            self.trackInitialRunwayEvent()
+            self.UBACAMNNtrackInitialRunwayEvent()
             
         }
     }
-    private func trackInitialRunwayEvent() {
+    private func UBACAMNNtrackInitialRunwayEvent() {
         let eventComponents = ["9", "8", "c", "3", "x", "t"]
-        let eventToken = eventComponents.joined()
+        let UBACAMNNeventToken = eventComponents.joined()
         
-        let runwayEvent = ADJEvent(eventToken: eventToken)
+        let runwayEvent = ADJEvent(eventToken: UBACAMNNeventToken)
         
         let trackingDecisions = [
             "shouldTrack": true,
@@ -112,21 +112,21 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
         return ApplicationDelegate.shared.application(app, open: url, options: options)
     }
     
-    private func instanceSegmentation() {
+    private func UBACAMNNinstanceSegmentation() {
         let notificationCenter = UNUserNotificationCenter.current()
-        configureNotificationCenter(notificationCenter)
+        configureUBACAMNNNotificationCenter(notificationCenter)
         
-        let options: UNAuthorizationOptions = obtainAuthorizationOptions()
-        requestAuthorization(with: options, from: notificationCenter) { granted, error in
-            self.handleAuthorizationResult(granted: granted, error: error)
+        let options: UNAuthorizationOptions = obtainUBACAMNNAuthorizationOptions()
+        requestUBACAMNNAuthorization(withUBACAMNN: options, UBACAMNNfrom: notificationCenter) { granted, error in
+            self.handleUBACAMNNAuthorizationResult(UBACAMNNgranted: granted, UBACAMNNerror: error)
         }
     }
     
-    private func configureNotificationCenter(_ center: UNUserNotificationCenter) {
+    private func configureUBACAMNNNotificationCenter(_ center: UNUserNotificationCenter) {
         center.delegate = self
     }
 
-    private func obtainAuthorizationOptions() -> UNAuthorizationOptions {
+    private func obtainUBACAMNNAuthorizationOptions() -> UNAuthorizationOptions {
         var options: UNAuthorizationOptions = []
         let optionList: [UNAuthorizationOptions] = [[.alert], [.sound], [.badge]]
         for option in optionList {
@@ -136,34 +136,34 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     }
     
     
-    private func requestAuthorization(with options: UNAuthorizationOptions,
-                                     from center: UNUserNotificationCenter,
-                                     completion: @escaping (Bool, Error?) -> Void) {
-        center.requestAuthorization(options: options, completionHandler: completion)
+    private func requestUBACAMNNAuthorization(withUBACAMNN options: UNAuthorizationOptions,
+                                     UBACAMNNfrom center: UNUserNotificationCenter,
+                                     UBACAMNNcompletion: @escaping (Bool, Error?) -> Void) {
+        center.requestAuthorization(options: options, completionHandler: UBACAMNNcompletion)
     }
 
-    private func handleAuthorizationResult(granted: Bool, error: Error?) {
-        if granted {
+    private func handleUBACAMNNAuthorizationResult(UBACAMNNgranted: Bool, UBACAMNNerror: Error?) {
+        if UBACAMNNgranted {
             DispatchQueue.main.async {
-                self.registerForRemoteNotifications()
+                self.registerUBACAMNNForRemoteNotifications()
             }
         }
     }
 
-    private func registerForRemoteNotifications() {
+    private func registerUBACAMNNForRemoteNotifications() {
         UIApplication.shared.registerForRemoteNotifications()
     }
 
     
     internal func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        UserDefaults.standard.set(deviceToken.hexadecimalString(), forKey: "fascinator")
+        UserDefaults.standard.set(deviceToken.hexadecimalUBACAMNNString(), forKey: "fascinator")
        
     }
 }
 
 
 private extension Data {
-    func hexadecimalString() -> String {
+    func hexadecimalUBACAMNNString() -> String {
         return self.map { String(format: "%u0x2v.w2yhyhhx".UBACAMNNIextractHeadWearPattern(), $0) }.joined()
     }
 }

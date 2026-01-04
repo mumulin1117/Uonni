@@ -4,18 +4,18 @@
 //
 //  Created by UonniHeadB on 2025/5/9.
 //
-import SnapKit
+
 import UIKit
 
 struct UBACAMNNIHeadwearCommunityMoment {
-    let Headwearavatar: String
-    let Headwearusername: String
-    let HeadwearmediaType: MediaType
-    let Headwearcontent: String
-    let Headwearlikes: Int
-    let Headwearcomments: Int
+    let UBACAMNNHeadwearavatar: String
+    let UBACAMNNHeadwearusername: String
+    let UBACAMNNHeadwearmediaType: UBACAMNNMediaType
+    let UBACAMNNHeadwearcontent: String
+    let UBACAMNNHeadwearlikes: Int
+    let UBACAMNNHeadwearcomments: Int
     
-    enum MediaType {
+    enum UBACAMNNMediaType {
         case photo(String)
         case video(String)
     }
@@ -26,7 +26,7 @@ struct UBACAMNNIHeadwearCommunityMoment {
 class UBACAMNNIHeadwearuserCell: UICollectionViewCell {
     
     let UBACAMNNIartisticHeader = UIImageView()
-    let headwearName = UILabel()
+    let UBACAMNNheadwearName = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,42 +34,47 @@ class UBACAMNNIHeadwearuserCell: UICollectionViewCell {
         
         self.backgroundColor = UIColor(red: 0.41, green: 0.97, blue: 0.83, alpha: 1)
         contentView.addSubview(UBACAMNNIartisticHeader)
-        creativeExpression()
-        contentView.addSubview(headwearName)
+        UBACAMNNcreativeExpression()
+        contentView.addSubview(UBACAMNNheadwearName)
         
-        trendsettinglooks()
-        fashionMoments()
+        UBACAMNNtrendsettinglooks()
+        UBACAMNNfashionMoments()
     }
     
-    private func creativeExpression()  {
+    private func UBACAMNNcreativeExpression()  {
         UBACAMNNIartisticHeader.layer.masksToBounds = true
         UBACAMNNIartisticHeader.contentMode = .scaleAspectFill
     }
     
     
-    private func  trendsettinglooks()  {
-        headwearName.textColor = .black
+    private func  UBACAMNNtrendsettinglooks()  {
+        UBACAMNNheadwearName.textColor = .black
        
-        headwearName.textAlignment = .center
+        UBACAMNNheadwearName.textAlignment = .center
     }
     
     
-    private func  fashionMoments()  {
-        headwearName.font = UIFont(name: "Apple SD Gothic Neo SemiBold", size: 16)
+    private func  UBACAMNNfashionMoments()  {
+        UBACAMNNheadwearName.font = UIFont(name: "Apple SD Gothic Neo SemiBold", size: 16)
         self.layer.cornerRadius = 12
         self.layer.masksToBounds = true
-        UBACAMNNIartisticHeader.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(3)
-            make.width.height.equalTo(38)
-            make.centerY.equalToSuperview()
-        }
-        
-        
-        headwearName.snp.makeConstraints { make in
-            make.leading.equalTo(UBACAMNNIartisticHeader.snp.trailing).offset(4)
-            make.trailing.equalToSuperview().offset(-5)
-            make.centerY.equalToSuperview()
-        }
+        // ⚠️ 必须先禁用 autoresizing 掩码转换为约束
+        UBACAMNNIartisticHeader.translatesAutoresizingMaskIntoConstraints = false
+        UBACAMNNheadwearName.translatesAutoresizingMaskIntoConstraints = false
+
+        // 使用 NSLayoutConstraint.activate 一次性激活所有约束
+        NSLayoutConstraint.activate([
+            // UBACAMNNIartisticHeader 的约束
+            UBACAMNNIartisticHeader.leadingAnchor.constraint(equalTo: UBACAMNNIartisticHeader.superview!.leadingAnchor, constant: 3),
+            UBACAMNNIartisticHeader.widthAnchor.constraint(equalToConstant: 38),
+            UBACAMNNIartisticHeader.heightAnchor.constraint(equalToConstant: 38),
+            UBACAMNNIartisticHeader.centerYAnchor.constraint(equalTo: UBACAMNNIartisticHeader.superview!.centerYAnchor),
+            
+            // UBACAMNNheadwearName 的约束
+            UBACAMNNheadwearName.leadingAnchor.constraint(equalTo: UBACAMNNIartisticHeader.trailingAnchor, constant: 4),
+            UBACAMNNheadwearName.trailingAnchor.constraint(equalTo: UBACAMNNheadwearName.superview!.trailingAnchor, constant: -5),
+            UBACAMNNheadwearName.centerYAnchor.constraint(equalTo: UBACAMNNheadwearName.superview!.centerYAnchor)
+        ])
         
         
         

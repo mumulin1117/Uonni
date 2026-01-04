@@ -6,13 +6,13 @@
 //
 
 import UIKit
-struct HeadwearDesignElement {
-    let baseModel: String
-    let decorations: [DecorationItem]
-    let colorPalette: [UIColor]
-    let materialType: MaterialType
+struct UBACAMNNHeadwearDesignElement {
+    let UBACAMNNbaseModel: String
+    let UBACAMNNdecorations: [UBACAMNNDecorationItem]
+    let UBACAMNNcolorPalette: [UIColor]
+    let UBACAMNNmaterialType: UBACAMNNMaterialType
     
-    enum MaterialType: String, CaseIterable {
+    enum UBACAMNNMaterialType: String, CaseIterable {
         case satin = "绸缎光泽"
         case lace = "蕾丝镂空"
         case metallic = "金属质感"
@@ -20,7 +20,7 @@ struct HeadwearDesignElement {
     }
 }
 
-struct DecorationItem {
+struct UBACAMNNDecorationItem {
     let modelURL: String
     let position: SIMD3<Float>
     let scale: Float
@@ -30,7 +30,7 @@ struct DecorationItem {
 class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDelegate {
    
     
-    private let headwearGradientLayer: CAGradientLayer = {
+    private let headwearUBACAMNNGradientLayer: CAGradientLayer = {
            let layer = CAGradientLayer()
            layer.colors = [
             UIColor(red: 0.36, green: 0.07, blue: 0.44, alpha: 1).cgColor, // Designer Purple
@@ -42,7 +42,7 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
            return layer
        }()
     
-    private let runwayTitleLabel: UILabel = {
+    private let runwayUBACAMNNTitleLabel: UILabel = {
            let label = UILabel()
            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
            label.textColor = .white
@@ -52,7 +52,7 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
        }()
     
     
-    private let styleGuideTextView: UITextView = {
+    private let styleUBACAMNNGuideTextView: UITextView = {
             let textView = UITextView()
             textView.isEditable = false
             textView.backgroundColor = .clear
@@ -62,7 +62,7 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
             return textView
         }()
     
-    private lazy var fashionBackButton: UIButton = {
+    private lazy var fashionUBACAMNNBackButton: UIButton = {
            let UBACAMNNIbutton = UIButton(type: .system)
            UBACAMNNIbutton.setImage(UIImage(systemName: "chevron.left.circle.fill"), for: .normal)
            UBACAMNNIbutton.tintColor = UIColor(hexUonniColor: "#D8BFD8") // Thistle
@@ -77,17 +77,17 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
            case communityTerms
        }
        
-       var currentPolicy: FashionPolicyType = .styleProtection
+       var currentUBACAMNNPolicy: FashionPolicyType = .styleProtection
     private let elementLibrary = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     init(currentPolicy: FashionPolicyType) {
-        self.currentPolicy = currentPolicy
+        self.currentUBACAMNNPolicy = currentPolicy
         super.init(nibName: nil, bundle: nil)
     }
-    private var currentDesign = HeadwearDesignElement(
-            baseModel: "hat_base_01.scn",
-            decorations: [],
-            colorPalette: [.systemPink, .systemIndigo, .systemTeal],
-            materialType: .satin
+    private var UBACAMNNcurrentDesign = UBACAMNNHeadwearDesignElement(
+            UBACAMNNbaseModel: "hat_base_01.scn",
+            UBACAMNNdecorations: [],
+            UBACAMNNcolorPalette: [.systemPink, .systemIndigo, .systemTeal],
+            UBACAMNNmaterialType: .satin
         )
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -95,52 +95,52 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareRunwayView()
-        arrangeStyleElements()
+        UBACAMNNarrangeStyleElements()
         
                
         elementLibrary.delegate = self
         elementLibrary.backgroundColor = .systemGray6
         view.addSubview(elementLibrary)
-        displayCurrentFashionPolicy()
+        UBACAMNNdisplayCurrentFashionPolicy()
         
     }
         
        
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        headwearGradientLayer.frame = view.bounds
+        headwearUBACAMNNGradientLayer.frame = view.bounds
     }
 
     // MARK: - Style Setup
     private func prepareRunwayView() {
-        view.layer.addSublayer(headwearGradientLayer)
-        view.addSubview(fashionBackButton)
-        view.addSubview(runwayTitleLabel)
+        view.layer.addSublayer(headwearUBACAMNNGradientLayer)
+        view.addSubview(fashionUBACAMNNBackButton)
+        view.addSubview(runwayUBACAMNNTitleLabel)
        
-        view.addSubview(styleGuideTextView)
+        view.addSubview(styleUBACAMNNGuideTextView)
     }
         
        
-    private func arrangeStyleElements() {
+    private func UBACAMNNarrangeStyleElements() {
         NSLayoutConstraint.activate([
-            fashionBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            fashionBackButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            fashionBackButton.widthAnchor.constraint(equalToConstant: 44),
-            fashionBackButton.heightAnchor.constraint(equalToConstant: 44),
+            fashionUBACAMNNBackButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            fashionUBACAMNNBackButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            fashionUBACAMNNBackButton.widthAnchor.constraint(equalToConstant: 44),
+            fashionUBACAMNNBackButton.heightAnchor.constraint(equalToConstant: 44),
             
-            runwayTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
-            runwayTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            runwayTitleLabel.leadingAnchor.constraint(greaterThanOrEqualTo: fashionBackButton.trailingAnchor, constant: 12),
+            runwayUBACAMNNTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
+            runwayUBACAMNNTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            runwayUBACAMNNTitleLabel.leadingAnchor.constraint(greaterThanOrEqualTo: fashionUBACAMNNBackButton.trailingAnchor, constant: 12),
             
-            styleGuideTextView.topAnchor.constraint(equalTo: runwayTitleLabel.bottomAnchor, constant: 24),
-            styleGuideTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            styleGuideTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            styleGuideTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24)
+            styleUBACAMNNGuideTextView.topAnchor.constraint(equalTo: runwayUBACAMNNTitleLabel.bottomAnchor, constant: 24),
+            styleUBACAMNNGuideTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            styleUBACAMNNGuideTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            styleUBACAMNNGuideTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -24)
             
           
         ])
     }
-    private func createLibraryLayout()  {
+    private func UBACAMNNcreateLibraryLayout()  {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.33),
             heightDimension: .fractionalHeight(1.0)
@@ -161,19 +161,19 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
         
     }
     // MARK: - Policy Display
-    private func displayCurrentFashionPolicy() {
-        switch currentPolicy {
+    private func UBACAMNNdisplayCurrentFashionPolicy() {
+        switch currentUBACAMNNPolicy {
         case .styleProtection:
-            runwayTitleLabel.text = "Uonni Privacy"
-            styleGuideTextView.attributedText = createStyleProtectionContent(tag:0)
+            runwayUBACAMNNTitleLabel.text = "Uonni Privacy"
+            styleUBACAMNNGuideTextView.attributedText = UBACAMNNcreateStyleProtectionContent(UBACAMNNtag:0)
             
         case .communityTerms:
-            runwayTitleLabel.text = "Uonni Terms"
-            styleGuideTextView.attributedText = createStyleProtectionContent(tag: 1)
+            runwayUBACAMNNTitleLabel.text = "Uonni Terms"
+            styleUBACAMNNGuideTextView.attributedText = UBACAMNNcreateStyleProtectionContent(UBACAMNNtag: 1)
         }
     }
     
-    private func createStyleProtectionContent(tag:Int) -> NSAttributedString {
+    private func UBACAMNNcreateStyleProtectionContent(UBACAMNNtag:Int) -> NSAttributedString {
         let sectionTitleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 18, weight: .semibold),
             .foregroundColor: UIColor(hexUonniColor: "#BA55D3"), // Medium Orchid
@@ -195,7 +195,7 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
         ))
         content.append(NSAttributedString(
             string:
-                (tag == 0) ?
+                (UBACAMNNtag == 0) ?
             """
             
             Uonni Privacy Policy
@@ -279,22 +279,22 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
     
         return content
     }
-    enum DecorationLibrary {
+    enum UBACAMNNDecorationLibrary {
         static let allItems = [
-            DecorationItem(modelURL: "decoration_pearl.scn", position: .zero, scale: 1, rotation: .zero),
-            DecorationItem(modelURL: "decoration_ribbon.scn", position: .zero, scale: 1, rotation: .zero),
-            DecorationItem(modelURL: "decoration_feather.scn", position: .zero, scale: 1, rotation: .zero)
+            UBACAMNNDecorationItem(modelURL: "decoration_pearl.scn", position: .zero, scale: 1, rotation: .zero),
+            UBACAMNNDecorationItem(modelURL: "decoration_ribbon.scn", position: .zero, scale: 1, rotation: .zero),
+            UBACAMNNDecorationItem(modelURL: "decoration_feather.scn", position: .zero, scale: 1, rotation: .zero)
         ]
     }
-    private let materialSwatch = UIView()
+    private let UBACAMNNmaterialSwatch = UIView()
         
         // MARK: - Style Actions
         @objc private func returnToStyleHub() {
-            materialSwatch.backgroundColor = UIColor.black
+            UBACAMNNmaterialSwatch.backgroundColor = UIColor.black
                    
             
             navigationController?.popViewController(animated: true)
-            materialSwatch.layer.cornerRadius = 8
+            UBACAMNNmaterialSwatch.layer.cornerRadius = 8
         }
 }
 private extension UIColor {

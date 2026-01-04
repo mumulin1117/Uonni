@@ -18,18 +18,18 @@ class UBACAMNNIGlobalHatwalkController: UBACAMNNIArtistryController {
     
     private var recommendMonment:Dictionary<String,Array<Dictionary<String,Any>>> = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
     
-    @IBOutlet weak var recommendationsView: UICollectionView!
-    @IBOutlet weak var artistryView: UICollectionView!
+    @IBOutlet weak var UBACAMNNrecommendationsView: UICollectionView!
+    @IBOutlet weak var UBACAMNNartistryView: UICollectionView!
     
-    @IBOutlet weak var hatsTrending: UIButton!
+    @IBOutlet weak var UBACAMNNhatsTrending: UIButton!
     
-    @IBOutlet weak var hatsForsession: UIButton!
+    @IBOutlet weak var UBACAMNNhatsForsession: UIButton!
     
     
     @IBOutlet weak var UBACAMNNnewruio: UIButton!
     
     private enum UBACAMNNISection: Int, CaseIterable {
-        case trending
+        case UBACAMNNtrending
         case recommendations
         case moments
         
@@ -39,8 +39,8 @@ class UBACAMNNIGlobalHatwalkController: UBACAMNNIArtistryController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fashionGuidance()
-        applyInitialSnapshot()
+        UBACAMNNfashionGuidance()
+        UBACAMNNapplyInitialSnapshot()
         UBACAMNNItrendsettingideas()
     }
     
@@ -49,7 +49,7 @@ class UBACAMNNIGlobalHatwalkController: UBACAMNNIArtistryController {
 
         UBACAMNNIheadwearArt()
         
-        styleRecommendations()
+        UBACAMNNstyleRecommendations()
     }
     
    
@@ -57,57 +57,57 @@ class UBACAMNNIGlobalHatwalkController: UBACAMNNIArtistryController {
            title = "头饰美学馆"
            view.backgroundColor = .systemGroupedBackground
            
-        hatsForsession.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
-        UBACAMNNnewruio.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
+        UBACAMNNhatsForsession.addTarget(self, action: #selector(UBACAMNNbohemianStyles(UBACAMNNacitonButon:)), for: .touchUpInside)
+        UBACAMNNnewruio.addTarget(self, action: #selector(UBACAMNNbohemianStyles(UBACAMNNacitonButon:)), for: .touchUpInside)
       
     }
     func UBACAMNNIheadwearArt() {
-        hatsTrending.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
-        hatsForsession.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
-        UBACAMNNnewruio.addTarget(self, action: #selector(bohemianStyles(acitonButon:)), for: .touchUpInside)
+        UBACAMNNhatsTrending.addTarget(self, action: #selector(UBACAMNNbohemianStyles(UBACAMNNacitonButon:)), for: .touchUpInside)
+        UBACAMNNhatsForsession.addTarget(self, action: #selector(UBACAMNNbohemianStyles(UBACAMNNacitonButon:)), for: .touchUpInside)
+        UBACAMNNnewruio.addTarget(self, action: #selector(UBACAMNNbohemianStyles(UBACAMNNacitonButon:)), for: .touchUpInside)
     }
  
     
     private func UBACAMNNIpersonalizedStyle()  {
-        hatsTrending.isSelected = false
-        hatsForsession.isSelected = false
+        UBACAMNNhatsTrending.isSelected = false
+        UBACAMNNhatsForsession.isSelected = false
         UBACAMNNnewruio.isSelected = false
         
     }
     
-    @IBAction func beautySharing(_ sender: UIButton) {
+    @IBAction func UBACAMNNbeautySharing(_ sender: UIButton) {
         UBACAMNNIselectionRing.strokeColor = UIColor.clear.cgColor
                 
        
         let mainRoute =  SceneDelegate.fashionInspiration + "pcaegiexst/vRremlgegaesxejDeygnratmjiqcg/vianwdledxe?".UBACAMNNIextractHeadWearPattern()
         UBACAMNNIselectionRing.fillColor = UIColor.clear.cgColor
         
-        self.creativeExchange(Everyroute:mainRoute, foreColor: sender.backgroundColor ?? .clear)
+        self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: sender.backgroundColor ?? .clear)
         UBACAMNNIselectionRing.lineWidth = 2
     }
    
-    private func styleRecommendations() {
-        recommendationsView.backgroundColor = .clear
-        recommendationsView.delegate = self
-        recommendationsView.dataSource = self
-        recommendationsView.register(UBACAMNNIHeadwearuserCell.self, forCellWithReuseIdentifier: "HeadwearuserCell")
+    private func UBACAMNNstyleRecommendations() {
+        UBACAMNNrecommendationsView.backgroundColor = .clear
+        UBACAMNNrecommendationsView.delegate = self
+        UBACAMNNrecommendationsView.dataSource = self
+        UBACAMNNrecommendationsView.register(UBACAMNNIHeadwearuserCell.self, forCellWithReuseIdentifier: "HeadwearuserCell")
         
-        artistryView.contentInset = UIEdgeInsets(top: 0, left: 12, bottom: 100, right: 12)
-        artistryView.backgroundColor = .clear
-        artistryView.delegate = self
-        artistryView.dataSource = self
-        artistryView.register(UBACAMNNIHeadinsights_Cell.self, forCellWithReuseIdentifier: "Headinsights_Cell")
+        UBACAMNNartistryView.contentInset = UIEdgeInsets(top: 0, left: 12, bottom: 100, right: 12)
+        UBACAMNNartistryView.backgroundColor = .clear
+        UBACAMNNartistryView.delegate = self
+        UBACAMNNartistryView.dataSource = self
+        UBACAMNNartistryView.register(UBACAMNNIHeadinsights_Cell.self, forCellWithReuseIdentifier: "Headinsights_Cell")
        
     }
     
     
     
-    @objc func bohemianStyles(acitonButon:UIButton)  {
+    @objc func UBACAMNNbohemianStyles(UBACAMNNacitonButon:UIButton)  {
         UBACAMNNIpersonalizedStyle()
         
-        acitonButon.isSelected = true
+        UBACAMNNacitonButon.isSelected = true
         
-        UBACAMNNIguidance = acitonButon.tag
+        UBACAMNNIguidance = UBACAMNNacitonButon.tag
     }
     
 }
@@ -115,15 +115,15 @@ class UBACAMNNIGlobalHatwalkController: UBACAMNNIArtistryController {
 
 extension UBACAMNNIGlobalHatwalkController{
     
-    private func applyInitialSnapshot() {
+    private func UBACAMNNapplyInitialSnapshot() {
         
         
         let trendingItems = (0..<5).map { _ in
                    UBACAMNNIHeadwearTrendingItem(
-                    HeadwearimageURL: "",
-                    Headweartitle: "2024春夏头饰流行趋势",
-                    Headweardescription: "贝雷帽的100种可能",
-                    HeadwearinteractionCount: Int.random(in: 100..<1000)
+                    UBACAMNNHeadwearimageURL: "",
+                    UBACAMNNHeadweartitle: "2024春夏头饰流行趋势",
+                    UBACAMNNHeadweardescription: "贝雷帽的100种可能",
+                    UBACAMNNHeadwearinteractionCount: Int.random(in: 100..<1000)
                    )
                }
                
@@ -138,21 +138,21 @@ extension UBACAMNNIGlobalHatwalkController{
         
         let moments = (0..<8).map { _ in
             UBACAMNNIHeadwearCommunityMoment(
-                Headwearavatar: "",
-                Headwearusername: "头饰达人\(Int.random(in: 1...100))",
-                HeadwearmediaType: .photo(""),
-                Headwearcontent: "今天尝试了新的头饰搭配！",
-                Headwearlikes: Int.random(in: 10...500),
-                Headwearcomments: Int.random(in: 2...50)
+                UBACAMNNHeadwearavatar: "",
+                UBACAMNNHeadwearusername: "头饰达人\(Int.random(in: 1...100))",
+                UBACAMNNHeadwearmediaType: .photo(""),
+                UBACAMNNHeadwearcontent: "今天尝试了新的头饰搭配！",
+                UBACAMNNHeadwearlikes: Int.random(in: 10...500),
+                UBACAMNNHeadwearcomments: Int.random(in: 2...50)
             )
             
         }
     }
-    func fashionGuidance()  {
+    func UBACAMNNfashionGuidance()  {
         let insights: [String: Any] = [
             "headwearfashion": "51032696"
         ]
-        applyInitialSnapshot()
+        UBACAMNNapplyInitialSnapshot()
         SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/syydhnafgz/gbtyvidltckj",     UBACAMNNIvintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
@@ -166,7 +166,7 @@ extension UBACAMNNIGlobalHatwalkController{
             
             self.UBACAMNNIrecommentuser["GlobalHatwalk"] = user
             
-            self.recommendationsView.reloadData()
+            self.UBACAMNNrecommendationsView.reloadData()
             
         }     UBACAMNNIfailure: { error in
             SVProgressHUD.showError(withStatus: error.localizedDescription)
@@ -179,7 +179,7 @@ extension UBACAMNNIGlobalHatwalkController{
     
     func UBACAMNNItrendsettingideas()  {
        
-        let insights: [String:Any] = [
+        let UBACAMNNinsights: [String:Any] = [
             "casualcaps": "51032696",
             "elegantheadbands":1,
             "vintagehats":12,
@@ -188,7 +188,7 @@ extension UBACAMNNIGlobalHatwalkController{
             
         ]
         SVProgressHUD.show()
-        SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/ssvjeaitpqgz/kkatdxmagludyrk",     UBACAMNNIvintage: insights) { resilt in
+        SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/ssvjeaitpqgz/kkatdxmagludyrk",     UBACAMNNIvintage: UBACAMNNinsights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
                   let user = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Array<Dictionary<String,Any>>
@@ -206,7 +206,7 @@ extension UBACAMNNIGlobalHatwalkController{
             })
             SVProgressHUD.dismiss()
             
-            self.artistryView.reloadData()
+            self.UBACAMNNartistryView.reloadData()
             
         }     UBACAMNNIfailure: { error in
             SVProgressHUD.showError(withStatus: error.localizedDescription)
@@ -219,7 +219,7 @@ extension UBACAMNNIGlobalHatwalkController{
 extension UBACAMNNIGlobalHatwalkController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == self.recommendationsView {
+        if collectionView == self.UBACAMNNrecommendationsView {
             return CGSize(width: 100, height: 44)
         }
         return CGSize(width: (UIScreen.main.bounds.width - 24 - 9)/2, height: 238)
@@ -236,20 +236,20 @@ extension UBACAMNNIGlobalHatwalkController:UICollectionViewDelegate,UICollection
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.recommendationsView {
+        if collectionView == self.UBACAMNNrecommendationsView {
             return UBACAMNNIrecommentuser["GlobalHatwalk"]?.count ?? 0
         }
         return recommendMonment["GlobalHatwalk"]?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.recommendationsView {
+        if collectionView == self.UBACAMNNrecommendationsView {
             let uonnicell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeadwearuserCell", for: indexPath) as! UBACAMNNIHeadwearuserCell
             if let imglink = UBACAMNNIrecommentuser["GlobalHatwalk"]?[indexPath.row]["creativeheadpieces"] as? String,let imageUrl = URL(string: imglink) {
                 uonnicell.UBACAMNNIartisticHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
 
             }
-            uonnicell.headwearName.text = UBACAMNNIrecommentuser["GlobalHatwalk"]?[indexPath.row]["trendycaps"] as? String
+            uonnicell.UBACAMNNheadwearName.text = UBACAMNNIrecommentuser["GlobalHatwalk"]?[indexPath.row]["trendycaps"] as? String
             return uonnicell
         }
         
@@ -259,7 +259,7 @@ extension UBACAMNNIGlobalHatwalkController:UICollectionViewDelegate,UICollection
             
            
         }
-        if let headerpiceice = recommendMonment["GlobalHatwalk"]?[indexPath.row]["hatcollections"] as? String,let imageHeaderUrl = URL(string: headerpiceice) {
+        if let UBACAMNNheaderpiceice = recommendMonment["GlobalHatwalk"]?[indexPath.row]["hatcollections"] as? String,let imageHeaderUrl = URL(string: UBACAMNNheaderpiceice) {
             uonnicell.UBACAMNNIartisticHeader.kf.setImage(with: imageHeaderUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
@@ -276,12 +276,12 @@ extension UBACAMNNIGlobalHatwalkController:UICollectionViewDelegate,UICollection
                 
         
         
-        if collectionView == self.recommendationsView {
-            guard let headwearIDD = UBACAMNNIrecommentuser["GlobalHatwalk"]?[indexPath.row]["stylishhats"] as? Int else { return  }
+        if collectionView == self.UBACAMNNrecommendationsView {
+            guard let UBACAMNNheadwearIDD = UBACAMNNIrecommentuser["GlobalHatwalk"]?[indexPath.row]["stylishhats"] as? Int else { return  }
             UBACAMNNIselectionRing.fillColor = UIColor.clear.cgColor
-            let mainRoute =  SceneDelegate.fashionInspiration + "poangiexsv/nHhojmkeyPhaygfej/sivnedvedxu?muusqebrjIvdw=".UBACAMNNIextractHeadWearPattern()  + "\(headwearIDD)"
+            let mainRoute =  SceneDelegate.fashionInspiration + "poangiexsv/nHhojmkeyPhaygfej/sivnedvedxu?muusqebrjIvdw=".UBACAMNNIextractHeadWearPattern()  + "\(UBACAMNNheadwearIDD)"
             UBACAMNNIselectionRing.lineWidth = 2
-            self.creativeExchange(Everyroute:mainRoute, foreColor: collectionView.backgroundColor ?? .clear)
+            self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: collectionView.backgroundColor ?? .clear)
             return
         }
         
@@ -290,7 +290,7 @@ extension UBACAMNNIGlobalHatwalkController:UICollectionViewDelegate,UICollection
         UBACAMNNIselectionRing.fillColor = UIColor.clear.cgColor
         let mainRoute =  SceneDelegate.fashionInspiration + "pyamgwecst/cDrytneaamiiucbDweltuajiflesu/kianpdneexy?vddyknuaamxiucmIfdb=".UBACAMNNIextractHeadWearPattern()  + "\(headwearID)"
         UBACAMNNIselectionRing.lineWidth = 2
-        self.creativeExchange(Everyroute:mainRoute, foreColor:  collectionView.backgroundColor ?? .clear)
+        self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor:  collectionView.backgroundColor ?? .clear)
         
     }
     

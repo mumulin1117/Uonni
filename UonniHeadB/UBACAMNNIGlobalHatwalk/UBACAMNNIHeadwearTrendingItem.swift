@@ -8,8 +8,8 @@
 import UIKit
 
 struct UBACAMNNIHeadwearTrendingItem {
-    let HeadwearimageURL: String
-    let Headweartitle: String
-    let Headweardescription: String
-    let HeadwearinteractionCount: Int
+    let UBACAMNNHeadwearimageURL: String
+    let UBACAMNNHeadweartitle: String
+    let UBACAMNNHeadweardescription: String
+    let UBACAMNNHeadwearinteractionCount: Int
 }

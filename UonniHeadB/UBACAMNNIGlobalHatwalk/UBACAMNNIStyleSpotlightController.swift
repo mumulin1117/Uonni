@@ -9,39 +9,39 @@ import UIKit
 
 class UBACAMNNIStyleSpotlightController: UBACAMNNIArtistryController {
 
-    @IBOutlet weak var relationFriendUo: UIButton!
-    @IBOutlet weak var relationFolloweUo: UIButton!
-    @IBOutlet weak var relationFansUo: UIButton!
+    @IBOutlet weak var UBACAMNNrelationFriendUo: UIButton!
+    @IBOutlet weak var UBACAMNNrelationFolloweUo: UIButton!
+    @IBOutlet weak var UBACAMNNrelationFansUo: UIButton!
     
-    @IBOutlet weak var suresite: UIButton!
+    @IBOutlet weak var UBACAMNNsuresite: UIButton!
     
-    @IBOutlet weak var epationPayi: UIButton!
+    @IBOutlet weak var UBACAMNNepationPayi: UIButton!
     
-    @IBOutlet weak var ecoEdit: UIButton!
+    @IBOutlet weak var UBACAMNNecoEdit: UIButton!
     
-    @IBOutlet weak var headwearName: UILabel!
-    @IBOutlet weak var artisticHeader: UIImageView!
+    @IBOutlet weak var headUBACAMNNwearName: UILabel!
+    @IBOutlet weak var artisticUBACAMNNHeader: UIImageView!
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fashionGuidance()
+        UBACAMNNfashionGuidance()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        artisticHeader.layer.cornerRadius = 60
-        addTouchupinside()
+        artisticUBACAMNNHeader.layer.cornerRadius = 60
+        UBACAMNNaddTouchupinside()
         
         creativeExpression()
-        relationFriendUo.layer.cornerRadius = 12
-        relationFriendUo.layer.masksToBounds = true
+        UBACAMNNrelationFriendUo.layer.cornerRadius = 12
+        UBACAMNNrelationFriendUo.layer.masksToBounds = true
     }
     
     private func creativeExpression()  {
-        artisticHeader.layer.masksToBounds = true
-        relationFolloweUo.layer.cornerRadius = 12
-        relationFolloweUo.layer.masksToBounds = true
-        artisticHeader.contentMode = .scaleAspectFill
+        artisticUBACAMNNHeader.layer.masksToBounds = true
+        UBACAMNNrelationFolloweUo.layer.cornerRadius = 12
+        UBACAMNNrelationFolloweUo.layer.masksToBounds = true
+        artisticUBACAMNNHeader.contentMode = .scaleAspectFill
     }
     
     
@@ -50,12 +50,12 @@ class UBACAMNNIStyleSpotlightController: UBACAMNNIArtistryController {
 
 }
 extension UBACAMNNIStyleSpotlightController{
-    func fashionGuidance()  {
-        let insights: [String: Any] = [
-            "stylesharing": "\(SeasonalLoogController.enthusiasts?["headweardiversity"] as? Int ?? 0)"
+    func UBACAMNNfashionGuidance()  {
+        let UBACAMNNinsights: [String: Any] = [
+            "stylesharing": "\(UBACAMNNSeasonalLoogController.UBACAMNNenthusiasts?["headweardiversity"] as? Int ?? 0)"
         ]
         
-        SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/jiyhqvz/wjbxauzuh",     UBACAMNNIvintage: insights) { resilt in
+        SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/jiyhqvz/wjbxauzuh",     UBACAMNNIvintage: UBACAMNNinsights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
                   let user = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Dictionary<String,Any>
@@ -65,7 +65,7 @@ extension UBACAMNNIStyleSpotlightController{
                 return
             }
             
-            self.stylerecommendations(neda:user)
+            self.stylereUBACAMNNcommendations(UBACAMNNneda:user)
             
         }     UBACAMNNIfailure: { error in
             
@@ -73,76 +73,76 @@ extension UBACAMNNIStyleSpotlightController{
         
     }
     
-    private func addTouchupinside()
+    private func UBACAMNNaddTouchupinside()
     {
         
-        relationFansUo.layer.cornerRadius = 12
-        relationFansUo.layer.masksToBounds = true
+        UBACAMNNrelationFansUo.layer.cornerRadius = 12
+        UBACAMNNrelationFansUo.layer.masksToBounds = true
         
         
-        ecoEdit.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)
-        relationFriendUo.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)
-        relationFriendUo.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)
-        relationFriendUo.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)
-        suresite.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)
-        epationPayi.addTarget(self, action: #selector(didtapRelaitonGo(relaButton:)), for: .touchUpInside)
+        UBACAMNNecoEdit.addTarget(self, action: #selector(UBACAMNNdidtapRelaitonGo(UBACAMNNrelaButton:)), for: .touchUpInside)
+        UBACAMNNrelationFriendUo.addTarget(self, action: #selector(UBACAMNNdidtapRelaitonGo(UBACAMNNrelaButton:)), for: .touchUpInside)
+        UBACAMNNrelationFriendUo.addTarget(self, action: #selector(UBACAMNNdidtapRelaitonGo(UBACAMNNrelaButton:)), for: .touchUpInside)
+        UBACAMNNrelationFriendUo.addTarget(self, action: #selector(UBACAMNNdidtapRelaitonGo(UBACAMNNrelaButton:)), for: .touchUpInside)
+        UBACAMNNsuresite.addTarget(self, action: #selector(UBACAMNNdidtapRelaitonGo(UBACAMNNrelaButton:)), for: .touchUpInside)
+        UBACAMNNepationPayi.addTarget(self, action: #selector(UBACAMNNdidtapRelaitonGo(UBACAMNNrelaButton:)), for: .touchUpInside)
     }
     
-    private func stylerecommendations(neda:Dictionary<String,Any>)  {
-        headwearName.text = neda["creativecommunity"] as? String
-        if let headerpiceice = neda["trendinspiration"] as? String,let imageUrl = URL(string: headerpiceice) {
-            artisticHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
+    private func stylereUBACAMNNcommendations(UBACAMNNneda:Dictionary<String,Any>)  {
+        headUBACAMNNwearName.text = UBACAMNNneda["creativecommunity"] as? String
+        if let headerpiceice = UBACAMNNneda["trendinspiration"] as? String,let imageUrl = URL(string: headerpiceice) {
+            artisticUBACAMNNHeader.kf.setImage(with: imageUrl, options: [.memoryCacheExpiration(.seconds(60))])
             
            
         }
         
-        let friendcount = "\(neda["headwearpassion"] as? Int ?? 0)"
-        relationFriendUo.titleLabel?.numberOfLines = 2
-        relationFriendUo.titleLabel?.textAlignment = .center
-        relationFriendUo.setTitle(friendcount + "\nFriends", for: .normal)
+        let friendcount = "\(UBACAMNNneda["headwearpassion"] as? Int ?? 0)"
+        UBACAMNNrelationFriendUo.titleLabel?.numberOfLines = 2
+        UBACAMNNrelationFriendUo.titleLabel?.textAlignment = .center
+        UBACAMNNrelationFriendUo.setTitle(friendcount + "\nFriends", for: .normal)
        
-        let followcount = "\(neda["virtualinspiration"] as? Int ?? 0)"
-        relationFolloweUo.setTitle(followcount + "\nFollowings", for: .normal)
-        relationFolloweUo.titleLabel?.numberOfLines = 2
-        relationFolloweUo.titleLabel?.textAlignment = .center
+        let followcount = "\(UBACAMNNneda["virtualinspiration"] as? Int ?? 0)"
+        UBACAMNNrelationFolloweUo.setTitle(followcount + "\nFollowings", for: .normal)
+        UBACAMNNrelationFolloweUo.titleLabel?.numberOfLines = 2
+        UBACAMNNrelationFolloweUo.titleLabel?.textAlignment = .center
         
         
-        let fanscount = "\(neda["aestheticappeal"] as? Int ?? 0)"
-        relationFansUo.setTitle(fanscount + "\nFans", for: .normal)
-        relationFansUo.titleLabel?.numberOfLines = 2
-        relationFansUo.titleLabel?.textAlignment = .center
+        let fanscount = "\(UBACAMNNneda["aestheticappeal"] as? Int ?? 0)"
+        UBACAMNNrelationFansUo.setTitle(fanscount + "\nFans", for: .normal)
+        UBACAMNNrelationFansUo.titleLabel?.numberOfLines = 2
+        UBACAMNNrelationFansUo.titleLabel?.textAlignment = .center
        
     }
     
     
     
-   @objc func didtapRelaitonGo(relaButton:UIButton)  {
+   @objc func UBACAMNNdidtapRelaitonGo(UBACAMNNrelaButton:UIButton)  {
         
       
        
        var headwear = SceneDelegate.fashionInspiration
        
-       if relaButton == suresite {
+       if UBACAMNNrelaButton == UBACAMNNsuresite {
            headwear = headwear +  "ptasgielsg/qSxexthtaimnngk/qipnfdyevxk?".UBACAMNNIextractHeadWearPattern()
-       } else if relaButton == epationPayi {
+       } else if UBACAMNNrelaButton == UBACAMNNepationPayi {
            headwear = headwear +  "poawgwexsx/jVcojuucqhhetrrCdetnmtgeere/biknodkewxd?".UBACAMNNIextractHeadWearPattern()
            
-       }else if relaButton == relationFriendUo {
+       }else if UBACAMNNrelaButton == UBACAMNNrelationFriendUo {
            headwear = headwear +  "ptawgqenst/camtjtzeznutxiaomni/aiunydkefxv?ptvyipeem=m1".UBACAMNNIextractHeadWearPattern()
            
-       }else if relaButton == relationFolloweUo {
+       }else if UBACAMNNrelaButton == UBACAMNNrelationFolloweUo {
            headwear = headwear +  "psamgledso/fartttyepnztniyoqnk/ciynhddezxf?atkyxpwee=n2".UBACAMNNIextractHeadWearPattern()
            
-       }else if relaButton == relationFansUo {
+       }else if UBACAMNNrelaButton == UBACAMNNrelationFansUo {
            headwear = headwear +  "pqaogiemsi/kaytqtxeintttiaonnb/zirnsduesxp?dtjyapler=e3".UBACAMNNIextractHeadWearPattern()
            
-       }else if relaButton == ecoEdit {
+       }else if UBACAMNNrelaButton == UBACAMNNecoEdit {
            headwear = headwear +  "pvapgcevsg/fEwdqivtdDwaxtaad/aiqnkdaeyxj?".UBACAMNNIextractHeadWearPattern()
            
        }
     
       
-       self.creativeExchange(Everyroute:headwear, foreColor: relaButton.backgroundColor ?? .clear)
+       self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:headwear, UBACAMNNforeColor: UBACAMNNrelaButton.backgroundColor ?? .clear)
     }
     
 }

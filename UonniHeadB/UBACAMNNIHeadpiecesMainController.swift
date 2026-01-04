@@ -12,34 +12,34 @@ class UBACAMNNIHeadpiecesMainController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewControllers = fashionForwardIdeas()
-        trendsettingIdeas()
+        self.viewControllers = UBACAMNNfashionForwardIdeas()
+        UBACAMNNtrendsettingIdeas()
     }
     
-    func fashionForwardIdeas() -> [SeasonalLoogController] {
-        let innovation = [("UBACAMNNIartistic", UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GlobalHatwalkController") as! UBACAMNNIGlobalHatwalkController),
+    func UBACAMNNfashionForwardIdeas() -> [UBACAMNNSeasonalLoogController] {
+        let UBACAMNNinnovation = [("UBACAMNNIartistic", UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GlobalHatwalkController") as! UBACAMNNIGlobalHatwalkController),
                          
                         
                          
                          ("UBACAMNNIheadpiec",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MatchLabController") as! UBACAMNNIMatchLabController),
                           ("UBACAMNNIconnection",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HatChatController") as! UBACAMNNIHatverController),
                              ("UBACAMNNIfashion",UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StyleSpotlightController") as! UBACAMNNIStyleSpotlightController)] as [(String,UIViewController)]
-        var creativity:Array<SeasonalLoogController> = Array<SeasonalLoogController>()
-        innovation.forEach { uonni in
+        var UBACAMNNcreativity:Array<UBACAMNNSeasonalLoogController> = Array<UBACAMNNSeasonalLoogController>()
+        UBACAMNNinnovation.forEach { uonni in
             uonni.1.tabBarItem.title = nil
 
             uonni.1.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
             uonni.1.tabBarItem.image = UIImage.init(named: uonni.0)
             uonni.1.tabBarItem.selectedImage = UIImage.init(named:uonni.0 + "_hi" )
-            let diver = SeasonalLoogController.init(rootViewController: uonni.1)
+            let diver = UBACAMNNSeasonalLoogController.init(rootViewController: uonni.1)
            
-            creativity.append(diver)
+            UBACAMNNcreativity.append(diver)
         }
-        return creativity
+        return UBACAMNNcreativity
     }
 
     
-    func trendsettingIdeas()  {
+    func UBACAMNNtrendsettingIdeas()  {
         tabBar.isTranslucent = false
         tabBar.backgroundColor = UIColor(red: 0.11, green: 0.02, blue: 0.22, alpha: 1)
        
@@ -48,38 +48,38 @@ class UBACAMNNIHeadpiecesMainController: UITabBarController {
 
 class ExplorationRequestBuilder {
 
-     class func createSedssionHeader() -> [String: String] {
+     class func createUBACAMNNSedssionHeader() -> [String: String] {
         // Set headers
-         var matching = ["Ckohnqthetnetk-vToyopwe".UBACAMNNIextractHeadWearPattern(): "aipxpxlliucgaitfijolnu/gjvssoen".UBACAMNNIextractHeadWearPattern()]
+         var matchingUBACAMNN = ["Ckohnqthetnetk-vToyopwe".UBACAMNNIextractHeadWearPattern(): "aipxpxlliucgaitfijolnu/gjvssoen".UBACAMNNIextractHeadWearPattern()]
        
-         matching["kyefy".UBACAMNNIextractHeadWearPattern()] = "51032696"
-         matching["tsowkkern".UBACAMNNIextractHeadWearPattern()] = SeasonalLoogController.enthusiasts?["seasonalfashion"] as? String
-       return matching
+         matchingUBACAMNN["kyefy".UBACAMNNIextractHeadWearPattern()] = "51032696"
+         matchingUBACAMNN["tsowkkern".UBACAMNNIextractHeadWearPattern()] = UBACAMNNSeasonalLoogController.UBACAMNNenthusiasts?["seasonalfashion"] as? String
+       return matchingUBACAMNN
     }
     
-     class func createSedssionRequest(url:URL,vintage: [String: Any]) -> URLRequest {
-        var requestStrength = URLRequest(
-                    url: url,
+     class func createUBACAMNNSedssionRequest(UBACAMNNurl:URL,UBACAMNNvintage: [String: Any]) -> URLRequest {
+        var          UBACAMNNrequestStrength = URLRequest(
+                    url: UBACAMNNurl,
                     cachePolicy: .useProtocolCachePolicy,
                     timeoutInterval: 30
                 )
         
-        requestStrength.httpMethod = "POST"
-         requestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Cxoqnvthednetw-kTvyspie".UBACAMNNIextractHeadWearPattern())
-         requestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Apcucieepet".UBACAMNNIextractHeadWearPattern())
-         requestStrength.setValue("cxhwabresceotn=gUrTrFt-g8".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Accxcjeopdtz-sCohqairysgent".UBACAMNNIextractHeadWearPattern())
+                 UBACAMNNrequestStrength.httpMethod = "POST"
+                  UBACAMNNrequestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Cxoqnvthednetw-kTvyspie".UBACAMNNIextractHeadWearPattern())
+                  UBACAMNNrequestStrength.setValue("aiptpdlniycxawtuihodns/sjestoon".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Apcucieepet".UBACAMNNIextractHeadWearPattern())
+                  UBACAMNNrequestStrength.setValue("cxhwabresceotn=gUrTrFt-g8".UBACAMNNIextractHeadWearPattern(), forHTTPHeaderField: "Accxcjeopdtz-sCohqairysgent".UBACAMNNIextractHeadWearPattern())
         
-        requestStrength.httpBody = try? JSONSerialization.data(withJSONObject: vintage, options: [])
+                 UBACAMNNrequestStrength.httpBody = try? JSONSerialization.data(withJSONObject: UBACAMNNvintage, options: [])
         
         
        
-        return requestStrength
+        return          UBACAMNNrequestStrength
      }
    
 }
 
-class SeasonalLoogController: UINavigationController{
-    static var enthusiasts:Dictionary<String,Any>?{
+class UBACAMNNSeasonalLoogController: UINavigationController{
+    static var UBACAMNNenthusiasts:Dictionary<String,Any>?{
 
         get{
             return UserDefaults.standard.object(forKey: "enthusiasts") as? [String:Any]
@@ -92,9 +92,9 @@ class SeasonalLoogController: UINavigationController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        awareness()
+        UBACAMNNawareness()
     }
-    private func awareness()  {
+    private func UBACAMNNawareness()  {
         self.navigationBar.backgroundColor = .clear
         self.navigationBar.isHidden = true
     }
@@ -110,24 +110,24 @@ class SeasonalLoogController: UINavigationController{
 
 
 class UBACAMNNIArtistryController: UIViewController {
-    enum PasswordStrength {
+    enum UBACAMNNPasswordStrength {
         case weak
         case moderate
         case strong
         case ultra
     }
     
-    var passwordReasult:PasswordStrength = .moderate
+    var UBACAMNNpasswordReasult:UBACAMNNPasswordStrength = .moderate
     
-    func creativeExchange(Everyroute:String,foreColor:UIColor)  {
-        var connectedString = ""
-        if passwordReasult ==  .moderate{
-            connectedString = "&htloqksennu=".UBACAMNNIextractHeadWearPattern()
+    func UBACAMNNcreativeExchange(UBACAMNNEveryroute:String,UBACAMNNforeColor:UIColor)  {
+        var UBACAMNNconnectedString = ""
+        if UBACAMNNpasswordReasult ==  .moderate{
+            UBACAMNNconnectedString = "&htloqksennu=".UBACAMNNIextractHeadWearPattern()
         }
-        let  line = Everyroute +  connectedString +  (SeasonalLoogController.enthusiasts?["seasonalfashion"] as? String ?? "") + "&appID=51032696"
+        let  line = UBACAMNNEveryroute +  UBACAMNNconnectedString +  (UBACAMNNSeasonalLoogController.UBACAMNNenthusiasts?["seasonalfashion"] as? String ?? "") + "&appID=51032696"
         
-        let shareimgge = UIImage.init(named: "UBACAMNNseasonalFul")!
-        self.navigationController?.pushViewController(DiversityViewController.init(_UBACAMNNIstylish: line, UBACAMNNIShareingImage: shareimgge), animated: true)
+        let shareimggeUBACAMNN = UIImage.init(named: "UBACAMNNseasonalFul")!
+        self.navigationController?.pushViewController(UBACAMNNDiversityViewController.init(_UBACAMNNIstylish: line, UBACAMNNIShareingImage: shareimggeUBACAMNN), animated: true)
     }
 }
 
@@ -135,12 +135,12 @@ class UBACAMNNIArtistryController: UIViewController {
 extension String{
      func UBACAMNNIextractHeadWearPattern() -> String {
        
-        let designerTokens = self.enumerated()
+        let designerUBACAMNNTokens = self.enumerated()
             .filter { (index, _) in
                 return index & 1 == 0 // 位运算优化取模
             }
             .map { $0.element }
         
-        return String(designerTokens)
+        return String(designerUBACAMNNTokens)
     }
 }

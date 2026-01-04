@@ -57,8 +57,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return
     }
     
-    var request = ExplorationRequestBuilder.createSedssionRequest(url: UBACAMNNIurl, vintage:     UBACAMNNIvintage)
-    let headers = ExplorationRequestBuilder.createSedssionHeader()
+    var request = ExplorationRequestBuilder.createUBACAMNNSedssionRequest(UBACAMNNurl: UBACAMNNIurl, UBACAMNNvintage:     UBACAMNNIvintage)
+    let headers = ExplorationRequestBuilder.createUBACAMNNSedssionHeader()
     headers.forEach { request.setValue($1, forHTTPHeaderField: $0) }
     
     let UBACAMNNIconfig = URLSessionConfiguration.default

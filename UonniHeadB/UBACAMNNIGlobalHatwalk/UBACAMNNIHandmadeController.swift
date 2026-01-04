@@ -10,18 +10,18 @@ import UIKit
 
 class UBACAMNNIHandmadeController: UIViewController {
 
-    @IBOutlet weak var trendsLabel: UIImageView!
+    @IBOutlet weak var UBACAMNNtrendsLabel: UIImageView!
     
-    @IBOutlet weak var forwardTexifld: UITextField!
+    @IBOutlet weak var UBACAMNNforwardTexifld: UITextField!
     
     
-    @IBOutlet weak var artistry: UIButton!
-    @IBOutlet weak var culturalField: UITextField!
+    @IBOutlet weak var UBACAMNNartistry: UIButton!
+    @IBOutlet weak var UBACAMNNculturalField: UITextField!
  
 
-    @IBOutlet weak var artistrylbl: UILabel!
-    @IBOutlet weak var uniquelbl: UILabel!
-    private let HeadwearLabel: UILabel = {
+    @IBOutlet weak var UBACAMNNartistrylbl: UILabel!
+    @IBOutlet weak var UBACAMNNuniquelbl: UILabel!
+    private let UBACAMNNHeadwearLabel: UILabel = {
             let Headwear = UILabel()
             Headwear.text = "Join the Headwear Community"
             Headwear.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
@@ -34,140 +34,140 @@ class UBACAMNNIHandmadeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        fashionHeadhair()
-        HeadwearLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        UBACAMNNfashionHeadhair()
+        UBACAMNNHeadwearLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
        
-        styleIconView()
+        UBACAMNNstyleIconView()
         
     }
-    private var currentPhase: AuthPhase = .welcome
+    private var UBACAMNNcurrentPhase: UBACAMNNAuthPhase = .welcome
        
-    private func styleIconView()  {
-        artistrylbl.isUserInteractionEnabled = true
-        HeadwearLabel.backgroundColor = .systemIndigo
-        culturalField.attributedPlaceholder =  NSAttributedString(string: "Enter email address", attributes: [
+    private func UBACAMNNstyleIconView()  {
+        UBACAMNNartistrylbl.isUserInteractionEnabled = true
+        UBACAMNNHeadwearLabel.backgroundColor = .systemIndigo
+        UBACAMNNculturalField.attributedPlaceholder =  NSAttributedString(string: "Enter email address", attributes: [
             .font:  UIFont.systemFont(ofSize:18, weight: .semibold),
             .foregroundColor:UIColor.white,
             .kern: 0.5
         ])
         
-        forwardTexifld.attributedPlaceholder =  NSAttributedString(string: "Enter password", attributes: [
+        UBACAMNNforwardTexifld.attributedPlaceholder =  NSAttributedString(string: "Enter password", attributes: [
             .font:  UIFont.systemFont(ofSize:18, weight: .semibold),
             .foregroundColor:UIColor.white,
             .kern: 0.5
         ])
         
         
-        uniquelbl.isUserInteractionEnabled = true
+        UBACAMNNuniquelbl.isUserInteractionEnabled = true
     }
     
     
-    private func fashionHeadhair()  {
-        artistrylbl.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dividerViewterm)))
-        HeadwearLabel.tintColor = .white
+    private func UBACAMNNfashionHeadhair()  {
+        UBACAMNNartistrylbl.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(UBACAMNNdividerViewterm)))
+        UBACAMNNHeadwearLabel.tintColor = .white
         
-        uniquelbl.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dividerView)))
-        HeadwearLabel.layer.cornerRadius = 8
+        UBACAMNNuniquelbl.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(UBACAMNNdividerView)))
+        UBACAMNNHeadwearLabel.layer.cornerRadius = 8
     }
     
-    @objc func dividerView() {
+    @objc func UBACAMNNdividerView() {
         //pri
         self.navigationController?.pushViewController(UBACAMNNIHeadwearPolicyController(currentPolicy: .styleProtection), animated: true)
     }
     
-    @objc func dividerViewterm() {
+    @objc func UBACAMNNdividerViewterm() {
         self.navigationController?.pushViewController(UBACAMNNIHeadwearPolicyController(currentPolicy: .communityTerms), animated: true)
         
     }
   
-    @IBAction func handleStylishContinue(_ sender: UIButton) {
+    @IBAction func UBACAMNNhandleStylishContinue(_ sender: UIButton) {
         let gradient = CAGradientLayer()
                
        
        
-        if artistry.isSelected == false {
+        if UBACAMNNartistry.isSelected == false {
             gradient.colors = [UIColor.systemPink.cgColor, UIColor.systemIndigo.cgColor]
             SVProgressHUD.showInfo(withStatus: "Pzlnexaosyez lrtevaudz kannydl caeglruehea gtcol xokugra gucspewru vpbrvifvraxczyw npnovlnizcmya iaznndf itzevrpmysr!".UBACAMNNIextractHeadWearPattern())
             return
         }
         gradient.frame = view.bounds
         
-        guard let registailName = culturalField.text,registailName.count > 0 else{
+        guard let registailName = UBACAMNNculturalField.text,registailName.count > 0 else{
             SVProgressHUD.showInfo(withStatus: "Psluezaxsaem sfkinlllk cienk bymoyuqrc arpeggpifsntaegrkeddx eexmrakitlc sfiisrssitl!".UBACAMNNIextractHeadWearPattern())
             return
         }
         
         
-        guard let signPasw = forwardTexifld.text,registailName.count > 0 else{
+        guard let signPasw = UBACAMNNforwardTexifld.text,registailName.count > 0 else{
             SVProgressHUD.showInfo(withStatus: "Prlneeaxsaez gennltpeurz kykolulry npoavsesnwmomridl ffyibrysetj!".UBACAMNNIextractHeadWearPattern())
             return
         }
         
         view.layer.insertSublayer(gradient, at: 0)
-        fashionGuidance(signPasw:signPasw,registailName:registailName)
+        UBACAMNNfashionGuidance(UBACAMNNsignPasw:signPasw,UBACAMNNregistailName:registailName)
     }
     
-    private func transition(to phase: AuthPhase, animated: Bool = true) {
-           currentPhase = phase
-           if animated {
+    private func UBACAMNNtransition(to phase: UBACAMNNAuthPhase, UBACAMNNanimated: Bool = true) {
+           UBACAMNNcurrentPhase = phase
+           if UBACAMNNanimated {
                UIView.transition(with: view, duration: 0.35, options: .transitionCrossDissolve) {
-                   self.startAuthFlow()
+                   self.UBACAMNNstartAuthFlow()
                }
            } else {
-               startAuthFlow()
+               UBACAMNNstartAuthFlow()
            }
       
     }
-    func fashionGuidance(signPasw:String,registailName:String)  {
+    func UBACAMNNfashionGuidance(UBACAMNNsignPasw:String,UBACAMNNregistailName:String)  {
         let insights: [String: Any] = [
             "aestheticsharing": "51032696",
-            "hatfashionista": registailName,
-            "styleexploration": signPasw
+            "hatfashionista": UBACAMNNregistailName,
+            "styleexploration": UBACAMNNsignPasw
         ]
         SVProgressHUD.show()
-        let startButton = UIButton(type: .system)
-        startButton.setTitle("Start config", for: .normal)
+        let UBACAMNNstartButton = UIButton(type: .system)
+        UBACAMNNstartButton.setTitle("Start config", for: .normal)
         
                
         SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/rbcjkngccdz/vwrguhl",    UBACAMNNIvintage: insights) { resilt in
             guard let response = resilt as? Dictionary<String,Any> ,
                   
-                  let pices = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Dictionary<String,Any>
+                  let UBACAMNNpices = response["dqaytea".UBACAMNNIextractHeadWearPattern()] as? Dictionary<String,Any>
                     
             else {
-                startButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
-                startButton.backgroundColor = .white.withAlphaComponent(0.9)
+                UBACAMNNstartButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+                UBACAMNNstartButton.backgroundColor = .white.withAlphaComponent(0.9)
                 
                 SVProgressHUD.showInfo(withStatus: "Ypoiudrs lUisoeyrzngajmvea lovrh dpuarsgscwpogrjdg zimnxcyoxrzrjerccts!".UBACAMNNIextractHeadWearPattern())
                 
                 return
             }
             
-            startButton.layer.cornerRadius = 24
+            UBACAMNNstartButton.layer.cornerRadius = 24
             
-            startButton.transform = CGAffineTransform(translationX: 0, y: 40)
-            self.presentWelcomeScreen(headwearuser:pices)
+            UBACAMNNstartButton.transform = CGAffineTransform(translationX: 0, y: 40)
+            self.UBACAMNNpresentWelcomeScreen(UBACAMNNheadwearuser:UBACAMNNpices)
             
             self.navigationController?.pushViewController(UBACAMNNIHeadpiecesMainController.init(), animated: false)
             
             SVProgressHUD.showSuccess(withStatus: "Lpokgs biwnm usnuycbczezsessfluwlh!".UBACAMNNIextractHeadWearPattern())
-            if startButton.isHidden == true{
-                self.view.addSubview(startButton)
+            if UBACAMNNstartButton.isHidden == true{
+                self.view.addSubview(UBACAMNNstartButton)
             }
             
         }     UBACAMNNIfailure: { error in
-            startButton.layer.cornerRadius = 24
+            UBACAMNNstartButton.layer.cornerRadius = 24
             
-            startButton.transform = CGAffineTransform(translationX: 0, y: 40)
+            UBACAMNNstartButton.transform = CGAffineTransform(translationX: 0, y: 40)
             SVProgressHUD.showInfo(withStatus: error.localizedDescription)
            
         }
 
     }
-    private func startAuthFlow() {
-            switch currentPhase {
+    private func UBACAMNNstartAuthFlow() {
+            switch UBACAMNNcurrentPhase {
             case .welcome:
-                fashionGuidance(signPasw:"",registailName:"")
+                UBACAMNNfashionGuidance(UBACAMNNsignPasw:"",UBACAMNNregistailName:"")
             case .avatarSelection:
                 break
             case .securitySetup:
@@ -177,12 +177,12 @@ class UBACAMNNIHandmadeController: UIViewController {
             }
         }
     
-    func presentWelcomeScreen(headwearuser:Dictionary<String,Any>)  {
+    func UBACAMNNpresentWelcomeScreen(UBACAMNNheadwearuser:Dictionary<String,Any>)  {
         var saveingHeader = Dictionary<String,Any>()
-        saveingHeader["seasonalfashion"] = headwearuser["seasonalfashion"]
-        saveingHeader["headweardiversity"] = headwearuser["headweardiversity"]
+        saveingHeader["seasonalfashion"] = UBACAMNNheadwearuser["seasonalfashion"]
+        saveingHeader["headweardiversity"] = UBACAMNNheadwearuser["headweardiversity"]
         
-        SeasonalLoogController.enthusiasts = saveingHeader
+        UBACAMNNSeasonalLoogController.UBACAMNNenthusiasts = saveingHeader
         
         
     }

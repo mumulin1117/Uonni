@@ -7,47 +7,47 @@
 
 import UIKit
 struct UBACAMNNIHeadwearMessage {
-    let senderAvatar: String
-    let senderName: String
-    let messageContent: String
-    let messageType: MessageType
-    let timestamp: Date
+    let UBACAMNNsenderAvatar: String
+    let UBACAMNNsenderName: String
+    let UBACAMNNmessageContent: String
+    let UBACAMNNmessageType: UBACAMNNMessageType
+    let UBACAMNNtimestamp: Date
     
-    enum MessageType {
-        case text
-        case videoShare
-        case aiRecommendation
+    enum UBACAMNNMessageType {
+        case UBACAMNNtext
+        case UBACAMNNvideoShare
+        case UBACAMNNaiRecommendation
     }
 }
 class UBACAMNNIDnnoCamesagCell: UICollectionViewCell {
  
-    @IBOutlet weak var artisticHeader: UIImageView!
+    @IBOutlet weak var UBACAMNNartisticHeader: UIImageView!
     
-    @IBOutlet weak var headwearName: UILabel!
-    @IBOutlet weak var postConttnwearLbl: UILabel!
+    @IBOutlet weak var UBACAMNNheadwearName: UILabel!
+    @IBOutlet weak var UBACAMNNpostConttnwearLbl: UILabel!
     
-    @IBOutlet weak var tovhatki: UIButton!
-    private let aiRecommendationBadge: UIView = {
-        let iRecommenda = UIView()
-        iRecommenda.backgroundColor = UIColor(red: 0.25, green: 0.65, blue: 1.0, alpha: 0.15)
-        iRecommenda.layer.cornerRadius = 10
-        iRecommenda.isHidden = true
-        return iRecommenda
+    @IBOutlet weak var UBACAMNNtovhatki: UIButton!
+    private let UBACAMNNaiRecommendationBadge: UIView = {
+        let UBACAMNNiRecommenda = UIView()
+        UBACAMNNiRecommenda.backgroundColor = UIColor(red: 0.25, green: 0.65, blue: 1.0, alpha: 0.15)
+        UBACAMNNiRecommenda.layer.cornerRadius = 10
+        UBACAMNNiRecommenda.isHidden = true
+        return UBACAMNNiRecommenda
         
     }()
     override func awakeFromNib() {
         super.awakeFromNib()
-        tovhatki.isUserInteractionEnabled = false
+        UBACAMNNtovhatki.isUserInteractionEnabled = false
         self.layer.cornerRadius = 12
        
-        setupLayout()
+        UBACAMNNsetupLayout()
         self.layer.masksToBounds = true
     }
     
-    private func setupLayout() {
-        artisticHeader.layer.cornerRadius = 12
-        artisticHeader.contentMode = .scaleAspectFill
-        artisticHeader.layer.masksToBounds = true
+    private func UBACAMNNsetupLayout() {
+        UBACAMNNartisticHeader.layer.cornerRadius = 12
+        UBACAMNNartisticHeader.contentMode = .scaleAspectFill
+        UBACAMNNartisticHeader.layer.masksToBounds = true
         
     }
 
