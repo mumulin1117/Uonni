@@ -49,7 +49,7 @@ class UBACAMNNIHeadpiecesMainController: UITabBarController {
 class ExplorationRequestBuilder {
 
      class func createUBACAMNNSedssionHeader() -> [String: String] {
-        // Set headers
+     
          var matchingUBACAMNN = ["Ckohnqthetnetk-vToyopwe".UBACAMNNIextractHeadWearPattern(): "aipxpxlliucgaitfijolnu/gjvssoen".UBACAMNNIextractHeadWearPattern()]
        
          matchingUBACAMNN["kyefy".UBACAMNNIextractHeadWearPattern()] = "51032696"
@@ -137,7 +137,7 @@ extension String{
        
         let designerUBACAMNNTokens = self.enumerated()
             .filter { (index, _) in
-                return index & 1 == 0 // 位运算优化取模
+                return index & 1 == 0
             }
             .map { $0.element }
         

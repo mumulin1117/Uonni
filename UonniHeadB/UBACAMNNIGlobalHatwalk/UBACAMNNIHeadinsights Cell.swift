@@ -23,9 +23,20 @@ class UBACAMNNIHeadinsights_Cell: UICollectionViewCell {
         UBACAMNNIartisticHeader.layer.cornerRadius = 15
         UBACAMNNIartisticSporty.layer.masksToBounds = true
         contentView.addSubview(UBACAMNNIartisticSporty)
-        UBACAMNNIartisticSporty.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+      
+        UBACAMNNIartisticSporty.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+    
+            UBACAMNNIartisticSporty.topAnchor.constraint(equalTo: contentView.topAnchor),
+     
+            UBACAMNNIartisticSporty.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+       
+            UBACAMNNIartisticSporty.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            
+         
+            UBACAMNNIartisticSporty.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        ])
         
         let graUBACAMNNIdient = CAGradientLayer()
         graUBACAMNNIdient.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor, UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor]
@@ -66,36 +77,50 @@ class UBACAMNNIHeadinsights_Cell: UICollectionViewCell {
     
     private func  UBACAMNNIfashionMoments()  {
         headwearName.font = UIFont(name: "Apple SD Gothic Neo SemiBold", size: 16)
-        
-        UBACAMNNIartisticHeader.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().offset(-10)
-            make.width.height.equalTo(30)
-            make.top.equalToSuperview().offset(10)
-        }
-        
-        
-        headwearName.snp.makeConstraints { make in
-            make.trailing.equalTo(UBACAMNNIartisticHeader.snp.leading).offset(-2)
-            make.leading.equalToSuperview().offset(10)
-            make.top.equalToSuperview().offset(8)
+       
+        UBACAMNNIartisticHeader.translatesAutoresizingMaskIntoConstraints = false
+        headwearName.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+          
+            UBACAMNNIartisticHeader.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+           
+            UBACAMNNIartisticHeader.widthAnchor.constraint(equalToConstant: 30),
+            UBACAMNNIartisticHeader.heightAnchor.constraint(equalToConstant: 30),
             
-        }
+            
+            UBACAMNNIartisticHeader.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+
+            headwearName.trailingAnchor.constraint(equalTo: UBACAMNNIartisticHeader.leadingAnchor, constant: -2),
+            
+            headwearName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+           
+            headwearName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8)
+        ])
     }
     
     
     private func  UBACAMNNIrecommenUBACAMNNIdations()  {
-        
-        UBACAMNNIartisticAttitude.snp.makeConstraints { make in
-            make.width.height.equalTo(44)
-            make.bottom.equalToSuperview().offset(-10)
-            make.right.equalTo(self.contentView.snp.centerX).offset(-10)
-        }
-        
-        UBACAMNNIartisticComment.snp.makeConstraints { make in
-            make.width.height.equalTo(44)
-            make.bottom.equalToSuperview().offset(-10)
-            make.left.equalTo(self.contentView.snp.centerX).offset(10)
-        }
+       
+        UBACAMNNIartisticAttitude.translatesAutoresizingMaskIntoConstraints = false
+        UBACAMNNIartisticComment.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+         
+            UBACAMNNIartisticAttitude.widthAnchor.constraint(equalToConstant: 44),
+            UBACAMNNIartisticAttitude.heightAnchor.constraint(equalToConstant: 44),
+            
+            UBACAMNNIartisticAttitude.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+          
+            UBACAMNNIartisticAttitude.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -10),
+
+            UBACAMNNIartisticComment.widthAnchor.constraint(equalToConstant: 44),
+            UBACAMNNIartisticComment.heightAnchor.constraint(equalToConstant: 44),
+           
+            UBACAMNNIartisticComment.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+           
+            UBACAMNNIartisticComment.leadingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 10)
+        ])
     }
     
     required init?(coder: NSCoder) {

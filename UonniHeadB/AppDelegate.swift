@@ -4,7 +4,7 @@
 //
 //  Created by UonniHeadB on 2025/5/9.
 //
-import AppTrackingTransparency
+
 import FBSDKCoreKit
 import UIKit
 import SwiftyStoreKit
@@ -14,8 +14,6 @@ import AdjustSdk
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-//    static var fascinator:String = ""
-//    static var cloche:String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UBACAMNNtasseled()

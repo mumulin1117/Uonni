@@ -3,4 +3,116 @@
    uuid = "9CE7B850-D93D-452A-B8D7-A26A339A60B7"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EAFAD203-C514-4C23-AE35-1856F9311398"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UonniHeadB/UBACAMNNIGlobalHatwalk/UBACAMNNIHeadwearer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "765"
+            endingLineNumber = "765"
+            landmarkName = "UBACAMNNIhandleUBACAMNNICloseMessage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D28E331-34AF-4EAC-BFFF-33C1680025B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UonniHeadB/UBACAMNNIGlobalHatwalk/UBACAMNNIHeadwearer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init(UBACAMNNIbonnet:UBACAMNNItrilby:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D28E331-34AF-4EAC-BFFF-33C1680025B4 - 8bf8c063c93f223a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UonniHeadB.UBACAMNNIHeadwearer.__allocating_init(UBACAMNNIbonnet: Swift.String, UBACAMNNItrilby: Swift.Bool) -&gt; UonniHeadB.UBACAMNNIHeadwearer"
+                  moduleName = "UonniHeadB.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/Uonni/UonniHeadB/UBACAMNNIGlobalHatwalk/UBACAMNNIHeadwearer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "0D28E331-34AF-4EAC-BFFF-33C1680025B4 - c28ae8b03a7ca91c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UonniHeadB.UBACAMNNIHeadwearer.init(UBACAMNNIbonnet: Swift.String, UBACAMNNItrilby: Swift.Bool) -&gt; UonniHeadB.UBACAMNNIHeadwearer"
+                  moduleName = "UonniHeadB.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/Uonni/UonniHeadB/UBACAMNNIGlobalHatwalk/UBACAMNNIHeadwearer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "335D692F-416A-4DC3-A6C0-44D9E75ED0FB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UonniHeadB/UBACAMNNIGlobalHatwalk/UBACAMNNISeasonalntroller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "UBACAMNNIlizeWebViewWithConfiguration()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13255C7F-BDA4-4954-8240-9961238C445F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UonniHeadB/UBACAMNNIGlobalHatwalk/UBACAMNNIHeadgearController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
+            landmarkName = "UBACAMNNDiversityViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "660D6D40-3685-4122-BB2C-2D3DCE9DCBB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UonniHeadB/UBACAMNNIGlobalHatwalk/UBACAMNNIHeadgearController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "469"
+            endingLineNumber = "469"
+            landmarkName = "returnToUBACAMNNIRunwayDashboard(UBACAMNNIusing:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

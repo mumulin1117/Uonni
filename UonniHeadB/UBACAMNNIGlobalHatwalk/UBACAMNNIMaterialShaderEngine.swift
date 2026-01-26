@@ -12,10 +12,10 @@ class UBACAMNNIMaterialShaderEngine: NSObject {
             var presets = [String: UBACAMNNSCNMaterial]()
             
             // 绸缎材质配置
-            presets["绸缎光泽"] = UBACAMNNSCNMaterial()
-            presets["绸缎光泽"]?.diffuse = "satin_diffuse"
-            presets["绸缎光泽"]?.specular = "satin_specular"
-            presets["绸缎光泽"]?.shininess = 0.8
+            presets["Lace Cutout"] = UBACAMNNSCNMaterial()
+            presets["Lace Cutout"]?.diffuse = "satin_diffuse"
+            presets["Lace Cutout"]?.specular = "satin_specular"
+            presets["Lace Cutout"]?.shininess = 0.8
             
           
             

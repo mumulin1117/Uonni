@@ -86,13 +86,13 @@ class UBACAMNNIMatchLabController: UBACAMNNIArtistryController {
                
        
         if sender.tag == 234 {
-            let mainRoute =  SceneDelegate.fashionInspiration + "paaegtesse/uryeulmeqaksaedVjirdheqoasd/yipnhdbeoxz?".UBACAMNNIextractHeadWearPattern()
+            let mainRoute =  SceneDelegate.UBACAMNNfashionInspiration + "paaegtesse/uryeulmeqaksaedVjirdheqoasd/yipnhdbeoxz?".UBACAMNNIextractHeadWearPattern()
             self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: self.view.backgroundColor ?? UIColor.clear)
             return
         }
         selectionUBACAMNNRing.fillColor = UIColor.clear.cgColor
         
-        let mainUBACAMNNRoute =  SceneDelegate.fashionInspiration + "puahgtecst/fRjegpqourbto/disnvdaelxf?".UBACAMNNIextractHeadWearPattern()
+        let mainUBACAMNNRoute =  SceneDelegate.UBACAMNNfashionInspiration + "puahgtecst/fRjegpqourbto/disnvdaelxf?".UBACAMNNIextractHeadWearPattern()
         selectionUBACAMNNRing.lineWidth = 2
         self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainUBACAMNNRoute, UBACAMNNforeColor: self.view.backgroundColor  ?? UIColor.clear)
     }
@@ -139,9 +139,7 @@ class UBACAMNNIMatchLabController: UBACAMNNIArtistryController {
         enterButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         enterButton.backgroundColor = .systemOrange
         enterButton.layer.cornerRadius = 28
-          
-        
-        // 布局设置...
+     
         view.addSubview(completionUBACAMNNView)
     }
     private let specialUBACAMNNtyLabel: UILabel = UILabel.init()
@@ -159,7 +157,7 @@ class UBACAMNNIMatchLabController: UBACAMNNIArtistryController {
         
         UBACAMNNrecommendationsView.dataSource = self
         crownEmitter.emitterSize = CGSize(width: 80, height: 80)
-        // 粒子效果配置...
+    
        
         UBACAMNNrecommendationsView.register(UBACAMNNIDnnovationVidrCell.self, forCellWithReuseIdentifier: "UBACAMNNIDnnovationVidrCell")
         completionUBACAMNNView.layer.addSublayer(crownEmitter)
@@ -230,8 +228,7 @@ extension UBACAMNNIMatchLabController:UICollectionViewDelegate,UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         0
     }
-    // MARK: - 错误处理
-       
+
     private func UBACAMNNshowErrorAlert(UBACAMNNmessage: String) {
         let alert = UIAlertController(
             title: "Runway Error",
@@ -273,7 +270,7 @@ extension UBACAMNNIMatchLabController:UICollectionViewDelegate,UICollectionViewD
         return UBACAMNNuonnicell
         
     }
-    /// 专为Uonni应用设计的独家设计时间格式化
+  
     private func formatHeadUBACAMNNwearDesignTime(_ timestamp: TimeInterval) -> String {
         guard timestamp > 0 else {
             return "Just released" // 处理0或负时间戳
@@ -283,28 +280,28 @@ extension UBACAMNNIMatchLabController:UICollectionViewDelegate,UICollectionViewD
         let now = Date()
         let calendar = Calendar.current
         
-        // 1. 当天显示时分
+      
         if calendar.isDateInToday(date) {
             let formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
             formatter.timeZone = TimeZone.current
             return "today \(formatter.string(from: date))"
         }
-        // 2. 昨天显示昨天+时间
+      
         else if calendar.isDateInYesterday(date) {
             let formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
             formatter.timeZone = TimeZone.current
             return "Yesterday \(formatter.string(from: date))"
         }
-        // 3. 一周内显示星期
+      
         else if let days = calendar.dateComponents([.day], from: date, to: now).day, days < 7 {
             let weekdayFormatter = DateFormatter()
             weekdayFormatter.dateFormat = "EEEE HH:mm"
             weekdayFormatter.timeZone = TimeZone.current
             return weekdayFormatter.string(from: date)
         }
-        // 4. 其他情况显示完整日期
+  
         else {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy/MM/dd HH:mm"
@@ -320,7 +317,7 @@ extension UBACAMNNIMatchLabController:UICollectionViewDelegate,UICollectionViewD
         guard let UBACAMNNheadwerId = recommendUBACAMNNMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
         selectionUBACAMNNRing.fillColor = UIColor.clear.cgColor
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pqaigleysg/yDpyanpacmwigcgDpectraminlpsr/nihngdfefxz?pdqyxnhalmaiocsIwdf=".UBACAMNNIextractHeadWearPattern()  + "\(UBACAMNNheadwerId)"
+        let mainRoute =  SceneDelegate.UBACAMNNfashionInspiration + "pqaigleysg/yDpyanpacmwigcgDpectraminlpsr/nihngdfefxz?pdqyxnhalmaiocsIwdf=".UBACAMNNIextractHeadWearPattern()  + "\(UBACAMNNheadwerId)"
         selectionUBACAMNNRing.lineWidth = 2
         self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: self.view.backgroundColor ?? UIColor.clear)
         

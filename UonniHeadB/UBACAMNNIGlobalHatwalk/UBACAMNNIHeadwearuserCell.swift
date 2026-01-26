@@ -58,19 +58,18 @@ class UBACAMNNIHeadwearuserCell: UICollectionViewCell {
         UBACAMNNheadwearName.font = UIFont(name: "Apple SD Gothic Neo SemiBold", size: 16)
         self.layer.cornerRadius = 12
         self.layer.masksToBounds = true
-        // ⚠️ 必须先禁用 autoresizing 掩码转换为约束
+      
         UBACAMNNIartisticHeader.translatesAutoresizingMaskIntoConstraints = false
         UBACAMNNheadwearName.translatesAutoresizingMaskIntoConstraints = false
 
-        // 使用 NSLayoutConstraint.activate 一次性激活所有约束
+       
         NSLayoutConstraint.activate([
-            // UBACAMNNIartisticHeader 的约束
+         
             UBACAMNNIartisticHeader.leadingAnchor.constraint(equalTo: UBACAMNNIartisticHeader.superview!.leadingAnchor, constant: 3),
             UBACAMNNIartisticHeader.widthAnchor.constraint(equalToConstant: 38),
             UBACAMNNIartisticHeader.heightAnchor.constraint(equalToConstant: 38),
             UBACAMNNIartisticHeader.centerYAnchor.constraint(equalTo: UBACAMNNIartisticHeader.superview!.centerYAnchor),
-            
-            // UBACAMNNheadwearName 的约束
+          
             UBACAMNNheadwearName.leadingAnchor.constraint(equalTo: UBACAMNNIartisticHeader.trailingAnchor, constant: 4),
             UBACAMNNheadwearName.trailingAnchor.constraint(equalTo: UBACAMNNheadwearName.superview!.trailingAnchor, constant: -5),
             UBACAMNNheadwearName.centerYAnchor.constraint(equalTo: UBACAMNNheadwearName.superview!.centerYAnchor)

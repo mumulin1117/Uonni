@@ -9,6 +9,12 @@ import UIKit
 
 class UBACAMNNIStyleSpotlightController: UBACAMNNIArtistryController {
 
+    @IBOutlet weak var UBACAMNNpost: UILabel!
+    
+    @IBOutlet weak var UBACAMNNnoost: UILabel!
+    
+    
+    
     @IBOutlet weak var UBACAMNNrelationFriendUo: UIButton!
     @IBOutlet weak var UBACAMNNrelationFolloweUo: UIButton!
     @IBOutlet weak var UBACAMNNrelationFansUo: UIButton!
@@ -28,7 +34,9 @@ class UBACAMNNIStyleSpotlightController: UBACAMNNIArtistryController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UBACAMNNpost.text =  "PhOmSwT".UBACAMNNIextractHeadWearPattern()
+        UBACAMNNnoost.text =  "Nzox hPzoesot".UBACAMNNIextractHeadWearPattern()
+        
         artisticUBACAMNNHeader.layer.cornerRadius = 60
         UBACAMNNaddTouchupinside()
         
@@ -120,7 +128,7 @@ extension UBACAMNNIStyleSpotlightController{
         
       
        
-       var headwear = SceneDelegate.fashionInspiration
+       var headwear = SceneDelegate.UBACAMNNfashionInspiration
        
        if UBACAMNNrelaButton == UBACAMNNsuresite {
            headwear = headwear +  "ptasgielsg/qSxexthtaimnngk/qipnfdyevxk?".UBACAMNNIextractHeadWearPattern()

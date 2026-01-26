@@ -54,7 +54,7 @@ class UBACAMNNIGlobalHatwalkController: UBACAMNNIArtistryController {
     
    
     private func UBACAMNNIconfigureHierarchy() {
-           title = "头饰美学馆"
+           title = ""
            view.backgroundColor = .systemGroupedBackground
            
         UBACAMNNhatsForsession.addTarget(self, action: #selector(UBACAMNNbohemianStyles(UBACAMNNacitonButon:)), for: .touchUpInside)
@@ -79,7 +79,7 @@ class UBACAMNNIGlobalHatwalkController: UBACAMNNIArtistryController {
         UBACAMNNIselectionRing.strokeColor = UIColor.clear.cgColor
                 
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pcaegiexst/vRremlgegaesxejDeygnratmjiqcg/vianwdledxe?".UBACAMNNIextractHeadWearPattern()
+        let mainRoute =  SceneDelegate.UBACAMNNfashionInspiration + "pcaegiexst/vRremlgegaesxejDeygnratmjiqcg/vianwdledxe?".UBACAMNNIextractHeadWearPattern()
         UBACAMNNIselectionRing.fillColor = UIColor.clear.cgColor
         
         self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: sender.backgroundColor ?? .clear)
@@ -121,8 +121,8 @@ extension UBACAMNNIGlobalHatwalkController{
         let trendingItems = (0..<5).map { _ in
                    UBACAMNNIHeadwearTrendingItem(
                     UBACAMNNHeadwearimageURL: "",
-                    UBACAMNNHeadweartitle: "2024春夏头饰流行趋势",
-                    UBACAMNNHeadweardescription: "贝雷帽的100种可能",
+                    UBACAMNNHeadweartitle: "",
+                    UBACAMNNHeadweardescription: "",
                     UBACAMNNHeadwearinteractionCount: Int.random(in: 100..<1000)
                    )
                }
@@ -131,7 +131,7 @@ extension UBACAMNNIGlobalHatwalkController{
         let recommendations = (0..<4).map { _ in
             UBACAMNNIHeadwearRecommendation(
                 coverImage: "",
-                styleTags: ["复古", "度假", "波西米亚"].shuffled(),
+                styleTags: ["Retro", "Vacation", "Bohemian"].shuffled(),
                 matchScore: Double.random(in: 0.7...0.95)
             )
         }
@@ -139,11 +139,11 @@ extension UBACAMNNIGlobalHatwalkController{
         let moments = (0..<8).map { _ in
             UBACAMNNIHeadwearCommunityMoment(
                 UBACAMNNHeadwearavatar: "",
-                UBACAMNNHeadwearusername: "头饰达人\(Int.random(in: 1...100))",
+                UBACAMNNHeadwearusername: "StyleIcon_\(Int.random(in: 1024...9999))",
                 UBACAMNNHeadwearmediaType: .photo(""),
-                UBACAMNNHeadwearcontent: "今天尝试了新的头饰搭配！",
-                UBACAMNNHeadwearlikes: Int.random(in: 10...500),
-                UBACAMNNHeadwearcomments: Int.random(in: 2...50)
+                UBACAMNNHeadwearcontent: "Just experimented with a brand new headwear combo today! What do you think?",
+                UBACAMNNHeadwearlikes: Int.random(in: 120...850),
+                UBACAMNNHeadwearcomments: Int.random(in: 5...88)
             )
             
         }
@@ -279,16 +279,16 @@ extension UBACAMNNIGlobalHatwalkController:UICollectionViewDelegate,UICollection
         if collectionView == self.UBACAMNNrecommendationsView {
             guard let UBACAMNNheadwearIDD = UBACAMNNIrecommentuser["GlobalHatwalk"]?[indexPath.row]["stylishhats"] as? Int else { return  }
             UBACAMNNIselectionRing.fillColor = UIColor.clear.cgColor
-            let mainRoute =  SceneDelegate.fashionInspiration + "poangiexsv/nHhojmkeyPhaygfej/sivnedvedxu?muusqebrjIvdw=".UBACAMNNIextractHeadWearPattern()  + "\(UBACAMNNheadwearIDD)"
+            let mainRoute =  SceneDelegate.UBACAMNNfashionInspiration + "poangiexsv/nHhojmkeyPhaygfej/sivnedvedxu?muusqebrjIvdw=".UBACAMNNIextractHeadWearPattern()  + "\(UBACAMNNheadwearIDD)"
             UBACAMNNIselectionRing.lineWidth = 2
             self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: collectionView.backgroundColor ?? .clear)
             return
         }
         
         
-        guard let headwearID = recommendMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
+        guard let UBACAMNNheadwearID = recommendMonment["GlobalHatwalk"]?[indexPath.row]["chicaccessories"] as? Int else { return  }
         UBACAMNNIselectionRing.fillColor = UIColor.clear.cgColor
-        let mainRoute =  SceneDelegate.fashionInspiration + "pyamgwecst/cDrytneaamiiucbDweltuajiflesu/kianpdneexy?vddyknuaamxiucmIfdb=".UBACAMNNIextractHeadWearPattern()  + "\(headwearID)"
+        let mainRoute =  SceneDelegate.UBACAMNNfashionInspiration + "pyamgwecst/cDrytneaamiiucbDweltuajiflesu/kianpdneexy?vddyknuaamxiucmIfdb=".UBACAMNNIextractHeadWearPattern()  + "\(UBACAMNNheadwearID)"
         UBACAMNNIselectionRing.lineWidth = 2
         self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor:  collectionView.backgroundColor ?? .clear)
         

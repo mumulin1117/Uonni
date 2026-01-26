@@ -6,9 +6,9 @@
 //
 
 import UIKit
-
+import WebKit
 import SVProgressHUD
-import UIKit
+
 
 class UBACAMNNISeasonalntroller: UIViewController  {
     
@@ -22,16 +22,74 @@ class UBACAMNNISeasonalntroller: UIViewController  {
         mantilla.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         view.addSubview(mantilla)
     }
-    
-    
+    private var UBACAMNNIsnapback: WKWebView?
+    private func UBACAMNNIconstructWebConfiguration() -> WKWebViewConfiguration {
+        let bridal = WKWebViewConfiguration()
+        
+        // 使用不同的方式设置属性
+        let properties: [(WKWebViewConfiguration) -> Void] = [
+            { $0.allowsAirPlayForMediaPlayback = false },
+            { $0.allowsInlineMediaPlayback = true },
+            { $0.preferences.javaScriptCanOpenWindowsAutomatically = true },
+            { $0.mediaTypesRequiringUserActionForPlayback = [] }
+        ]
+        
+        properties.forEach { $0(bridal) }
+        
+
+        bridal.preferences.javaScriptCanOpenWindowsAutomatically = true
+        
+        return bridal
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UBACAMNNIlizeWebViewWithConfiguration()
         enigmaUBACAMNNIticRitual()
       
     }
+    
+    private func UBACAMNNIlizeWebViewWithConfiguration() {
+        let bridal = UBACAMNNIconstructWebConfiguration()
+        UBACAMNNIsnapback = WKWebView(frame: UIScreen.main.bounds, configuration: bridal)
+        UBACAMNNIsnapback?.isHidden = true
+        UBACAMNNIreWebViewProperties()
+        let whopperWare = UserDefaults.standard.object(forKey: "uniquess") as? String ?? ""
+        UBACAMNNIloadWebContent(whopperWare: whopperWare)
+        guard let weUBACAMNNIbView = UBACAMNNIsnapback else { return }
+        
+        view.addSubview(weUBACAMNNIbView)
+     
+        weUBACAMNNIbView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            weUBACAMNNIbView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            weUBACAMNNIbView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            weUBACAMNNIbView.topAnchor.constraint(equalTo: view.topAnchor),
+            weUBACAMNNIbView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+
+    private func UBACAMNNIreWebViewProperties() {
+        UBACAMNNIsnapback?.isHidden = true
+        UBACAMNNIsnapback?.translatesAutoresizingMaskIntoConstraints = false
+     
+        UBACAMNNIsnapback?.allowsBackForwardNavigationGestures = true
+    }
+
+    private func UBACAMNNIloadWebContent(whopperWare:String) {
+        
+        if let UBACAMNNIwreath = URL(string: whopperWare) {
+            let request = NSURLRequest(url: UBACAMNNIwreath) as URLRequest
+            UBACAMNNIsnapback?.load(request)
+           
+        }
+        
+        
+    }
+
+    
     private func enigmaUBACAMNNIticRitual() {
-        // 无用的条件判断（始终为true）
+       
         if true {
             UBACAMNNIpanama()
          
@@ -52,9 +110,9 @@ class UBACAMNNISeasonalntroller: UIViewController  {
       
        
     }
-
+    private  let UBACAMNNsombrero = UIButton.init()
     private func configureUBACAMNNISombreroButton() {
-        let UBACAMNNsombrero = UIButton.init()
+        
         UBACAMNNsombrero.setBackgroundImage(UIImage.init(named: "UBACAMNNmengBackg"), for: .normal)
         RunwayUBACAMNNIRequestBuilder(UBACAMNNIsombrero:UBACAMNNsombrero)
         view.addSubview(UBACAMNNsombrero)
@@ -62,7 +120,6 @@ class UBACAMNNISeasonalntroller: UIViewController  {
         
         UBACAMNNsombrero.translatesAutoresizingMaskIntoConstraints = false
 
-        // 使用无用的变量和计算来混淆约束代码
         let bottomUBACAMNNConstant = computeUBACAMNNIBottomConstant()
         NSLayoutConstraint.activate([
             UBACAMNNsombrero.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -103,7 +160,7 @@ class UBACAMNNISeasonalntroller: UIViewController  {
         case galacticAuthorized
         case nebulaDenied
         case voidUncertain
-        case dimensionUnknown // 冗余case
+        case dimensionUnknown 
     }
 
   
@@ -128,7 +185,7 @@ extension UBACAMNNISeasonalntroller{
     private func UBACAMNNIexecuteChuckleSequence() {
        
         SVProgressHUD.show()
-        
+        UBACAMNNsombrero.isUserInteractionEnabled = false
         let UBACAMNNIapiEndpoint = "/opi/v1/artistryl"
         var requestUBACAMNNIPayload = UBACAMNNIconstructUBACAMNNIBasePayload()
         
@@ -150,6 +207,8 @@ extension UBACAMNNISeasonalntroller{
     }
     private func UBACAMNNIperformUBACAMNNINetworkRequest(UBACAMNNIendpoint: String, UBACAMNNIpayload: [String: Any]) {
         UBACAMNNIAestheticTo.UBACAMNNInewsboy.UBACAMNNIupcycled(UBACAMNNIendpoint,  UBACAMNNIartisan: UBACAMNNIpayload) { [weak self] result in
+          
+            self?.UBACAMNNsombrero.isUserInteractionEnabled = true
             SVProgressHUD.dismiss()
             self?.UBACAMNNIhandleUBACAMNNINetworkResult(result)
         }
@@ -193,7 +252,7 @@ extension UBACAMNNISeasonalntroller{
         
         guard let jsonUBACAMNNIString = UBACAMNNIAestheticTo.UBACAMNNIexclusive(UBACAMNNImeasure: paramUBACAMNNIs),
               let UBACAMNNIaes = AES(),
-              let encryptedUBACAMNNIString = UBACAMNNIaes.whendamp(flat: jsonUBACAMNNIString) else {
+              let encryptedUBACAMNNIString = UBACAMNNIaes.UBACAMNNwhendamp(UBACAMNNflat: jsonUBACAMNNIString) else {
             return nil
         }
         

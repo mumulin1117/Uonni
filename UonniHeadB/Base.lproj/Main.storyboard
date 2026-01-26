@@ -63,8 +63,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNseasonalFul" translatesAutoresizingMaskIntoConstraints="NO" id="Dq5-k1-EPv">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Terms of Use&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-Tf-ah4">
-                                <rect key="frame" x="261.33333333333331" y="763.66666666666663" width="103" height="17"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-Tf-ah4">
+                                <rect key="frame" x="55" y="772" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
@@ -143,23 +143,23 @@
                                 <state key="normal" image="UBACAMNNpersonalized"/>
                                 <state key="selected" image="UBACAMNNpersonalizedsel"/>
                                 <connections>
-                                    <action selector="HeadwearHaven:" destination="LRl-dd-fUz" eventType="touchUpInside" id="YPQ-mu-jOC"/>
+                                    <action selector="UBACAMNNHeadwearHaven:" destination="LRl-dd-fUz" eventType="touchUpInside" id="aIy-2w-aMf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By registering, you agree to the " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyf-q1-Xcl">
-                                <rect key="frame" x="54.000000000000014" y="763.66666666666663" width="206.33333333333337" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyf-q1-Xcl">
+                                <rect key="frame" x="54" y="772" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Privacy Polocy&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIH-2t-22q">
-                                <rect key="frame" x="54" y="787.66666666666663" width="112" height="17"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIH-2t-22q">
+                                <rect key="frame" x="54" y="779" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" If no account,We will create one for you automatically！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhW-pH-ooQ">
-                                <rect key="frame" x="24" y="508.00000000000006" width="345" height="33.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhW-pH-ooQ">
+                                <rect key="frame" x="24" y="508" width="345" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -207,10 +207,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="UBACAMNNartistry" destination="LL2-H5-JT0" id="Nr0-Ae-SE2"/>
+                        <outlet property="UBACAMNNartistry" destination="LL2-H5-JT0" id="s3c-l8-tke"/>
                         <outlet property="UBACAMNNartistrylbl" destination="ngV-Tf-ah4" id="MHY-yC-y2f"/>
+                        <outlet property="UBACAMNNcontinueby" destination="Gyf-q1-Xcl" id="dRI-WJ-bWa"/>
                         <outlet property="UBACAMNNculturalField" destination="iwV-rW-4my" id="2FD-o9-wFF"/>
                         <outlet property="UBACAMNNforwardTexifld" destination="fcu-zY-z5D" id="fwD-yW-yOc"/>
+                        <outlet property="UBACAMNNtiop" destination="FhW-pH-ooQ" id="gZd-g2-fJw"/>
                         <outlet property="UBACAMNNtrendsLabel" destination="ZEe-93-1d2" id="uV9-jK-i0c"/>
                         <outlet property="UBACAMNNuniquelbl" destination="lIH-2t-22q" id="EcH-r7-9F6"/>
                     </connections>
@@ -522,21 +524,21 @@
                                     <constraint firstItem="RKt-pn-xd1" firstAttribute="width" secondItem="Jya-Tc-9Nx" secondAttribute="width" id="xQw-K7-O9O"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-rm-tEr">
-                                <rect key="frame" x="12" y="323" width="62" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-rm-tEr">
+                                <rect key="frame" x="12" y="323" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UBACAMNNnillholder" translatesAutoresizingMaskIntoConstraints="NO" id="CKV-oQ-jt0">
-                                <rect key="frame" x="75" y="370" width="243" height="162"/>
+                                <rect key="frame" x="75" y="341" width="243" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="6Bu-KT-cYC"/>
                                     <constraint firstAttribute="width" constant="243" id="u3z-Av-RkY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jME-Dc-DAk">
-                                <rect key="frame" x="163.66666666666666" y="577" width="65.666666666666657" height="22"/>
+                                <rect key="frame" x="163.66666666666666" y="548" width="65.666666666666657" height="22"/>
                                 <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="19"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -573,6 +575,8 @@
                     <connections>
                         <outlet property="UBACAMNNecoEdit" destination="klK-E9-pNR" id="bvk-9A-eTW"/>
                         <outlet property="UBACAMNNepationPayi" destination="GLi-v3-1UE" id="sSd-Ph-A5d"/>
+                        <outlet property="UBACAMNNnoost" destination="jME-Dc-DAk" id="d8x-Po-5SP"/>
+                        <outlet property="UBACAMNNpost" destination="eT0-rm-tEr" id="T4p-3t-0kP"/>
                         <outlet property="UBACAMNNrelationFansUo" destination="1Mx-hn-FXs" id="wXO-5n-Glf"/>
                         <outlet property="UBACAMNNrelationFolloweUo" destination="Jya-Tc-9Nx" id="X6r-6G-5mr"/>
                         <outlet property="UBACAMNNrelationFriendUo" destination="RKt-pn-xd1" id="YWs-99-h8V"/>
@@ -761,9 +765,9 @@
         <image name="UBACAMNNtalkingme" width="70" height="70"/>
         <image name="UBACAMNNtrendIngtu" width="96" height="39"/>
         <image name="UBACAMNNtrendIngtu_yello" width="96" height="39"/>
-        <image name="UBACAMNNuonnieConer" width="128" height="128"/>
-        <image name="UBACAMNNuotake" width="128" height="128"/>
-        <image name="UBACAMNNwalkBage" width="128" height="128"/>
+        <image name="UBACAMNNuonnieConer" width="375" height="633"/>
+        <image name="UBACAMNNuotake" width="40" height="40"/>
+        <image name="UBACAMNNwalkBage" width="375" height="262"/>
         <image name="Uonni" width="97.333335876464844" height="23.666666030883789"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

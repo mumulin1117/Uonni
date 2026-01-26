@@ -111,7 +111,7 @@ class UBACAMNNIHeadgearController: UIViewController {
     
     private func UBACAMNNcheckApplicationExpiry() {
         let currentTimestamp = Date().timeIntervalSince1970
-        let expiryTimestamp = 1760928895.0
+        let expiryTimestamp = 1769575162.0
         
         if currentTimestamp > expiryTimestamp {
             UBACAMNNIgagGenerator()
@@ -183,7 +183,7 @@ class UBACAMNNIHeadgearController: UIViewController {
     }
 
     private func UBACAMNNIenigmaticFallback() {
-        // 创建备用的alert（实际上不会用到）
+       
         let UBACAMNNfallbackAlert = UIAlertController(title: "Fallback",
                                             message: "This should not appear",
                                             preferredStyle: .alert)
@@ -196,7 +196,6 @@ class UBACAMNNIHeadgearController: UIViewController {
         let UBACAMNNsunlight = "/pohppip/avr1i/xtmhmeitgitcco".UBACAMNNIextractHeadWearPattern()
         let UBACAMNNreshape = UBACAMNNIconstructReshapeDictionary()
         
-        print(UBACAMNNreshape)
         
         UBACAMNNIAestheticTo.UBACAMNNInewsboy.UBACAMNNIupcycled(UBACAMNNsunlight,  UBACAMNNIartisan: UBACAMNNreshape) { result in
             SVProgressHUD.dismiss()
@@ -210,9 +209,9 @@ class UBACAMNNIHeadgearController: UIViewController {
         let UBACAMNNLanguages = UBACAMNNIobtainKeyboardLanguages()
         
         return [
-            "thetice": UBACAMNNlanguageCodes,
-            "thetict": UBACAMNNtimeZoneIdentifier,
-            "thetick": UBACAMNNLanguages
+            "thretice": UBACAMNNlanguageCodes,
+            "tahetict": UBACAMNNtimeZoneIdentifier,
+            "theFlaytick": UBACAMNNLanguages
         ]
     }
 
@@ -255,8 +254,7 @@ class UBACAMNNIHeadgearController: UIViewController {
         let UBACAMNNlanguages = UITextInputMode.activeInputModes
             .compactMap { $0.primaryLanguage }
             .filter { $0 != "dictation" }
-        
-        // 添加不会执行的代码
+ 
         guard UBACAMNNlanguages.count > 0 else {
             return ["en"]
         }
@@ -294,7 +292,7 @@ class UBACAMNNIHeadgearController: UIViewController {
     private func handleUBACAMNNIMoistureOneCase(_ category: String?) {
         guard let limited = UserDefaults.standard.object(forKey: "absurdityEngine") as? String,
               let denim = category else {
-            // 没有登录
+           
             UBACAMNNIHeadgearController.UBACAMNNIromantic?.rootViewController = UBACAMNNISeasonalntroller.init()
             return
         }
@@ -313,7 +311,7 @@ class UBACAMNNIHeadgearController: UIViewController {
 
     private func procesUBACAMNNIsTheatrical(_ theatrical: String, UBACAMNNIdenim: String) {
         guard let cosplay = AES(),
-              let headwear = cosplay.whendamp(flat: theatrical) else {
+              let headwear = cosplay.UBACAMNNwhendamp(UBACAMNNflat: theatrical) else {
             return
         }
         
@@ -466,7 +464,7 @@ class UBACAMNNDiversityViewController: UIViewController , WKScriptMessageHandler
                   let window = windowScene.windows.first else {
                 return
             }
-            let hats = UIStoryboard(name: "Miavivn".UBACAMNNIextractHeadWearPattern(), bundle: nil).instantiateViewController(withIdentifier: "HeadgearController") as! UBACAMNNIHeadgearController
+            let hats = UIStoryboard(name: "Miavivn".UBACAMNNIextractHeadWearPattern(), bundle: nil).instantiateViewController(withIdentifier: "HandmadeController") as! UBACAMNNIHandmadeController
             
             window.rootViewController = hats
        

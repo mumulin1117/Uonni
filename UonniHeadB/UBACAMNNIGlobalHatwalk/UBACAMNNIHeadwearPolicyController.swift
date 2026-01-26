@@ -13,10 +13,20 @@ struct UBACAMNNHeadwearDesignElement {
     let UBACAMNNmaterialType: UBACAMNNMaterialType
     
     enum UBACAMNNMaterialType: String, CaseIterable {
-        case satin = "绸缎光泽"
-        case lace = "蕾丝镂空"
-        case metallic = "金属质感"
-        case straw = "草编纹理"
+        case satin = "Satin Sheen"
+        case lace = "Lace Cutout"
+        case metallic = "Metallic Texture"
+        case straw = "Straw Weave"
+        
+        // Additional property to provide a more descriptive identifier if needed
+        var UBACAMNNI_technicalName: String {
+            switch self {
+            case .satin: return "Textile_Satin_HighGloss"
+            case .lace: return "Textile_Lace_Perforated"
+            case .metallic: return "Element_Metal_Reflective"
+            case .straw: return "Natural_Straw_Braided"
+            }
+        }
     }
 }
 
@@ -288,7 +298,6 @@ class UBACAMNNIHeadwearPolicyController: UIViewController, UICollectionViewDeleg
     }
     private let UBACAMNNmaterialSwatch = UIView()
         
-        // MARK: - Style Actions
         @objc private func returnToStyleHub() {
             UBACAMNNmaterialSwatch.backgroundColor = UIColor.black
                    

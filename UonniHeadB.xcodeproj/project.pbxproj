@@ -224,7 +224,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uonni needs access to your location to use iCloud's location feature.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Uonni needs access to your microphone for sending voice messages and audio calls";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uonni needs access to your photo album for posting local headwear pictures and sharing local videos";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier helps Uonni deliver personalized ads to you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -235,7 +234,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hairni.uonni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -265,7 +264,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Uonni needs access to your location to use iCloud's location feature.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Uonni needs access to your microphone for sending voice messages and audio calls";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Uonni needs access to your photo album for posting local headwear pictures and sharing local videos";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier helps Uonni deliver personalized ads to you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -276,7 +274,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hairni.uonni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

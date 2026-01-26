@@ -15,11 +15,11 @@ class UBACAMNNIHatverController: UBACAMNNIArtistryController {
     struct UBACAMNNMillineryMessageThread {
         let UBACAMNNdesignerID: String
         let UBACAMNNatelierName: String
-        let UBACAMNNlatestAccessoryDesign: String  // 最新头饰设计描述
-        let UBACAMNNpreviewSketchURL: String      // 设计草图预览图
+        let UBACAMNNlatestAccessoryDesign: String
+        let UBACAMNNpreviewSketchURL: String
         let UBACAMNNunreadMessageCount: Int
-        let UBACAMNNlastExchangeTime: TimeInterval // 最后交流时间戳
-        let UBACAMNNcollectionSeason: String       // 所属系列季节
+        let UBACAMNNlastExchangeTime: TimeInterval
+        let UBACAMNNcollectionSeason: String       
         
     }
     private var UBACAMNNrecommendMonment:Dictionary<String,Array<Dictionary<String,Any>>>  = ["GlobalHatwalk":Array<Dictionary<String,Any>>()]
@@ -48,20 +48,19 @@ class UBACAMNNIHatverController: UBACAMNNIArtistryController {
         if sender.tag == 23 {
             UBACAMNNselectionRing.fillColor = UIColor.clear.cgColor
            
-            let mainRoute =  SceneDelegate.fashionInspiration + "puangeexsp/wsrcxreeaeanxprljahyf/zianydoejxn?".UBACAMNNIextractHeadWearPattern()
+            let mainRoute =  SceneDelegate.UBACAMNNfashionInspiration + "puangeexsp/wsrcxreeaeanxprljahyf/zianydoejxn?".UBACAMNNIextractHeadWearPattern()
             UBACAMNNselectionRing.lineWidth = 2
             self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: sender.backgroundColor ?? .clear)
             return
         }
         UBACAMNNselectionRing.fillColor = UIColor.clear.cgColor
        
-        let mainRoute =  SceneDelegate.fashionInspiration + "pjaigkeqsv/aCrraegajtveqRnollwek/jilnndjepxi?".UBACAMNNIextractHeadWearPattern()
+        let mainRoute =  SceneDelegate.UBACAMNNfashionInspiration + "pjaigkeqsv/aCrraegajtveqRnollwek/jilnndjepxi?".UBACAMNNIextractHeadWearPattern()
         UBACAMNNselectionRing.lineWidth = 2
         self.UBACAMNNcreativeExchange(UBACAMNNEveryroute:mainRoute, UBACAMNNforeColor: sender.backgroundColor ?? .clear)
        
     }
-    // MARK: - UI组件
-       
+  
     private lazy var UBACAMNNrunwayTableView: UITableView = {
         let UBACAMNNTableVi = UITableView(frame: .zero, style: .grouped)
         
@@ -173,15 +172,27 @@ extension UBACAMNNIHatverController{
     
     func UBACAMNNtrendsettingideas()  {
         UBACAMNNmessages = [
-            UBACAMNNIHeadwearMessage(UBACAMNNsenderAvatar: "avatar_luna", UBACAMNNsenderName: "Luna的帽饰研究所",
-                           UBACAMNNmessageContent: "刚发了新的贝雷帽混搭视频，求搭配建议！",
-                           UBACAMNNmessageType: .UBACAMNNvideoShare, UBACAMNNtimestamp: Date().addingTimeInterval(-3600)),
-            UBACAMNNIHeadwearMessage(UBACAMNNsenderAvatar: "avatar_ai_stylist", UBACAMNNsenderName: "AI搭配助手",
-                           UBACAMNNmessageContent: "根据您的草帽收藏，推荐尝试波西米亚风长裙搭配方案",
-                           UBACAMNNmessageType: .UBACAMNNaiRecommendation, UBACAMNNtimestamp: Date().addingTimeInterval(-7200)),
-            UBACAMNNIHeadwearMessage(UBACAMNNsenderAvatar: "avatar_hat_lover", UBACAMNNsenderName: "头饰收藏家小鹿",
-                           UBACAMNNmessageContent: "姐妹！求你上次视频里的珍珠发箍链接！",
-                           UBACAMNNmessageType: .UBACAMNNtext, UBACAMNNtimestamp: Date().addingTimeInterval(-18000))
+            UBACAMNNIHeadwearMessage(
+                UBACAMNNsenderAvatar: "avatar_luna",
+                UBACAMNNsenderName: "Luna's Headwear Lab",
+                UBACAMNNmessageContent: "Just uploaded a new beret styling video! I'd love to hear your outfit suggestions.",
+                UBACAMNNmessageType: .UBACAMNNvideoShare,
+                UBACAMNNtimestamp: Date().addingTimeInterval(-Double.random(in: 3500...3700))
+            ),
+            UBACAMNNIHeadwearMessage(
+                UBACAMNNsenderAvatar: "avatar_ai_stylist",
+                UBACAMNNsenderName: "AI Style Assistant",
+                UBACAMNNmessageContent: "Based on your straw hat collection, I recommend trying a Bohemian maxi dress combo.",
+                UBACAMNNmessageType: .UBACAMNNaiRecommendation,
+                UBACAMNNtimestamp: Date().addingTimeInterval(-Double.random(in: 7100...7300))
+            ),
+            UBACAMNNIHeadwearMessage(
+                UBACAMNNsenderAvatar: "avatar_hat_lover",
+                UBACAMNNsenderName: "Fawn | Hat Collector",
+                UBACAMNNmessageContent: "Hey! Could you share the link for that pearl headband in your last video?",
+                UBACAMNNmessageType: .UBACAMNNtext,
+                UBACAMNNtimestamp: Date().addingTimeInterval(-Double.random(in: 17000...19000))
+            )
         ]
         let insights: [String:Any] = [
             "fashionconnection": "51032696"
@@ -323,7 +334,7 @@ extension UBACAMNNIHatverController:UICollectionViewDelegate,UICollectionViewDat
         UBACAMNNactionButton.setTitleColor(.white, for: .normal)
         UBACAMNNselectionRing.fillColor = UIColor.clear.cgColor
         UBACAMNNactionButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
-        let mainRoute =  SceneDelegate.fashionInspiration + "peamgieast/lpnrminvgabtmegCjhcaetk/jiqnudjerxq?supshecreIgdk=".UBACAMNNIextractHeadWearPattern()  + "\(itemid)"
+        let mainRoute =  SceneDelegate.UBACAMNNfashionInspiration + "peamgieast/lpnrminvgabtmegCjhcaetk/jiqnudjerxq?supshecreIgdk=".UBACAMNNIextractHeadWearPattern()  + "\(itemid)"
        
        
         UBACAMNNactionButton.layer.cornerRadius = 8

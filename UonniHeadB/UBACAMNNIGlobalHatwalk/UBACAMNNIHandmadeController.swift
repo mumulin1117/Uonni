@@ -6,10 +6,13 @@
 //
 import SVProgressHUD
 import UIKit
-//log
 
 class UBACAMNNIHandmadeController: UIViewController {
-
+    
+    @IBOutlet weak var UBACAMNNtiop: UILabel!
+    
+    @IBOutlet weak var UBACAMNNcontinueby: UILabel!
+    
     @IBOutlet weak var UBACAMNNtrendsLabel: UIImageView!
     
     @IBOutlet weak var UBACAMNNforwardTexifld: UITextField!
@@ -22,13 +25,13 @@ class UBACAMNNIHandmadeController: UIViewController {
     @IBOutlet weak var UBACAMNNartistrylbl: UILabel!
     @IBOutlet weak var UBACAMNNuniquelbl: UILabel!
     private let UBACAMNNHeadwearLabel: UILabel = {
-            let Headwear = UILabel()
-            Headwear.text = "Join the Headwear Community"
-            Headwear.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
-            Headwear.textColor = .label
-            Headwear.textAlignment = .center
-            Headwear.translatesAutoresizingMaskIntoConstraints = false
-            return Headwear
+            let UBACAMNNHeadwear = UILabel()
+          
+            UBACAMNNHeadwear.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+            UBACAMNNHeadwear.textColor = .label
+            UBACAMNNHeadwear.textAlignment = .center
+            UBACAMNNHeadwear.translatesAutoresizingMaskIntoConstraints = false
+            return UBACAMNNHeadwear
         }()
     
     override func viewDidLoad() {
@@ -45,13 +48,13 @@ class UBACAMNNIHandmadeController: UIViewController {
     private func UBACAMNNstyleIconView()  {
         UBACAMNNartistrylbl.isUserInteractionEnabled = true
         UBACAMNNHeadwearLabel.backgroundColor = .systemIndigo
-        UBACAMNNculturalField.attributedPlaceholder =  NSAttributedString(string: "Enter email address", attributes: [
+        UBACAMNNculturalField.attributedPlaceholder =  NSAttributedString(string: "Ejnutnefrp xeamaapiqlt waldzdircetsqs".UBACAMNNIextractHeadWearPattern(), attributes: [
             .font:  UIFont.systemFont(ofSize:18, weight: .semibold),
             .foregroundColor:UIColor.white,
             .kern: 0.5
         ])
         
-        UBACAMNNforwardTexifld.attributedPlaceholder =  NSAttributedString(string: "Enter password", attributes: [
+        UBACAMNNforwardTexifld.attributedPlaceholder =  NSAttributedString(string: "Ednatuezrn apmahsnsxwvokryd".UBACAMNNIextractHeadWearPattern(), attributes: [
             .font:  UIFont.systemFont(ofSize:18, weight: .semibold),
             .foregroundColor:UIColor.white,
             .kern: 0.5
@@ -65,13 +68,17 @@ class UBACAMNNIHandmadeController: UIViewController {
     private func UBACAMNNfashionHeadhair()  {
         UBACAMNNartistrylbl.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(UBACAMNNdividerViewterm)))
         UBACAMNNHeadwearLabel.tintColor = .white
-        
+        UBACAMNNartistrylbl.text = "<sTsevrymcsb koxfq uUysueg>".UBACAMNNIextractHeadWearPattern()
         UBACAMNNuniquelbl.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(UBACAMNNdividerView)))
+        UBACAMNNuniquelbl.text = "<sPfrlifvcalcjyo fPtoelioscayu>".UBACAMNNIextractHeadWearPattern()
         UBACAMNNHeadwearLabel.layer.cornerRadius = 8
+        UBACAMNNtiop.text = "Iyfl aniod vaaclcsoxumnstv,zWyeh twmimlqlb pcnrbefautmek joonqej ofionry rysoouk gaxubtnoummaxtligcvaglclvy".UBACAMNNIextractHeadWearPattern()
+        
+        UBACAMNNcontinueby.text = "Biyc trieqgwirsftxeyrbimnhge,j oyfoduz safggrteqea btaot mtwhie ".UBACAMNNIextractHeadWearPattern()
     }
     
     @objc func UBACAMNNdividerView() {
-        //pri
+       
         self.navigationController?.pushViewController(UBACAMNNIHeadwearPolicyController(currentPolicy: .styleProtection), animated: true)
     }
     
@@ -81,16 +88,16 @@ class UBACAMNNIHandmadeController: UIViewController {
     }
   
     @IBAction func UBACAMNNhandleStylishContinue(_ sender: UIButton) {
-        let gradient = CAGradientLayer()
+        let UBACAMNNgradient = CAGradientLayer()
                
        
        
         if UBACAMNNartistry.isSelected == false {
-            gradient.colors = [UIColor.systemPink.cgColor, UIColor.systemIndigo.cgColor]
+            UBACAMNNgradient.colors = [UIColor.systemPink.cgColor, UIColor.systemIndigo.cgColor]
             SVProgressHUD.showInfo(withStatus: "Pzlnexaosyez lrtevaudz kannydl caeglruehea gtcol xokugra gucspewru vpbrvifvraxczyw npnovlnizcmya iaznndf itzevrpmysr!".UBACAMNNIextractHeadWearPattern())
             return
         }
-        gradient.frame = view.bounds
+        UBACAMNNgradient.frame = view.bounds
         
         guard let registailName = UBACAMNNculturalField.text,registailName.count > 0 else{
             SVProgressHUD.showInfo(withStatus: "Psluezaxsaem sfkinlllk cienk bymoyuqrc arpeggpifsntaegrkeddx eexmrakitlc sfiisrssitl!".UBACAMNNIextractHeadWearPattern())
@@ -103,7 +110,7 @@ class UBACAMNNIHandmadeController: UIViewController {
             return
         }
         
-        view.layer.insertSublayer(gradient, at: 0)
+        view.layer.insertSublayer(UBACAMNNgradient, at: 0)
         UBACAMNNfashionGuidance(UBACAMNNsignPasw:signPasw,UBACAMNNregistailName:registailName)
     }
     
@@ -126,7 +133,7 @@ class UBACAMNNIHandmadeController: UIViewController {
         ]
         SVProgressHUD.show()
         let UBACAMNNstartButton = UIButton(type: .system)
-        UBACAMNNstartButton.setTitle("Start config", for: .normal)
+        UBACAMNNstartButton.setTitle("", for: .normal)
         
                
         SceneDelegate.UBACAMNNIaskForvirtualSstylist(    UBACAMNNIpath: "/rbcjkngccdz/vwrguhl",    UBACAMNNIvintage: insights) { resilt in
@@ -178,16 +185,16 @@ class UBACAMNNIHandmadeController: UIViewController {
         }
     
     func UBACAMNNpresentWelcomeScreen(UBACAMNNheadwearuser:Dictionary<String,Any>)  {
-        var saveingHeader = Dictionary<String,Any>()
-        saveingHeader["seasonalfashion"] = UBACAMNNheadwearuser["seasonalfashion"]
-        saveingHeader["headweardiversity"] = UBACAMNNheadwearuser["headweardiversity"]
+        var UBACAMNNsaveingHeader = Dictionary<String,Any>()
+        UBACAMNNsaveingHeader["seasonalfashion"] = UBACAMNNheadwearuser["seasonalfashion"]
+        UBACAMNNsaveingHeader["headweardiversity"] = UBACAMNNheadwearuser["headweardiversity"]
         
-        UBACAMNNSeasonalLoogController.UBACAMNNenthusiasts = saveingHeader
+        UBACAMNNSeasonalLoogController.UBACAMNNenthusiasts = UBACAMNNsaveingHeader
         
         
     }
     
-    @IBAction func HeadwearHaven(_ sender: UIButton) {
+    @IBAction func UBACAMNNHeadwearHaven(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
     }
 }

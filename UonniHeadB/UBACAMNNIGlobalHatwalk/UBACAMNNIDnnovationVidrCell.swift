@@ -30,9 +30,13 @@ class UBACAMNNIDnnovationVidrCell: UICollectionViewCell {
         
         contentView.addSubview(UBACAMNNartisticSporty)
         UBACAMNNartisticSporty.contentMode = .scaleAspectFill
-        UBACAMNNartisticSporty.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        UBACAMNNartisticSporty.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            UBACAMNNartisticSporty.topAnchor.constraint(equalTo: contentView.topAnchor),
+            UBACAMNNartisticSporty.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            UBACAMNNartisticSporty.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            UBACAMNNartisticSporty.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        ])
         
         let UBACAMNNgradient = CAGradientLayer()
         UBACAMNNgradient.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor, UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor]
@@ -73,10 +77,17 @@ class UBACAMNNIDnnovationVidrCell: UICollectionViewCell {
         UBACAMNNinteractionUser.setImage(UIImage.init(named: "UBACAMNNIdiversityIN"), for: .normal)
         contentView.addSubview(UBACAMNNheadwearName)
         contentView.addSubview(UBACAMNNinteractionUser)
-        UBACAMNNtConttnwearLbl.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().offset(-70)
-        }
+        
+        UBACAMNNtConttnwearLbl.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+        
+            UBACAMNNtConttnwearLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+          
+            UBACAMNNtConttnwearLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+          
+            UBACAMNNtConttnwearLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -70)
+        ])
         
        
         UBACAMNNrecommendations()
@@ -95,36 +106,67 @@ class UBACAMNNIDnnovationVidrCell: UICollectionViewCell {
     
     
     private func  UBACAMNNrecommendations()  {
-        UBACAMNNartisticHeader.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(15)
-            make.width.height.equalTo(46)
-            make.bottom.equalTo(UBACAMNNtConttnwearLbl.snp.top).offset(-13)
-        }
-        
-        UBACAMNNtTimewearLbl.snp.makeConstraints { make in
-            make.left.equalTo(UBACAMNNartisticHeader.snp.right).offset(9)
-            make.bottom.equalTo(UBACAMNNartisticHeader)
-        }
-        
+       
+        UBACAMNNartisticHeader.translatesAutoresizingMaskIntoConstraints = false
+        UBACAMNNtTimewearLbl.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+         
+            UBACAMNNartisticHeader.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            
+            // make.width.height.equalTo(46)
+            UBACAMNNartisticHeader.widthAnchor.constraint(equalToConstant: 46),
+            UBACAMNNartisticHeader.heightAnchor.constraint(equalToConstant: 46),
+            
+            UBACAMNNartisticHeader.bottomAnchor.constraint(equalTo: UBACAMNNtConttnwearLbl.topAnchor, constant: -13),
+
+          
+            UBACAMNNtTimewearLbl.leadingAnchor.constraint(equalTo: UBACAMNNartisticHeader.trailingAnchor, constant: 9),
+          
+            UBACAMNNtTimewearLbl.bottomAnchor.constraint(equalTo: UBACAMNNartisticHeader.bottomAnchor)
+        ])
         contentView.addSubview(UBACAMNNinteractionUser)
-        UBACAMNNinteractionUser.snp.makeConstraints { make in
-            make.width.height.equalTo(28)
-            make.bottom.right.equalTo(UBACAMNNartisticHeader)
-        }
+       
+        UBACAMNNinteractionUser.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+           
+            UBACAMNNinteractionUser.widthAnchor.constraint(equalToConstant: 28),
+            UBACAMNNinteractionUser.heightAnchor.constraint(equalToConstant: 28),
+            
+            UBACAMNNinteractionUser.bottomAnchor.constraint(equalTo: UBACAMNNartisticHeader.bottomAnchor),
+           
+            UBACAMNNinteractionUser.trailingAnchor.constraint(equalTo: UBACAMNNartisticHeader.trailingAnchor)
+        ])
         
         contentView.addSubview(UBACAMNNheadwearName)
-        UBACAMNNheadwearName.snp.makeConstraints { make in
-            make.left.equalTo(UBACAMNNartisticHeader.snp.right).offset(9)
-            make.top.equalTo(UBACAMNNartisticHeader).offset(3)
-        }
+       
+        UBACAMNNheadwearName.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+           
+            UBACAMNNheadwearName.leadingAnchor.constraint(equalTo: UBACAMNNartisticHeader.trailingAnchor, constant: 9),
+           
+            UBACAMNNheadwearName.topAnchor.constraint(equalTo: UBACAMNNartisticHeader.topAnchor, constant: 3)
+        ])
         
-        let aiuu = UIImageView(image: UIImage.init(named: "UBACAMNNIcospla"))
-        contentView.addSubview(aiuu)
-        aiuu.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.width.equalTo(44)
-            make.height.equalTo(61)
-        }
+        let UBACAMNNBrton = UIImageView(image: UIImage.init(named: "UBACAMNNIcospla"))
+        contentView.addSubview(UBACAMNNBrton)
+       
+        UBACAMNNBrton.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+          
+            UBACAMNNBrton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            
+            UBACAMNNBrton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            
+          
+            UBACAMNNBrton.widthAnchor.constraint(equalToConstant: 44),
+            
+          
+            UBACAMNNBrton.heightAnchor.constraint(equalToConstant: 61)
+        ])
     }
     
     required init?(coder: NSCoder) {
