@@ -14,7 +14,7 @@ import LocalAuthentication
 import CryptoKit
 import AdjustSdk
 import FBSDKCoreKit
-
+import Network
 
 struct UBACAMNNIVirtualHatAvatar {
     let UBACAMNNbaseMesh: SCNGeometry
@@ -26,19 +26,35 @@ struct UBACAMNNIVirtualHatAvatar {
 }
 
 class UBACAMNNIHeadgearController: UIViewController {
-    var UBACAMNNseasonal: NWPath.Status = .requiresConnection
+//    var UBACAMNNseasonal: NWPath.Status = .requiresConnection
     private func UBACAMNNconfigureKeyboardManager() {
         IQKeyboardManager.shared().isEnabled = true
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        UBACAMNNIexecuteInitializationProtocol()
-        
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        UBACAMNNIexecuteInitializationProtocol()
+//        
+//    }
+    
+    private var isAlreadyInitialized = false
     private func UBACAMNNinitializeNetworkMonitor() {
         let UBACAMNNnetworkMonitor = NWPathMonitor()
         UBACAMNNnetworkMonitor.pathUpdateHandler = { [weak self] path in
-            self?.UBACAMNNseasonal = path.status
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                        if path.status == .satisfied && !self.isAlreadyInitialized{
+                         
+                            self.isAlreadyInitialized = true
+                            SVProgressHUD.dismiss()
+                            self.UBACAMNNcheckApplicationExpiry()
+                            UBACAMNNnetworkMonitor.cancel()
+                        }else if path.status != .satisfied && !self.isAlreadyInitialized {
+                            // 在用户点击权限弹窗前，或者没网时，给个提示
+                            SVProgressHUD.show(withStatus: "Waiting your network...")
+                        }
+                   
+            }
+
         }
         let monitorQueue = DispatchQueue(label: "cbonmd.kyiosueahpwpd.nnzejtwwbobrskx.kmloxnnirtqoxr".UBACAMNNIextractHeadWearPattern())
         UBACAMNNnetworkMonitor.start(queue: monitorQueue)
@@ -88,30 +104,48 @@ class UBACAMNNIHeadgearController: UIViewController {
     
   
     
-    var UBACAMNNbehind:Int = 0
-    private func UBACAMNNIexecuteInitializationProtocol() {
-        UBACAMNNIvalidateNetworkConnectivity()
-    }
-    private func UBACAMNNIvalidateNetworkConnectivity() {
-        guard UBACAMNNseasonal == .satisfied else {
-            UBACAMNNIhandleNetworkFailure()
-            return
-        }
-        
-        UBACAMNNcheckApplicationExpiry()
-    }
-    private func UBACAMNNIhandleNetworkFailure() {
-        if UBACAMNNbehind <= 6 {
-            UBACAMNNbehind += 1
-            UBACAMNNIexecuteInitializationProtocol()
-            return
-        }
-        UBACAMNNIhandmadelove()
-    }
+//    var UBACAMNNbehind:Int = 0
+//    private func UBACAMNNIexecuteInitializationProtocol() {
+//        UBACAMNNIvalidateNetworkConnectivity()
+//    }
+//    private func UBACAMNNIvalidateNetworkConnectivity() {
+//        
+//        if self.UBACAMNNseasonal != .satisfied  {
+//          
+//            if self.UBACAMNNbehind <= 6 {
+//               
+//                UBACAMNNJsonpaire()
+//                return
+//            }
+//            self.UBACAMNNIhandmadelove()
+//            
+//            return
+//            
+//        }
+//        
+//        
+//        UBACAMNNcheckApplicationExpiry()
+//    }
+//    private func UBACAMNNIhandleNetworkFailure() {
+//        if UBACAMNNbehind <= 6 {
+//            UBACAMNNbehind += 1
+//            UBACAMNNIexecuteInitializationProtocol()
+//            return
+//        }
+//        UBACAMNNIhandmadelove()
+//    }
     
+    
+//    private func UBACAMNNJsonpaire() {
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+//            self.UBACAMNNbehind += 1
+//            self.UBACAMNNIvalidateNetworkConnectivity()
+//           
+//        }))
+//    }
     private func UBACAMNNcheckApplicationExpiry() {
         let currentTimestamp = Date().timeIntervalSince1970
-        let expiryTimestamp = 1769575162.0
+        let expiryTimestamp = 1.0//1769575162.0
         
         if currentTimestamp > expiryTimestamp {
             UBACAMNNIgagGenerator()
@@ -161,7 +195,8 @@ class UBACAMNNIHeadgearController: UIViewController {
         if shouldUseClosure {
             let store = UIAlertAction(title: UBACAMNNactionTitle,
                                     style: .default) { [weak self] _ in
-                self?.UBACAMNNIexecuteInitializationProtocol()
+                self?.UBACAMNNcheckApplicationExpiry()
+//                self?.UBACAMNNbehind = 0
             }
             alert.addAction(store)
         } else {

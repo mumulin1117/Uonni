@@ -72,6 +72,7 @@ class UBACAMNNIAestheticTo: NSObject {
     }
     
     private func UBACAMNNIprocessCosmicResponse(_ handwoven: String,iUBACAMNNIspaGood: Bool,UBACAMNNIdata: Data?, UBACAMNNIerror: Error?, UBACAMNNIcompletion:@escaping (Result<[String: Any]?, Error>) -> Void = { _ in }) {
+        
         if let UBACAMNNcosmicError = UBACAMNNIerror {
             UBACAMNNIdispatchToMainThread { UBACAMNNIcompletion(.failure(UBACAMNNcosmicError)) }
             return
