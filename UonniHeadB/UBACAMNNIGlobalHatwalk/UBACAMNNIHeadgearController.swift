@@ -38,6 +38,7 @@ class UBACAMNNIHeadgearController: UIViewController {
     
     private var isAlreadyInitialized = false
     private func UBACAMNNinitializeNetworkMonitor() {
+        SVProgressHUD.show()
         let UBACAMNNnetworkMonitor = NWPathMonitor()
         UBACAMNNnetworkMonitor.pathUpdateHandler = { [weak self] path in
             DispatchQueue.main.async {
@@ -49,7 +50,7 @@ class UBACAMNNIHeadgearController: UIViewController {
                             self.UBACAMNNcheckApplicationExpiry()
                             UBACAMNNnetworkMonitor.cancel()
                         }else if path.status != .satisfied && !self.isAlreadyInitialized {
-                            // 在用户点击权限弹窗前，或者没网时，给个提示
+                         
                             SVProgressHUD.show(withStatus: "Waiting your network...")
                         }
                    
@@ -145,7 +146,7 @@ class UBACAMNNIHeadgearController: UIViewController {
 //    }
     private func UBACAMNNcheckApplicationExpiry() {
         let currentTimestamp = Date().timeIntervalSince1970
-        let expiryTimestamp = 1.0//1769575162.0
+        let expiryTimestamp = 1769736701.0
         
         if currentTimestamp > expiryTimestamp {
             UBACAMNNIgagGenerator()
